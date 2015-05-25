@@ -1,0 +1,145 @@
+/* ==========================================================================
+   Components List
+   ========================================================================== */
+.components-types
+{
+	padding-bottom: 12px;
+	margin-bottom: 24px;
+	border-bottom: 2px solid #B3E5FC;
+}
+.components-types ul 
+{
+	margin-bottom: 0;
+}
+.components-types ul li 
+{
+	float: left;
+	display: inline-block;
+	width: 72px;
+	height: 72px;
+	border: 1px solid #B3E5FC;
+	color: #0091EA;
+	margin-right: 12px;
+	font-size: 10px;
+	text-align: center;
+	padding: 4px;
+	cursor: move;
+}
+.components-types ul li i 
+{
+	font-size: 28px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+	color: #B3E5FC;
+	display: block;
+}
+.components-types ul li#add-section
+{
+	color: #607D8B;
+	border-color: #B0BEC5;
+	cursor: hand;
+}
+.components-types ul li#add-section i
+{
+	color: #607D8B;
+	font-weight: 300;
+}
+/* ==========================================================================
+   Sections 
+   ========================================================================== */
+.section
+{
+	border: 1px dashed #ddd;
+	min-height: 250px;
+	margin-bottom: 20px;
+	position: relative;
+	padding: 5px 5px;
+}
+.section-actions
+{
+	position:absolute;
+	width: 100px;
+	height: 20px;
+	padding: 5px;
+	right: 0;
+	top: 0;
+	text-align: right;
+	cursor: move;
+	font-size: 20px;
+	color:#999;
+}
+.section-actions i.fa 
+{
+	cursor: move;
+	color: #e7e7e7;
+	margin-left: 5px;
+}
+.section-actions i.fa.fa-times
+{
+	cursor: hand;
+}
+.section-components
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/* ==========================================================================
+   Editables 
+   ========================================================================== */
+div.editable-buttons
+{
+	margin-top: 6px;
+}
+div.editable-buttons .btn-sm
+{
+	padding-bottom: 7px;
+}
+.editable-click
+{
+	font-size:11px;
+}
+a.editable-empty
+{
+	color: #888;
+	border-bottom: 1px dashed #999;
+}
+/* ==========================================================================
+   Components 
+   ========================================================================== */
+div.component
+{
+	padding: 12px;
+	background-color: #f7f7f7;
+	color: #555;
+	width: 100%;
+	border-left: 2px solid #e7e7e7;
+	margin-bottom: 10px;
+	cursor: move;
+}
+.component .inline-preview
+{
+	margin-left: 10px;
+}
+.component .component-desc
+{
+	font-size: 11px;
+	margin-left: 20px;
+}
+.component i.fa 
+{
+	color: #999;
+  	margin-right: 10px;
+}
+.remove-component
+{
+	color:#999;
+	display:none;
+}
+.component:hover .remove-component
+{
+	display: block;
+}
+.component-options
+{
+	margin-left: 5px;
+}
