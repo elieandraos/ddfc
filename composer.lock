@@ -224,16 +224,16 @@
         },
         {
             "name": "eandraos/gaia-ui",
-            "version": "1.1.13",
+            "version": "1.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-ui.git",
-                "reference": "f845fdd7867d04d583c9bb878ce7a0a7374e0d6a"
+                "reference": "c9cb784d2e6b5dc69afeb07ba5c11d577fa2c172"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-ui/zipball/f845fdd7867d04d583c9bb878ce7a0a7374e0d6a",
-                "reference": "f845fdd7867d04d583c9bb878ce7a0a7374e0d6a",
+                "url": "https://api.github.com/repos/elieandraos/gaia-ui/zipball/c9cb784d2e6b5dc69afeb07ba5c11d577fa2c172",
+                "reference": "c9cb784d2e6b5dc69afeb07ba5c11d577fa2c172",
                 "shasum": ""
             },
             "require": {
@@ -244,6 +244,7 @@
                 "kalnoy/nestedset": "2.4.x",
                 "laracasts/flash": "~1.3",
                 "php": ">=5.4.0",
+                "spatie/laravel-medialibrary": "1.5.x",
                 "zizaco/entrust": "1.4.x"
             },
             "type": "library",
@@ -271,20 +272,20 @@
                 "laravel 5",
                 "ui"
             ],
-            "time": "2015-05-25 12:26:15"
+            "time": "2015-05-26 12:11:12"
         },
         {
             "name": "eandraos/gaia-users",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-users.git",
-                "reference": "056cdeb49e816d4af5a57deda81d4fa2559218b9"
+                "reference": "1aa1998ab69451b4abed75fda27637416bc51278"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-users/zipball/056cdeb49e816d4af5a57deda81d4fa2559218b9",
-                "reference": "056cdeb49e816d4af5a57deda81d4fa2559218b9",
+                "url": "https://api.github.com/repos/elieandraos/gaia-users/zipball/1aa1998ab69451b4abed75fda27637416bc51278",
+                "reference": "1aa1998ab69451b4abed75fda27637416bc51278",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +316,7 @@
                 "permissions",
                 "roles"
             ],
-            "time": "2015-05-25 16:17:31"
+            "time": "2015-05-26 12:06:39"
         },
         {
             "name": "fzaninotto/faker",
@@ -952,6 +953,68 @@
             "time": "2015-03-29 14:01:43"
         },
         {
+            "name": "league/glide",
+            "version": "0.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/glide.git",
+                "reference": "57a10a4b8049f9efb7debb5cfd9718f897e205d3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/glide/zipball/57a10a4b8049f9efb7debb5cfd9718f897e205d3",
+                "reference": "57a10a4b8049f9efb7debb5cfd9718f897e205d3",
+                "shasum": ""
+            },
+            "require": {
+                "intervention/image": "~2.1",
+                "league/flysystem": "~1.0",
+                "php": ">=5.4",
+                "symfony/http-foundation": "~2.3",
+                "symfony/http-kernel": "~2.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/php-token-stream": ">=1.3.0",
+                "phpunit/phpunit": "~4.4"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Glide\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "homepage": "http://reinink.ca"
+                }
+            ],
+            "description": "Wonderfully easy on-demand image manipulation library with an HTTP based API.",
+            "homepage": "https://github.com/thephpleague/glide",
+            "keywords": [
+                "ImageMagick",
+                "editing",
+                "gd",
+                "image",
+                "imagick",
+                "league",
+                "manipulation",
+                "processing"
+            ],
+            "time": "2015-05-22 23:35:09"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.13.1",
             "source": {
@@ -1268,6 +1331,106 @@
                 "shell"
             ],
             "time": "2015-03-26 18:43:54"
+        },
+        {
+            "name": "spatie/laravel-glide",
+            "version": "2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-glide.git",
+                "reference": "66a48c7d78e3517a4d5a694761efa20b90c5521c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-glide/zipball/66a48c7d78e3517a4d5a694761efa20b90c5521c",
+                "reference": "66a48c7d78e3517a4d5a694761efa20b90c5521c",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "league/glide": "0.3.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "codeception/codeception": "2.*",
+                "mockery/mockery": "~0.9.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Spatie\\Glide": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be"
+                }
+            ],
+            "description": "A Glide Service Provider for Laravel",
+            "time": "2015-04-22 14:57:46"
+        },
+        {
+            "name": "spatie/laravel-medialibrary",
+            "version": "1.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-medialibrary.git",
+                "reference": "03db21fe46bebde85ba6d2752f0e484aca3d8a49"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/03db21fe46bebde85ba6d2752f0e484aca3d8a49",
+                "reference": "03db21fe46bebde85ba6d2752f0e484aca3d8a49",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0",
+                "spatie/laravel-glide": "~2.2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\MediaLibrary\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://murze.be",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Matthias De Winter",
+                    "email": "dewinter.matthias@gmail.com",
+                    "homepage": "https://github.com/MatthiasDeWinter",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Associate files with Eloquent models",
+            "homepage": "https://github.com/spatie/laravel-medialibrary",
+            "keywords": [
+                "cms",
+                "laravel",
+                "laravel-medialibrary",
+                "media",
+                "spatie"
+            ],
+            "time": "2015-05-22 20:26:08"
         },
         {
             "name": "swiftmailer/swiftmailer",
