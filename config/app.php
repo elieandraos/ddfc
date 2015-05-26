@@ -151,6 +151,8 @@ return [
 		 */
 		'Gaia\Ui\GaiaUiServiceProvider',
 		'Gaia\Users\GaiaUsersServiceProvider',
+		'Gaia\Seo\GaiaSeoServiceProvider',
+		'Gaia\News\GaiaNewsServiceProvider',
 
 		/**
 		 * Gaia required third party packages providers

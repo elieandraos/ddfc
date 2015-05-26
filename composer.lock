@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "126ad25548ed626087295aabf5d457ea",
+    "hash": "e8c75aeed1fee7af03eb6bb1d5992f6e",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -221,6 +221,94 @@
                 "string"
             ],
             "time": "2014-12-20 21:24:13"
+        },
+        {
+            "name": "eandraos/gaia-news",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elieandraos/gaia-news.git",
+                "reference": "09d79244566cc9c38b5c3856f826a85c3d1e4a0c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elieandraos/gaia-news/zipball/09d79244566cc9c38b5c3856f826a85c3d1e4a0c",
+                "reference": "09d79244566cc9c38b5c3856f826a85c3d1e4a0c",
+                "shasum": ""
+            },
+            "require": {
+                "eandraos/gaia-seo": "1.0.x",
+                "eandraos/gaia-ui": "1.1.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gaia\\News": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elie Andraos",
+                    "email": "elie@andraos.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "News admin module for the Gaia CMS project",
+            "keywords": [
+                "backend news",
+                "cms",
+                "gaia project",
+                "laravel 5"
+            ],
+            "time": "2015-04-16 14:29:19"
+        },
+        {
+            "name": "eandraos/gaia-seo",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elieandraos/gaia-seo.git",
+                "reference": "c1b0468d7d8b1a2d1087f38078247c5894076fa2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elieandraos/gaia-seo/zipball/c1b0468d7d8b1a2d1087f38078247c5894076fa2",
+                "reference": "c1b0468d7d8b1a2d1087f38078247c5894076fa2",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gaia\\Seo": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elie Andraos",
+                    "email": "elie@andraos.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Add SEO and sharing tags to pages/modules in the Gaia CMS",
+            "keywords": [
+                "cms",
+                "facebook",
+                "gaia project",
+                "laravel 5",
+                "meta tags",
+                "polymorphic",
+                "seo",
+                "twitter"
+            ],
+            "time": "2015-04-16 14:47:12"
         },
         {
             "name": "eandraos/gaia-ui",
