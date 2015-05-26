@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1e897eaabd81a724e698ada579ad3033",
+    "hash": "126ad25548ed626087295aabf5d457ea",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -272,6 +272,50 @@
                 "ui"
             ],
             "time": "2015-05-25 12:26:15"
+        },
+        {
+            "name": "eandraos/gaia-users",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elieandraos/gaia-users.git",
+                "reference": "056cdeb49e816d4af5a57deda81d4fa2559218b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elieandraos/gaia-users/zipball/056cdeb49e816d4af5a57deda81d4fa2559218b9",
+                "reference": "056cdeb49e816d4af5a57deda81d4fa2559218b9",
+                "shasum": ""
+            },
+            "require": {
+                "eandraos/gaia-ui": "1.1.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gaia\\Users": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elie Andraos",
+                    "email": "elie@andraos.org"
+                }
+            ],
+            "description": "Users management module for the Gaia CMS",
+            "keywords": [
+                "backend users",
+                "cms",
+                "gaia project",
+                "laravel 5",
+                "permissions",
+                "roles"
+            ],
+            "time": "2015-05-25 16:17:31"
         },
         {
             "name": "fzaninotto/faker",

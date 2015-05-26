@@ -150,6 +150,7 @@ return [
 		 * Gaia CMS packages providers
 		 */
 		'Gaia\Ui\GaiaUiServiceProvider',
+		'Gaia\Users\GaiaUsersServiceProvider',
 
 		/**
 		 * Gaia required third party packages providers
