@@ -4,13 +4,13 @@
 	</button>
 </a>
 
-
-<a href="{{ route('admin.users.permissions', $user->id) }}">
-	<button type="button" class="btn btn-info btn-trans btn-xs btn-action " data-toggle="tooltip" data-placement="top" title="Manage Permissions">
-		<i class="fa fa-wrench"></i>
-	</button>
-</a>
-
+@if(!$user->is('superadmin'))
+	<a href="{{ route('admin.users.permissions', $user->id) }}">
+		<button type="button" class="btn btn-info btn-trans btn-xs btn-action " data-toggle="tooltip" data-placement="top" title="Manage Permissions">
+			<i class="fa fa-wrench"></i>
+		</button>
+	</a>
+@endif
 
 {!! Form::model($user, ['data-remote' => true, 'data-callback' => 'removeTableRow', 'class' => 'remote-form', 'route' => ['admin.users.delete', $user->id]]) !!}
 	<a href="#">

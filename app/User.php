@@ -34,12 +34,34 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 	protected $hidden = ['password', 'remember_token'];
 
 
+	/**
+	 * Get the user role object
+	 * @return type
+	 */
 	public function getRole()
 	{
 		if($this->roles)
 			return $this->roles[0];
 
 		return null;
+	}
+
+
+	/**
+	 * Checks if the use is('superadmin') or is('editor') or is('administrator')
+	 * @param type $rolename 
+	 * @return type
+	 */
+	public function is($rolename)
+	{
+		$r = $this->getRole()->name;
+		$r = explode('-', $r);
+		$r = ucwords($r[0]);
+
+		if($r == ucwords($rolename))
+			return true;
+
+		return false;
 	}
 
 }
