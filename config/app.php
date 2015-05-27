@@ -160,7 +160,6 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
-		'Intervention\Image\ImageServiceProvider',
 		'Spatie\MediaLibrary\MediaLibraryServiceProvider'
 
 	],
@@ -214,7 +213,6 @@ return [
 		'Html' => 'Illuminate\Html\HtmlFacade',
 		'Flash' => 'Laracasts\Flash\Flash',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
-		'Image' => 'Intervention\Image\Facades\Image',
 		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
 
 	],
