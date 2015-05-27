@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e8c75aeed1fee7af03eb6bb1d5992f6e",
+    "hash": "19594065e460d1e33065cb601ea9f4bd",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -265,6 +265,51 @@
                 "laravel 5"
             ],
             "time": "2015-05-27 12:59:25"
+        },
+        {
+            "name": "eandraos/gaia-pages",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elieandraos/gaia-pages.git",
+                "reference": "9f6634e10f6ac931dc1bb87d9ef5756cf65e55ed"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/9f6634e10f6ac931dc1bb87d9ef5756cf65e55ed",
+                "reference": "9f6634e10f6ac931dc1bb87d9ef5756cf65e55ed",
+                "shasum": ""
+            },
+            "require": {
+                "eandraos/gaia-seo": "1.0.x",
+                "eandraos/gaia-ui": "1.1.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gaia\\Pages": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elie Andraos",
+                    "email": "elie@andraos.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Pages module for the Gaia CMS project",
+            "keywords": [
+                "backend pages",
+                "cms",
+                "gaia project",
+                "laravel 5",
+                "page templates"
+            ],
+            "time": "2015-05-06 15:45:20"
         },
         {
             "name": "eandraos/gaia-seo",

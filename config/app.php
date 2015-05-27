@@ -153,6 +153,7 @@ return [
 		'Gaia\Users\GaiaUsersServiceProvider',
 		'Gaia\Seo\GaiaSeoServiceProvider',
 		'Gaia\News\GaiaNewsServiceProvider',
+		'Gaia\Pages\GaiaPagesServiceProvider',
 
 		/**
 		 * Gaia required third party packages providers
