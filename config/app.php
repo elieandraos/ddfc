@@ -161,7 +161,8 @@ return [
 		'Illuminate\Html\HtmlServiceProvider',
 		'Laracasts\Flash\FlashServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
-		'Spatie\MediaLibrary\MediaLibraryServiceProvider'
+		'Spatie\MediaLibrary\MediaLibraryServiceProvider',
+		'Vinkla\Translator\TranslatorServiceProvider'
 
 	],
 
