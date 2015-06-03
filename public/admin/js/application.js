@@ -9,6 +9,7 @@ var app = function() {
         datepickers();
         slugify();
         handleRemoteForms();
+        toggleTranslate();
     };
 
     //set up tooltips
@@ -87,6 +88,15 @@ var app = function() {
     };
     //End functions
 
+    //handle dropdown language change when translating content
+    var toggleTranslate = function()
+    {
+        $('.toggle-language').change(function(){
+             var _locale = $(this).val();
+             var _url = $("#translate-url").val() + "/" + _locale;
+             window.location = _url;
+        })
+    }
 
     //return functions
     return {
