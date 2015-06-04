@@ -162,7 +162,8 @@ return [
 		'Laracasts\Flash\FlashServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Spatie\MediaLibrary\MediaLibraryServiceProvider',
-		'Vinkla\Translator\TranslatorServiceProvider'
+		'Vinkla\Translator\TranslatorServiceProvider',
+		'Intervention\Image\ImageServiceProvider'
 
 	],
 
@@ -216,6 +217,7 @@ return [
 		'Flash' => 'Laracasts\Flash\Flash',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
+		'Image' => 'Intervention\Image\Facades\Image'
 
 	],
 

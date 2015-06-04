@@ -224,16 +224,16 @@
         },
         {
             "name": "eandraos/gaia-news",
-            "version": "1.0.6",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-news.git",
-                "reference": "4b9d521ca377be5b705494e9db656d68f248460c"
+                "reference": "88643cac61b322d62e0fe69f406f496fce8945c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-news/zipball/4b9d521ca377be5b705494e9db656d68f248460c",
-                "reference": "4b9d521ca377be5b705494e9db656d68f248460c",
+                "url": "https://api.github.com/repos/elieandraos/gaia-news/zipball/88643cac61b322d62e0fe69f406f496fce8945c5",
+                "reference": "88643cac61b322d62e0fe69f406f496fce8945c5",
                 "shasum": ""
             },
             "require": {
@@ -264,7 +264,7 @@
                 "gaia project",
                 "laravel 5"
             ],
-            "time": "2015-05-27 12:59:25"
+            "time": "2015-06-04 11:47:28"
         },
         {
             "name": "eandraos/gaia-pages",
@@ -313,16 +313,16 @@
         },
         {
             "name": "eandraos/gaia-seo",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-seo.git",
-                "reference": "c1b0468d7d8b1a2d1087f38078247c5894076fa2"
+                "reference": "30c70500288fb77a5a4e23806817aed64cd3520f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-seo/zipball/c1b0468d7d8b1a2d1087f38078247c5894076fa2",
-                "reference": "c1b0468d7d8b1a2d1087f38078247c5894076fa2",
+                "url": "https://api.github.com/repos/elieandraos/gaia-seo/zipball/30c70500288fb77a5a4e23806817aed64cd3520f",
+                "reference": "30c70500288fb77a5a4e23806817aed64cd3520f",
                 "shasum": ""
             },
             "type": "library",
@@ -353,7 +353,7 @@
                 "seo",
                 "twitter"
             ],
-            "time": "2015-04-16 14:47:12"
+            "time": "2015-06-04 11:45:37"
         },
         {
             "name": "eandraos/gaia-ui",
@@ -1467,16 +1467,16 @@
         },
         {
             "name": "spatie/laravel-glide",
-            "version": "2.2.2",
+            "version": "2.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-glide.git",
-                "reference": "66a48c7d78e3517a4d5a694761efa20b90c5521c"
+                "reference": "0597557ffa2ed30c600ade87c581bbe44524c0b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-glide/zipball/66a48c7d78e3517a4d5a694761efa20b90c5521c",
-                "reference": "66a48c7d78e3517a4d5a694761efa20b90c5521c",
+                "url": "https://api.github.com/repos/spatie/laravel-glide/zipball/0597557ffa2ed30c600ade87c581bbe44524c0b2",
+                "reference": "0597557ffa2ed30c600ade87c581bbe44524c0b2",
                 "shasum": ""
             },
             "require": {
@@ -1505,20 +1505,21 @@
                 }
             ],
             "description": "A Glide Service Provider for Laravel",
-            "time": "2015-04-22 14:57:46"
+            "homepage": "https://github.com/spatie/laravel-glide",
+            "time": "2015-06-01 21:17:43"
         },
         {
             "name": "spatie/laravel-medialibrary",
-            "version": "1.5.2",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-medialibrary.git",
-                "reference": "03db21fe46bebde85ba6d2752f0e484aca3d8a49"
+                "reference": "97f5f5ef6815a2a908a5a72c39f372de03d4ad6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/03db21fe46bebde85ba6d2752f0e484aca3d8a49",
-                "reference": "03db21fe46bebde85ba6d2752f0e484aca3d8a49",
+                "url": "https://api.github.com/repos/spatie/laravel-medialibrary/zipball/97f5f5ef6815a2a908a5a72c39f372de03d4ad6a",
+                "reference": "97f5f5ef6815a2a908a5a72c39f372de03d4ad6a",
                 "shasum": ""
             },
             "require": {
@@ -1563,7 +1564,7 @@
                 "media",
                 "spatie"
             ],
-            "time": "2015-05-22 20:26:08"
+            "time": "2015-06-03 15:53:30"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2772,16 +2773,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "2.1.2",
+            "version": "2.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "6b7d2094ca2a685a2cad846cb7cd7a30e8b9470f"
+                "reference": "28a6b34e91d789b2608072ab3c82eaae7cdb973c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/6b7d2094ca2a685a2cad846cb7cd7a30e8b9470f",
-                "reference": "6b7d2094ca2a685a2cad846cb7cd7a30e8b9470f",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/28a6b34e91d789b2608072ab3c82eaae7cdb973c",
+                "reference": "28a6b34e91d789b2608072ab3c82eaae7cdb973c",
                 "shasum": ""
             },
             "require": {
@@ -2830,7 +2831,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-06-01 07:35:26"
+            "time": "2015-06-03 07:01:01"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3018,16 +3019,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "4.6.9",
+            "version": "4.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "816d12536a7a032adc3b68737f82cfbbf98b79c1"
+                "reference": "7b5fe98b28302a8b25693b2298bca74463336975"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/816d12536a7a032adc3b68737f82cfbbf98b79c1",
-                "reference": "816d12536a7a032adc3b68737f82cfbbf98b79c1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7b5fe98b28302a8b25693b2298bca74463336975",
+                "reference": "7b5fe98b28302a8b25693b2298bca74463336975",
                 "shasum": ""
             },
             "require": {
@@ -3086,7 +3087,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2015-05-29 06:00:03"
+            "time": "2015-06-03 05:03:30"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
