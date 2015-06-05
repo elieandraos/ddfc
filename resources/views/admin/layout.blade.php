@@ -17,6 +17,7 @@
     <link href="/admin/css/bootstrap-datepicker3.min.css" rel="stylesheet" />
     <link href="/admin/css/bootstrap-editable.css" rel="stylesheet" />
     <link href="/admin/css/sweet-alert.css" rel="stylesheet" />
+    <link href="/admin/css/nestable.css" rel="stylesheet" />
     <link href="/admin/css/main.css" rel="stylesheet" />
     <link href="/admin/css/template-builder.css" rel="stylesheet" />
 
@@ -102,6 +103,7 @@
     <script type="text/javascript" src="/admin/js/bootstrap-editable.min.js"></script>
     <script type="text/javascript" src="/admin/js/jquery.slugify.js"></script>
     <script type="text/javascript" src="/admin/js/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="/admin/js/jquery.nestable.js"></script>
     <!-- Custom Scripts -->
     <script type="text/javascript" src="/admin/js/application.js"></script>
     <script type="text/javascript" src="/admin/js/template.js"></script>

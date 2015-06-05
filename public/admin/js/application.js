@@ -10,6 +10,7 @@ var app = function() {
         slugify();
         handleRemoteForms();
         toggleTranslate();
+        initNestedCategories();
     };
 
     //set up tooltips
@@ -86,7 +87,21 @@ var app = function() {
             })
         })
     };
-    //End functions
+
+
+    var initNestedCategories = function()
+    {
+        if($("#nestable").length)
+        {
+            $('#nestable').nestable({
+                'expandBtnHTML': '-',
+                'collapseBtnHTML': '+',
+                'group': 1,
+                'listNodeName': 'ul' 
+            })
+            .on('change', sortCategories);
+        }   
+    }
 
     //handle dropdown language change when translating content
     var toggleTranslate = function()
@@ -150,3 +165,47 @@ function customConfirm(elem, prompt_title, prompt_text, confirm_title, confirm_t
     });
        
 }
+
+
+/*******************************
+ * Nested Categories Functions *
+ *******************************/
+
+ // add a category
+function updateNewsCategoriesList(response, form)
+{
+    if(response.errors)
+    {
+        var html = "";
+        for(var key in response.errors)
+            html += "<li>" + response.errors["name"] + "</li>";
+        $("#frm-add-alert ul").html(html);
+        $("#frm-add-alert").show();
+        return;
+    }
+
+    $("#news-category-list").html(response.data);
+    $('input[name="name"]').val('');
+    initNestedNewsCategories();
+}
+
+function removeNewsCategory(response, form)
+{
+    $(form).closest('li').fadeOut(750);
+}
+
+function sortCategories(e)
+{
+   var str = window.JSON.stringify($('#nestable').nestable('serialize'));
+   var request_url = $("#sort-url").val();
+ 
+   $.ajax({
+        url: request_url,
+        type: "POST",
+        data: { "json_string" : str},
+        success: function(data){
+            // ...
+        }
+    })
+}
+
