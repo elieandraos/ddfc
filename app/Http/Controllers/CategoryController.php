@@ -11,9 +11,8 @@ use Illuminate\Http\Request;
 //use Illuminate\Http\Request;
 //use Illuminate\Routing\Controller;
 
-//use Gaia\News\NewsRequest;
+
 use Gaia\Repositories\CategoryRepositoryInterface;
-//use Gaia\Services\NewsService;
 use App\Models\Category;
 use Redirect;
 use Auth;
@@ -62,35 +61,17 @@ class CategoryController extends Controller {
 
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		die('s');
-	}
-
-	/**
 	 * Store a newly created resource in storage.
 	 *
 	 * @return Response
 	 */
 	public function store()
 	{
-		//
+		$input = Input::all();
+		Category::create($input);
+		return Redirect::route('admin.categories.list');
 	}
 
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($id)
-	{
-		//
-	}
 
 	/**
 	 * Show the form for editing the specified resource.
@@ -98,9 +79,9 @@ class CategoryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit(Category $category)
 	{
-		//
+		return view('admin.categories.edit')->withCategory($category);
 	}
 
 	/**
@@ -109,9 +90,11 @@ class CategoryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Category $category)
 	{
-		//
+		$input = Input::all();
+		$category->update($input);
+		return Redirect::route('admin.categories.list');
 	}
 
 	/**

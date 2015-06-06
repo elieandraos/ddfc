@@ -32,8 +32,17 @@
 		</div>
 	</div>
 
-	<div class="col-sm-4 col-sm-offset-1">
-		<p>Create a new category:</p>
+	<div class="col-sm-5">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Add New Category</h3>
+			</div>
+			<div class="panel-body">
+				{!! Form::open( ['route' => ['admin.categories.store']]) !!}
+					@include('admin.categories._form')
+				{!! Form::close() !!}
+			</div>
+		</div>
 	</div>
 </div>
 

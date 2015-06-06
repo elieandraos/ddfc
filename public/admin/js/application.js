@@ -171,24 +171,6 @@ function customConfirm(elem, prompt_title, prompt_text, confirm_title, confirm_t
  * Nested Categories Functions *
  *******************************/
 
- // add a category
-function updateNewsCategoriesList(response, form)
-{
-    if(response.errors)
-    {
-        var html = "";
-        for(var key in response.errors)
-            html += "<li>" + response.errors["name"] + "</li>";
-        $("#frm-add-alert ul").html(html);
-        $("#frm-add-alert").show();
-        return;
-    }
-
-    $("#news-category-list").html(response.data);
-    $('input[name="name"]').val('');
-    initNestedNewsCategories();
-}
-
 function removeNewsCategory(response, form)
 {
     $(form).closest('li').fadeOut(750);

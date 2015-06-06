@@ -25,8 +25,7 @@ class Category extends Node implements TranslatableContract {
 	  $data['id']    = $category->id;
 	  $data['title']  = $category->title;
 	 
-	  // $data['url']   = route('application.{application}.news.index', [$category->application->slug, 'category' => $category->id]);
-	  //$data['title'] = "This category has {$count} news.";
+	  $data['edit_url']   = route('admin.categories.edit', $category->id);
 	 
 	  echo "<li class='dd-item dd3-item' data-id='{$category->id}'>";
 	  echo "<div class='dd-handle'><i class='fa fa-bars'></i></div>";
@@ -69,10 +68,10 @@ class Category extends Node implements TranslatableContract {
 	{
 		if(is_array($categories))
 		{
-			
 			foreach($categories as $cat)
 			{
 				$node = Category::find($cat['id']);
+				//$node->descendants->linknodes();
 				
 				//loop recursively through the children
 				if(isset($cat['children']) && is_array($cat['children']))
