@@ -34,7 +34,7 @@ class Category extends Node implements TranslatableContract {
 	  
 	  if ( $category->hasChildren() ) {
 	    echo "<ul class='dd-list'>";
-	    	foreach($category->children as $child) $this->renderNode($child);
+	    	foreach($category->getChildren() as $child) $this->renderNode($child);
 	    echo "</ul>";
 	  }
 	  echo "</li>";
@@ -42,29 +42,67 @@ class Category extends Node implements TranslatableContract {
 
 
 	/**
-	 * Updates the nodes order
+	 * Resets all the nodes as roots
 	 * @param type $categories 
 	 * @return type
-	 */
-	public static function build($categories)
+	 */	
+	public static function updateTreeRoots($categories)
 	{
 		if(is_array($categories))
 		{
 			foreach($categories as $cat)
 			{
-				$parent = Category::find($cat['id']);
-				if(is_array($cat['children']))
+				$node = Category::find($cat['id']);
+				$node->parent_id = null;
+				$node->save();
+			}
+		}
+	}
+
+	
+	/**
+	 * Rebuilds the tree: update descendants and their order
+	 * @param type $categories 
+	 * @return type
+	 */
+	public static function rebuildTree($categories)
+	{
+		if(is_array($categories))
+		{
+			
+			foreach($categories as $cat)
+			{
+				$node = Category::find($cat['id']);
+				
+				//loop recursively through the children
+				if(isset($cat['children']) && is_array($cat['children']))
 				{
 					foreach($cat['children'] as $child)
 					{
+						//append the children to their (old/new)parents
 						$descendant = Category::find($child['id']);
-						$descendant->parent_id = $parent->id;
-						$descendant->save();
+						$node->append($descendant);
+
+						//shift the descendants to the bottom to get the right order at the end
+						$shift = count($descendant->getSiblings());
+						$descendant->down($shift);
+
+						Category::rebuildTree($cat['children']);
 					}
 				}
 			}
 		}
 	}
 
+
+	/**
+	 * a method to get the children by order
+	 * @param type $categories 
+	 * @return type
+	 */	
+	public function getChildren()
+	{
+		return $this->children()->orderBy('_lft')->get();
+	}
 
 }

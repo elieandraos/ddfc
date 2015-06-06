@@ -38,7 +38,7 @@ class CategoryController extends Controller {
 	 */
 	public function index()
 	{
-		$sortUrl = route('admin.categories.sort');
+		$sortUrl = route('admin.categories.sort');	
 		$categories = $this->categoryRepos->getRoots();
 		return view('admin.categories.index')->withCategories($categories)->withSortUrl($sortUrl);
 	}
@@ -52,8 +52,12 @@ class CategoryController extends Controller {
 	{
 		$input = Input::all();
 		$json = $input['json_string'];
-		$cats = json_decode($json, true);
-		Category::build($cats);
+		$categories = json_decode($json, true);
+
+		//update tree Roots
+		Category::updateTreeRoots($categories);
+		//rebuild tree to update descandants and order them
+		Category::rebuildTree($categories);
 	}
 
 

@@ -21,7 +21,7 @@ class CategoryRepository implements CategoryRepositoryInterface
 	 */
 	public function getRoots()
 	{
-		return Category::whereParentId(null)->get();
+		return Category::defaultOrder()->whereParentId(null)->get();
 	}
 
 
