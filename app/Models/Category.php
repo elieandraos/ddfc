@@ -18,12 +18,13 @@ class Category extends Node implements TranslatableContract {
 	/***************
 	 * NESTED SETS *
 	 ***************/
-	public function renderNode($category) 
+	public function renderNode($category, $locale = 'en') 
 	{
 	  $data = [];
 	  $data['category']    = $category;
 	  $data['id']    = $category->id;
 	  $data['title']  = $category->title;
+	  $data['locale'] = $locale;
 	 
 	  $data['edit_url']   = route('admin.categories.edit', $category->id);
 	 
@@ -33,7 +34,7 @@ class Category extends Node implements TranslatableContract {
 	  
 	  if ( $category->hasChildren() ) {
 	    echo "<ul class='dd-list'>";
-	    	foreach($category->getChildren() as $child) $this->renderNode($child);
+	    	foreach($category->getChildren() as $child) $this->renderNode($child, $locale);
 	    echo "</ul>";
 	  }
 	  echo "</li>";

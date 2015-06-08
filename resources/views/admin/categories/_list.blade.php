@@ -5,7 +5,7 @@
 	 <div class="dd" id="nestable">
         <ul class="dd-list">
 			@foreach($categories as $category)
-				{{ $category->renderNode($category) }}
+				{{ $category->renderNode($category, $locale) }}
 			@endforeach
 		</ul>
 	</div>

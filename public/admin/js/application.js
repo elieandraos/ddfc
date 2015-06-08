@@ -171,7 +171,7 @@ function customConfirm(elem, prompt_title, prompt_text, confirm_title, confirm_t
  * Nested Categories Functions *
  *******************************/
 
-function removeNewsCategory(response, form)
+function removeCategory(response, form)
 {
     $(form).closest('li').fadeOut(750);
 }
