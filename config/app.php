@@ -154,6 +154,7 @@ return [
 		'Gaia\Seo\GaiaSeoServiceProvider',
 		'Gaia\News\GaiaNewsServiceProvider',
 		'Gaia\Pages\GaiaPagesServiceProvider',
+		'Gaia\Categories\GaiaCategoriesServiceProvider',
 
 		/**
 		 * Gaia required third party packages providers
@@ -220,5 +221,7 @@ return [
 		'Image' => 'Intervention\Image\Facades\Image'
 
 	],
+
+	'newsCategoryRootId' => 1
 
 ];

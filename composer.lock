@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7f745d988ca3bd2145d2fde7f6180e4d",
+    "hash": "4700f6f9f9d91d54e3749657de051ed3",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -223,6 +223,50 @@
             "time": "2014-12-20 21:24:13"
         },
         {
+            "name": "eandraos/gaia-categories",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elieandraos/gaia-categories.git",
+                "reference": "ddfbcbe16cbb2ca99caf2580c456f4aea0220281"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elieandraos/gaia-categories/zipball/ddfbcbe16cbb2ca99caf2580c456f4aea0220281",
+                "reference": "ddfbcbe16cbb2ca99caf2580c456f4aea0220281",
+                "shasum": ""
+            },
+            "require": {
+                "eandraos/gaia-ui": "1.1.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gaia\\Categories": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elie Andraos",
+                    "email": "elie@andraos.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Categories admin module for the Gaia CMS project",
+            "keywords": [
+                "backend categories",
+                "cms",
+                "gaia project",
+                "laravel 5",
+                "nested"
+            ],
+            "time": "2015-06-08 12:30:45"
+        },
+        {
             "name": "eandraos/gaia-news",
             "version": "1.0.8",
             "source": {
@@ -357,16 +401,16 @@
         },
         {
             "name": "eandraos/gaia-ui",
-            "version": "1.1.16",
+            "version": "1.1.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-ui.git",
-                "reference": "ae9f4fcb9a9f0c4a8c791f9af607632ba78653ca"
+                "reference": "03b63307290931f18e0ab00bc1fdba2a7c0a0aef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-ui/zipball/ae9f4fcb9a9f0c4a8c791f9af607632ba78653ca",
-                "reference": "ae9f4fcb9a9f0c4a8c791f9af607632ba78653ca",
+                "url": "https://api.github.com/repos/elieandraos/gaia-ui/zipball/03b63307290931f18e0ab00bc1fdba2a7c0a0aef",
+                "reference": "03b63307290931f18e0ab00bc1fdba2a7c0a0aef",
                 "shasum": ""
             },
             "require": {
@@ -405,7 +449,7 @@
                 "laravel 5",
                 "ui"
             ],
-            "time": "2015-06-03 10:01:25"
+            "time": "2015-06-08 11:31:15"
         },
         {
             "name": "eandraos/gaia-users",
@@ -1004,19 +1048,20 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "3c2400a99ccc3be6884d40361890010449c6b447"
+                "reference": "56862959b45131ad33e5a7727a25db19f2cf090b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/3c2400a99ccc3be6884d40361890010449c6b447",
-                "reference": "3c2400a99ccc3be6884d40361890010449c6b447",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/56862959b45131ad33e5a7727a25db19f2cf090b",
+                "reference": "56862959b45131ad33e5a7727a25db19f2cf090b",
                 "shasum": ""
             },
             "require": {
+                "ext-mbstring": "*",
                 "php": ">=5.4.0"
             },
             "require-dev": {
@@ -1083,7 +1128,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2015-03-29 14:01:43"
+            "time": "2015-06-07 21:27:37"
         },
         {
             "name": "league/glide",
@@ -1568,23 +1613,23 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v5.4.0",
+            "version": "v5.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "31454f258f10329ae7c48763eb898a75c39e0a9f"
+                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/31454f258f10329ae7c48763eb898a75c39e0a9f",
-                "reference": "31454f258f10329ae7c48763eb898a75c39e0a9f",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/0697e6aa65c83edf97bb0f23d8763f94e3f11421",
+                "reference": "0697e6aa65c83edf97bb0f23d8763f94e3f11421",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1"
+                "mockery/mockery": "~0.9.1,<0.9.4"
             },
             "type": "library",
             "extra": {
@@ -1613,10 +1658,11 @@
             "description": "Swiftmailer, free feature-rich PHP mailer",
             "homepage": "http://swiftmailer.org",
             "keywords": [
+                "email",
                 "mail",
                 "mailer"
             ],
-            "time": "2015-03-14 06:06:39"
+            "time": "2015-06-06 14:19:39"
         },
         {
             "name": "symfony/console",
