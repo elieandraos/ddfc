@@ -32,6 +32,11 @@ class PermissionTableSeeder extends Seeder {
 			"description" => "Ability to view all news."
 		]);
 
+		Permission::create([
+			"name" => "translate-news",
+			"display_name" => "Translate news",
+			"description" => "Ability to translate news to other languages."
+		]);
 
 		/** Page Templates **/
 		Permission::create([
@@ -52,7 +57,6 @@ class PermissionTableSeeder extends Seeder {
 			"description" => "Ability to view all page templates."
 		]);
 
-
 		/** Pages **/
 		Permission::create([
 			"name" => "create-edit-pages",
@@ -70,7 +74,20 @@ class PermissionTableSeeder extends Seeder {
 			"name" => "list-pages",
 			"display_name" => "View all pages",
 			"description" => "Ability to view all pages."
-		]);		
+		]);	
+
+		Permission::create([
+			"name" => "translate-pages",
+			"display_name" => "Translate pages",
+			"description" => "Ability to translate pages to other languages."
+		]);			
+
+		/** Categories **/
+		Permission::create([
+			"name" => "manage-categories",
+			"display_name" => "Manage categories",
+			"description" => "Ability to add/edit/delete/translate categories."
+		]);	
 	}
 
 

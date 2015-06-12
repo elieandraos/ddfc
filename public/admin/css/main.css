@@ -180,7 +180,7 @@ select.form-control { height: 36px;}
 }
 #header .user-nav {
   float: right;
-  padding-top: 5px;
+  padding-top: 15px;
   padding-right: 20px;
 }
 #header .user-nav ul li {
@@ -395,6 +395,21 @@ select.form-control { height: 36px;}
   margin: -2px 0 0;
   padding: 0;
 }
+.sidebar #user-profile
+{
+  padding: 20px;
+  color: #aeb2b7;
+  text-align: center;
+  text-transform: lowercase;
+  padding-left: 0;
+}
+.sidebar #user-profile i 
+{
+  font-size: 64px;
+  color:#999;
+  display: block;
+}
+
 .user-nav ul{
     margin-bottom: 0px;
 }
@@ -569,6 +584,7 @@ select.form-control { height: 36px;}
   -ms-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background: #f1f2f7;
+  min-height: 75%;
 }
 .main-content-wrapper #main-content {
   border-top: solid thin #e7e8ec;

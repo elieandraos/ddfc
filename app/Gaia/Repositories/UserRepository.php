@@ -122,8 +122,8 @@ class UserRepository extends DbRepository implements UserRepositoryInterface
 			return null;
 
 		$perms = ['editor', 'administrator'];
-		$perms['editor'] = ['create-edit-news', 'list-news', 'create-edit-pages', 'list-pages'];
-		$perms['administrator'] = ['create-edit-news', 'delete-news', 'list-news', 'create-edit-page-templates', 'delete-page-templates', 'list-page-templates', 'create-edit-pages', 'list-pages', 'delete-pages'];
+		$perms['editor'] = ['create-edit-news', 'list-news', 'create-edit-pages', 'list-pages', 'translate-news', 'translate-pages'];
+		$perms['administrator'] = ['create-edit-news', 'delete-news', 'list-news', 'translate-news', 'create-edit-page-templates', 'delete-page-templates', 'list-page-templates', 'create-edit-pages', 'list-pages', 'delete-pages', 'translate-pages', 'manage-categories'];
 		
 		if($rolename =="editor")
 			$permissions = Permission::whereIn('name', $perms['editor'])->get();

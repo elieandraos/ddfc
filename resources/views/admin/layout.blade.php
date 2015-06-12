@@ -23,6 +23,7 @@
 
 </head>
 <body class="animated fadeIn">
+
     <section id="container">
         <!-- header -->
         <header id="header">
@@ -35,23 +36,35 @@
             <!-- user dropdown -->
             <div class="user-nav">
                 <ul>
-                    <li class="dropdown settings">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            John Doe <i class="fa fa-angle-down"></i>
-                        </a>
-                        <ul class="dropdown-menu animated fadeInDown">
-                            <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-                            <li><a href="#"><i class="fa fa-calendar"></i> Calendar</a></li>
-                            <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge badge-danager" id="user-inbox">5</span></a></li>
-                            <li><a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a></li>
-                        </ul>
+                    <li class="settings">
+                        <a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a>
                     </li>
                 </ul>
             </div>
         </header>
 
+        @if (Session::has('flash_notification.message'))
+            <script type="text/javascript">
+                window.onload = function() {
+                  
+                        $.growl({
+                            icon: "icon icon-comment-alt",
+                            message: " {{ Session::get('flash_notification.message') }}"
+                        }, {
+                            delay: 3000,
+                            type: "success"
+                        });
+                };
+            </script>
+        @endif
+
         <!--sidebar-->
         <aside class="sidebar">
+
+            <div id="user-profile">
+                <i class="fa fa-user"></i>
+                {!! Auth::user()->name !!}
+            </div>
             <div id="leftside-navigation" class="nano">
                 <ul class="nano-content">
                     <li class="active">
@@ -104,6 +117,7 @@
     <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/admin/js/bootstrap-datepicker.min.js"></script>
     <script type="text/javascript" src="/admin/js/bootstrap-editable.min.js"></script>
+    <script type="text/javascript" src="/admin/js/bootstrap-growl.min.js"></script>
     <script type="text/javascript" src="/admin/js/jquery.slugify.js"></script>
     <script type="text/javascript" src="/admin/js/sweet-alert.min.js"></script>
     <script type="text/javascript" src="/admin/js/jquery.nestable.js"></script>
