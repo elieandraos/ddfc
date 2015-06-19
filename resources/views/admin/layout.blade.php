@@ -89,7 +89,10 @@
                     </li>
                     <li class="">
                         <a href="/admin/categories"><i class="fa fa-sitemap"></i><span>Categories</span></a>
-                    </li>           
+                    </li> 
+                    <li>
+                        <a href="/admin/post-types"><i class="fa fa-beer"></i><span>Post Types</span></a>
+                    </li>          
                     <li class="sub-menu">
                         <a href="javascript:void(0);"><i class="fa fa-user"></i><span>Users</span><i class="arrow fa fa-angle-right pull-right"></i></a>
                         <ul>
