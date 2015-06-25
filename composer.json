@@ -10,8 +10,6 @@
 		"eandraos/gaia-users": "~1.0",
 		"eandraos/gaia-news": "~1.0",
 		"eandraos/gaia-pages": "~1.0",
-		"vinkla/translator": "~2.2",
-		"kalnoy/nestedset": "~2.4",
 		"eandraos/gaia-categories": "~1.1"
 	},
 	"require-dev": {

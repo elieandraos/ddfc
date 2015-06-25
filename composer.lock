@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4700f6f9f9d91d54e3749657de051ed3",
+    "hash": "a81b42f9b05eadb5511f872e658f4f59",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -313,16 +313,16 @@
         },
         {
             "name": "eandraos/gaia-pages",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-pages.git",
-                "reference": "18be2a5c059e0443f6b18ff8cad9c781a70b98bd"
+                "reference": "025de028b94159b7366063a6dd0c1b75ef9f5568"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/18be2a5c059e0443f6b18ff8cad9c781a70b98bd",
-                "reference": "18be2a5c059e0443f6b18ff8cad9c781a70b98bd",
+                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/025de028b94159b7366063a6dd0c1b75ef9f5568",
+                "reference": "025de028b94159b7366063a6dd0c1b75ef9f5568",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +354,7 @@
                 "laravel 5",
                 "page templates"
             ],
-            "time": "2015-05-27 20:23:59"
+            "time": "2015-06-25 13:53:44"
         },
         {
             "name": "eandraos/gaia-seo",
