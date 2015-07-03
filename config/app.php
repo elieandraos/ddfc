@@ -155,6 +155,8 @@ return [
 		'Gaia\News\GaiaNewsServiceProvider',
 		'Gaia\Pages\GaiaPagesServiceProvider',
 		'Gaia\Categories\GaiaCategoriesServiceProvider',
+		'Gaia\Posts\GaiaPostsServiceProvider',
+
 
 		/**
 		 * Gaia required third party packages providers
@@ -163,8 +165,7 @@ return [
 		'Laracasts\Flash\FlashServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Spatie\MediaLibrary\MediaLibraryServiceProvider',
-		'Vinkla\Translator\TranslatorServiceProvider',
-		'Intervention\Image\ImageServiceProvider'
+		'Vinkla\Translator\TranslatorServiceProvider'
 
 	],
 
@@ -217,11 +218,8 @@ return [
 		'Html' => 'Illuminate\Html\HtmlFacade',
 		'Flash' => 'Laracasts\Flash\Flash',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
-		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
-		'Image' => 'Intervention\Image\Facades\Image'
+		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade'
 
-	],
-
-	'newsCategoryRootId' => 1
+	]
 
 ];

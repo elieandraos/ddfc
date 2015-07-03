@@ -7,14 +7,14 @@ use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 use Vinkla\Translator\Translatable;
 use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
 
-class News extends Model implements MediaLibraryModelInterface, TranslatableContract {
+class Post extends Model implements MediaLibraryModelInterface, TranslatableContract {
 
 	use MediaLibraryModelTrait, Translatable;
 
-	protected $table = 'news';
-	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'published_at', 'category_id', 'is_featured'];
+	protected $table = 'post';
+	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'published_at', 'category_id', 'post_type_id'];
 	protected $translatedAttributes = ['title', 'excerpt', 'description', 'slug'];
-	protected $translator = 'App\Models\NewsTranslation';
+	protected $translator = 'App\Models\PostTranslation';
 	
 	
 	/**********************
@@ -25,6 +25,12 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	{
 		return $this->belongsTo('App\Models\Category');
 	}
+
+	public function postType()
+	{
+		return $this->belongsTo('App\Models\PostType');
+	}
+
 
 	/**
 	 * Morphing to Seo Model
@@ -39,7 +45,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	/******************
 	 * DATE FUNCTIONS *
 	 ******************/
-
+	
 	/**
 	 * published_at mutator: parse the date before saving the model 
 	 * @param type $date 
@@ -59,8 +65,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
     {
         return Carbon::parse($this->published_at)->diffForHumans();
     }
-
-
+    
     /**
      * Return the media collection name
      * @return type
@@ -69,12 +74,11 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
     {
     	return "collection-".$this->id;
     }
-
+   
 
     /*****************
 	 * MEDIA LINRARY *
 	 *****************/
-
     /**
      * Image profiles: list of resized images post uploading
      * @return type
@@ -88,23 +92,6 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	        'twitter'  => ['w'=>128, 'h'=>128],
 	        'thumb-xs' => ['w'=>60, 'h'=>60]
 	    ];
-	}  
-
-
-
-	/**
-	 * Returns the root category id configured for the news
-	 * @return type
-	 */
-	public static function getConfiguredRootCategory()
-	{
-		$obj = CategoryModules::where('is_news', '=', 1)->first();
-		
-		if(!$obj)
-			return null;
-
-		return $obj->category_id;
-	}  
-
+	}    
 
 }

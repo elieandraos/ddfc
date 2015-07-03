@@ -87,6 +87,8 @@
                             <li><a href="/admin/pages/templates/" ><i class="arrow fa fa-angle-right"></i>List Templates</a></li>
                         </ul>
                     </li>
+                    {!! $postTypesSubmenu !!}
+
                     <li class="">
                         <a href="/admin/categories"><i class="fa fa-sitemap"></i><span>Categories</span></a>
                     </li> 

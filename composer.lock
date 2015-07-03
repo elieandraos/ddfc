@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a81b42f9b05eadb5511f872e658f4f59",
+    "hash": "891e964c3e1d2320397bfc8a5a2b3446",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -313,16 +313,16 @@
         },
         {
             "name": "eandraos/gaia-pages",
-            "version": "1.0.8",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-pages.git",
-                "reference": "025de028b94159b7366063a6dd0c1b75ef9f5568"
+                "reference": "b0dbe85436d6d76d6ac9146a7dae8fa826162783"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/025de028b94159b7366063a6dd0c1b75ef9f5568",
-                "reference": "025de028b94159b7366063a6dd0c1b75ef9f5568",
+                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/b0dbe85436d6d76d6ac9146a7dae8fa826162783",
+                "reference": "b0dbe85436d6d76d6ac9146a7dae8fa826162783",
                 "shasum": ""
             },
             "require": {
@@ -354,7 +354,53 @@
                 "laravel 5",
                 "page templates"
             ],
-            "time": "2015-06-25 13:53:44"
+            "time": "2015-06-25 18:12:07"
+        },
+        {
+            "name": "eandraos/gaia-posts",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elieandraos/gaia-posts.git",
+                "reference": "338386705ae98a32b7002f605e6fc38a47174c0a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elieandraos/gaia-posts/zipball/338386705ae98a32b7002f605e6fc38a47174c0a",
+                "reference": "338386705ae98a32b7002f605e6fc38a47174c0a",
+                "shasum": ""
+            },
+            "require": {
+                "eandraos/gaia-seo": "1.0.x",
+                "eandraos/gaia-ui": "1.1.x"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Gaia\\Posts": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elie Andraos",
+                    "email": "elie@andraos.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Posts module for the Gaia CMS project",
+            "keywords": [
+                "backend pages",
+                "cms",
+                "custom post types",
+                "gaia project",
+                "laravel 5",
+                "posts"
+            ],
+            "time": "2015-06-29 12:53:53"
         },
         {
             "name": "eandraos/gaia-seo",
@@ -1316,21 +1362,21 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "1.19.0",
+            "version": "1.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "68868e0b02d2d803d0052a59d4e5003cccf87320"
+                "reference": "bfd3eaba109c9a2405c92174c8e17f20c2b9caf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/68868e0b02d2d803d0052a59d4e5003cccf87320",
-                "reference": "68868e0b02d2d803d0052a59d4e5003cccf87320",
+                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/bfd3eaba109c9a2405c92174c8e17f20c2b9caf3",
+                "reference": "bfd3eaba109c9a2405c92174c8e17f20c2b9caf3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0",
-                "symfony/translation": "~2.6"
+                "symfony/translation": "~2.6|~3.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "~4.0"
@@ -1359,7 +1405,7 @@
                 "datetime",
                 "time"
             ],
-            "time": "2015-05-09 03:23:44"
+            "time": "2015-06-25 04:19:39"
         },
         {
             "name": "nikic/php-parser",
