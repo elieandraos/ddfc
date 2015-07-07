@@ -269,16 +269,16 @@
         },
         {
             "name": "eandraos/gaia-news",
-            "version": "1.0.11",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-news.git",
-                "reference": "6c627d99d76442a87f61867b2ee88feb1c95ad56"
+                "reference": "c050208d5284de1ef8de5dc7437d4b32e8ffd897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-news/zipball/6c627d99d76442a87f61867b2ee88feb1c95ad56",
-                "reference": "6c627d99d76442a87f61867b2ee88feb1c95ad56",
+                "url": "https://api.github.com/repos/elieandraos/gaia-news/zipball/c050208d5284de1ef8de5dc7437d4b32e8ffd897",
+                "reference": "c050208d5284de1ef8de5dc7437d4b32e8ffd897",
                 "shasum": ""
             },
             "require": {
@@ -310,7 +310,7 @@
                 "gaia project",
                 "laravel 5"
             ],
-            "time": "2015-07-03 11:20:14"
+            "time": "2015-07-07 10:34:32"
         },
         {
             "name": "eandraos/gaia-pages",
@@ -359,16 +359,16 @@
         },
         {
             "name": "eandraos/gaia-posts",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-posts.git",
-                "reference": "124edd26f25a89c66446edfca4249ee341bab5be"
+                "reference": "29bf2b3be64f057edfa99e392dd38b2bcc52d4ae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-posts/zipball/124edd26f25a89c66446edfca4249ee341bab5be",
-                "reference": "124edd26f25a89c66446edfca4249ee341bab5be",
+                "url": "https://api.github.com/repos/elieandraos/gaia-posts/zipball/29bf2b3be64f057edfa99e392dd38b2bcc52d4ae",
+                "reference": "29bf2b3be64f057edfa99e392dd38b2bcc52d4ae",
                 "shasum": ""
             },
             "require": {
@@ -401,7 +401,7 @@
                 "laravel 5",
                 "posts"
             ],
-            "time": "2015-07-06 12:06:04"
+            "time": "2015-07-07 10:34:56"
         },
         {
             "name": "eandraos/gaia-seo",

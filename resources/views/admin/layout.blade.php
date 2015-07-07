@@ -127,6 +127,7 @@
     <script type="text/javascript" src="/admin/js/jquery.slugify.js"></script>
     <script type="text/javascript" src="/admin/js/sweet-alert.min.js"></script>
     <script type="text/javascript" src="/admin/js/jquery.nestable.js"></script>
+    <script type="text/javascript" src="/admin/js/nicEdit.js"></script>
     <!-- Custom Scripts -->
     <script type="text/javascript" src="/admin/js/application.js"></script>
     <script type="text/javascript" src="/admin/js/template.js"></script>

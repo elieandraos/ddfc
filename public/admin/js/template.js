@@ -8,6 +8,7 @@ var template = function() {
         bindEditables();
         bindSortables();
         bindRemovals();
+        loadRichTextEditor();
     };
 
 
@@ -112,6 +113,17 @@ var template = function() {
                 }
             });
         });
+    }
+
+
+    var loadRichTextEditor = function()
+    {
+        $(".richtexteditor").each(function(){
+            var id = $(this).attr('id');
+            bkLib.onDomLoaded(function() {
+                new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif', fullPanel : true}).panelInstance(id);
+            });
+        })
     }
 
 
