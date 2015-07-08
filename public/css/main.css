@@ -1,0 +1,18 @@
+#top-bar 
+{
+	height: 35px;
+	color:#FFF;
+	background-color: #393939;
+}
+
+#logos 
+{
+	height: 120px;
+}
+
+
+.navbar-main
+{
+	height: 55px;
+	background-color: #3b5287;
+}
