@@ -314,16 +314,16 @@
         },
         {
             "name": "eandraos/gaia-pages",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-pages.git",
-                "reference": "b319d45ca732624b2f635dd257d03c23de90d296"
+                "reference": "6857cf80679d053621c3c40c9c53142a7613d0af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/b319d45ca732624b2f635dd257d03c23de90d296",
-                "reference": "b319d45ca732624b2f635dd257d03c23de90d296",
+                "url": "https://api.github.com/repos/elieandraos/gaia-pages/zipball/6857cf80679d053621c3c40c9c53142a7613d0af",
+                "reference": "6857cf80679d053621c3c40c9c53142a7613d0af",
                 "shasum": ""
             },
             "require": {
@@ -355,7 +355,7 @@
                 "laravel 5",
                 "page templates"
             ],
-            "time": "2015-07-03 11:20:44"
+            "time": "2015-07-07 13:09:16"
         },
         {
             "name": "eandraos/gaia-posts",
@@ -449,16 +449,16 @@
         },
         {
             "name": "eandraos/gaia-ui",
-            "version": "1.1.20",
+            "version": "1.1.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elieandraos/gaia-ui.git",
-                "reference": "4281db2bcf76a366a09983cbcc878778ad1b18bb"
+                "reference": "a2cf7c10d73926cb9052871a9462e68cbbe74702"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elieandraos/gaia-ui/zipball/4281db2bcf76a366a09983cbcc878778ad1b18bb",
-                "reference": "4281db2bcf76a366a09983cbcc878778ad1b18bb",
+                "url": "https://api.github.com/repos/elieandraos/gaia-ui/zipball/a2cf7c10d73926cb9052871a9462e68cbbe74702",
+                "reference": "a2cf7c10d73926cb9052871a9462e68cbbe74702",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
                 "laravel 5",
                 "ui"
             ],
-            "time": "2015-07-06 11:56:44"
+            "time": "2015-07-07 13:08:29"
         },
         {
             "name": "eandraos/gaia-users",

@@ -25,6 +25,7 @@
 <body class="animated fadeIn">
 
     <section id="container">
+        
         <!-- header -->
         <header id="header">
             <div class="brand"><a href="/admin/dashboard" class="logo"><span>GAIA</span>admin</a></div>
@@ -33,9 +34,26 @@
                     <i class="fa fa-bars"></i>
                 </button>
             </div>
+           
             <!-- user dropdown -->
             <div class="user-nav">
                 <ul>
+                    <li class="dropdown settings">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                          <i class="fa fa-cogs"></i> Manage <i class="fa fa-angle-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu animated fadeInDown">  
+                            <li><a href="/admin/pages/templates/">List Page Templates</a></li> 
+                            <li><a href="/admin/pages/templates/create" id="add-template">Create Page Templates</a></li> 
+                            <li class="seperator"></li> 
+                            <li><a href="/admin/users/">List Users</a></li>    
+                            <li><a href="/admin/users/create/">Create User</a></li>
+                            <li class="seperator"></li>
+                            <li><a href="/admin/post-types">Post Types</a></li> 
+                        </ul>
+                    </li>
+
                     <li class="settings">
                         <a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a>
                     </li>
@@ -65,6 +83,8 @@
                 <i class="fa fa-user"></i>
                 {!! Auth::user()->name !!}
             </div>
+
+
             <div id="leftside-navigation" class="nano">
                 <ul class="nano-content">
                     <li class="active">
@@ -75,17 +95,15 @@
                         <a href="javascript:void(0);"><i class="fa fa-rss"></i><span>News</span><i class="arrow fa fa-angle-right pull-right"></i></a>
                         <ul>
 
-                            <li><a href="/admin/news"><i class="arrow fa fa-angle-right"></i>View All</a></li>
-                            <li><a href="/admin/news/create"><i class="arrow fa fa-angle-right"></i>Add New</a></li>
+                            <li><a href="/admin/news"><i class="arrow fa fa-angle-right"></i>List News</a></li>
+                            <li><a href="/admin/news/create"><i class="arrow fa fa-angle-right"></i>Create News</a></li>
                         </ul>
                     </li>
                     <li class="sub-menu">
                         <a href="javascript:void(0);"><i class="fa fa-file"></i><span>Pages</span><i class="arrow fa fa-angle-right pull-right"></i></a>
                         <ul>
-                            <li><a href="/admin/pages/create/"><i class="arrow fa fa-angle-right"></i>Create Page</a></li>
                             <li><a href="/admin/pages/"><i class="arrow fa fa-angle-right"></i>List Pages</a></li>
-                            <li><a href="/admin/pages/templates/create" id="add-template"><i class="arrow fa fa-angle-right"></i>Create Template</a></li>
-                            <li><a href="/admin/pages/templates/" ><i class="arrow fa fa-angle-right"></i>List Templates</a></li>
+                            <li><a href="/admin/pages/create/"><i class="arrow fa fa-angle-right"></i>Create Page</a></li>
                         </ul>
                     </li>
                     {!! $postTypesSubmenu !!}
@@ -93,16 +111,6 @@
                     <li class="">
                         <a href="/admin/categories"><i class="fa fa-sitemap"></i><span>Categories</span></a>
                     </li> 
-                    <li>
-                        <a href="/admin/post-types"><i class="fa fa-beer"></i><span>Post Types</span></a>
-                    </li>          
-                    <li class="sub-menu">
-                        <a href="javascript:void(0);"><i class="fa fa-user"></i><span>Users</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-                        <ul>
-                            <li><a href="/admin/users/create/"><i class="arrow fa fa-angle-right"></i>Create User</a></li>
-                            <li><a href="/admin/users/"><i class="arrow fa fa-angle-right"></i>List Users</a></li>
-                        </ul>
-                    </li>
                 </ul>
             </div>
         </aside>
