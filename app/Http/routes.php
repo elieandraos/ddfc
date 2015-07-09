@@ -14,7 +14,7 @@
 
 //custom posts
 Route::get('/posts/{posttypeslug}/', ['as' => 'posts.list', 'uses' => 'PostController@index']);
-Route::get('/posts/{posttypeslug}/category/{categoryId}', ['as' => 'posts.category.list', 'uses' => 'PostController@category']);
+//Route::get('/posts/{posttypeslug}/category/{categoryId}', ['as' => 'posts.category.list', 'uses' => 'PostController@category']);
 
 
 Route::get('/', 'WelcomeController@index');
