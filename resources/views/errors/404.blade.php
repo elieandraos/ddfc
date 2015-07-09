@@ -1,4 +1,4 @@
-@extends('admin.layout')
+@extends('front.layout')
 
 @section('content')
 	<h2>Error 404</h2>

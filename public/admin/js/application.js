@@ -11,6 +11,7 @@ var app = function() {
         handleRemoteForms();
         toggleTranslate();
         initNestedCategories();
+        initRichTextEditor();
     };
 
     //set up tooltips
@@ -110,6 +111,17 @@ var app = function() {
              var _locale = $(this).val();
              var _url = $("#translate-url").val() + "/" + _locale;
              window.location = _url;
+        })
+    }
+
+    //init the rich text editors
+    var initRichTextEditor = function()
+    {
+         $(".richtexteditor").each(function(){
+            var id = $(this).attr('id');
+            bkLib.onDomLoaded(function() {
+                new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif', fullPanel : true}).panelInstance(id);
+            });
         })
     }
 

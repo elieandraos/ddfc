@@ -1,18 +1,62 @@
+
+body img { width: 100%;}
+/*********************************
+ * 			HEADER 				 *
+ *********************************/
 #top-bar 
 {
 	height: 35px;
 	color:#FFF;
 	background-color: #393939;
 }
-
 #logos 
 {
-	height: 120px;
+	height: 180px;
 }
 
-
-.navbar-main
+/*********************************
+ * 			MENU 				 *
+ *********************************/
+nav.navbar-main
 {
-	height: 55px;
+	height: 50px;
 	background-color: #3b5287;
+	margin-bottom: 0;
+	border: none;
+}
+.navbar-main a 
+{
+	color: #fff;
+	font-weight: normal;
+}
+.navbar-main #menu-navigation
+{
+	padding-left: 0;
+}
+.navbar-main a:hover
+{
+	color: #3b5287;
+}
+
+.navbar-main li.active a, .navbar-main li a:hover, .navbar-main li.open a.dropdown-toggle 
+{
+	background-color: #23C4FD;
+	color: #FFF;
+}
+
+/*********************************
+ * 		  HOMEPAGE SLIDER        *
+ *********************************/
+ #carousel-example-generic div.carousel-caption
+ {
+ 	text-align: left;
+ 	left: 5%;
+ }
+
+/*********************************
+ * 		  HOMEPAGE BLOCKS        *
+ *********************************/
+.homepage-block
+{
+	margin-top: 30px;
 }
