@@ -3,3 +3,4 @@
 .env
 /public/media
 _ide_helper.php
+composer.lock
