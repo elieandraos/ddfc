@@ -3,9 +3,9 @@
 		
 		<!-- Block Title -->
 		<div class="row">
-			<div class="col-sm-12 text-center">
-				<h3>news</h3>
-				<h5>Read the latest news and learn about our activities</h5>
+			<div class="col-sm-12 title-container">
+				<h1 class="heading1">news</h3>
+				<h3 class="heading2">Read the latest news and learn about our activities</h5>
 			</div>
 		</div>
 		<!-- End Of Block Title -->
@@ -19,8 +19,9 @@
 							<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->title !!}" title="{!! $n->title !!}" />
 						</div>
 						<div class="col-sm-6">
-							<h2>{!! $n->title !!}</h2>
-							<p>{!! $n->excerpt !!}</p>
+							<h4 class="heading5">{!! $n->getReadablePublishedAt() !!}</h4>
+							<h2 class="heading6">{!! $n->title !!}</h2>
+							<p  class="heading7">{!! $n->excerpt !!}</p>
 						</div>
 					</div>
 				</div>

@@ -3,20 +3,45 @@
 @section('content')
 	
 	@if($posts->count())
+
+		<!-- Page Title -->
+		@if(isset($pageTitle))
+			<div class="row">
+				<div class="col-sm-12 title-container">
+					<h1 class="heading1">{!! $pageTitle !!}</h3>
+				</div>
+			</div>
+		@endif
+		<!-- End Of Page Title -->
+
+
+		<!-- Page Desc -->
+		@if(isset($pageDescription))
+			<div class="row">
+				<div class="col-sm-12">
+					<p class="heading4">{!! $pageDescription !!}</p>
+				</div>
+			</div>
+		@endif
+		<!-- End Of Page Desc -->
+
+
 		<!-- posts listing -->
 		<div class="row">
 			@foreach($posts as $post)
 				@include('front.posts._listItem', ['post' => $post])
 			@endforeach
 		</div>
+
+
 		<!-- posts pagination -->
 		<div class="row">
-			<div class=" col-sm-12 centered">
+			<div class=" col-sm-12 text-center">
 				{!! $posts->render() !!}
 			</div>
 		</div>
 	@else
-		No posts available for this section.
+		<p>No posts available for this section.</p>
 	@endif
 	
 @stop

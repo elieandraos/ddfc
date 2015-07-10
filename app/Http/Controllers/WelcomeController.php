@@ -18,7 +18,7 @@ class WelcomeController extends Controller {
 	{
 		$this->postRepos = $postRepos;
 		$this->newsRepos = $newRepos;
-		$this->middleware('guest');
+		$this->middleware('auth');
 	}
 
 

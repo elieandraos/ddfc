@@ -104,18 +104,25 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	 * @param type $limit 
 	 * @return type
 	 */
-	public function getAllByPostTypeSlugAndCategoryId($slug, $categoryId, $limit)
+	public function getAllByPostTypeIdAndCategoryId($postTypeId, $categoryId, $limit)
 	{
 		$posts = Post::latest('published_at');
 		
 		if(!$limit)
 			$limit = $this->limit;
 
-		$postType = $this->postTypeRepos->getBySlug($slug);
-		$posts->where('post_type_id', '=', $postType->id);
-		$posts->where('category_id', '=', $categoryId);
-		
-		return $posts->paginate($limit);
+		return $posts->where('post_type_id', '=', $postTypeId)->where('category_id', '=', $categoryId)->paginate($limit);
+	}
+
+
+	public function getAllRelated($post, $limit = 5)
+	{
+		return Post::latest('published_at')
+				->where('post_type_id', '=', $post->post_type_id)
+				->where('category_id', '=', $post->category_id)
+				->where('id', '!=', $post->id)
+				->take($limit)
+				->get();
 	}
 }
 ?>

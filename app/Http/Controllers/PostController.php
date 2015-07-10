@@ -2,7 +2,6 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
 use Illuminate\Http\Request;
 
 //repositories
@@ -11,6 +10,11 @@ use Gaia\Repositories\PostRepositoryInterface;
 //Facades
 use Route;
 use App;
+//Models 
+use App\Models\Category;
+use App\Models\PostType;
+use App\Models\Post;
+
 
 class PostController extends Controller {
 
@@ -21,13 +25,6 @@ class PostController extends Controller {
 		$this->postTypeRepos = $postTypeRepositoryInterface;
 		$this->postRepos = $postRepositoryInterface;
 		$this->limit = 6;
-
-		//get the post type object from the url param
-		$routeParamters = Route::current()->parameters();
-		$this->postType = $this->postTypeRepos->getBySlug($routeParamters['posttypeslug']);
-
-		if(!$this->postType)
-			App::abort(404, 'Page not found.');
 	}
 
 
@@ -36,10 +33,10 @@ class PostController extends Controller {
 	 * @param type $postTypeSlug 
 	 * @return type
 	 */
-	public function index($postTypeSlug)
+	public function index(PostType $postType)
 	{
-		$posts = $this->postRepos->getAllByPostTypeSlug($postTypeSlug, $this->limit);
-		return view('front.posts.index', ['posts' => $posts]);
+		$posts = $this->postRepos->getAll($postType->id, $this->limit);
+		return view('front.posts.index', ['posts' => $posts, 'pageTitle' => $postType->title]);
 	}
 
 
@@ -49,9 +46,23 @@ class PostController extends Controller {
 	 * @param type $categoryId 
 	 * @return type
 	 */
-	public function category($postTypeSlug, $categoryId)
+	public function category(PostType $postType, Category $category)
 	{
-		$posts = $this->postRepos->getAllByPostTypeSlug($postTypeSlug, $categoryId, $this->limit);
+		$posts = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, $category->id, $this->limit);
+		return view('front.posts.index', ['posts' => $posts, 'pageTitle' => $category->title, 'pageDescription' => $category->description]);
+	}
+
+
+	/**
+	 * Displays the single post
+	 * @param type PostType $postType 
+	 * @param type Post $post 
+	 * @return type
+	 */
+	public function show(PostType $postType, Post $post)
+	{
+		$related_posts = $this->postRepos->getAllRelated($post);
+		return view('front.posts.show', ['post' => $post, 'related_posts' => $related_posts]);
 	}
 
 

@@ -13,7 +13,7 @@ class Post extends Model implements MediaLibraryModelInterface, TranslatableCont
 
 	protected $table = 'post';
 	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'published_at', 'youtube_url', 'category_id', 'post_type_id'];
-	protected $translatedAttributes = ['title', 'excerpt', 'description', 'slug'];
+	protected $translatedAttributes = ['title', 'excerpt', 'description'];
 	protected $translator = 'App\Models\PostTranslation';
 	
 	

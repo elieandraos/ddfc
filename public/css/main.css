@@ -1,5 +1,135 @@
 
-body img { width: 100%;}
+/*********************************
+ * 			FONT 				 *
+ *********************************/
+@font-face {
+    font-family: avenirNextRegular;
+    src: url('/fonts/AvenirNext-Regular.ttf');
+}
+@font-face {
+    font-family: avenirNextMedium;
+    src: url('/fonts/AvenirNext-Medium.ttf');
+}
+@font-face {
+    font-family: avenirNextBold;
+    src: url('/fonts/AvenirNext-Bold.ttf');
+}
+@font-face {
+    font-family: avenirNextDemiBold;
+    src: url('/fonts/AvenirNext-DemiBold.ttf');
+}
+
+
+/*********************************
+ * 			COMMON 				 *
+ *********************************/
+body 
+{
+	line-height: 1;
+	font-size: 12px;
+	font-family: 'avenirNextRegular';
+	color:#000;
+}
+body img 
+{ 
+	width: 100%;
+}
+h1,h2,h3,h4,h5,h6
+{
+	padding: 0;
+	margin: 0;
+}
+a:hover, a:active, a:visited
+{
+	text-decoration: none;
+}
+
+/*********************************
+ * 			HEADINGS 			 *
+ *********************************/
+.heading1, .heading1 a 
+{
+	font-family: 'avenirNextBold';
+	font-size: 24px;
+	text-transform: uppercase;
+	color:#3C5287;
+	padding-top: 20px;
+	letter-spacing: 4px;
+}
+.heading2, .heading2 a
+{
+	font-family: 'avenirNextRegular';
+	font-size: 16px;
+	color:#484848;
+}
+.heading3, .heading3 a
+{
+	font-family: 'avenirNextBold';
+	font-size: 28px;
+	color:#3b5287;
+	margin-top: 20px;
+}
+.heading4, .heading4 a
+{
+	font-family: 'avenirNextRegular';
+	font-size: 16px;
+	color:#000000;
+	margin-top: 18px;
+}
+.heading5, .heading5 a
+{
+	font-family: 'avenirNextRegular';
+	font-size: 16px;
+	color:#3C5287;
+}
+.heading6, .heading6 a
+{
+	font-family: 'avenirNextMedium';
+	font-size: 24px;
+	color:#000000;
+	margin-top: 8px;
+}
+.heading7, .heading7 a
+{
+	font-family: 'avenirNextRegular';
+	font-size: 16px;
+	color:#030303;
+	margin-top: 10px;
+}
+.heading9, .heading9 a 
+{
+	font-family: 'avenirNextBold';
+	font-size: 23px;
+	color:#3b5287;
+	margin-bottom: 24px;
+}
+.heading11, .heading11 a
+{
+	font-family: 'avenirNextBold';
+	font-size: 20px;
+	color:#1D1717;
+	margin-top: 15px;
+	text-transform: uppercase;
+}
+.title-container
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	background-image: url('/images/Blue-Line.png');
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+.title-container-left
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+	background-image: url('/images/Blue-Line.png');
+	background-position: top left;
+	background-repeat: no-repeat;
+}
+
 /*********************************
  * 			HEADER 				 *
  *********************************/
@@ -11,8 +141,33 @@ body img { width: 100%;}
 }
 #logos 
 {
-	height: 180px;
+	height: 215px;
 }
+#logos .header-logo
+{
+	padding-top: 20px;
+	height: 100%;
+	position: relative;
+}
+#logos .header-logo img
+{
+	width: 50%;
+}
+#logos .header-logo.header-logo-middle img
+{
+	width: 36%;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -18%;
+	display: block;
+}
+
+#logos .header-logo.header-logo-right
+{
+	text-align: right;
+}
+
 
 /*********************************
  * 			MENU 				 *
@@ -44,6 +199,7 @@ nav.navbar-main
 	color: #FFF;
 }
 
+
 /*********************************
  * 		  HOMEPAGE SLIDER        *
  *********************************/
@@ -53,10 +209,32 @@ nav.navbar-main
  	left: 5%;
  }
 
+
 /*********************************
  * 		  HOMEPAGE BLOCKS        *
  *********************************/
 .homepage-block
 {
-	margin-top: 30px;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
 }
+
+.homepage-block-goals
+{
+	background-color: #F7F8F8;
+	border-bottom: 1px solid #23C4FD;
+}
+.homepage-block-goals .goal 
+{
+	text-align: center;
+}
+.homepage-block-goals .goal img 
+{
+	width: 72px;
+}
+
+
+
+
+
+

@@ -13,7 +13,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 
 	protected $table = 'news';
 	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured'];
-	protected $translatedAttributes = ['title', 'excerpt', 'description', 'slug'];
+	protected $translatedAttributes = ['title', 'excerpt', 'description'];
 	protected $translator = 'App\Models\NewsTranslation';
 	
 	
@@ -58,6 +58,16 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	public function getHumanPublishedAt()
     {
         return Carbon::parse($this->published_at)->diffForHumans();
+    }
+
+
+    /**
+	 * returns a friendly date format for pusblished_at attrubute
+	 * @return type
+	 */
+	public function getReadablePublishedAt()
+    {
+        return Carbon::parse($this->published_at)->format('M d,Y');
     }
 
 
