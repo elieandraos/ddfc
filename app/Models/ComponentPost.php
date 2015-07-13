@@ -6,14 +6,15 @@ use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelInterface;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 
-class ComponentPage extends Model implements MediaLibraryModelInterface, TranslatableContract {
+
+class ComponentPost extends Model implements MediaLibraryModelInterface, TranslatableContract {
 
 	use Translatable, MediaLibraryModelTrait;
 
-	protected $table = 'component_page';
-	protected $fillable = ['component_id', 'page_id', 'value', 'params'];
+	protected $table = 'component_post';
+	protected $fillable = ['component_id', 'post_id', 'value', 'params'];
 	protected $translatedAttributes = ['value', 'params'];
-	protected $translator = 'App\Models\ComponentPageTranslation';
+	protected $translator = 'App\Models\ComponentPostTranslation';
 	public $timestamps = false;
 
 	/**
@@ -29,9 +30,9 @@ class ComponentPage extends Model implements MediaLibraryModelInterface, Transla
 	 * Page Relation
 	 * @return type
 	 */
-	public function page()
+	public function post()
 	{
-		return $this->belongsTo('App\Models\Page');
+		return $this->belongsTo('App\Models\Post');
 	}
 
 
@@ -64,6 +65,5 @@ class ComponentPage extends Model implements MediaLibraryModelInterface, Transla
 	        'thumb-xs' => ['w'=>60, 'h'=>60]
 	    ];
 	}    
-
 
 }

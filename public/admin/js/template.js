@@ -169,6 +169,7 @@ function addComponent(componentTypeId, sectionId)
         success: function(response){
            $("div.section#" + sectionId+" .section-components").append(response);
            $(".component-title").editable({});
+           $(".component-unique-id").editable({});
            $(".component-options").editable({
             display: function(value) {
               $(this).text('Options');
