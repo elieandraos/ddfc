@@ -3,7 +3,22 @@
 use App\Models\Category;
 use App\Models\PostType;
 use App\Models\Post;
+use App\Models\Page;
 //use Route;
+
+
+/*
+|--------------------------------------------------------------------------
+| PAGES ROUTES
+|--------------------------------------------------------------------------
+*/
+Route::bind('pageslug', function($value)
+{
+    return Page::where('slug', '=', $value)->first();
+});
+
+Route::get('/page/{pageslug}/', ['as' => 'pages.show', 'uses' => 'PageController@show']);
+
 
 /*
 |--------------------------------------------------------------------------

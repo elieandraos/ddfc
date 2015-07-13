@@ -17,7 +17,14 @@
     <div class="collapse navbar-collapse" id="menu-navigation">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="javascript:void(0)">My Community</a></li>
+        <!-- My Community -->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Community <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/page/about">About</a></li>
+            <li><a href="/page/strategy">Strategy</a></li>
+          </ul>
+        </li>        
         <li><a href="javascript:void(0)">Goals</a></li>
         <!-- Voices -->
         <li class="dropdown">

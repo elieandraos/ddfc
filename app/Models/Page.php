@@ -12,7 +12,7 @@ class Page extends Model {
 	protected $fillable = ['title', 'slug', 'description', 'template_id'];
 	protected $hidden = [];
 	//translator
-	protected $translatedAttributes = ['title', 'description', 'slug'];
+	protected $translatedAttributes = ['title', 'description'];
 	protected $translator = 'App\Models\PageTranslation';
 	//for Component page build
 	protected $except = ['_token', 'title', 'slug', 'description', 'remove_image', 'meta_title', 'locale', 'meta_description', 'meta_keywords', 'facebook_title', 'facebook_description', 'twitter_title', 'twitter_description'];
