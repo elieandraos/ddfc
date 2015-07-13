@@ -7,7 +7,7 @@
 			@include('front.homepage._slider')
 		</div>
 	</div>
-	
+
 	@include('front.homepage._goals')
 	@include('front.homepage._voices')
 	@include('front.homepage._news')

@@ -44,8 +44,8 @@
                         </a>
 
                         <ul class="dropdown-menu animated fadeInDown">  
-                            <li><a href="/admin/pages/templates/">List Page Templates</a></li> 
-                            <li><a href="/admin/pages/templates/create" id="add-template">Create Page Templates</a></li> 
+                            <li><a href="/admin/pages/templates/">List Templates</a></li> 
+                            <li><a href="/admin/pages/templates/create" id="add-template">Create Template</a></li> 
                             <li class="seperator"></li> 
                             <li><a href="/admin/users/">List Users</a></li>    
                             <li><a href="/admin/users/create/">Create User</a></li>

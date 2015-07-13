@@ -39,6 +39,7 @@ var template = function() {
         //updates the SECTION (model) title in the builder ui
         $(".section_title").editable({});
         $(".component-title").editable({});
+        $(".component-unique-id").editable({});
         $(".component-options").editable({
             display: function(value) {
               $(this).text('Options');
