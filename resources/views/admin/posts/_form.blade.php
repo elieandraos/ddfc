@@ -40,7 +40,7 @@
             <div class="col-sm-6">
                 {!! Form::select(
                     'category_id', 
-                    ['0' => 'Select category'] + $categories, 
+                    $categories, 
                     isset($post)?$post->category_id:null, 
                     ['class' => 'form-control', 'id' => 'category_id']
                 ) !!}    
