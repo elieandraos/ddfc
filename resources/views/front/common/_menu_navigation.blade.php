@@ -19,10 +19,10 @@
         <li class="{{ Request::is('/*') ?  "active" : '' }}"><a href="/">Home <span class="sr-only">(current)</span></a></li>
         <!-- My Community -->
         <li class="dropdown">
-          <a style="{{ Request::is('*page*') ?  'background-color:#23C4FD' : '' }}"href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Community <span class="caret"></span></a>
+          <a style="{{ Request::is('page/about')||Request::is('page/strategy') ?  'background-color:#23C4FD' : '' }}"href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Community <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li class="{{ Request::is('/page/about*') ?  "active" : '' }}"><a href="/page/about">About</a></li>
-            <li class="{{ Request::is('/page/strategy*') ?  "active" : '' }}"><a href="/page/strategy">Strategy</a></li>
+            <li class="{{ Request::is('page/about') ?  "active" : '' }}"><a href="/page/about">About</a></li>
+            <li class="{{ Request::is('page/strategy') ?  "active" : '' }}"><a href="/page/strategy">Strategy</a></li>
           </ul>
         </li>        
         <li><a href="javascript:void(0)">Goals</a></li>

@@ -31,7 +31,7 @@
             <p>Professionals</p>
         </div>
          <div class="col-sm-3">
-            <a href="#" alt="ACT NOW">
+            <a href="page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg"  alt="ACT NOW"/>
             </a> <br/><br/>
             <p>Subscribe to our Newsletter</p>
@@ -49,9 +49,9 @@
             <div class='col-sm-4 header-logo-left header-logo'><img src='/images/small_logo.png' alt='Government Of Dubai' title='Government of Dubai'  /></div>
             <div class="col-sm-4" id="copyright-text">
                 <span>© DDFC- All Rights Reserved 2015</span>
-                <span> | </span><span><a href="">Privacy Policy</a></span>
-                 <span> | </span><span><a href="">Terms and Conditions</a></span>
-                 <span> | </span><span><a href="">Contact us</a></span>
+                <span> | </span><span class="white-link">&nbsp;<a href="/page/privacy-policy">Privacy Policy</a></span>
+                 <span> | </span><span class="white-link">&nbsp;<a href="/page/terms-and-conditions">Terms and Conditions</a></span>
+                 <span> | </span><span class="white-link">&nbsp;<a href="/page/contact-us">Contact us</a></span>
             </div>
         </div>
     </div>

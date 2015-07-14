@@ -252,7 +252,14 @@ nav.navbar-main
 	margin-bottom: 20px;
 }
 
-
+/*********************************
+ * 			DEFAULT PAGE 		 *
+ *********************************/
+.default_content img
+{
+    width:25%;
+    height:auto;
+}
 
 
 /*********************************
@@ -311,3 +318,12 @@ nav.navbar-main
     position: relative;
     color:#FFF;
 }
+
+.white-link a{
+    color:#FFF;
+}
+
+.white-link a:hover{
+    color:#7c7c7c;
+}
+
