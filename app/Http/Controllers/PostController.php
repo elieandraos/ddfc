@@ -10,6 +10,7 @@ use Gaia\Repositories\PostRepositoryInterface;
 //Facades
 use Route;
 use App;
+use File;
 //Models 
 use App\Models\Category;
 use App\Models\PostType;
@@ -25,6 +26,7 @@ class PostController extends Controller {
 		$this->postTypeRepos = $postTypeRepositoryInterface;
 		$this->postRepos = $postRepositoryInterface;
 		$this->limit = 6;
+		$this->viewsPath = realpath(base_path('resources/views/front/posts/'));
 	}
 
 
@@ -36,7 +38,12 @@ class PostController extends Controller {
 	public function index(PostType $postType)
 	{
 		$posts = $this->postRepos->getAll($postType->id, $this->limit);
-		return view('front.posts.index', ['posts' => $posts, 'pageTitle' => $postType->title]);
+		//get the view name
+		if( File::exists($this->viewsPath."/index-".$postType->slug.".blade.php" ))
+			$viewName = "front.posts.index-".$postType->slug;
+		else
+			$viewName = "front.posts.index";
+		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title]);
 	}
 
 
@@ -48,8 +55,19 @@ class PostController extends Controller {
 	 */
 	public function category(PostType $postType, Category $category)
 	{
+		//change limit in case post type is support
+		if($postType->slug == 'support')
+			$this->limit = 100;
+
 		$posts = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, $category->id, $this->limit);
-		return view('front.posts.index', ['posts' => $posts, 'pageTitle' => $category->title, 'pageDescription' => $category->description]);
+		
+		//get the view name
+		if( File::exists($this->viewsPath."/index-".$postType->slug.".blade.php" ))
+			$viewName = "front.posts.index-".$postType->slug;
+		else
+			$viewName = "front.posts.index";
+
+		return view($viewName, ['posts' => $posts, 'pageTitle' => $category->title, 'pageDescription' => $category->description]);
 	}
 
 
@@ -62,7 +80,14 @@ class PostController extends Controller {
 	public function show(PostType $postType, Post $post)
 	{
 		$related_posts = $this->postRepos->getAllRelated($post);
-		return view('front.posts.show', ['post' => $post, 'related_posts' => $related_posts]);
+
+		//get the view name
+		if( File::exists($this->viewsPath."/show-".$postType->slug.".blade.php" ))
+			$viewName = "front.posts.show-".$postType->slug;
+		else
+			$viewName = "front.posts.show";
+		
+		return view($viewName, ['post' => $post, 'related_posts' => $related_posts]);
 	}
 
 

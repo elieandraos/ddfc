@@ -103,6 +103,13 @@ a:hover, a:active, a:visited
 	color:#3b5287;
 	margin-bottom: 24px;
 }
+.heading10, .heading10 a 
+{
+	font-family: 'avenirNextMedium';
+	font-size: 20px;
+	color:#23C4FD;
+	margin-bottom: 10px;
+}
 .heading11, .heading11 a
 {
 	font-family: 'avenirNextBold';
@@ -233,6 +240,18 @@ nav.navbar-main
 	width: 72px;
 }
 
+
+/*********************************
+ * 		    FAQ LISTING          *
+ *********************************/
+.panel.faq
+{
+	box-shadow: none;
+}
+.accordion-body
+{
+	margin-bottom: 20px;
+}
 
 
 
