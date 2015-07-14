@@ -81,13 +81,25 @@ class PostController extends Controller {
 	{
 		$related_posts = $this->postRepos->getAllRelated($post);
 
+        //check if youtube url and id exist in the post:
+        $youtubeid = "";
+        if($post->youtube_url != "")
+        {
+            preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $post->youtube_url, $matches);
+            $youtubeid = $matches[1];
+        }
+
 		//get the view name
 		if( File::exists($this->viewsPath."/show-".$postType->slug.".blade.php" ))
 			$viewName = "front.posts.show-".$postType->slug;
 		else
 			$viewName = "front.posts.show";
 		
-		return view($viewName, ['post' => $post, 'related_posts' => $related_posts]);
+		return view($viewName, ['post' => $post, 'related_posts' => $related_posts, 'youtube_id'=>$youtubeid]);
+
+
+
+
 	}
 
 

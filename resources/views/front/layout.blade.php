@@ -22,6 +22,7 @@
     <!-- Third Party Scripts -->
     <script type="text/javascript" src="/admin/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/app.js"></script>
     <script>
         $('ul.nav li.dropdown').hover(function() {
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
