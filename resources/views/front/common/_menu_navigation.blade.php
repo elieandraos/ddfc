@@ -23,6 +23,7 @@
           <ul class="dropdown-menu">
             <li class="{{ Request::is('/page/about*') ?  "active" : '' }}"><a href="/page/about">About</a></li>
             <li class="{{ Request::is('/page/strategy*') ?  "active" : '' }}"><a href="/page/strategy">Strategy</a></li>
+            <li class="{{ Request::is('/page/the-higher-committee*') ?  "active" : '' }}"><a href="/page/the-higher-committee">The Higher Committee</a></li>
           </ul>
         </li>        
         <li><a href="javascript:void(0)">Goals</a></li>

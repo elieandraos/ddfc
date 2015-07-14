@@ -105,7 +105,6 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 		$postType = $this->postTypeRepos->getBySlug($slug);
 
 		return $this->getAll($postType->id, $limit);
-		
 	}
 
 
