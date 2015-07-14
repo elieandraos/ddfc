@@ -11,7 +11,14 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		//
+        view()->share(
+            "menuConfiguration",
+            [
+                'showVoicesCategories'=>true,
+                'showSupportCategories'=>true,
+                'showKnowledgeCategories'=>false,
+            ]
+        );
 	}
 
 	/**
