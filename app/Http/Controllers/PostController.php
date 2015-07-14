@@ -37,12 +37,24 @@ class PostController extends Controller {
 	 */
 	public function index(PostType $postType)
 	{
-		$posts = $this->postRepos->getAll($postType->id, $this->limit);
+		
+		if($postType->slug == "entities")
+		{
+			$posts = ['gov' => [], 'org' => [] ];
+			$posts['postsGov'] = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, 30, 50);
+			$posts['postsOrg'] = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, 31, 50);
+		}
+		else
+		{
+			$posts = $this->postRepos->getAll($postType->id, $this->limit);
+		}
+
 		//get the view name
 		if( File::exists($this->viewsPath."/index-".$postType->slug.".blade.php" ))
 			$viewName = "front.posts.index-".$postType->slug;
 		else
 			$viewName = "front.posts.index";
+
 		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title]);
 	}
 

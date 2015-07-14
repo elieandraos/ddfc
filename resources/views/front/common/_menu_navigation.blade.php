@@ -56,7 +56,7 @@
         <li class="dropdown" >
           <a style="{{ Request::is('*support*') ?  'background-color:#23C4FD' : '' }}" href="/posts/support/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li class="{{ Request::is('*support*entities*') ?  "active" : '' }}"><a href="/posts/support/category/entities">Entities</a></li>
+            <li class="{{ Request::is('*entities*') ?  "active" : '' }}"><a href="/posts/entities">Entities</a></li>
             <li class="{{ Request::is('*support*faq*') ?  "active" : '' }}"><a href="/posts/support/category/faq">FAQ</a></li>
           </ul>
         </li>

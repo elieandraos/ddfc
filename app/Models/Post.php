@@ -137,4 +137,38 @@ class Post extends Model implements MediaLibraryModelInterface, TranslatableCont
 		return $array;
 	}
 
+
+	/**
+	 * Front Related: Get All Metas
+	 * @return type
+	 */
+	public function getMetas()
+	{
+		$metas = [];
+		foreach($this->componentPosts as $componentPost)
+		{
+			$key = $componentPost->component->unique_id;
+			if($componentPost->component->component_type_id == 3) //image
+			{
+				$mediaItems = MediaLibrary::getCollection($componentPost, $componentPost->getMediaCollectionName(), []);
+				(count($mediaItems))?$url = $mediaItems[0]->getURL('thumb-large'):$url = null; 
+				$metas[$key] = $url;
+			}	 
+			else
+				$metas[$key] = $componentPost->value;
+		}
+
+		return $metas;
+	}
+
+
+	public function getMeta($id)
+	{
+		$metas = $this->getMetas();
+		
+		if(isset($metas[$id]))
+			return $metas[$id];
+
+		return null;
+	}
 }
