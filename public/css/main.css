@@ -25,7 +25,6 @@
  *********************************/
 body 
 {
-	line-height: 1;
 	font-size: 12px;
 	font-family: 'avenirNextRegular';
 	color:#000;
@@ -256,4 +255,59 @@ nav.navbar-main
 
 
 
+/*********************************
+ * 			FOOTER 				 *
+ *********************************/
+#bottom-bar
+{
+    min-height: 290px;
+    height:auto;
+    color:#595959;
+    background-color: #e5e7e7;
+}
 
+
+.navbar-bottom
+{
+    min-height: 120px;
+    height:auto;
+    background-color: #3b5287;
+    width:100%;
+    margin-bottom: 0;
+    border: none;
+}
+
+
+#logos-bottom .header-logo
+{
+    padding-top: 20px;
+    /*height: 100%;*/
+    position: relative;
+}
+#logos-bottom .header-logo img
+{
+    width: 30%;
+}
+#logos-bottom .header-logo.header-logo-middle img
+{
+    width: 36%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -18%;
+    display: block;
+}
+
+#logos-bottom .header-logo.header-logo-right
+{
+    text-align: right;
+}
+
+#copyright-text
+{
+    float:right;
+    padding-top:40px;
+    width:50%;
+    position: relative;
+    color:#FFF;
+}

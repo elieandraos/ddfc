@@ -18,6 +18,7 @@
         @yield('content')   
     </div>
 
+    @include('front.common._footer')
 
     <!-- Third Party Scripts -->
     <script type="text/javascript" src="/admin/js/jquery-2.1.3.min.js"></script>
