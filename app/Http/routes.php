@@ -4,7 +4,7 @@ use App\Models\Category;
 use App\Models\PostType;
 use App\Models\Post;
 use App\Models\Page;
-//use Route;
+use App\Models\News;
 
 
 /*
@@ -14,10 +14,11 @@ use App\Models\Page;
 */
 Route::bind('newsslug', function($value)
 {
-    return Page::where('newsslug', '=', $value)->first();
+    return News::where('slug', '=', $value)->first();
 });
 
-Route::get('/news/{newsslug}/', ['as' => 'news.show', 'uses' => 'PageController@show']);
+Route::get('/news/', ['as' => 'news.index', 'uses' => 'NewsController@index']);
+Route::get('/news/{newsslug}/', ['as' => 'news.show', 'uses' => 'NewsController@show']);
 
 
 /*
