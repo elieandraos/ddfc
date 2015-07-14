@@ -56,7 +56,7 @@
 				</div>
 				<div class="panel-body">
 					@foreach($section->getComponentsByOrder() as $component)
-							{!! $component->renderFormRow('page') !!} 
+							{!! $component->renderFormRow('page', $page->id) !!} 
 					@endforeach
 				</div>
 			</div>

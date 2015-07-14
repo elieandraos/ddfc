@@ -39,7 +39,7 @@ class DropdownComponent extends Component {
 		if($type == 'post')
 			$cp = $this->component->getComponentPost($id);
 		else 
-			$cp = $this->component->componentPages()->first();
+			$cp = $this->component->getComponentPage($id);
 		
 		if(isset($cp)) 
 		{

@@ -123,7 +123,7 @@ class Component extends Model {
 	 */
 	public function getComponentPage($page_id)
 	{
-		return $this->componentPages()->first();
+		return $this->componentPages()->where('page_id', '=', $page_id)->first();
 	}
 
 
