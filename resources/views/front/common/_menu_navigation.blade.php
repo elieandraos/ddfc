@@ -29,7 +29,16 @@
                  </li>
 
 
-            <li><a href="javascript:void(0)">Goals</a></li>
+            <li class="dropdown">
+                <a style="{{ Request::is('*goals*') ?  'background-color:#23C4FD' : '' }}" href="/posts/goals/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Goals <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li class="{{ Request::is('*goals*health*') ?  "active" : '' }}"><a href="/posts/goals/category/health">Health</a></li>
+            <li class="{{ Request::is('*goals*education*') ?  "active" : '' }}"><a href="/posts/goals/category/education">Education</a></li>
+            <li class="{{ Request::is('*goals*employment*') ?  "active" : '' }}"><a href="/posts/goals/category/employment">Employment</a></li>
+            <li class="{{ Request::is('*goals*universal-accessibility*') ?  "active" : '' }}"><a href="/posts/goals/category/universal-accessibility">Universal Accessibility</a></li>
+            <li class="{{ Request::is('*goals*social-protection*') ?  "active" : '' }}"><a href="/posts/goals/category/social-protection">Social Protection</a></li>
+            </ul>
+            </li>
             <!-- Voices -->
 
             @if($menuConfiguration['showVoicesCategories']==true)

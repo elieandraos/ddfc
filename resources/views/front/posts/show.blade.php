@@ -3,7 +3,7 @@
 @section('content')
 
 	<div class="row">
-
+        {!! $post->getMeta('123') !!}
 		<!-- posts listing -->
 		<div class='col-sm-6'>
 		    @if ($youtube_id != "")

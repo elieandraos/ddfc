@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use Spatie\MediaLibrary\MediaLibraryFacade;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelInterface;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 use Vinkla\Translator\Translatable;
@@ -150,7 +151,8 @@ class Post extends Model implements MediaLibraryModelInterface, TranslatableCont
 			$key = $componentPost->component->unique_id;
 			if($componentPost->component->component_type_id == 3) //image
 			{
-				$mediaItems = MediaLibrary::getCollection($componentPost, $componentPost->getMediaCollectionName(), []);
+
+				$mediaItems = MediaLibraryFacade::getCollection($componentPost, $componentPost->getMediaCollectionName(), []);
 				(count($mediaItems))?$url = $mediaItems[0]->getURL('thumb-large'):$url = null; 
 				$metas[$key] = $url;
 			}	 
