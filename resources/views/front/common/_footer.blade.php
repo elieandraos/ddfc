@@ -31,7 +31,7 @@
             <p>Professionals</p>
         </div>
          <div class="col-sm-3">
-            <a href="page/act-now" alt="ACT NOW">
+            <a href="/page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg"  alt="ACT NOW"/>
             </a> <br/><br/>
             <p>Subscribe to our Newsletter</p>

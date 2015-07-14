@@ -253,7 +253,7 @@ nav.navbar-main
 }
 
 /*********************************
- * 			DEFAULT PAGE 		 *
+ * 			PAGES        		 *
  *********************************/
 .default_content img
 {
@@ -261,6 +261,30 @@ nav.navbar-main
     height:auto;
 }
 
+.actnow_text
+{
+    font-size:16px;
+}
+
+.actnow_text p{
+    padding-top:20px;
+}
+
+.actnow_text .moreinfo{
+    padding-top:10px;
+    font-family:'avenirNextBold';
+    font-size:20px;
+    color:#3b5287;
+
+}
+
+.actnow_text .contact{
+    padding-top:10px;
+    font-family:'avenirNextBold';
+    font-size:18px;
+    color:#707070;
+
+}
 
 /*********************************
  * 			FOOTER 				 *
