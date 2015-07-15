@@ -198,6 +198,12 @@ nav.navbar-top
     padding:0;
 }
 
+.navbar-top .btn
+{
+    font-weight: normal;
+    font-size: 12px;
+}
+
 nav.navbar-main
 {
 	min-height: 50px;

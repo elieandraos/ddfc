@@ -40,7 +40,7 @@ class PageController extends Controller {
 			if($componentPage->component->component_type_id == 3) //image
 			{
 				$mediaItems = MediaLibrary::getCollection($componentPage, $componentPage->getMediaCollectionName(), []);
-				(count($mediaItems))?$url = $mediaItems[0]->getURL('thumb-large'):$url = null; 
+				(count($mediaItems))?$url = $mediaItems[0]->getURL():$url = null;
 				$metas[$key] = $url;
 			}	 
 			else
