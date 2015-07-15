@@ -180,7 +180,7 @@ a:hover, a:active, a:visited
  *********************************/
 nav.navbar-main
 {
-	height: 50px;
+	min-height: 50px;
 	background-color: #3b5287;
 	margin-bottom: 0;
 	border: none;
@@ -205,6 +205,15 @@ nav.navbar-main
 	color: #FFF;
 }
 
+.navbar .icon-bar
+{
+    background-color: #cccccc;
+}
+
+.dropdown-menu li
+{
+    background-color: #FFFFFF;
+}
 
 /*********************************
  * 		  HOMEPAGE SLIDER        *
