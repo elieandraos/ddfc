@@ -13,16 +13,16 @@
         </div>
     </div>
 
-	<div class="row">
+	<div class="row post_body_text">
         <div class="col-sm-6">
-            <p class="heading4">{!! $post->description !!}</p>
+            <p>{!! $post->description !!}</p>
         </div>
-        <div class="col-sm-6 actnow_text">
+        <div class="col-sm-6">
             <p class="moreinfo">{{trans('For More Information')}}</p>
             <hr/>
             <p class="contact">{!! $post->getMeta('contact_person') !!}</p>
             <p>Tel: {!! $post->getMeta('contact_phone') !!}</p>
-            <p>Web: <a href="{!! $post->getMeta('contact_web') !!}" target="_blank">{!! $post->getMeta('contact_web') !!} </a></p>
+            <p>Web: <a href="{!! $post->getMeta('contact_website') !!}" target="_blank">{!! $post->getMeta('contact_website') !!} </a></p>
         </div>
     </div>
 
