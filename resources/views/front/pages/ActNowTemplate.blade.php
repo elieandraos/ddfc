@@ -12,11 +12,11 @@
 
             <p>{!! $content['left_text'] !!}</p>
 
-            <p class="moreinfo">{{trans('For More Information')}}</p>
+            <p class="moreinfo">{{trans('messages.For More Information')}}</p>
             <hr/>
             <p class="contact">{!! $content['left_contact'] !!}</p>
-            <p>Tel: {!! $content['left_phone'] !!}</p>
-            <p>Web: <a href="{!! $content['left_web'] !!}" target="_blank">{!! $content['left_web'] !!} </a></p>
+            <p>{{trans('messages.Tel')}}: {!! $content['left_phone'] !!}</p>
+            <p>{{trans('messages.Web')}}: <a href="{!! $content['left_web'] !!}" target="_blank">{!! $content['left_web'] !!} </a></p>
 		</div>
 
 		<div class='col-sm-5 col-sm-push-2 post_body_text'>
@@ -26,11 +26,11 @@
             <img src="{!! $content['right_image'] !!}" alt="{!! $content['right_title'] !!}" title="{!! $content['right_title'] !!}" />
             <p>{!! $content['right_text'] !!}</p>
 
-             <p class="moreinfo">{{trans('For More Information')}}</p>
+             <p class="moreinfo">{{trans('messages.For More Information')}}</p>
              <hr/>
              <p class="contact">{!! $content['right_contact'] !!}</p>
-             <p>Tel: {!! $content['right_phone'] !!}</p>
-             <p>Web: <a href="{!! $content['right_web'] !!}" target="_blank">{!! $content['right_web'] !!} </a></p>
+             <p>{{trans('messages.Tel')}}: {!! $content['right_phone'] !!}</p>
+             <p>{{trans('messages.Web')}}: <a href="{!! $content['right_web'] !!}" target="_blank">{!! $content['right_web'] !!} </a></p>
         </div>
 
 

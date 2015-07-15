@@ -1,5 +1,5 @@
 <div class="title-container-left">
-	<h1 class="heading1"> Other {!! $post->category->title !!}</h1>
+	<h1 class="heading1"> {{trans('messages.other')}} {!! $post->category->title !!}</h1>
 </div>
 
 @foreach($related_posts as $related_post)

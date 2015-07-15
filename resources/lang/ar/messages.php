@@ -10,5 +10,12 @@
 return [
 
     'title' => 'وهذا هو اللقب العربية',
+    'other' => 'آخر',
+    'For More Information' => 'للمزيد من المعلومات',
+    'Tel' => 'الهاتف',
+    'Web' => 'الموقع',
+    'government entities' => 'الجهات الحكومية',
+    'organization' => 'المنظمات',
+    'the higher committee' => 'اللجنة العليا',
 
 ];

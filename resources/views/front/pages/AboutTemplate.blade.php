@@ -24,7 +24,7 @@
 
 		<div class='col-sm-5 col-sm-push-1'>
 			<div class="title-container-left">
-				<h1 class="heading1"> the higher committee</h1>
+				<h1 class="heading1"> {{trans('the higher committee')}}</h1>
 			</div>
 		</div>
 
