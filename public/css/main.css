@@ -179,6 +179,25 @@ a:hover, a:active, a:visited
 /*********************************
  * 			MENU 				 *
  *********************************/
+
+.top-buffer
+{
+    margin-top:20px;
+}
+
+nav.navbar-top
+{
+    height: 35px;
+    color:#FFF;
+    background-color: #393939;
+}
+
+.navbar-top .dropdown-toggle
+{
+    color:#FFF;
+    padding:0;
+}
+
 nav.navbar-main
 {
 	min-height: 50px;

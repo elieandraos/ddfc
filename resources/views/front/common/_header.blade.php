@@ -1,9 +1,28 @@
 <!-- Top Bar -->
-<div class="container-fluid">
-  <div class="row" id="top-bar">
+<nav class="navbar navbar-top">
+    <div class="container">
+        <div class='col-sm-4 pull-left top-buffer'>Skip to Navigation</div>
+        <div class='col-sm-4 pull-right text-right top-buffer'>
+            <div class="dropdown">
+              <a class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              @if (Lang::getLocale() =="en")
+              English
+              @else
+              Arabic
+              @endif
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu pull-right text-right">
+                @if (Lang::getLocale() =="en")
+                <li><a href="?locale=ar">Arabic</a></li>
+                @else
+                <li><a href="?locale=en">English</a></li>
+                @endif
+              </ul>
+            </div>
 
-  </div>
-</div>
+        </div>
+    </div>
+</nav>
 <!-- End Of Top Bar -->
 
 
