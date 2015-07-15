@@ -17,67 +17,67 @@
         <div class="collapse navbar-collapse" id="menu-navigation">
             <ul class="nav navbar-nav">
 
-            <li class="{{ Request::is('/*') ?  "active" : '' }}"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+            <li class="{{ Request::is('/*') ?  "active" : '' }}"><a href="/">{{trans('messages.Home')}} <span class="sr-only">(current)</span></a></li>
 
             <!-- My Community -->
             <li class="dropdown">
-                <a style="{{ Request::is('page/about')|| Request::is('page/strategy') || Request::is('page/the-higher-committee') ?  'background-color:#23C4FD' : '' }}"href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">My Community <span class="caret"></span></a>
+                <a style="{{ Request::is('page/about')|| Request::is('page/strategy') || Request::is('page/the-higher-committee') ?  'background-color:#23C4FD' : '' }}"href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">{{trans('messages.My Community')}} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                <li class="{{ Request::is('page/about') ?  "active" : '' }}"><a href="/page/about">About</a></li>
-                <li class="{{ Request::is('page/strategy') ?  "active" : '' }}"><a href="/page/strategy">Strategy</a></li>
-                <li class="{{ Request::is('page/the-higher-committee') ?  "active" : '' }}"><a href="/page/the-higher-committee">The Higher Committee</a></li>
+                <li class="{{ Request::is('page/about') ?  "active" : '' }}"><a href="/page/about">{{trans('messages.About')}}</a></li>
+                <li class="{{ Request::is('page/strategy') ?  "active" : '' }}"><a href="/page/strategy">{{trans('messages.Strategy')}}</a></li>
+                <li class="{{ Request::is('page/the-higher-committee') ?  "active" : '' }}"><a href="/page/the-higher-committee">{{trans('messages.the higher committee')}}</a></li>
 
                 </ul>
              </li>
 
 
             <li class="dropdown">
-                <a style="{{ Request::is('*goals*') ?  'background-color:#23C4FD' : '' }}" href="/posts/goals/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Goals <span class="caret"></span></a>
+                <a style="{{ Request::is('*goals*') ?  'background-color:#23C4FD' : '' }}" href="/posts/goals/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('messages.Goals')}} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ Request::is('*goals*health*') ?  "active" : '' }}"><a href="/posts/goals/category/health">Health</a></li>
-            <li class="{{ Request::is('*goals*education*') ?  "active" : '' }}"><a href="/posts/goals/category/education">Education</a></li>
-            <li class="{{ Request::is('*goals*employment*') ?  "active" : '' }}"><a href="/posts/goals/category/employment">Employment</a></li>
-            <li class="{{ Request::is('*goals*universal-accessibility*') ?  "active" : '' }}"><a href="/posts/goals/category/universal-accessibility">Universal Accessibility</a></li>
-            <li class="{{ Request::is('*goals*social-protection*') ?  "active" : '' }}"><a href="/posts/goals/category/social-protection">Social Protection</a></li>
+                    <li class="{{ Request::is('*goals*health*') ?  "active" : '' }}"><a href="/posts/goals/category/health">{{trans('messages.Health')}}</a></li>
+            <li class="{{ Request::is('*goals*education*') ?  "active" : '' }}"><a href="/posts/goals/category/education">{{trans('messages.Education')}}</a></li>
+            <li class="{{ Request::is('*goals*employment*') ?  "active" : '' }}"><a href="/posts/goals/category/employment">{{trans('messages.Employment')}}</a></li>
+            <li class="{{ Request::is('*goals*universal-accessibility*') ?  "active" : '' }}"><a href="/posts/goals/category/universal-accessibility">{{trans('messages.Universal Accessibility')}}</a></li>
+            <li class="{{ Request::is('*goals*social-protection*') ?  "active" : '' }}"><a href="/posts/goals/category/social-protection">{{trans('messages.Social Protection')}}</a></li>
             </ul>
             </li>
             <!-- Voices -->
 
             @if($menuConfiguration['showVoicesCategories']==true)
             <li class="dropdown">
-                <a style="{{ Request::is('*voices*') ?  'background-color:#23C4FD' : '' }}" href="/posts/voices/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Voices <span class="caret"></span></a>
+                <a style="{{ Request::is('*voices*') ?  'background-color:#23C4FD' : '' }}" href="/posts/voices/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('messages.Voices')}} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ Request::is('*voices*success-stories*') ?  "active" : '' }}"><a href="/posts/voices/category/success-stories">Success Stories</a></li>
-            <li class="{{ Request::is('*voices*testimonials*') ?  "active" : '' }}"><a href="/posts/voices/category/testimonials">Testimonials</a></li>
-            <li class="{{ Request::is('*voices*articles*') ?  "active" : '' }}"><a href="/posts/voices/category/articles">Articles</a></li>
-            <li class="{{ Request::is('posts/voices') ?  "active" : '' }}"><a href="/posts/voices">All Voices</a></li>
+                    <li class="{{ Request::is('*voices*success-stories*') ?  "active" : '' }}"><a href="/posts/voices/category/success-stories">{{trans('messages.Success Stories')}})</a></li>
+            <li class="{{ Request::is('*voices*testimonials*') ?  "active" : '' }}"><a href="/posts/voices/category/testimonials">{{trans('messages.Testimonials')}})</a></li>
+            <li class="{{ Request::is('*voices*articles*') ?  "active" : '' }}"><a href="/posts/voices/category/articles">{{trans('messages.Articles')}}</a></li>
+            <li class="{{ Request::is('posts/voices') ?  "active" : '' }}"><a href="/posts/voices">{{trans('messages.All Voices')}}</a></li>
             </ul>
             </li>
             @else
             <li class="{{ Request::is('*voices*') ?  "active" : '' }}">
-            <a href="/posts/voices">Voices</a>
+            <a href="/posts/voices">{{trans('messages.Voices')}}</a>
             </li>
             @endif
 
 
             <!-- News -->
             <li class="{{ Request::is('*news*') ?  "active" : '' }}">
-            <a href="/news">News</a>
+            <a href="/news">{{trans('messages.News')}}</a>
             </li>
 
 
             <!-- Support -->
             @if ($menuConfiguration['showSupportCategories']==true)
             <li class="dropdown" >
-                <a style="{{ Request::is('*support*') ?  'background-color:#23C4FD' : '' }}" href="/posts/support/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support <span class="caret"></span></a>
+                <a style="{{ Request::is('*support*') ?  'background-color:#23C4FD' : '' }}" href="/posts/support/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('messages.Support')}} <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
-                    <li class="{{ Request::is('*entities*') ?  "active" : '' }}"><a href="/posts/entities">Entities</a></li>
-            <li class="{{ Request::is('*support*faq*') ?  "active" : '' }}"><a href="/posts/support/category/faq">FAQ</a></li>
+                    <li class="{{ Request::is('*entities*') ?  "active" : '' }}"><a href="/posts/entities">{{trans('messages.Entities')}}</a></li>
+            <li class="{{ Request::is('*support*faq*') ?  "active" : '' }}"><a href="/posts/support/category/faq">{{trans('messages.FAQ')}}</a></li>
             </ul>
             </li>
             @else
             <li class="{{ Request::is('*support*') ?  "active" : '' }}">
-            <a href="/posts/support/">Support</a>
+            <a href="/posts/support/">{{trans('messages.Support')}}</a>
             </li>
             @endif
 
@@ -86,15 +86,15 @@
             <li class="dropdown">
                 <a style="{{ Request::is('*knowledge*') ?  'background-color:#23C4FD' : '' }}" href="/posts/knowledge/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Knowledge <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ Request::is('*knowledge*useful-information*') ?  "active" : '' }}"><a href="/posts/knowledge/category/useful-information">Useful Information</a></li>
-            <li class="{{ Request::is('*knowledge*testimonials*') ?  "active" : '' }}"><a href="/posts/knowledge/category/testimonials">Testimonials</a></li>
-            <li class="{{ Request::is('*knowledge*facts*') ?  "active" : '' }}"><a href="/posts/knowledge/category/facts">Facts</a></li>
-            <li class="{{ Request::is('posts/knowledge') ?  "active" : '' }}"><a href="/posts/knowledge">All Knowledge</a></li>
+                    <li class="{{ Request::is('*knowledge*useful-information*') ?  "active" : '' }}"><a href="/posts/knowledge/category/useful-information">{{trans('messages.Useful Information')}}</a></li>
+            <li class="{{ Request::is('*knowledge*testimonials*') ?  "active" : '' }}"><a href="/posts/knowledge/category/testimonials">{{trans('messages.Testimonials')}}</a></li>
+            <li class="{{ Request::is('*knowledge*facts*') ?  "active" : '' }}"><a href="/posts/knowledge/category/facts">{{trans('messages.Facts')}}</a></li>
+            <li class="{{ Request::is('posts/knowledge') ?  "active" : '' }}"><a href="/posts/knowledge">{{trans('messages.All Knowledge')}}</a></li>
             </ul>
             </li>
             @else
             <li class="{{ Request::is('*knowledge*') ?  "active" : '' }}">
-            <a href="/posts/knowledge">Knowledge</a>
+            <a href="/posts/knowledge">{{trans('messages.Knowledge')}}</a>
             </li>
             @endif
 
