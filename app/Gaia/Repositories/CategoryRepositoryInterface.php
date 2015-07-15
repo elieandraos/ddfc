@@ -7,5 +7,6 @@
 		public function getRoots();
 		public function getDescendants($category);
 		public function getCategoryTree($category);
+		public function getCategoryBySlug($slug);
 	}
 ?>

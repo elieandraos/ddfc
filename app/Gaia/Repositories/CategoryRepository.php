@@ -47,5 +47,16 @@ class CategoryRepository implements CategoryRepositoryInterface
 	{
 		return $category->descendants()->orderBy($order)->lists('title', 'id'); 
 	}
+
+
+	/**
+	 * Gets a Category by its slug
+	 * @param type $slug 
+	 * @return type
+	 */
+	public function getCategoryBySlug($slug)
+	{
+		return Category::where('slug', '=', $slug)->first();
+	}
 }
 ?>

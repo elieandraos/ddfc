@@ -3,10 +3,6 @@
 @section('content')
 	
 	@if($news->count())
-
-		@include('front.news._featured')
-
-		<!-- news filter -->
 		@include('front.news._filters')
 		
 		<div class="news-listing">

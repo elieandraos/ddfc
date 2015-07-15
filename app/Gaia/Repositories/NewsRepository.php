@@ -68,6 +68,27 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 		$news->delete();
 	}
 
+
+	public function getByCategory($category_id, $limit)
+	{
+		if(!$limit)
+			$limit = $this->limit;
+
+		return News::latest('published_at')->where('category_id', '=', $category_id)->paginate($limit);
+	}
+
+
+	public function getByIsFeatured($limit)
+	{
+		if(!$limit)
+			$limit = $this->limit;
+
+		return News::latest('published_at')->where('is_featured', '=', 1)->paginate($limit);
+
+	}
+
+
+
 }
 
 ?>

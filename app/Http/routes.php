@@ -19,6 +19,7 @@ Route::bind('newsslug', function($value)
 
 Route::get('/news/', ['as' => 'news.index', 'uses' => 'NewsController@index']);
 Route::get('/news/{newsslug}/', ['as' => 'news.show', 'uses' => 'NewsController@show']);
+Route::get('/news/category/{id}/', ['as' => 'news.category', 'uses' => 'NewsController@category']);
 
 
 /*

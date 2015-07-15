@@ -9,5 +9,8 @@
 		public function create($input);
 		public function update($id, $input);
 		public function delete($id);
+		public function getByCategory($category_id, $limit);
+		public function getByIsFeatured($limit);
+
 	}
 ?>
