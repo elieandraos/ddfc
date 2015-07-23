@@ -1,4 +1,4 @@
-<div class="homepage-block homepage-block-goals">
+
 	
 	<!-- Block Title -->
 	<div class="row">
@@ -8,7 +8,7 @@
 	</div>
 	<!-- End Of Block Title -->
 
-	<!-- Recent 2 News -->
+	<!-- Goals -->
 	<div class="row">
 		<div class="col-sm-12 col-sm-push-1">
 			<div class="row">
@@ -46,8 +46,5 @@
 				</div>
 			</div>
 		</div>
-
 	</div>
-	<!-- End Of Recent 2 News -->
-
-</div>
+	<!-- End Of Goals -->

@@ -45,6 +45,9 @@ return [
     'Act Now ' => 'Act Now',
     'Other Sections' => 'Other Sections',
     'Voices' => 'Voices',
+    'Success Stories' => 'Success Stories',
+    'Testimonials' => 'Testimonials',
+    'Articles' => 'Articles',
     'All Voices'=>'All Voices',
 
     'News' => 'News',

@@ -47,8 +47,8 @@
             <li class="dropdown">
                 <a style="{{ Request::is('*voices*') ?  'background-color:#23C4FD' : '' }}" href="/posts/voices/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('messages.Voices')}} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ Request::is('*voices*success-stories*') ?  "active" : '' }}"><a href="/posts/voices/category/success-stories">{{trans('messages.Success Stories')}})</a></li>
-            <li class="{{ Request::is('*voices*testimonials*') ?  "active" : '' }}"><a href="/posts/voices/category/testimonials">{{trans('messages.Testimonials')}})</a></li>
+                    <li class="{{ Request::is('*voices*success-stories*') ?  "active" : '' }}"><a href="/posts/voices/category/success-stories">{{trans('messages.Success Stories')}}</a></li>
+            <li class="{{ Request::is('*voices*testimonials*') ?  "active" : '' }}"><a href="/posts/voices/category/testimonials">{{trans('messages.Testimonials')}}</a></li>
             <li class="{{ Request::is('*voices*articles*') ?  "active" : '' }}"><a href="/posts/voices/category/articles">{{trans('messages.Articles')}}</a></li>
             <li class="{{ Request::is('posts/voices') ?  "active" : '' }}"><a href="/posts/voices">{{trans('messages.All Voices')}}</a></li>
             </ul>
