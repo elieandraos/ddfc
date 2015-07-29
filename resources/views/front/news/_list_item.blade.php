@@ -5,6 +5,8 @@
 </div>
 
 <div class="col-sm-9">
-	<h2 class="heading5">{!! $single_news->title !!}</h2>
-	<p class="heading6">{!! $single_news->excerpt !!}</p>	
+	<a href="{!! route('news.show', [$single_news->slug]) !!}" title="{!! $single_news->title !!}" >
+		<h2 class="heading6">{!! $single_news->title !!}</h2>
+		<p class="heading5">{!! $single_news->excerpt !!}</p>	
+	</a>
 </div>

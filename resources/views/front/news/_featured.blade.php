@@ -6,10 +6,11 @@
 			<div class="title-container-left">
 				<h1 class="heading1">Featured News</h1>
 			</div>
-
-			<img src="{!! $featured_news[0]->getFirstMediaURL( $featured_news[0]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[0]->title !!}" title="{!! $featured_news[0]->title !!}" />
-			<h2 class="heading6">{!! $featured_news[0]->title !!}</h2>
-			<p class="heading7">{!! $featured_news[0]->excerpt !!}</p>	
+			<a href="{!! route('news.show', [$featured_news[0]->slug]) !!}" title="{!! $featured_news[0]->title !!}" >
+				<img src="{!! $featured_news[0]->getFirstMediaURL( $featured_news[0]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[0]->title !!}" title="{!! $featured_news[0]->title !!}" />
+				<h2 class="heading6">{!! $featured_news[0]->title !!}</h2>
+				<p class="heading7">{!! $featured_news[0]->excerpt !!}</p>	
+			</a>
 		</div>
 	@endif
 
@@ -18,10 +19,11 @@
 			<div class="title-container-left">
 				<h1 class="heading1">Featured News</h1>
 			</div>
-
-			<img src="{!! $featured_news[1]->getFirstMediaURL( $featured_news[1]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[1]->title !!}" title="{!! $featured_news[1]->title !!}" />
-			<h2 class="heading6">{!! $featured_news[1]->title !!}</h2>
-			<p class="heading7">{!! $featured_news[1]->excerpt !!}</p>	
+			<a href="{!! route('news.show', [$featured_news[1]->slug]) !!}" title="{!! $featured_news[1]->title !!}" >
+				<img src="{!! $featured_news[1]->getFirstMediaURL( $featured_news[1]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[1]->title !!}" title="{!! $featured_news[1]->title !!}" />
+				<h2 class="heading6">{!! $featured_news[1]->title !!}</h2>
+				<p class="heading7">{!! $featured_news[1]->excerpt !!}</p>	
+			</a>
 		</div>
 	@endif
 

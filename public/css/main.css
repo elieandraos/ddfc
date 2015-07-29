@@ -358,10 +358,12 @@ nav.navbar-main
 .panel.faq
 {
 	box-shadow: none;
+	margin-bottom: 35px;
 }
 .accordion-body
 {
 	margin-bottom: 20px;
+	font-size: 16px;
 }
 
 
@@ -370,7 +372,7 @@ nav.navbar-main
  ********************************/
 .news-list-row
 {
-	margin-bottom: 20px;
+	margin-bottom: 35px;
 }
 
 
@@ -491,6 +493,7 @@ nav.navbar-main
  {
  	text-align: center;
  	overflow: hidden;
+ 	margin-bottom: 35px;
  }
  div.entity-row img 
  {
@@ -527,9 +530,26 @@ p.heading4
     font-size: 18px;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #23C4FD;
+    border: none;
+}
+.btn-custom:hover,.btn-custom:active
+{
+	background-color: #3b5287;
 }
 
-
+.news-filters .btn-custom 
+{
+	width: auto;
+	font-size: 12px;
+	color:#FFF;
+	margin-top: 0;
+}
+.post_body_text img,
+.post_body_text
+{
+	margin-bottom: 35px;
+}
 
 
 
