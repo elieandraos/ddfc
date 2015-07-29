@@ -8,7 +8,9 @@
     <!-- styles --> 
     <link href="/admin/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/css/main.css" rel="stylesheet" />
-
+     @if (Lang::getLocale() =="ar")
+        <link href="/css/ar.css" rel="stylesheet" />
+     @endif
 </head>
 <body>
 
