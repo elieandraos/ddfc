@@ -4,8 +4,8 @@
 		<!-- Block Title -->
 		<div class="row">
 			<div class="col-sm-12 title-container">
-				<h1 class="heading1">news</h3>
-				<h3 class="heading2">Read the latest news and learn about our activities</h5>
+				<h1 class="heading1">{{trans('messages.News')}}</h3>
+				<h3 class="heading2">{{trans('messages.Read the latest news and learn about our activities')}}</h5>
 			</div>
 		</div>
 		<!-- End Of Block Title -->

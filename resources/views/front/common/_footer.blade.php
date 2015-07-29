@@ -34,7 +34,7 @@
             <a href="/page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg"  alt="ACT NOW"/>
             </a> <br/><br/>
-            <p>{{trans('messages.Subscribe to our Newsletter')}}</p>
+            <!-- <p>{{trans('messages.Subscribe to our Newsletter')}}</p> -->
         </div>
     </div>
   </div>

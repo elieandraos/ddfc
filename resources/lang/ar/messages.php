@@ -59,6 +59,38 @@ return [
 
     'Subscribe to our Newsletter' =>'اشترك في نشرتنا الإخبارية',
 
+    'Universal Accessibility' => 'النفاذ الشامل',
+    'Social Protection' => 'الحماية الاجتماعية',
+    'Employment' => 'توظيف',
+    'Education' => 'التعليم',
+    'Health And Rehabilitation' => 'الصحة وإعادة التأهيل',
+
+    'Join us now and be part of the change' => 'انضم إلينا الآن وتكون جزءا من التغيير',
+    'Inspirational success stories and best practices' => 'قصص نجاح ملهمة وأفضل الممارسات',
+    'Read the latest news and learn about our activities' => 'قراءة آخر الأخبار ومعرفة المزيد عن أنشطتنا',
+    'Find Support' => 'البحث عن الدعم',
+    "Listing of government entities, NGO's and care centers" => 'قائمة من الجهات الحكومية والمنظمات غير الحكومية ومراكز الرعاية',
+
+
+    'Success Stories' => 'قصص نجاح',
+    'Testimonials' => 'الشهادات',
+    'Articles' => 'مقالات', 
+
+    'the higher committee' => 'اللجنة العليا',
+    'View All Members' => 'عرض جميع الأعضاء',
+
+    'Featured News' => 'أخبار مميزة',
+    'Filter By' => 'تصفية حسب',
+    'All' => 'جميع'
+
+
+
+
+
+
+
+
+
 
 
 ];

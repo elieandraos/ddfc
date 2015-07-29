@@ -24,7 +24,7 @@
 
 		<div class='col-sm-6 col-sm-push-1'>
 			<div class="title-container-left">
-				<h1 class="heading1"> {{trans('the higher committee')}}</h1>
+				<h1 class="heading1"> {{trans('messages.the higher committee')}}</h1>
 			</div>
 			<div class="row">
 				<div class="col-sm-12">
@@ -44,7 +44,7 @@
 				</div>
 
 				<div class="col-sm-12">
-					<a href="/page/the-higher-committee" class="btn btn-primary btn-custom">View All Members</a>
+					<a href="/page/the-higher-committee" class="btn btn-primary btn-custom">{{ trans('messages.View All Members')}}</a>
 				</div>
 			</div>
 

@@ -21,7 +21,7 @@
 		<div class="container text-center goal-act-now">
 			<a href="/page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg" alt="ACT NOW">
-                <div class="line">Join us now and be part of the change</div>
+                <div class="line">{{ trans('messages.Join us now and be part of the change')}}</div>
             </a>
 		</div>
 	</div>
