@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <img src="{!! $post->getMeta('cover_image') !!}" />
+            <img src="{!! $post->getMeta('cover_image') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
         </div>
     </div>
 
@@ -17,12 +17,12 @@
         <div class="col-sm-6">
             <p>{!! $post->description !!}</p>
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-5 col-sm-push-1">
             <p class="moreinfo">{{trans('messages.For More Information')}}</p>
             <hr/>
             <p class="contact">{!! $post->getMeta('contact_person') !!}</p>
             <p>{{trans('messages.Tel')}}: {!! $post->getMeta('contact_phone') !!}</p>
-            <p>{{trans('messages.Web')}}: <a href="{!! $post->getMeta('contact_website') !!}" target="_blank">{!! $post->getMeta('contact_website') !!} </a></p>
+            <p>{{trans('messages.Web')}}: <a href="{!! $post->getMeta('contact_website') !!}" target="_blank" title="{!! $post->getMeta('contact_website') !!}">{!! $post->getMeta('contact_website') !!} </a></p>
         </div>
     </div>
 

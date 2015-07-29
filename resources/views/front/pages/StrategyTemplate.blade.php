@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<div class="row">
+	<div class="row show-item">
 		
 		<div class='col-sm-6'>
 			<div class="title-container-left">

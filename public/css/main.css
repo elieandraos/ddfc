@@ -82,6 +82,7 @@ a:hover, a:active, a:visited
 	font-size: 28px;
 	color:#3b5287;
 	margin-top: 20px;
+	margin-bottom: 10px;
 }
 .heading4, .heading4 a
 {
@@ -115,7 +116,7 @@ a:hover, a:active, a:visited
 	font-family: 'avenirNextBold';
 	font-size: 23px;
 	color:#3b5287;
-	margin-bottom: 24px;
+	margin-bottom: 5px;
 }
 .heading10, .heading10 a 
 {
@@ -134,8 +135,8 @@ a:hover, a:active, a:visited
 }
 .title-container
 {
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 	text-align: center;
 	background-image: url('/images/Blue-Line.png');
 	background-position: top center;
@@ -143,8 +144,8 @@ a:hover, a:active, a:visited
 }
 .title-container-left
 {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 	text-align: left;
 	background-image: url('/images/Blue-Line.png');
 	background-position: top left;
@@ -280,7 +281,14 @@ nav.navbar-main
 {
     background-color: #FFFFFF;
 }
-
+#menu-navigation ul.navbar-nav > li > .dropdown-menu li a 
+{
+	min-height: auto !important;
+	height: auto !important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 14px;
+}
 /*********************************
  * 		  HOMEPAGE SLIDER        *
  *********************************/
@@ -288,6 +296,7 @@ nav.navbar-main
  {
  	text-align: left;
  	left: 5%;
+ 	display: none;
  }
  #carousel-example-generic
  {
@@ -302,7 +311,7 @@ nav.navbar-main
  *********************************/
 .homepage-block
 {
-	padding-bottom: 20px;
+	padding-bottom: 35px;
 }
 
 .homepage-block-goals
@@ -324,7 +333,7 @@ nav.navbar-main
 .goal-act-now img
 {
 	width:370px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 .actnow-block
 {
@@ -337,6 +346,10 @@ nav.navbar-main
 {
 	font-size: 20px;
 	color: #3C5287;
+}
+.news-block
+{
+	background-color: #F7F8F8;
 }
 
 /*********************************
@@ -405,7 +418,7 @@ nav.navbar-main
 
 .navbar-bottom
 {
-    min-height: 120px;
+    min-height: 85px;
     height:auto;
     background-color: #3b5287;
     width:100%;
@@ -416,13 +429,12 @@ nav.navbar-main
 
 #logos-bottom .header-logo
 {
-    padding-top: 20px;
     /*height: 100%;*/
     position: relative;
 }
 #logos-bottom .header-logo img
 {
-    width: 30%;
+    display: none;
 }
 #logos-bottom .header-logo.header-logo-middle img
 {
@@ -441,13 +453,15 @@ nav.navbar-main
 
 #copyright-text
 {
-    float:right;
     padding-top:40px;
-    width:50%;
     position: relative;
     color:#FFF;
+    text-align: right;
 }
-
+#copyright-text span 
+{
+	margin-left: 10px;
+}
 .white-link a{
     color:#FFF;
 }
@@ -456,6 +470,10 @@ nav.navbar-main
     color:#7c7c7c;
 }
 
+#logos-bottom
+{
+	height: 85px;
+}
 
 /*********************************
  * 			NEWS 				 *
@@ -466,11 +484,50 @@ nav.navbar-main
  	margin-top: 30px;
  }
 
+/*********************************
+ * 			ENTITIES 			 *
+ *********************************/
+ div.entity-row
+ {
+ 	text-align: center;
+ 	overflow: hidden;
+ }
+ div.entity-row img 
+ {
+ 	width: auto;
+ }
 
-
-
-
-
+p.heading4
+{
+	margin: 0;
+	margin-bottom: 35px;
+}
+.post-item, .related-item
+{
+	margin-bottom: 35px;
+}
+.show-item
+{
+	font-size: 16px;
+	padding-bottom: 35px;
+}
+.top0
+{
+	margin-top: 0;
+}
+.top35
+{
+	margin-top: 35px;
+}
+.btn-custom
+{
+    margin-top: 35px;
+    border-radius: 0;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 
 

@@ -8,7 +8,7 @@
 	</div>
 </div>
 
-<div class="row">
+<div class="row show-item">
 	<div class="col-sm-4">
 		 <img src="{!! $top_member->getFirstMediaURL( $top_member->getMediaCollectionName(), 'featured') !!}" alt="{!! $top_member->title !!}" title="{!! $top_member->title !!}" />
 	</div>
@@ -24,10 +24,10 @@
 
 
 
-<div class="row">
+<div class="row show-item">
 	@foreach($members as $member)
 		@if($member->id != $top_member->id)
-			<div class="col-sm-6">
+			<div class="col-sm-6 post-item">
 				<div class="row">
 					<div class="col-sm-6">
 						<img src="{!! $member->getFirstMediaURL( $member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $member->title !!}" title="{!! $member->title !!}" />

@@ -16,12 +16,16 @@
 				<div class="col-sm-6">
 					<div class="row">
 						<div class="col-sm-6">
-							<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->title !!}" title="{!! $n->title !!}" />
+							<a href="{!! route('news.show', [$n->slug]) !!}" title="{!! $n->title !!}">
+								<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->title !!}" title="{!! $n->title !!}" />
+							</a>
 						</div>
 						<div class="col-sm-6">
-							<h4 class="heading5">{!! $n->getReadablePublishedAt() !!}</h4>
-							<h2 class="heading6">{!! $n->title !!}</h2>
-							<p  class="heading7">{!! $n->excerpt !!}</p>
+							<a href="{!! route('news.show', [$n->slug]) !!}" title="{!! $n->title !!}">
+								<h4 class="heading5">{!! $n->getReadablePublishedAt() !!}</h4>
+								<h2 class="heading6">{!! $n->title !!}</h2>
+								<p  class="heading7">{!! $n->excerpt !!}</p>
+							</a>
 						</div>
 					</div>
 				</div>

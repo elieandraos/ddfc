@@ -1,7 +1,7 @@
 <!-- Bottom Bar -->
 <div class="container-fluid" id="bottom-bar">
   <div class="container" >
-    <div class="row" style=padding-top:50px;">
+    <div class="row" style="padding-top:35px;">
         <div class="col-sm-2">
             <h4>{{trans('messages.My Community')}}</h4><br/>
             <p>{{trans('messages.About')}}</p>
@@ -30,7 +30,7 @@
             <p>{{trans('messages.Knowledge')}}</p>
             <p>{{trans('messages.Professionals')}}</p>
         </div>
-         <div class="col-sm-3">
+         <div class="col-sm-4">
             <a href="/page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg"  alt="ACT NOW"/>
             </a> <br/><br/>
@@ -47,7 +47,7 @@
     <div class="container">
         <div class="row" id="logos-bottom">
             <div class='col-sm-4 header-logo-left header-logo'><img src='/images/small_logo.png' alt='Government Of Dubai' title='Government of Dubai'  /></div>
-            <div class="col-sm-4" id="copyright-text">
+            <div class="col-sm-8" id="copyright-text">
                 <span>{{trans('messages.CopyrightText')}}</span>
                 <span> | </span><span class="white-link">&nbsp;<a href="/page/privacy-policy">{{trans('messages.Privacy Policy')}}</a></span>
                  <span> | </span><span class="white-link">&nbsp;<a href="/page/terms-and-conditions">{{trans('messages.Terms and Conditions')}}</a></span>

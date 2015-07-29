@@ -28,8 +28,11 @@
 
 		<!-- posts listing -->
 		<div class="row">
-			@foreach($posts as $post)
+			@foreach($posts as $k => $post)
 				@include('front.posts._listItem', ['post' => $post])
+				@if($k%2 == 0 && $k != 0)
+					<div style="height:1px;clear:both"></div>
+				@endif
 			@endforeach
 		</div>
 
@@ -41,7 +44,11 @@
 			</div>
 		</div>
 	@else
-		<p>No posts available for this section.</p>
+		<div class="row">
+			<div class=" col-sm-12 text-center show-item top35">
+				<p>No posts available for this section.</p>
+			</div>
+		</div>
 	@endif
 	
 @stop

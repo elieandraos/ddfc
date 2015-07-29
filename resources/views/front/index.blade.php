@@ -21,13 +21,23 @@
 		<div class="container text-center goal-act-now">
 			<a href="/page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg" alt="ACT NOW">
-                <div class="line">join us now and be part of the change</div>
+                <div class="line">Join us now and be part of the change</div>
             </a>
 		</div>
 	</div>
 
 	<div class="container">
 		@include('front.homepage._voices')
-		@include('front.homepage._news')
+	</div>
+
+	<div class="container-fluid news-block">
+		<div class="container">
+			@include('front.homepage._news')
+		</div>
+	</div>
+
+	<div class="container">
+		@include('front.homepage._support')
+	</div>
 	
 @stop

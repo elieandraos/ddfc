@@ -2,10 +2,10 @@
 
 @section('content')
 
-	<div class="row">
+	<div class="row show-item">
         {!! $post->getMeta('123') !!}
 		<!-- posts listing -->
-		<div class='col-sm-6'>
+		<div class='col-sm-6 top35'>
 		    @if ($youtube_id != "")
 
 		        <iframe  style="display:none;" id="ytplayer" type="text/html" width="100%" height="321"
