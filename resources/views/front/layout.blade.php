@@ -17,7 +17,7 @@
     @include('front.common._header')
     
     <div class="container">
-        @yield('content')   
+      @yield('content')   
     </div>
 
     @include('front.common._footer')

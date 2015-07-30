@@ -551,9 +551,36 @@ p.heading4
 	margin-bottom: 35px;
 }
 
-
-
-
-
+/*********************************
+ * 	    MOBILE MEDIA QUERY 		 *
+ *********************************/
+@media screen and (min-width: 320px) and (max-width: 767px)
+{
+	.navbar-main #menu-navigation {
+    	min-height: auto !important; 
+     	height: auto !important;
+     	overflow: visible;
+     	background-color: #3b5287;
+     	padding-left: 10px;
+     	font-size: 13px;
+     	z-index: 9999999999;
+    }
+    nav.navbar-main {
+	    min-height: auto !important; 
+	    height: auto !important; 
+	}
+    ul.navbar-nav
+    {
+    	background-color: #3b5287;
+    }
+    #menu-navigation ul.navbar-nav li a {
+    	min-height: auto !important;
+    	height: auto !important;
+    	font-size: 13px;
+	}
+	#menu-navigation ul.navbar-nav > li > .dropdown-menu li a {
+	    font-size: 12px;
+	}
+}
 
 
