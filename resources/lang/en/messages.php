@@ -34,11 +34,13 @@ return [
     'Strategy' => 'Strategy',
     'the higher committee' => 'The Higher Committee',
     'Goals' => 'Goals',
-    'Health' => 'Accessible quality health services',
+
+    'Health' => 'Quality Health & Rehabilitation Services',
     'Education' => 'Inclusive Education',
-    'Employment' => 'Equal employment opportunities',
-    'Universal Accessibility' => 'Accessible environments',
-    'Social Protection' => 'Sustainable social protection system',
+    'Employment' => 'Equal Employment Opportunities',
+    'Universal Accessibility' => 'Universal Accessibility',
+    'Social Protection' => 'Sustainable Social Protection System',
+    
     'Support' => 'Support',
     'Entities' => 'Entities',
     'FAQ' => 'Frequently Asked Questions',

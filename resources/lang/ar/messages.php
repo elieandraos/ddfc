@@ -36,11 +36,11 @@ return [
     'the higher committee' => 'الهيئة العليا',
 
     'Goals' => 'الأهداف',
-    'Health' => 'خدمات صحّية للجميع',
+    'Health' => 'الخدمات الصحية الجيدة وإعادة التأهيل',
     'Education' => 'التعليم الشامل',
-    'Employment' => 'المساواة في العمل',
-    'Universal Accessibility' => 'مدينة متاحة للجميع',
-    'Social Protection' => 'الحماية الإجتماعية المستدامة',
+    'Employment' => 'المساواة في فرص العمل',
+    'Universal Accessibility' => 'مدينة مؤهلة وسهلة الوصول للجميع',
+    'Social Protection' => 'الحماية الاجتماعية المستدامة',
 
     'Support' => 'الدعم',
     'Entities' => 'الهيئات',
@@ -59,11 +59,6 @@ return [
 
     'Subscribe to our Newsletter' =>'اشترك في نشرتنا الإخبارية',
 
-    'Universal Accessibility' => 'النفاذ الشامل',
-    'Social Protection' => 'الحماية الاجتماعية',
-    'Employment' => 'توظيف',
-    'Education' => 'التعليم',
-    'Health And Rehabilitation' => 'الصحة وإعادة التأهيل',
 
     'Join us now and be part of the change' => 'انضم إلينا الآن وتكون جزءا من التغيير',
     'Inspirational success stories and best practices' => 'قصص نجاح ملهمة وأفضل الممارسات',

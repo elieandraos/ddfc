@@ -8,6 +8,7 @@
             <p><a href="/page/the-higher-committee" title="{{trans('messages.the higher committee')}}">{{trans('messages.the higher committee')}}</a></p>
             <p><a href="/page/strategy" title="{{trans('messages.Strategy')}}">{{trans('messages.Strategy')}}</a></p>
         </div>
+        
         <div class="col-sm-2">
             <h4>{{trans('messages.Goals')}}</h4><br/>
             <p><a href="/posts/goals/category/health" title="{{trans('messages.Health')}}" >{{trans('messages.Health')}}</a></p>
@@ -16,19 +17,22 @@
             <p><a href="/posts/goals/category/universal-accessibility" title="{{trans('messages.Universal Accessibility')}}" >{{trans('messages.Universal Accessibility')}}</a></p>
             <p><a href="/posts/goals/category/social-protection" title="{{trans('messages.Social Protection')}}" >{{trans('messages.Social Protection')}}</a></p>
         </div>
-        <div class="col-sm-2">
-            <h4>{{trans('messages.Voices')}}</h4><br/>
-            <p><a href="/posts/voices" title="{{trans('messages.All Voices')}}" >{{trans('messages.All Voices')}}</a></h4></p>
-            {{--<p>{{trans('messages.Testimonials')}}</p>
-            <p>{{trans('messages.Articles')}}</p> --}}
+        
+         <div class="col-sm-2">
+            <h4>{{trans('messages.Support')}}</h4><br/>
+            <p><a href="/page/act-now" title="{{trans('messages.Act Now')}}">{{trans('messages.Act Now')}}</a></p>
+            <p><a href="/posts/entities" title="{{trans('messages.Entities')}}">{{trans('messages.Entities')}}</a></p>
+            <p><a href="/posts/support/category/faq" title="{{trans('messages.FAQ')}}">{{trans('messages.FAQ')}}</a></p>
         </div>
+
         <div class="col-sm-2">
             <h4>{{trans('messages.Other Sections')}}</h4><br/>
             <p><a href="/news" title="{{trans('messages.News')}}">{{trans('messages.News')}}</a></p>
-            <p><a href="/posts/entities" title="{{trans('messages.Support')}}">{{trans('messages.Support')}}</a></p>
-            <p><a href="/posts/support/category/faq" title="{{trans('messages.FAQ')}}">{{trans('messages.FAQ')}}</a></p>
-            <p><a href="/posts/knowledge" title="{{trans('messages.All Knowledge')}}">{{trans('messages.All Knowledge')}}</a></p>
+            <p><a href="/posts/voices" title="{{trans('messages.All Voices')}}" >{{trans('messages.Voices')}}</a></h4></p>
+            <p><a href="/posts/knowledge" title="{{trans('messages.All Knowledge')}}">{{trans('messages.Knowledge')}}</a></p>
         </div>
+        
+       
          <div class="col-sm-4">
             <a href="/page/act-now" alt="ACT NOW">
                 <img src="/images/ActNow.jpg"  alt="ACT NOW"/>
