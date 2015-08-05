@@ -81,7 +81,9 @@ return [
 
     'Featured News' => 'أخبار مميزة',
     'Filter By' => 'تصفية حسب',
-    'All' => 'جميع'
+    'All' => 'جميع',
+
+    'Skip to Content' => 'إذهب إلى المضمون'
 
 
 

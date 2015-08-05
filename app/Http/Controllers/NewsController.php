@@ -11,6 +11,8 @@ use Response;
 use Request;
 use View;
 
+use Gaia\Seo\MetaTag;
+
 class NewsController extends Controller {
 
 	protected $newsRepos;
@@ -55,7 +57,8 @@ class NewsController extends Controller {
 	 */
 	public function show(News $news)
 	{
-		return view('front.news.show', [ 'news' => $news]);
+		$related_news = $this->newsRepos->getByCategory($news->category_id, 5, [$news->id]);
+		return view('front.news.show', [ 'news' => $news, 'related_news' => $related_news]);
 	}
 
 

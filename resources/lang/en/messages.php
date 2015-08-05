@@ -42,7 +42,7 @@ return [
     'Support' => 'Support',
     'Entities' => 'Entities',
     'FAQ' => 'Frequently Asked Questions',
-    'Act Now ' => 'Act Now',
+    'Act Now' => 'Act Now',
     'Other Sections' => 'Other Sections',
     'Voices' => 'Voices',
     'Success Stories' => 'Success Stories',
@@ -57,6 +57,32 @@ return [
     'Professionals' => 'Professionals',
 
     'Subscribe to our Newsletter' =>'Subscribe to our Newsletter',
+
+    'Universal Accessibility' => 'Universal Accessibility',
+    'Social Protection' => 'Social Protection',
+    'Employment' => 'Employment',
+    'Education' => 'Education',
+    'Health And Rehabilitation' => 'Health And Rehabilitation',
+
+    'Join us now and be part of the change' => 'Join us now and be part of the change',
+    'Inspirational success stories and best practices' => 'Inspirational success stories and best practices',
+    'Read the latest news and learn about our activities' => 'Read the latest news and learn about our activities',
+    'Find Support' => 'Find Support',
+    "Listing of government entities, NGO's and care centers" => 'Listing of government entities, NGO\'s and care centers',
+
+
+    'Success Stories' => 'Success Stories',
+    'Testimonials' => 'Testimonials',
+    'Articles' => 'Articles', 
+
+    'the higher committee' => 'the higher committee',
+    'View All Members' => 'View All Members',
+
+    'Featured News' => 'Featured News',
+    'Filter By' => 'Filter By',
+    'All' => 'All',
+
+    'Skip to Content' => 'Skip to Content'
 
 
 

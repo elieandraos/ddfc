@@ -16,7 +16,7 @@
 					<a href="{!! route('posts.show', [$voice->postType->slug, $voice->slug]) !!}" title="{!! $voice->title !!}">
 						<img src="{!! $voice->getFirstMediaURL( $voice->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $voice->title !!}" title="{!! $voice->title !!}" />
 						<h1 class="heading3">{!! $voice->title !!}</h2>
-						<h3 class="heading4">{!! $voice->excerpt !!}</p>
+						<h3 class="heading4">{!! $voice->excerpt !!}</h3>
 					</a>
 				</div>
 			@endforeach

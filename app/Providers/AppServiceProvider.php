@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider {
         view()->share(
             "menuConfiguration",
             [
-                'showVoicesCategories'=>true,
+                'showVoicesCategories'=>false,
                 'showSupportCategories'=>true,
                 'showKnowledgeCategories'=>false,
             ]

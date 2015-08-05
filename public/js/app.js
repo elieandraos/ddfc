@@ -7,7 +7,7 @@ var app = function() {
 
         initializeVideoFrames();
         initNewsFilters();
-
+        initTabIndex();
     };
 
     //set up tooltips
@@ -41,6 +41,15 @@ var app = function() {
             return false;
         })
     }
+
+
+    var initTabIndex = function()
+    {
+        $("#skip-link").click(function(){
+            $("#main-content").attr("tabindex","-1").focus()
+        })
+    }
+
 
     //return functions
     return {

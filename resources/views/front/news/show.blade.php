@@ -13,7 +13,9 @@
 
 		<!-- others --> 
 		<div class='col-sm-5 col-sm-push-1'>
-			
+			@if($related_news->count())
+				@include('front.news._related')
+			@endif
 		</div>
 	</div>
 

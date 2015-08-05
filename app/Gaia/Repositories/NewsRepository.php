@@ -69,12 +69,12 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 	}
 
 
-	public function getByCategory($category_id, $limit)
+	public function getByCategory($category_id, $limit, $except= [])
 	{
 		if(!$limit)
 			$limit = $this->limit;
 
-		return News::latest('published_at')->where('category_id', '=', $category_id)->paginate($limit);
+		return News::latest('published_at')->where('category_id', '=', $category_id)->whereNotIn('id', $except)->paginate($limit);
 	}
 
 

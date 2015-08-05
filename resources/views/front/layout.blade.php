@@ -1,8 +1,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-    <title>DDFC</title>
-    <meta name="description" content="">
+   {{--  <title>DDFC</title>
+    <meta name="description" content=""> --}}
+   {{--  {!! MetaTag::generate() !!} --}}
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <!-- styles --> 
@@ -16,7 +17,7 @@
 
     @include('front.common._header')
     
-    <div class="container">
+    <div class="container" id='main-content'>
       @yield('content')   
     </div>
 
