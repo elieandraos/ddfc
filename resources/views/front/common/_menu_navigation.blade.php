@@ -33,11 +33,25 @@
             <li class="dropdown">
                 <a style="{{ Request::is('*goals*') ?  'background-color:#23C4FD' : '' }}" href="/posts/goals/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('messages.Goals')}} <span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li class="{{ Request::is('*goals*health*') ?  "active" : '' }}"><a href="/posts/goals/category/health">{{trans('messages.Health')}}</a></li>
-            <li class="{{ Request::is('*goals*education*') ?  "active" : '' }}"><a href="/posts/goals/category/education">{{trans('messages.Education')}}</a></li>
-            <li class="{{ Request::is('*goals*employment*') ?  "active" : '' }}"><a href="/posts/goals/category/employment">{{trans('messages.Employment')}}</a></li>
-            <li class="{{ Request::is('*goals*universal-accessibility*') ?  "active" : '' }}"><a href="/posts/goals/category/universal-accessibility">{{trans('messages.Universal Accessibility')}}</a></li>
-            <li class="{{ Request::is('*goals*social-protection*') ?  "active" : '' }}"><a href="/posts/goals/category/social-protection">{{trans('messages.Social Protection')}}</a></li>
+                    <li class="{{ Request::is('*goals*quality-health-and-rehabilitation-services*') ?  "active" : '' }}">
+                        <a href="/posts/goals/category/quality-health-and-rehabilitation-services">{{trans('messages.Health')}}</a>
+                    </li>
+
+                    <li class="{{ Request::is('*goals*inclusive-education*') ?  "active" : '' }}">
+                        <a href="/posts/goals/category/inclusive-education">{{trans('messages.Education')}}</a>
+                    </li>
+                    
+                    <li class="{{ Request::is('*goals*equal-employment-opportunities*') ?  "active" : '' }}">
+                        <a href="/posts/goals/category/equal-employment-opportunities">{{trans('messages.Employment')}}</a>
+                    </li>
+
+                    <li class="{{ Request::is('*goals*universal-accessibility*') ?  "active" : '' }}">
+                        <a href="/posts/goals/category/universal-accessibility">{{trans('messages.Universal Accessibility')}}</a>
+                    </li>
+
+                    <li class="{{ Request::is('*goals*sustainable-social-protection-system*') ?  "active" : '' }}">
+                        <a href="/posts/goals/category/sustainable-social-protection-system">{{trans('messages.Social Protection')}}</a>
+                    </li>
             </ul>
             </li>
             <!-- Voices -->

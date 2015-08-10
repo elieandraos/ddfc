@@ -41,3 +41,6 @@ ul.dropdown-menu
     text-align: right;
     background-position: top right;
 }
+ul.dropdown-menu>li>a {
+    white-space: normal;
+}
