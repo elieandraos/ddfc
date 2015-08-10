@@ -218,7 +218,8 @@ return [
 		'Html' => 'Illuminate\Html\HtmlFacade',
 		'Flash' => 'Laracasts\Flash\Flash',
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
-		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade'
+		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
+		'MetaTag'   => 'Gaia\Seo\Facades\MetaTag',
 
 	]
 

@@ -15,32 +15,32 @@
 
 				<div class="col-sm-2 goal">
 				    <a href="/posts/goals/category/health">
-                        <img src="/images/icon-01.png" alt="{{trans('messages.Health')}}" title="{{trans('messages.Health')}}" />
+                        <img src="/images/icon-01.png" alt="{{trans('messages.Health')}}"/>
                         <h2 class="heading11">{{trans('messages.Health')}}</h2>
 					</a>
 				</div>
 
 				<div class="col-sm-2 goal">
 				     <a href="/posts/goals/category/education">
-					<img src="/images/icon-02.png" alt="{{trans('messages.Education')}}" title="{{trans('messages.Education')}}" />
+					<img src="/images/icon-02.png" alt="{{trans('messages.Education')}}" />
 					<h2 class="heading11">{{trans('messages.Education')}}</h2>
 					</a>
 				</div>
 				<div class="col-sm-2 goal">
 				    <a href="/posts/goals/category/employment">
-                        <img src="/images/icon-03.png" alt="{{trans('messages.Employment')}}" title="{{trans('messages.Employment')}}" />
+                        <img src="/images/icon-03.png" alt="{{trans('messages.Employment')}}" />
                         <h2 class="heading11">{{trans('messages.Employment')}}</h2>
 					</a>
 				</div>
 				<div class="col-sm-2 goal">
 				    <a href="/posts/goals/category/social-protection">
-                        <img src="/images/icon-04.png" alt="{{trans('messages.Social Protection')}}" title="{{trans('messages.Social Protection')}}" />
+                        <img src="/images/icon-04.png" alt="{{trans('messages.Social Protection')}}" />
                         <h2 class="heading11">{{trans('messages.Social Protection')}}</h2>
 					</a>
 				</div>
 				<div class="col-sm-2 goal">
 				    <a href="/posts/goals/category/universal-accessibility">
-                        <img src="/images/icon-05.png" alt="{{trans('messages.Universal Accessibility')}}" title="{{trans('messages.Universal Accessibility')}}" />
+                        <img src="/images/icon-05.png" alt="{{trans('messages.Universal Accessibility')}}" />
                         <h2 class="heading11">{{trans('messages.Universal Accessibility')}}</h2>
 					</a>
 				</div>
