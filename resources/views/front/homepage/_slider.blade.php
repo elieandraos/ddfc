@@ -10,27 +10,15 @@
   <div class="carousel-inner" role="listbox">
     
     <div class="item active">
-      <img src="/images/slide1.jpg" alt="Slide 1" title="Slide 1" />
-      <div class="carousel-caption">
-        <h2>A city for everyone</h2>
-        <p>Together for a disable friendly city</p>
-      </div>
+      <img src="/images/slide1.jpg" alt="Slide 1 - A Kid" />
     </div>
     
     <div class="item">
-      <img src="/images/slide2.jpg" alt="Slide 2" title="Slide 2" />
-      <div class="carousel-caption">
-        <h2>A city for everyone</h2>
-        <p>Together for a disable friendly city</p>
-      </div>
+      <img src="/images/slide2.jpg" alt="Slide 2 - A Woman" />
     </div>
     
     <div class="item">
-      <img src="/images/slide3.jpg" alt="Slide 2" title="Slide 3" />
-      <div class="carousel-caption">
-        <h2>A city for everyone</h2>
-        <p>Together for a disable friendly city</p>
-      </div>
+      <img src="/images/slide3.jpg" alt="Slide 3 - A Man" />
     </div>
 
   </div>

@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="menu-navigation">
             <ul class="nav navbar-nav">
 
-            <li class="{{ Request::is('/*') ?  "active" : '' }}"><a href="/">{{trans('messages.Home')}} <span class="sr-only">(current)</span></a></li>
+            <li class="{{ Request::is('/*') ?  "active" : '' }}"><a href="{!! url('/') !!}">{{trans('messages.Home')}}</a></li>
 
             <!-- My Community -->
             <li class="dropdown">
