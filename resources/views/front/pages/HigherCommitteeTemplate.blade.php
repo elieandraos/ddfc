@@ -30,7 +30,7 @@
 			<div class="col-sm-6 post-item">
 				<div class="row">
 					<div class="col-sm-6">
-						<img src="{!! $member->getFirstMediaURL( $member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $member->title !!}" title="{!! $member->title !!}" />
+						<img src="{!! $member->getFirstMediaURL( $member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $member->getMeta('job_title') !!}" />
 					</div>
 					<div class="col-sm-6">
 						<h2 class="heading6">{!! $member->title !!}</h2>

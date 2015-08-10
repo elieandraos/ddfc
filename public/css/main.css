@@ -137,6 +137,11 @@ a:focus
     margin-top: 20px;
 	text-transform: uppercase;
 }
+.heading12
+{
+	font-size: 18px;
+	font-weight: 500;
+}
 .title-container
 {
 	margin-top: 35px;

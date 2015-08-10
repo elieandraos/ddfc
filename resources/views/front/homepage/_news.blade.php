@@ -20,8 +20,8 @@
 								<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
 							</div>
 							<div class="col-sm-6">
-								<h1 class="heading5">{!! $n->getReadablePublishedAt() !!}</h4>
-								<h2 class="heading6">{!! $n->title !!}</h2>
+								<p class="heading5">{!! $n->getReadablePublishedAt() !!}</p>
+								<h3 class="heading6">{!! $n->title !!}</h3>
 								<p  class="heading7">{!! $n->excerpt !!}</p>
 							</div>
 						</a>

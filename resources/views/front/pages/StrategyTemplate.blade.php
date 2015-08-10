@@ -16,7 +16,7 @@
 			<div class="title-container-left">
 				<h1 class="heading1"> {!! $content['title_right'] !!}</h1>
 			</div>
-			<img src="{!! $content['infographic'] !!}" alt="{!! $content['title_right'] !!}" title="{!! $content['title_right'] !!}" />
+			<img src="{!! $content['infographic'] !!}" alt="{!! trans('messages.Strategy Roadmap Alt') !!}" />
 		</div>
 	</div>
 	

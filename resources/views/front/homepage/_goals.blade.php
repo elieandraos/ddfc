@@ -21,7 +21,7 @@
 				</div>
 
 				<div class="col-sm-2 goal">
-				     <a href="/posts/goals/category/education">
+				    <a href="/posts/goals/category/education">
 					<img src="/images/icon-02.png" alt="{{trans('messages.Education Alt')}}" />
 					<h2 class="heading11">{{trans('messages.Education')}}</h2>
 					</a>

@@ -15,6 +15,7 @@ use File;
 use App\Models\Category;
 use App\Models\PostType;
 use App\Models\Post;
+use MetaTag;
 
 
 class PostController extends Controller {
@@ -38,6 +39,17 @@ class PostController extends Controller {
 	public function index(PostType $postType)
 	{
 		
+		 MetaTag::setTitle($postType->title);
+         MetaTag::setDescription($postType->description);
+         MetaTag::setKeywords($postType->title);
+         MetaTag::setFacebookTags([
+         	'title' => $postType->title, 
+         	'description' => $postType->description, 
+         	'image' => "", 
+         	'url' => route('posts.list', [$postType->slug]) 
+         ]);
+        MetaTag::setTwitterDescription($postType->description);
+
 		if($postType->slug == "entities")
 		{
 			$posts = ['gov' => [], 'org' => [] ];
@@ -67,6 +79,19 @@ class PostController extends Controller {
 	 */
 	public function category(PostType $postType, Category $category)
 	{
+		
+		 MetaTag::setTitle($postType->title." - ".$category->title);
+         MetaTag::setDescription($postType->description);
+         MetaTag::setKeywords($postType->title);
+         MetaTag::setFacebookTags([
+         	'title' => $postType->title, 
+         	'description' => $postType->description, 
+         	'image' => "", 
+         	'url' => route('posts.list', [$postType->slug]) 
+         ]);
+        MetaTag::setTwitterDescription($postType->description);
+
+
 		//change limit in case post type is support
 		if($postType->slug == 'support')
 			$this->limit = 100;
@@ -91,6 +116,19 @@ class PostController extends Controller {
 	 */
 	public function show(PostType $postType, Post $post)
 	{
+		
+		 MetaTag::setTitle($post->seo->meta_title);
+         MetaTag::setDescription($post->seo->meta_description);
+         MetaTag::setKeywords($post->seo->meta_keywords);
+         MetaTag::setFacebookTags([
+         	'title' => $post->seo->facebook_title, 
+         	'description' => $post->seo->facebook_description, 
+         	'image' => url($post->getFirstMediaURL( $post->getMediaCollectionName(), 'facebook')) , 
+         	'url' => route('posts.show', [$postType->slug, $post->slug]) 
+         ]);
+        MetaTag::setTwitterDescription($post->seo->twitter_description);
+
+
 		$related_posts = $this->postRepos->getAllRelated($post);
 
         //check if youtube url and id exist in the post:

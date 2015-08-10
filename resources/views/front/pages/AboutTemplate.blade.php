@@ -30,15 +30,11 @@
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-6">
-							<a href="{!! route('news.show', [$top_member->slug]) !!}" title="{!! $top_member->title !!}">
-								<img src="{!! $top_member->getFirstMediaURL( $top_member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $top_member->title !!}" title="{!! $top_member->title !!}" />
-							</a>
+								<img src="{!! $top_member->getFirstMediaURL( $top_member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $top_member->getMeta('job_title') !!}"  />
 						</div>
 						<div class="col-sm-6">
-							<a href="{!! route('news.show', [$top_member->slug]) !!}" title="{!! $top_member->title !!}">
 								<h2 class="heading6">{!! $top_member->title !!}</h2>
 								<p  class="heading7">{!! $top_member->getMeta('job_title') !!}</p>
-							</a>
 						</div>
 					</div>
 				</div>

@@ -26,7 +26,6 @@
                 <li class="{{ Request::is('page/about') ?  "active" : '' }}"><a href="/page/about">{{trans('messages.About')}}</a></li>
                 <li class="{{ Request::is('page/strategy') ?  "active" : '' }}"><a href="/page/strategy">{{trans('messages.Strategy')}}</a></li>
                 <li class="{{ Request::is('page/the-higher-committee') ?  "active" : '' }}"><a href="/page/the-higher-committee">{{trans('messages.the higher committee')}}</a></li>
-
                 </ul>
              </li>
 

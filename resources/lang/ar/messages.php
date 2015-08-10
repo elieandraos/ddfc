@@ -78,7 +78,17 @@ return [
     'Filter By' => 'تصفية حسب',
     'All' => 'جميع',
 
-    'Skip to Content' => 'إذهب إلى المضمون'
+    'Skip to Content' => 'إذهب إلى المضمون',
+
+
+    //Alts 
+    'Universal Accessibility Alt' => 'Jump To Universal Accessibility Posts',
+    'Social Protection Alt' => 'Jump To Social Protection Posts',
+    'Employment Alt' => 'Jump To Employment Posts',
+    'Education Alt' => 'Jump To Education Posts',
+    'Health And Rehabilitation Alt' => 'Jump To Health And Rehabilitation Posts',
+    'Skip to Content Alt' => 'Skip Navigation And Jump To Content Directly',
+    'Strategy Roadmap Alt' => 'Infographic Of The Roadmap Strategy'
 
 
 

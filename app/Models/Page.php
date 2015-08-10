@@ -72,4 +72,14 @@ class Page extends Model {
 		return $array;
 	}
 
+
+	/**
+     * Return the media collection name
+     * @return type
+     */
+    public function getMediaCollectionName()
+    {
+    	return "collection-".$this->id;
+    }
+
 }

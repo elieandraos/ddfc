@@ -3,14 +3,14 @@
   <div class="container" >
     <div class="row" style="padding-top:35px;">
         <div class="col-sm-2">
-            <h1>{{trans('messages.My Community')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.My Community')}}</h1><br/>
             <p><a href="/page/about">{{trans('messages.About')}}</a></p>
             <p><a href="/page/the-higher-committee">{{trans('messages.the higher committee')}}</a></p>
             <p><a href="/page/strategy">{{trans('messages.Strategy')}}</a></p>
         </div>
         
         <div class="col-sm-2">
-            <h1>{{trans('messages.Goals')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.Goals')}}</h1><br/>
             <p><a href="/posts/goals/category/health">{{trans('messages.Health')}}</a></p>
             <p><a href="/posts/goals/category/education">{{trans('messages.Education')}}</a></p>
             <p><a href="/posts/goals/category/employment">{{trans('messages.Employment')}}</a></p>
@@ -19,14 +19,14 @@
         </div>
         
          <div class="col-sm-2">
-            <h1>{{trans('messages.Support')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.Support')}}</h1><br/>
             <p><a href="/page/act-now">{{trans('messages.Act Now')}}</a></p>
             <p><a href="/posts/entities">{{trans('messages.Entities')}}</a></p>
             <p><a href="/posts/support/category/faq">{{trans('messages.FAQ')}}</a></p>
         </div>
 
         <div class="col-sm-2">
-            <h1>{{trans('messages.Other Sections')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.Other Sections')}}</h1><br/>
             <p><a href="/news">{{trans('messages.News')}}</a></p>
             <p><a href="/posts/voices">{{trans('messages.Voices')}}</a></h4></p>
             <p><a href="/posts/knowledge">{{trans('messages.Knowledge')}}</a></p>

@@ -12,6 +12,7 @@ use App\Models\Section;
 use App\Models\ComponentPost;
 use App\Models\Post;
 use MediaLibrary;
+use MetaTag;
 
 
 class PageController extends Controller {
@@ -32,6 +33,18 @@ class PageController extends Controller {
 	 */
 	public function show(Page $page)
 	{
+		
+		MetaTag::setTitle($page->seo->meta_title);
+        MetaTag::setDescription($page->seo->meta_description);
+        MetaTag::setKeywords($page->seo->meta_keywords);
+        MetaTag::setFacebookTags([
+         	'title' => $page->seo->facebook_title, 
+         	'description' => $page->seo->facebook_description, 
+         	'image' => '', 
+         	'url' => route('pages.show', $page->slug) 
+         ]);
+        MetaTag::setTwitterDescription($page->seo->twitter_description);
+
 		//get metas 
 		$metas = [];
 		foreach($page->componentPages as $componentPage)
