@@ -39,9 +39,6 @@
     <div class="row">
          @foreach($related_posts as $k => $related_post)
             @include('front.posts._listItem', ['post' => $related_post])
-            @if($k%2 == 0)
-                <div class="clear:both;height:1px"></div>
-            @endif
         @endforeach
     </div>
 
