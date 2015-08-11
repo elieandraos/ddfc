@@ -90,6 +90,10 @@ return [
     'Strategy Roadmap Alt' => 'Infographic Of The Roadmap Strategy'
 
 
-
+    'Quality Health & Rehabilitation Services' => 'Quality Health & Rehabilitation Services',
+    'Inclusive Education' => 'Inclusive Education',
+    'Equal Employment Opportunities' => 'Equal Employment Opportunities',
+    'Universal Accessibility' => 'Universal Accessibility',
+    'Sustainable Social Protection System' => 'Sustainable Social Protection System',
 
 ];
