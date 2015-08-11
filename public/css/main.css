@@ -324,7 +324,7 @@ nav.navbar-main
  }
  #carousel-example-generic div.item img 
  {
- 	height: 100%;
+ 	/*height: 100%;*/
  }
 
 /*********************************

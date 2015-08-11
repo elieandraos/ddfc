@@ -36,8 +36,8 @@
 		</div>
 	</div>
 
-	<div class="container">
+	{{-- <div class="container">
 		@include('front.homepage._support')
-	</div>
+	</div> --}}
 	
 @stop
