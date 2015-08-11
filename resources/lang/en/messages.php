@@ -60,12 +60,6 @@ return [
 
     'Subscribe to our Newsletter' =>'Subscribe to our Newsletter',
 
-    'Universal Accessibility' => 'Universal Accessibility',
-    'Social Protection' => 'Social Protection',
-    'Employment' => 'Employment',
-    'Education' => 'Education',
-    'Health And Rehabilitation' => 'Health And Rehabilitation',
-
     'Join us now and be part of the change' => 'Join us now and be part of the change',
     'Inspirational success stories and best practices' => 'Inspirational success stories and best practices',
     'Read the latest news and learn about our activities' => 'Read the latest news and learn about our activities',
