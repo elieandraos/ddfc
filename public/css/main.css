@@ -322,7 +322,10 @@ nav.navbar-main
  	height: auto;
  	overflow: hidden;
  }
-
+ #carousel-example-generic div.item img 
+ {
+ 	height: 100%;
+ }
 
 /*********************************
  * 		  HOMEPAGE BLOCKS        *

@@ -32,12 +32,13 @@
             <p><a href="/posts/knowledge">{{trans('messages.Knowledge')}}</a></p>
         </div>
         
-       
-         <div class="col-sm-4">
-            <a href="/page/act-now">
-                <img src="/images/ActNow.jpg" alt="ACT NOW"/>
-            </a> <br/><br/>
-        </div>
+        @if(!Request::is('page/act-now'))
+             <div class="col-sm-4">
+                <a href="/page/act-now">
+                    <img src="/images/ActNow.jpg" alt="ACT NOW"/>
+                </a> <br/><br/>
+            </div>
+        @endif
     </div>
   </div>
 </div>

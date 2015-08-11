@@ -36,6 +36,7 @@ div.text-right.top-buffer
 ul.dropdown-menu
 {
 	right: 0;
+    min-width: 200px;
 }
 .title-container-left {
     text-align: right;

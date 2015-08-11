@@ -74,7 +74,7 @@ return [
     'the higher committee' => 'اللجنة العليا',
     'View All Members' => 'عرض جميع الأعضاء',
 
-    'Featured News' => 'أخبار مميزة',
+    'Featured News' => 'آخر الأخبار',
     'Filter By' => 'تصفية حسب',
     'All' => 'جميع',
 

@@ -8,7 +8,7 @@
 		@if(isset($pageTitle))
 			<div class="row">
 				<div class="col-sm-12 title-container">
-					<h1 class="heading1">{!! $pageTitle !!}</h3>
+					<h1 class="heading1">{!! trans('messages.'.$pageTitle) !!}</h3>
 				</div>
 			</div>
 		@endif

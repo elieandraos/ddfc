@@ -77,7 +77,7 @@ return [
     'Testimonials' => 'Testimonials',
     'Articles' => 'Articles', 
 
-    'the higher committee' => 'the higher committee',
+    'the higher committee' => 'The Higher Committee',
     'View All Members' => 'View All Members',
 
     'Featured News' => 'Featured News',
