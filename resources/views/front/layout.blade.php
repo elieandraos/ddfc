@@ -15,7 +15,7 @@
 <body>
     @include('front.common._header')
     
-    <div class="container" id='main-content'>
+    <div class="container body-content" id='main-content'>
       @yield('content')
     </div>
 
@@ -25,6 +25,7 @@
     <script type="text/javascript" src="/admin/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="/js/fontResize.js"></script>
     <script type="text/javascript">
         $('ul.nav li.dropdown').hover(function() {
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);

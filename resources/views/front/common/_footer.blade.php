@@ -20,9 +20,9 @@
         
          <div class="col-sm-2">
             <h1 class="heading12">{{trans('messages.Support')}}</h1><br/>
-            <p><a href="/page/act-now">{{trans('messages.Act Now')}}</a></p>
             <p><a href="/posts/entities">{{trans('messages.Entities')}}</a></p>
             <p><a href="/posts/support/category/faq">{{trans('messages.FAQ')}}</a></p>
+            <p><a href="/page/act-now">{{trans('messages.Act Now')}}</a></p>
         </div>
 
         <div class="col-sm-2">
@@ -33,7 +33,7 @@
         </div>
         
         @if(!Request::is('page/act-now'))
-             <div class="col-sm-4">
+             <div class="col-sm-3 col-sm-push-1">
                 <a href="/page/act-now">
                     <img src="/images/ActNow.jpg" alt="ACT NOW"/>
                 </a> <br/><br/>

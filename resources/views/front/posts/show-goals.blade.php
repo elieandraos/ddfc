@@ -14,10 +14,10 @@
     </div>
 
 	<div class="row post_body_text">
-        <div class="col-sm-6">
+        <div class="col-sm-7">
             <p>{!! $post->description !!}</p>
         </div>
-        <div class="col-sm-5 col-sm-push-1">
+        <div class="col-sm-5">
             <p class="moreinfo">{{trans('messages.For More Information')}}</p>
             <hr/>
             <p class="contact">{!! $post->getMeta('contact_person') !!}</p>

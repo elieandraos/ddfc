@@ -4,7 +4,15 @@
 	
 	@if($news->count())
 
-		@include('front.news._featured')
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="title-container-left">
+					<h1 class="heading1">{{ trans('messages.News')}}</h1>
+				</div>
+			</div>
+		</div>
+
+		{{-- @include('front.news._featured') --}}
 
 		<!-- news filter -->
 		@include('front.news._filters')

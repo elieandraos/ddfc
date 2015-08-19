@@ -9,7 +9,7 @@
 
 <div class="row">
 	@if(isset($featured_news[0]))
-		<div class="col-sm-5">
+		<div class="col-sm-4">
 			<a href="{!! route('news.show', [$featured_news[0]->slug]) !!}" title="{!! $featured_news[0]->title !!}" >
 				<img src="{!! $featured_news[0]->getFirstMediaURL( $featured_news[0]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[0]->title !!}" title="{!! $featured_news[0]->title !!}" />
 				<h2 class="heading6">{!! $featured_news[0]->title !!}</h2>
@@ -19,11 +19,21 @@
 	@endif
 
 	@if(isset($featured_news[1]))
-		<div class="col-sm-5 col-sm-push-2">
+		<div class="col-sm-4">
 			<a href="{!! route('news.show', [$featured_news[1]->slug]) !!}" title="{!! $featured_news[1]->title !!}" >
 				<img src="{!! $featured_news[1]->getFirstMediaURL( $featured_news[1]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[1]->title !!}" title="{!! $featured_news[1]->title !!}" />
 				<h2 class="heading6">{!! $featured_news[1]->title !!}</h2>
 				<p class="heading7">{!! $featured_news[1]->excerpt !!}</p>	
+			</a>
+		</div>
+	@endif
+
+	@if(isset($featured_news[2]))
+		<div class="col-sm-4">
+			<a href="{!! route('news.show', [$featured_news[2]->slug]) !!}" title="{!! $featured_news[2]->title !!}" >
+				<img src="{!! $featured_news[2]->getFirstMediaURL( $featured_news[2]->getMediaCollectionName(), 'featured') !!}" alt="{!! $featured_news[2]->title !!}" title="{!! $featured_news[2]->title !!}" />
+				<h2 class="heading6">{!! $featured_news[2]->title !!}</h2>
+				<p class="heading7">{!! $featured_news[2]->excerpt !!}</p>	
 			</a>
 		</div>
 	@endif

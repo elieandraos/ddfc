@@ -4,13 +4,13 @@
 	
 		<!-- posts listing -->
 		<div class="row">
-			<div class="col-sm-5">
+			<div class="col-sm-6">
 				<div class="title-container-left">
 					<h1 class="heading1"> {{trans('messages.government entities')}}</h1>
 				</div>
 				@include( "front.posts._entities_list", ['posts' => $posts['postsGov']])
 			</div>
-			<div class="col-sm-5 col-sm-push-2">
+			<div class="col-sm-6">
 				<div class="title-container-left">
 					<h1 class="heading1"> {{trans('messages.organization')}}</h1>
 				</div>

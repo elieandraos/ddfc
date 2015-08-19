@@ -9,10 +9,10 @@
 		</div>
 		<!-- End Of Block Title -->
 
-		<!-- Recent 2 Voices -->
+		<!-- Recent 3 Voices -->
 		<div class="row">
 			@foreach($voices as $voice)
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<a href="{!! route('posts.show', [$voice->postType->slug, $voice->slug]) !!}">
 						<img src="{!! $voice->getFirstMediaURL( $voice->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $voice->excerpt !!}" />
 						<h3 class="heading3">{!! $voice->title !!}</h3>
@@ -21,7 +21,7 @@
 				</div>
 			@endforeach
 		</div>
-		<!-- End Of Recent 2 Voices -->
+		<!-- End Of Recent 3 Voices -->
 
 	</div>
 @endif

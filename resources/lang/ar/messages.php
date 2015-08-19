@@ -94,7 +94,7 @@ return [
     'Quality Health & Rehabilitation Services' => 'الخدمات الصحية الجيدة وإعادة التأهيل',
     'Inclusive Education' => 'التعليم الشامل',
     'Equal Employment Opportunities' => 'المساواة في فرص العمل',
-    'Universal Accessibility' => 'مدينة مؤهلة وسهلة الوصول للجميع',
+    'Universal Accessibility' => 'مدينة متاحة للجميع',
     'Sustainable Social Protection System' => 'الحماية الاجتماعية المستدامة',
 
 

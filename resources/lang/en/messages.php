@@ -35,7 +35,7 @@ return [
     'the higher committee' => 'The Higher Committee',
     'Goals' => 'Goals',
 
-    'Health' => 'Quality Health & Rehabilitation Services',
+    'Health' => 'Quality Health And Rehabilitation Services',
     'Education' => 'Inclusive Education',
     'Employment' => 'Equal Employment Opportunities',
     'Universal Accessibility' => 'Universal Accessibility',
@@ -87,7 +87,7 @@ return [
     'Education Alt' => 'Jump To Education Posts',
     'Health And Rehabilitation Alt' => 'Jump To Health And Rehabilitation Posts',
     'Skip to Content Alt' => 'Skip Navigation And Jump To Content Directly',
-    'Strategy Roadmap Alt' => 'Infographic Of The Roadmap Strategy',
+    'Strategy Roadmap Alt' => 'Infographic Of The Roadmap Framework',
 
 
     'Quality Health & Rehabilitation Services' => 'Quality Health & Rehabilitation Services',
@@ -95,5 +95,12 @@ return [
     'Equal Employment Opportunities' => 'Equal Employment Opportunities',
     'Universal Accessibility' => 'Universal Accessibility',
     'Social Protection' => 'Sustainable Social Protection System',
+
+    //Page About 
+    'AboutText' => 'Persons with disablities include those who have long-term physical, mental, 
+                    intellectual or sensory impairments which in interaction with various barriers 
+                    may hinder their full and effective participation in society on an <b>equal basis with others.</b>
+                    <br/>[Article 1 of the UN Convention on the Rights of People with Disablities]
+                    '
 
 ];

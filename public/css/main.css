@@ -71,8 +71,9 @@ a:focus
 	font-size: 24px;
 	text-transform: uppercase;
 	color:#3C5287;
-	padding-top: 20px;
-	letter-spacing: 4px;
+	padding-top: 15px;
+	padding-bottom: 5px;
+	letter-spacing: 3px;
 }
 .heading2, .heading2 a
 {
@@ -83,42 +84,43 @@ a:focus
 .heading3, .heading3 a
 {
 	font-family: 'avenirNextBold';
-	font-size: 28px;
+	font-size: 24px;
 	color:#3b5287;
-	margin-top: 20px;
 	margin-bottom: 10px;
+	margin-top: 20px;
 }
 .heading4, .heading4 a
 {
 	font-family: 'avenirNextRegular';
-	font-size: 16px;
+	font-size: 15px;
 	color:#000000;
 	margin-top: 8px;
 }
 .heading5, .heading5 a
 {
 	font-family: 'avenirNextRegular';
-	font-size: 16px;
+	font-size: 14px;
 	color:#3C5287;
 }
 .heading6, .heading6 a
 {
 	font-family: 'avenirNextMedium';
-	font-size: 24px;
+	font-size: 18px;
 	color:#000000;
+	line-height: 22px;
 	margin-top: 8px;
 }
 .heading7, .heading7 a
 {
 	font-family: 'avenirNextRegular';
-	font-size: 16px;
+	font-size: 15px;
 	color:#030303;
 	margin-top: 10px;
 }
 .heading9, .heading9 a 
 {
 	font-family: 'avenirNextBold';
-	font-size: 23px;
+	font-size: 18px;
 	color:#3b5287;
 	margin-bottom: 5px;
 }
@@ -132,7 +134,7 @@ a:focus
 .heading11, .heading11 a
 {
 	font-family: 'avenirNextBold';
-	font-size: 18px;
+	font-size: 15px;
     color: #1D1717;
     margin-top: 20px;
 	text-transform: uppercase;
@@ -154,11 +156,14 @@ a:focus
 .title-container-left
 {
 	margin-top: 35px;
-	margin-bottom: 35px;
+	margin-bottom: 15px;
 	text-align: left;
 	background-image: url('/images/Blue-Line.png');
 	background-position: top left;
 	background-repeat: no-repeat;
+}
+.title-container-left .heading1, .title-container-left .heading1 a {
+	font-size: 18px;
 }
 
 /*********************************
@@ -319,13 +324,21 @@ nav.navbar-main
  #carousel-example-generic
  {
  	max-height: 415px;
- 	height: auto;
+ 	height: 415px;
  	overflow: hidden;
  }
  #carousel-example-generic div.item img 
  {
  	/*height: 100%;*/
  }
+
+/* #carousel-example-generic div.item 
+ {
+ 	 max-height: 415px;
+ 	height: 415px;
+ 	background-position: center;
+ 	background-size: 100% 100%;
+ }*/
 
 /*********************************
  * 		  HOMEPAGE BLOCKS        *
@@ -353,7 +366,7 @@ nav.navbar-main
 }
 .goal-act-now img
 {
-	width:370px;
+	width:300px;
 	margin-bottom: 10px;
 }
 .actnow-block
@@ -395,7 +408,9 @@ nav.navbar-main
 {
 	margin-bottom: 35px;
 }
-
+.news-list-row .heading6, .news-list-row .heading6 a {
+	margin-top: 0;
+}
 
 /*********************************
  * 			PAGES        		 *
@@ -424,7 +439,10 @@ nav.navbar-main
     font-family:'avenirNextBold';
     font-size:18px;
     color:#707070;
-
+}
+.aboutHint
+{
+	margin-top: 35px;
 }
 
 /*********************************
@@ -536,6 +554,9 @@ p.heading4
 {
 	margin-bottom: 35px;
 }
+.post-item .heading3, .post-item .heading3 a {
+	margin-top: 20px;
+}
 .show-item
 {
 	font-size: 16px;
@@ -551,7 +572,7 @@ p.heading4
 }
 .btn-custom
 {
-    margin-top: 35px;
+    margin-top: 10px;
     border-radius: 0;
     width: 100%;
     font-size: 18px;

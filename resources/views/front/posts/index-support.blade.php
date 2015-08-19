@@ -28,7 +28,7 @@
 
 		<!-- posts listing -->
 		<div class="row">
-			<div class="col-sm-6">
+			<div class="col-sm-7">
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					{{--*/ $first = $posts->first()  /*--}}
 

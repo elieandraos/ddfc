@@ -6,7 +6,15 @@
         </div>
 
         <div class='col-sm-4 pull-right text-right top-buffer'>
-          <div class="dropdown">
+          
+
+          <a class="decreaseFont fontResizer" href="javascript:void(0)" title="Increase Font Size">A</a> | 
+          <a class="resetFont fontResizer" href="javascript:void(0)" title="Reset Font Size">A</a> |
+          <a class="increaseFont fontResizer" href="javascript:void(0)" title="Decrease Font Size">A</a>  
+          
+
+
+          <div class="dropdown pull-right" style="margin-left: 20px;">
               <a class="btn dropdown-toggle" type="button" data-toggle="dropdown">
                 @if (Lang::getLocale() =="en")
                 English

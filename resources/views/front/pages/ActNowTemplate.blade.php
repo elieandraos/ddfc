@@ -4,7 +4,7 @@
 
 	<div class="row">
 
-		<div class='col-sm-5 post_body_text'>
+		<div class='col-sm-6 post_body_text'>
 			<div class="title-container-left">
 				<h1 class="heading1"> {!! $content['left_title'] !!}</h1>
 			</div>
@@ -19,7 +19,7 @@
             <p>{{trans('messages.Web')}}: <a href="{!! $content['left_web'] !!}" target="_blank">{!! $content['left_web'] !!} </a></p>
 		</div>
 
-		<div class='col-sm-5 col-sm-push-2 post_body_text'>
+		<div class='col-sm-6 post_body_text'>
             <div class="title-container-left">
                 <h1 class="heading1"> {!! $content['right_title'] !!}</h1>
             </div>

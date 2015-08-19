@@ -5,7 +5,7 @@
 	<div class="row show-item">
         {!! $post->getMeta('123') !!}
 		<!-- posts listing -->
-		<div class='col-sm-6 top35'>
+		<div class='col-sm-7 top35'>
 		    @if ($youtube_id != "")
 
 		        <iframe  style="display:none;" id="ytplayer" type="text/html" width="100%" height="321"
@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- others --> 
-		<div class='col-sm-5 col-sm-push-1'>
+		<div class='col-sm-5'>
 			@if($related_posts->count())
 				@include('front.posts._related_posts')
 			@endif
