@@ -17,7 +17,9 @@
 					<div class="row">
 						<a href="{!! route('news.show', [$n->slug]) !!}">
 							<div class="col-sm-6">
-								<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
+								<div class="tint black">
+									<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
+								</div>
 							</div>
 							<div class="col-sm-6">
 								<p class="heading5">{!! $n->getReadablePublishedAt() !!}</p>

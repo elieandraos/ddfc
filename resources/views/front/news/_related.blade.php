@@ -6,7 +6,9 @@
 	<div class="row related-item">
 		<div class='col-sm-5'>
 			<a href="{!! route('news.show', [$related_n->slug]) !!}" title="{!! $related_n->title !!}" >
-				<img src="{!! $related_n->getFirstMediaURL( $related_n->getMediaCollectionName(), 'thumb-small') !!}" alt="{!! $related_n->title !!}" title="{!! $related_n->title !!}" />
+				<div class="tint black">
+					<img src="{!! $related_n->getFirstMediaURL( $related_n->getMediaCollectionName(), 'thumb-small') !!}" alt="{!! $related_n->title !!}" title="{!! $related_n->title !!}" />
+				</div>
 			</a>
 		</div>
 		<div class='col-sm-7'>

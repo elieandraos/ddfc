@@ -6,7 +6,9 @@
 	<div class="row related-item">
 		<div class='col-sm-5'>
 			<a href="{!! route('posts.show', [$related_post->postType->slug, $related_post->slug]) !!}" title="{!! $related_post->title !!}" >
-				<img src="{!! $related_post->getFirstMediaURL( $related_post->getMediaCollectionName(), 'thumb-small') !!}" alt="{!! $related_post->title !!}" title="{!! $related_post->title !!}" />
+				<div class="tint black">
+					<img src="{!! $related_post->getFirstMediaURL( $related_post->getMediaCollectionName(), 'thumb-small') !!}" alt="{!! $related_post->title !!}" title="{!! $related_post->title !!}" />
+				</div>
 			</a>
 		</div>
 		<div class='col-sm-7'>

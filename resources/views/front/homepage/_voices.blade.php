@@ -14,7 +14,9 @@
 			@foreach($voices as $voice)
 				<div class="col-sm-4">
 					<a href="{!! route('posts.show', [$voice->postType->slug, $voice->slug]) !!}">
-						<img src="{!! $voice->getFirstMediaURL( $voice->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $voice->excerpt !!}" />
+						<div class="tint black">
+							<img src="{!! $voice->getFirstMediaURL( $voice->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $voice->excerpt !!}" />
+						</div>
 						<h3 class="heading3">{!! $voice->title !!}</h3>
 						<p class="heading4">{!! $voice->excerpt !!}</p>
 					</a>
