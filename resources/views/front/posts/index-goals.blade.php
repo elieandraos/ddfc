@@ -8,7 +8,7 @@
 		@if(isset($pageTitle))
 			<div class="row">
 				<div class="col-sm-12 title-container">
-					{!! $pageTitle !!}
+					<h1 class="heading1">{!! $pageTitle !!}</h1>
 				</div>
 			</div>
 		@endif
@@ -19,7 +19,7 @@
 		@if(isset($pageDescription))
 			<div class="row">
 				<div class="col-sm-12">
-					<p class="heading4">{!! $pageDescription !!}</p>
+					{!! $pageDescription !!}
 				</div>
 			</div>
 		@endif
