@@ -14,7 +14,7 @@
 			<div class="row">
 
 				<div class="col-sm-2 goal">
-				    <a href="/goals/category/quality-health-and-rehabilitation-services">
+				    <a href="/posts/goals/category/quality-health-and-rehabilitation-services">
                         <img src="/images/icon-01.png" alt="{{trans('messages.Health Alt')}}"/>
                         <h2 class="heading11">{{trans('messages.Health')}}</h2>
 					</a>
