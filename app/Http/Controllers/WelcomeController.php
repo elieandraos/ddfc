@@ -30,9 +30,11 @@ class WelcomeController extends Controller {
 	public function index()
 	{
 		$voices = $this->postRepos->getAllByPostTypeSlug('voices', 3);
+		$slides = $this->postRepos->getAllByPostTypeSlug('slides');
+
 		$news = $this->newsRepos->getAll(2);
 
-		return view('front.index', ['voices' => $voices, 'news' => $news]);
+		return view('front.index', ['voices' => $voices, 'news' => $news, 'slides' => $slides]);
 	}
 
 }

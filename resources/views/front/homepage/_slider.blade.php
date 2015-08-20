@@ -1,45 +1,30 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+@if($slides->count())
+ 
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  
+
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    @foreach($slides as $key => $slide)
+      <li data-target="#carousel-example-generic" data-slide-to="{!! $key !!}" class="@if($key == 0) active @endif"></li>
+    @endforeach
   </ol>
-
+  
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
-    
-    <div class="item active">
-      <img src="/images/slide1.jpg" alt="Slide 1 - A Kid" />
-        <div class="caption-overlay">
-            <div class="caption-content">
-              <h1>a city <br/>for everyone</h1>
-              <h2>together for a disabled friendly city</h2>
-            </div>
-        </div>
-    </div>
-    
-    <div class="item">
-      <img src="/images/slide2.jpg" alt="Slide 2 - A Kid" />
-        <div class="caption-overlay">
-            <div class="caption-content">
-              <h1>a city <br/>for everyone</h1>
-              <h2>together for a disabled friendly city</h2>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="item">
-      <img src="/images/slide3.jpg" alt="Slide 3 - A Kid" />
-        <div class="caption-overlay">
-            <div class="caption-content">
-              <h1>a city <br/>for everyone</h1>
-              <h2>together for a disabled friendly city</h2>
-            </div>
-        </div>
-    </div>
-
+    @foreach($slides as $key => $slide)
+      <div class="item @if($key == 0) active @endif">
+        <a href="{!! $slide->getMeta('caption_link') !!}">
+          <img src="{!! url($slide->getMeta('slider_image')) !!}" alt="{!! $slide->title !!}"  />
+          <div class="caption-overlay">
+              <div class="caption-content">
+                <h1>{!! nl2br($slide->getMeta('caption_big')) !!}</h1>
+                <h2>{!! $slide->getMeta('caption_small') !!}</h2>
+              </div>
+          </div>
+        </a>
+      </div>
+    @endforeach
   </div>
 
   <!-- Controls -->
@@ -52,3 +37,4 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+@endif
