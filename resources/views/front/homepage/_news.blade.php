@@ -18,7 +18,7 @@
 						<a href="{!! route('news.show', [$n->slug]) !!}">
 							<div class="col-sm-6">
 								<div class="tint black">
-									<img src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
+									<img class="home-news-thumb" src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
 								</div>
 							</div>
 							<div class="col-sm-6">

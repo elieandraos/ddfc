@@ -9,7 +9,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            <img src="{!! $post->getMeta('cover_image') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
+            <img class="goal-img" src="{!! $post->getMeta('cover_image') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
         </div>
     </div>
 

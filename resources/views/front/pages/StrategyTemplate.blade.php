@@ -4,7 +4,7 @@
 
 	<div class="row show-item">
 		
-		<div class='col-sm-7'>
+		<div class='col-sm-12'>
 			<div class="title-container-left">
 				<h1 class="heading1"> {!! $content['title_left'] !!}</h1>
 			</div>
@@ -12,7 +12,7 @@
 		</div>
 
 		
-		<div class='col-sm-5'>
+		<div class='col-sm-12'>
 			<div class="title-container-left">
 				<h1 class="heading1"> {!! $content['title_right'] !!}</h1>
 			</div>

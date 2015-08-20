@@ -74,6 +74,25 @@ img.img-rounded
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
 }
+img.grid-thumb
+{
+	max-height: 205px;
+	height: 100%;
+}
+img.related-thumb
+{
+	max-height: 99px;
+	height: 100%;
+}
+img.home-news-thumb
+{
+	max-height: 150px;
+	height: 100%;
+}
+img.goal-img 
+{
+	max-height: 315px;
+}
 /********************************
  *      IMAGES FILTER           *
  ********************************/
@@ -97,12 +116,12 @@ img.img-rounded
     transition: all .3s linear;
   }
   
-  .tint:hover:before {
+  /*.tint:hover:before {
     background: none;
-  }
+  }*/
   
   .black:before {
-    background: rgba(0,0,0, 0.25);
+    background: rgba(0,0,0, 0.15);
   }
   
 /*********************************

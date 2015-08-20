@@ -11,11 +11,11 @@
         
         <div class="col-sm-2">
             <h1 class="heading12">{{trans('messages.Goals')}}</h1><br/>
-            <p><a href="/posts/goals/category/health">{{trans('messages.Health')}}</a></p>
-            <p><a href="/posts/goals/category/education">{{trans('messages.Education')}}</a></p>
-            <p><a href="/posts/goals/category/employment">{{trans('messages.Employment')}}</a></p>
+            <p><a href="/posts/goals/category/quality-health-and-rehabilitation-services">{{trans('messages.Health')}}</a></p>
+            <p><a href="/posts/goals/category/inclusive-education">{{trans('messages.Education')}}</a></p>
+            <p><a href="/posts/goals/category/equal-employment-opportunities">{{trans('messages.Employment')}}</a></p>
             <p><a href="/posts/goals/category/universal-accessibility">{{trans('messages.Universal Accessibility')}}</a></p>
-            <p><a href="/posts/goals/category/social-protection">{{trans('messages.Social Protection')}}</a></p>
+            <p><a href="/posts/goals/category/sustainable-social-protection-system">{{trans('messages.Social Protection')}}</a></p>
         </div>
         
          <div class="col-sm-2">

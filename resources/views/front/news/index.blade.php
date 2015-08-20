@@ -6,7 +6,7 @@
 
 		<div class="row">
 			<div class="col-sm-12">
-				<div class="title-container-left">
+				<div class="title-container">
 					<h1 class="heading1">{{ trans('messages.News')}}</h1>
 				</div>
 			</div>
