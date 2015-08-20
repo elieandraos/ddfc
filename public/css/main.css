@@ -277,7 +277,12 @@ img.goal-img
 	height: 63px;
 	text-align: right;
 }
-
+.social-icon
+{
+	width: 24px;
+	height: 21px;
+	margin-top: 30px;
+}
 
 /*********************************
  * 			MENU 				 *
