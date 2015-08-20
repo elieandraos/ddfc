@@ -7,5 +7,6 @@
 		<a class='btn btn-default btn-filter-news btn-custom' href="/news/category/{!! $categories['event']->id !!}" title="Filter By {!! $categories['event']->title !!}">{!! $categories['event']->title !!}</a>
 		<a class='btn btn-default btn-filter-news btn-custom' href="/news/category/{!! $categories['editorial']->id !!}" title="Filter By {!! $categories['editorial']->title !!}">{!! $categories['editorial']->title !!}</a>
 		<a class='btn btn-default btn-filter-news btn-custom' href="/news/category/{!! $categories['press']->id !!}" title="Filter By {!! $categories['press']->title !!}">{!! $categories['press']->title !!}</a>
+		<a class='btn btn-default btn-filter-news btn-custom' href="/news/category/{!! $categories['other']->id !!}" title="Filter By {!! $categories['other']->title !!}">{!! $categories['other']->title !!}</a>
 	</div>
 </div>

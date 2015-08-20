@@ -67,6 +67,10 @@ a:focus
     overflow: hidden;
     text-overflow: ellipsis;
 }
+img.img-rounded
+{
+	border-radius: 50%;
+}
 /*********************************
  * 			HEADINGS 			 *
  *********************************/

@@ -30,7 +30,7 @@
 				<div class="col-sm-12">
 					<div class="row">
 						<div class="col-sm-4">
-								<img src="{!! $top_member->getFirstMediaURL( $top_member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $top_member->getMeta('job_title') !!}"  />
+								<img src="{!! $top_member->getFirstMediaURL( $top_member->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $top_member->getMeta('job_title') !!}" class="img-rounded" />
 						</div>
 						<div class="col-sm-8">
 								<h2 class="heading6">{!! $top_member->title !!}</h2>
