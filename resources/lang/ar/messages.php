@@ -97,7 +97,13 @@ return [
     'Universal Accessibility' => 'مدينة متاحة للجميع',
     'Sustainable Social Protection System' => 'الحماية الاجتماعية المستدامة',
 
-
+    'AboutText' => 'Persons with disablities include those who have long-term physical, mental, 
+                intellectual or sensory impairments which in interaction with various barriers 
+                may hinder their full and effective participation in society on an <b>equal basis with others.</b>
+                <br/>[Article 1 of the UN Convention on the Rights of People with Disablities]
+                ',
+                    
+    'AccessibilityOptions' => 'خيارات الوصول'
 
 
 

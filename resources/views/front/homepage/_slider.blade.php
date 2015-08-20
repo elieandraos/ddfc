@@ -4,8 +4,6 @@
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
   </ol>
 
   <!-- Wrapper for slides -->
@@ -13,22 +11,33 @@
     
     <div class="item active">
       <img src="/images/slide1.jpg" alt="Slide 1 - A Kid" />
+        <div class="caption-overlay">
+            <div class="caption-content">
+              <h1>a city <br/>for everyone</h1>
+              <h2>together for a disabled friendly city</h2>
+            </div>
+        </div>
     </div>
     
     <div class="item">
-      <img src="/images/slide2.jpg" alt="Slide 2 - A Woman" />
-    </div>
-    
-    <div class="item">
-      <img src="/images/slide3.jpg" alt="Slide 3 - A Man" />
+      <img src="/images/slide2.jpg" alt="Slide 2 - A Kid" />
+        <div class="caption-overlay">
+            <div class="caption-content">
+              <h1>a city <br/>for everyone</h1>
+              <h2>together for a disabled friendly city</h2>
+            </div>
+        </div>
     </div>
 
+
     <div class="item">
-      <img src="/images/slide4.jpg" alt="Slide 4" />
-    </div>
-    
-    <div class="item">
-      <img src="/images/slide5.jpg" alt="Slide 5" />
+      <img src="/images/slide3.jpg" alt="Slide 3 - A Kid" />
+        <div class="caption-overlay">
+            <div class="caption-content">
+              <h1>a city <br/>for everyone</h1>
+              <h2>together for a disabled friendly city</h2>
+            </div>
+        </div>
     </div>
 
   </div>

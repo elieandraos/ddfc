@@ -25,7 +25,7 @@
  *********************************/
 body 
 {
-	font-size: 12px;
+	font-size: 16px;
 	font-family: 'avenirNextRegular';
 	color:#000;
 }
@@ -62,6 +62,11 @@ a:focus
     transform: translate(-50%,-50%);
 }
 
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 /*********************************
  * 			HEADINGS 			 *
  *********************************/
@@ -315,30 +320,52 @@ nav.navbar-main
 /*********************************
  * 		  HOMEPAGE SLIDER        *
  *********************************/
- #carousel-example-generic div.carousel-caption
- {
- 	text-align: left;
- 	left: 5%;
- 	display: none;
- }
  #carousel-example-generic
  {
- 	max-height: 415px;
- 	height: 415px;
+ /*	max-height: 415px;
+ 	height: auto;*/
  	overflow: hidden;
  }
- #carousel-example-generic div.item img 
+a.carousel-control
+{
+	z-index: 10;
+}
+.caption-overlay
  {
- 	/*height: 100%;*/
+ 	width: 100%;
+ 	height: 50%;
+ 	background-image: url('/images/overlaylayer.png');
+ 	background-repeat: repeat;
+ 	position: absolute;
+ 	bottom: 0;
+ 	left: 0;
+ 	z-index: 2;
+    background-position: bottom left;
+    background-size: contain;
  }
-
-/* #carousel-example-generic div.item 
+ .caption-content
  {
- 	 max-height: 415px;
- 	height: 415px;
- 	background-position: center;
- 	background-size: 100% 100%;
- }*/
+ 	width: 50%;
+    position: absolute;
+    left: 18%;
+    bottom: 27%;
+ }
+ .caption-overlay h1
+ {
+ 	font-family: 'avenirNextBold';
+    font-size: 60px;
+    text-transform: uppercase;
+    color: #FFF;
+    line-height: 0.9;
+ }
+ .caption-overlay h2
+ {
+ 	font-family: 'avenirNextRegular';
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFF;
+    letter-spacing: 1px;
+ }
 
 /*********************************
  * 		  HOMEPAGE BLOCKS        *
@@ -459,6 +486,7 @@ nav.navbar-main
 #bottom-bar a 
 {
 	color:#595959;
+	font-size: 12px;
 	text-transform: capitalize;
 }
 
@@ -504,6 +532,7 @@ nav.navbar-main
     position: relative;
     color:#FFF;
     text-align: right;
+    font-size: 12px;
 }
 #copyright-text span 
 {
@@ -598,6 +627,21 @@ p.heading4
 {
 	margin-bottom: 35px;
 }
+
+
+/*************************
+ * 	    Ellipsis 		 *
+ *************************/
+
+.homepage-block p.heading7,
+.related-item p.heading7{
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
 
 /*********************************
  * 	    MOBILE MEDIA QUERY 		 *

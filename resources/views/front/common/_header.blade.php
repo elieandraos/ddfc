@@ -3,6 +3,8 @@
     <div class="container">
         <div class='col-sm-4 pull-left top-buffer'>
           <a href="#main-content" title="{!! trans('messages.Skip to Content Alt') !!}" id="skip-link" >{!! trans('messages.Skip to Content') !!}</a>
+          &nbsp;&nbsp;
+          <a href="/page/accessibility-options" title="Description of Accessibility Options">{!! trans('messages.AccessibilityOptions') !!}</a>
         </div>
 
         <div class='col-sm-4 pull-right text-right top-buffer'>
