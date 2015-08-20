@@ -6,7 +6,7 @@
 
 		<!-- posts listing -->
 		<div class='col-sm-7 top35'>
-		        <img src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
+		        <img class='featured-img' src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
 			<h2 class="heading3">{!! $news->title !!}</h2>
 			<p>{!! $news->description !!}</p>	
 		</div>

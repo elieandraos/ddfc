@@ -22,7 +22,7 @@
                 </a>
 
             @else
-		        <img src="{!! $post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
+		        <img class='featured-img' src="{!! $post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
 		    @endif
 
 

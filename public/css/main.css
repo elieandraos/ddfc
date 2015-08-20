@@ -89,6 +89,11 @@ img.home-news-thumb
 	max-height: 150px;
 	height: 100%;
 }
+img.featured-img
+{
+	max-height: 373px;
+	height: 100%;
+}
 img.goal-img 
 {
 	max-height: 315px;
