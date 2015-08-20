@@ -7,5 +7,4 @@
 			<hr/>
 		{{trans('messages.Tel')}}: {!! $post->getMeta('contact_phone') !!}
 		{{trans('messages.Web')}}: <a href="{!! $post->getMeta('contact_website') !!}" title="{!! $post->getMeta('contact_website') !!}" target="_blank"> {!! $post->getMeta('contact_website') !!} </a>	
-			
 </div>

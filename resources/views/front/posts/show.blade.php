@@ -28,6 +28,10 @@
 
 			<h2 class="heading3">{!! $post->title !!}</h2>
 			<p>{!! $post->description !!}</p>	
+			
+			@if($post->getMeta('meta_document'))
+				<a href="{!! url($post->getMeta('meta_document')) !!}">{!! $post->getMeta('meta_document_text') !!}</a>
+			@endif
 		</div>
 
 		<!-- others --> 
