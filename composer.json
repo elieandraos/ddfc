@@ -11,7 +11,8 @@
 		"eandraos/gaia-news": "~1.0",
 		"eandraos/gaia-pages": "~1.0",
 		"eandraos/gaia-categories": "~1.1",
-		"eandraos/gaia-posts": "~1.0"
+		"eandraos/gaia-posts": "~1.0",
+		"nicolaslopezj/searchable": "^1.5"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

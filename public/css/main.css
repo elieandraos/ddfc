@@ -98,6 +98,10 @@ img.goal-img
 {
 	max-height: 315px;
 }
+ul.alert li 
+{
+	list-style: none;
+}
 
 /********************************
  *      IMAGES FILTER           *
@@ -384,6 +388,35 @@ nav.navbar-main
 	padding-top: 5px;
 	padding-bottom: 5px;
 	font-size: 14px;
+}
+
+.search-placeholder
+{
+	margin-right: -15px;
+}
+.search-placeholder form 
+{
+	display: inline;
+}
+
+.search-placeholder input#search
+{
+	height: 100%;
+	padding: 10px;
+    width: 270px;
+    background-color: #23c4fd;
+    color: #FFF;
+    border: none;
+}
+.search-placeholder .search-icon 
+{
+	width: 60px;
+	height: 100%;
+	background-color: #28ade5;
+	background-image: url('/images/Search-Icon.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
 }
 /*********************************
  * 		  HOMEPAGE SLIDER        *

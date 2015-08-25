@@ -45,3 +45,8 @@ ul.dropdown-menu
 ul.dropdown-menu>li>a {
     white-space: normal;
 }
+
+.search-placeholder
+{
+    margin-left: -15px;
+}

@@ -40,7 +40,7 @@ class NewsController extends Controller {
 	public function index()
 	{
 		$news = $this->newsRepos->getAll(5);
-
+		
 		$featured_news = $this->newsRepos->getByIsFeatured(2);
 
 		if (Request::ajax()) {

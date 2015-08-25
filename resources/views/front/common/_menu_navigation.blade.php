@@ -1,6 +1,18 @@
 <nav class="navbar navbar-main">
     <div class="container">
 
+
+                <!-- search -->
+            <div class="pull-right search-placeholder">
+                <div class="search-icon"></div>
+                {!! Form::open(['route' => 'search.index', 'method' => 'POST', 'role' => 'form']) !!}
+                    <input type="text" name="search" id="search" />
+                {!! Form::close() !!}
+            </div>
+            <!-- end of search -->
+
+
+
         <!-- Mobile Menu -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu-navigation" aria-expanded="false">
@@ -112,10 +124,8 @@
             </li>
             @endif
 
-
             </ul>
         </div>
         <!-- End Of Main Navigation -->
-
     </div>
 </nav>

@@ -9,6 +9,13 @@ use App\Models\News;
 
 /*
 |--------------------------------------------------------------------------
+| Search ROUTES
+|--------------------------------------------------------------------------
+*/
+Route::post('/search/', ['as' => 'search.index', 'uses' => 'SearchController@index']);
+
+/*
+|--------------------------------------------------------------------------
 | NEWS ROUTES
 |--------------------------------------------------------------------------
 */
@@ -33,6 +40,7 @@ Route::bind('pageslug', function($value)
 });
 
 Route::get('/page/{pageslug}/', ['as' => 'pages.show', 'uses' => 'PageController@show']);
+Route::post('/page/contact/', ['as' => 'pages.contact', 'uses' => 'PageController@contact']);
 
 
 /*

@@ -35,7 +35,6 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	    return $this->morphOne('App\Models\Seo', 'seoable');
 	}
 
-
 	/******************
 	 * DATE FUNCTIONS *
 	 ******************/

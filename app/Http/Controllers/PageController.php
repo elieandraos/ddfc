@@ -13,6 +13,8 @@ use App\Models\ComponentPost;
 use App\Models\Post;
 use MediaLibrary;
 use MetaTag;
+use Redirect;
+use Mail;
 
 
 class PageController extends Controller {
@@ -70,6 +72,29 @@ class PageController extends Controller {
 		$top_member = Post::find($cp->post_id); 
 
 		return view('front.pages.'.$page->template->title, ['page' => $page, 'content' => $metas, 'members' => $members, 'top_member' => $top_member ]);
+	}
+
+
+	public function contact(Request $request)
+	{
+		$this->validate($request, [
+	        'subject' => 'required',
+	        'message' => 'required',
+	        'email' => 'required|email'
+	    ]);
+
+		$data['email'] = $request->email;
+		$data['message'] = $request->message;
+		$data['subject'] = $request->subject;
+		$data['phone'] = $request->phone;
+
+		Mail::send('emails.contact', ['data' => $data],  function($m) use ($data) {
+		    $m->from($data['email'], 'DDFC Contact');
+		    $m->to('info@communitydubai.com');
+		    $m->subject($data['subject']);
+		});
+
+		return redirect('page/contact-us?success=1');
 	}
 
 }
