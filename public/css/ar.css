@@ -50,3 +50,14 @@ ul.dropdown-menu>li>a {
 {
     margin-left: -15px;
 }
+/*********************************
+ *          FONT                 *
+ *********************************/
+@font-face {
+    font-family: avenirNextRegular;
+    src: url('/fonts/DroidArabicKufi.ttf');
+}
+@font-face {
+    font-family: avenirNextBold;
+    src: url('/fonts/DroidArabicKufi-Bold.ttf');
+}
