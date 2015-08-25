@@ -17,6 +17,8 @@
 				<h1 class="heading1"> {!! $content['title_right'] !!}</h1>
 			</div>
 			<img src="{!! $content['infographic'] !!}" alt="{!! trans('messages.Strategy Roadmap Alt') !!}" />
+			@include("front.common._social_buttons", ["link" => url('/page/strategy') ])
+
 		</div>
 	</div>
 	

@@ -1,0 +1,5 @@
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u={!! $link !!}&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;"><img src="/images/flat_web_icon_set/color/Facebook.png"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source={!! $link !!}&text=:%{!! $link !!}" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(document.title) + ':%20'  + encodeURIComponent(document.URL)); return false;"><img src="/images/flat_web_icon_set/color/Twitter.png"></a></li>
+  <li><a href="mailto:?subject=&body=:%{!! $link !!}" target="_blank" title="Email" onclick="window.open('mailto:?subject=' + encodeURIComponent(document.title) + '&body=' +  encodeURIComponent(document.URL)); return false;"><img src="/images/flat_web_icon_set/color/Email.png"></a></li>
+</ul>

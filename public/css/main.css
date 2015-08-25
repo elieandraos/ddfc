@@ -30,7 +30,20 @@
 {
 	font-size: 15px;
 }
+ul.share-buttons{
+  list-style: none;
+  padding: 0;
+}
 
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons li a img 
+{
+	width: 32px;
+	height: 32px;
+}
 /*********************************
  * 			COMMON 				 *
  *********************************/

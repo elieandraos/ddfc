@@ -40,6 +40,9 @@
 			</div>
 		@endif
 	@endforeach
+	<div style="height:1px;clear:both"></div>
+	@include("front.common._social_buttons", ["link" => url('/page/the-higher-committee') ])
+
 </div>
 
 @stop

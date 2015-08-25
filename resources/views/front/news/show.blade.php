@@ -9,6 +9,8 @@
 		        <img class='featured-img' src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
 			<h2 class="heading3">{!! $news->title !!}</h2>
 			<p>{!! $news->description !!}</p>	
+			@include("front.common._social_buttons", ["link" => route('news.show', [$news->slug]) ])
+
 		</div>
 
 		<!-- others --> 

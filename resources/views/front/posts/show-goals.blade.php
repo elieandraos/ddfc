@@ -23,6 +23,8 @@
             <p class="contact">{!! $post->getMeta('contact_person') !!}</p>
             <p>{{trans('messages.Tel')}}: {!! $post->getMeta('contact_phone') !!}</p>
             <p>{{trans('messages.Web')}}: <a href="{!! $post->getMeta('contact_website') !!}" target="_blank" title="{!! $post->getMeta('contact_website') !!}">{!! $post->getMeta('contact_website') !!} </a></p>
+            @include("front.common._social_buttons", ["link" => route('posts.show', [$post->postType->slug, $post->slug]) ])
+
         </div>
     </div>
 

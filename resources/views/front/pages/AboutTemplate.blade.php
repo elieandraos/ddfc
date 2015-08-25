@@ -20,6 +20,9 @@
 				<h1 class="heading1"> {!! $content['title_3'] !!}</h1>
 			</div>
 			{!! $content['paragraph_3'] !!}
+
+			@include("front.common._social_buttons", ["link" => url('/page/about') ])
+
 		</div>
 
 		<div class='col-sm-5'>

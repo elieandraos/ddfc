@@ -32,6 +32,8 @@
 			@if($post->getMeta('meta_document'))
 				<a href="{!! url($post->getMeta('meta_document')) !!}">{!! $post->getMeta('meta_document_text') !!}</a>
 			@endif
+
+			@include("front.common._social_buttons", ["link" => route('posts.show', [$post->postType->slug, $post->slug]) ])
 		</div>
 
 		<!-- others --> 
