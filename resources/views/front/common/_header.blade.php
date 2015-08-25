@@ -57,9 +57,9 @@
         <img src='/images/header-logo-right.png' alt='The Executive Council' />
       </a>
       <!-- Social Links --> 
-        <a href="https://www.facebook.com" target="_blank"><img src="/images/facebook-btn.png" class="social-icon" alte="Our page on facebook"/></a>
-        <a href="https://www.twitter.com" target="_blank"><img src="/images/twitter-btn.png" class="social-icon" alte="Our page on twotter"/></a>
-        <a href="https://www.instagram.com" target="_blank"><img src="/images/insta-btn.png" class="social-icon" alte="Our page on instagram"/></a>
+        <a href="https://www.facebook.com/mycommunitydubai" target="_blank"><img src="/images/facebook-btn.png" class="social-icon" alte="Our page on facebook"/></a>
+        <a href="https://twitter.com/communitydubai" target="_blank"><img src="/images/twitter-btn.png" class="social-icon" alte="Our page on twotter"/></a>
+        <a href=" https://instagram.com/communitydubai" target="_blank"><img src="/images/insta-btn.png" class="social-icon" alte="Our page on instagram"/></a>
       <!-- End of Social Links -->
     </div>
   </div>

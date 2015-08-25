@@ -36,7 +36,14 @@
              <div class="col-sm-3 col-sm-push-1">
                 <a href="/page/act-now">
                     <img src="/images/ActNow.jpg" alt="ACT NOW"/>
-                </a> <br/><br/>
+                </a> 
+                 <!-- Social Links --> 
+                <div class="pull-right">
+                <a href="https://www.facebook.com/mycommunitydubai" target="_blank"><img src="/images/facebook-btn.png" class="social-icon" alte="Our page on facebook"/></a>
+                <a href="https://twitter.com/communitydubai" target="_blank"><img src="/images/twitter-btn.png" class="social-icon" alte="Our page on twotter"/></a>
+                <a href=" https://instagram.com/communitydubai" target="_blank"><img src="/images/insta-btn.png" class="social-icon" alte="Our page on instagram"/></a>
+                  <!-- End of Social Links -->
+              </div>
             </div>
         @endif
     </div>

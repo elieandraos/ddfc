@@ -18,7 +18,18 @@
     font-family: avenirNextDemiBold;
     src: url('/fonts/AvenirNext-DemiBold.ttf');
 }
-
+.decreaseFont
+{
+	font-size: 10px;
+}
+.resetFont
+{
+	font-size: 13px;
+}
+.increaseFont
+{
+	font-size: 15px;
+}
 
 /*********************************
  * 			COMMON 				 *

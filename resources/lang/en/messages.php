@@ -85,7 +85,7 @@ return [
     'Social Protection Alt' => 'Jump To Social Protection Posts',
     'Employment Alt' => 'Jump To Employment Posts',
     'Education Alt' => 'Jump To Education Posts',
-    'Health And Rehabilitation Alt' => 'Jump To Health And Rehabilitation Posts',
+    'Health And Rehabilitation Alt' => 'Jump To Health and Rehabilitation Posts',
     'Skip to Content Alt' => 'Skip Navigation And Jump To Content Directly',
     'Strategy Roadmap Alt' => 'Infographic Of The Roadmap Framework',
 
