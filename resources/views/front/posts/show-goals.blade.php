@@ -1,6 +1,16 @@
 @extends('front.layout')
 
 @section('content')
+    
+
+    <div class="row breadcrumb-nav">
+        <div class="col-sm-12">
+            <a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+            <a href="/posts/goals">{{trans('messages.Goals')}} </a>
+            <a href="/posts/goals/category/{!! $post->category->slug!!}">{!! $post->category->title !!}</a>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-sm-12 title-container">
             <h1 class="heading1">{!! $post->title !!}</h1>

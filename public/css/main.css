@@ -157,7 +157,28 @@ ul.alert li
   .black:before {
     background: rgba(0,0,0, 0.15);
   }
-  
+ 
+/*********************************
+ * 			BREADCRUMB 			 *
+ *********************************/
+ div.breadcrumb-nav 
+ {
+ 	margin-top: 35px;
+ }
+ div.breadcrumb-nav a 
+ {
+ 	font-size: 14px;
+ 	color: #000;
+ 	color: #3C5287;
+ }
+div.breadcrumb-nav a:after 
+{
+	content: " >";
+}
+div.breadcrumb-nav a:last-child:after 
+{
+	content: none;
+}
 /*********************************
  * 			HEADINGS 			 *
  *********************************/

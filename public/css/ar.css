@@ -61,3 +61,8 @@ ul.dropdown-menu>li>a {
     font-family: avenirNextBold;
     src: url('/fonts/DroidArabicKufi-Bold.ttf');
 }
+
+.breadcrumb-nav a:after 
+{
+    content: " <";
+}

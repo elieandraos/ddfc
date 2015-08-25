@@ -1,6 +1,15 @@
 @extends('front.layout')
 
 @section('content')
+	
+	 <div class="row breadcrumb-nav">
+        <div class="col-sm-12">
+            <a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+            <a href="/posts/{!! $post->postType->title !!}">{!! $post->postType->title !!} </a>
+            <a href="#">{!! $post->title !!}</a>
+        </div>
+    </div>
+
 
 	<div class="row show-item">
         {!! $post->getMeta('123') !!}

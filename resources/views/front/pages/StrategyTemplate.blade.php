@@ -1,7 +1,16 @@
 @extends('front.layout')
 
 @section('content')
+	
 
+	<div class="row breadcrumb-nav">
+		<div class="col-sm-12">
+			<a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+			<a href="/page/about">{{trans('messages.My Community')}}</a>
+			<a href="/page/strategy">{{trans('messages.Strategy')}}</a>
+		</div>
+	</div>
+	
 	<div class="row show-item">
 		
 		<div class='col-sm-12'>
