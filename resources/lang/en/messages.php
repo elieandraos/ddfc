@@ -35,7 +35,7 @@ return [
     'the higher committee' => 'The Higher Committee',
     'Goals' => 'Goals',
 
-    'Health' => 'Quality Health And Rehabilitation Services',
+    'Health' => 'Quality Health and Rehabilitation Services',
     'Education' => 'Inclusive Education',
     'Employment' => 'Equal Employment Opportunities',
     'Universal Accessibility' => 'Universal Accessibility',

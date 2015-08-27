@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 //repositories
 use Gaia\Repositories\PostTypeRepositoryInterface;
 use Gaia\Repositories\PostRepositoryInterface;
+use Gaia\Repositories\CategoryRepositoryInterface;
 //Facades
 use Route;
 use App;
@@ -22,10 +23,11 @@ class PostController extends Controller {
 
 	protected $postRepos, $postTypeRepos, $limit;
 	
-	public function __construct(PostTypeRepositoryInterface $postTypeRepositoryInterface, PostRepositoryInterface $postRepositoryInterface)
+	public function __construct(PostTypeRepositoryInterface $postTypeRepositoryInterface, PostRepositoryInterface $postRepositoryInterface, CategoryRepositoryInterface $categoryRepositoryInterface)
 	{
 		$this->postTypeRepos = $postTypeRepositoryInterface;
 		$this->postRepos = $postRepositoryInterface;
+		$this->categoryRepos = $categoryRepositoryInterface;
 		$this->limit = 6;
 		$this->viewsPath = realpath(base_path('resources/views/front/posts/'));
 	}
@@ -55,10 +57,13 @@ class PostController extends Controller {
 			$posts = ['gov' => [], 'org' => [] ];
 			$posts['postsGov'] = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, 30, 50);
 			$posts['postsOrg'] = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, 31, 50);
+			$cats['Gov'] = $this->categoryRepos->getCategoryBySlug('government-entities');
+			$cats['Org'] = $this->categoryRepos->getCategoryBySlug('organizations');
 		}
 		else
 		{
 			$posts = $this->postRepos->getAll($postType->id, $this->limit);
+			$cats['Gov'] = $cats['Org'] = null;
 		}
 
 		//get the view name
@@ -67,7 +72,7 @@ class PostController extends Controller {
 		else
 			$viewName = "front.posts.index";
 
-		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title]);
+		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title, 'cats' => $cats]);
 	}
 
 

@@ -11,7 +11,7 @@
 	Post Type Template:
     {!! Form::select(
         'template_id', 
-         $templates, 
+         isset($templates)?$templates:[], 
         isset($postType)?$postType->template_id:null, 
         ['class' => 'form-control', 'id' => 'template_id']
     ) !!} 

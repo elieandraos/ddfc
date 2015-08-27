@@ -62,12 +62,13 @@ class UserRepository extends DbRepository implements UserRepositoryInterface
 		$user = $this->find($id);
 		
 		$input['password'] = Hash::make($input['password']);
-		$user->update($input); 
+		$user->update($input);
+
 		//detach existing role
 		$role = $this->getUserRole($user);
 		$user->detachRole($role);
 		//attach role
-		$role = Role::create(['name' => $input['user_role']."-".$user->id, 'display_name' => $input['user_role']]);
+		$role = Role::firstOrCreate(['name' => $input['user_role']."-".$user->id, 'display_name' => $input['user_role']]);
 		$user->attachRole($role);
 
 		return $user;
@@ -122,8 +123,32 @@ class UserRepository extends DbRepository implements UserRepositoryInterface
 			return null;
 
 		$perms = ['editor', 'administrator'];
-		$perms['editor'] = ['create-edit-news', 'list-news', 'create-edit-pages', 'list-pages', 'translate-news', 'translate-pages'];
-		$perms['administrator'] = ['create-edit-news', 'delete-news', 'list-news', 'translate-news', 'create-edit-page-templates', 'delete-page-templates', 'list-page-templates', 'create-edit-pages', 'list-pages', 'delete-pages', 'translate-pages', 'manage-categories'];
+		$perms['editor'] = [
+			'create-edit-news', 'list-news', 
+			'create-edit-pages', 'list-pages', 'translate-news', 
+			'translate-pages', 
+			'manage-knowledge',
+			'manage-voices',
+			'manage-support',
+			'manage-entities',
+			'manage-members',
+			'manage-goals',
+			'manage-slides'
+		];
+		$perms['administrator'] = 
+		[
+			'create-edit-news', 'delete-news', 'list-news', 'translate-news', 
+			'create-edit-page-templates', 'delete-page-templates', 'list-page-templates',
+			'create-edit-pages', 'list-pages', 'delete-pages', 'translate-pages',
+			'manage-categories',
+			'manage-knowledge',
+			'manage-voices',
+			'manage-support',
+			'manage-entities',
+			'manage-members',
+			'manage-goals',
+			'manage-slides'
+		];
 		
 		if($rolename =="editor")
 			$permissions = Permission::whereIn('name', $perms['editor'])->get();

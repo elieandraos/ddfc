@@ -11,6 +11,15 @@
 			</div>
 		</div>
 
+		
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="heading4">{!! $cats['Gov']->description !!}</p>
+			</div>
+		</div>
+		
+		<!-- End Of Page Desc -->
+
 		<!-- posts listing -->
 		<div class="row">
 			@foreach($posts['postsGov'] as $k => $post)
@@ -30,6 +39,11 @@
 			</div>
 		</div>
 
+		<div class="row">
+			<div class="col-sm-12">
+				<p class="heading4">{!! $cats['Org']->description !!}</p>
+			</div>
+		</div>
 		
 		<!-- posts listing -->
 		<div class="row">

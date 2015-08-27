@@ -74,7 +74,7 @@
 			</div>
 			<div class="panel-body">
 				{!! Form::open( ['route' => ['admin.post-types.store']]) !!}
-					@include('admin.post-types._form', ['display_slug' => false])
+					@include('admin.post-types._form', ['display_slug' => false, 'templates' => $templates])
 				{!! Form::close() !!}
 			</div>
 		</div>

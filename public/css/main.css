@@ -616,6 +616,8 @@ a.carousel-control
 .aboutHint
 {
 	margin-top: 35px;
+	color: #3C5287;
+    font-style: italic;
 }
 
 /*********************************
@@ -703,7 +705,6 @@ a.carousel-control
  div.news-filters
  {
  	margin-bottom: 30px;
- 	margin-top: 30px;
  }
 
 /*********************************

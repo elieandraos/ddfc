@@ -38,21 +38,23 @@
             <!-- user dropdown -->
             <div class="user-nav">
                 <ul>
-                    <li class="dropdown settings">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                          <i class="fa fa-cogs"></i> Manage <i class="fa fa-angle-down"></i>
-                        </a>
+                    @if(Auth::user()->is('superadmin'))
+                        <li class="dropdown settings">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                              <i class="fa fa-cogs"></i> Manage <i class="fa fa-angle-down"></i>
+                            </a>
 
-                        <ul class="dropdown-menu animated fadeInDown">  
-                            <li><a href="/admin/pages/templates/">List Templates</a></li> 
-                            <li><a href="/admin/pages/templates/create" id="add-template">Create Template</a></li> 
-                            <li class="seperator"></li> 
-                            <li><a href="/admin/users/">List Users</a></li>    
-                            <li><a href="/admin/users/create/">Create User</a></li>
-                            <li class="seperator"></li>
-                            <li><a href="/admin/post-types">Post Types</a></li> 
-                        </ul>
-                    </li>
+                            <ul class="dropdown-menu animated fadeInDown">  
+                                <li><a href="/admin/pages/templates/">List Templates</a></li> 
+                                <li><a href="/admin/pages/templates/create" id="add-template">Create Template</a></li> 
+                                <li class="seperator"></li> 
+                                <li><a href="/admin/users/">List Users</a></li>    
+                                <li><a href="/admin/users/create/">Create User</a></li>
+                                <li class="seperator"></li>
+                                <li><a href="/admin/post-types">Post Types</a></li> 
+                            </ul>
+                        </li>
+                    @endif
 
                     <li class="settings">
                         <a href="/auth/logout"><i class="fa fa-power-off"></i> Logout</a>
@@ -91,6 +93,7 @@
                         <a href="/admin/dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
                     </li>
 
+                    @if(Auth::user()->can('list-news') || Auth::user()->is('superadmin'))
                     <li class="sub-menu">
                         <a href="javascript:void(0);"><i class="fa fa-rss"></i><span>News</span><i class="arrow fa fa-angle-right pull-right"></i></a>
                         <ul>
@@ -99,18 +102,25 @@
                             <li><a href="/admin/news/create"><i class="arrow fa fa-angle-right"></i>Create News</a></li>
                         </ul>
                     </li>
-                    <li class="sub-menu">
-                        <a href="javascript:void(0);"><i class="fa fa-file"></i><span>Pages</span><i class="arrow fa fa-angle-right pull-right"></i></a>
-                        <ul>
-                            <li><a href="/admin/pages/"><i class="arrow fa fa-angle-right"></i>List Pages</a></li>
-                            <li><a href="/admin/pages/create/"><i class="arrow fa fa-angle-right"></i>Create Page</a></li>
-                        </ul>
-                    </li>
+                    @endif
+
+                    @if(Auth::user()->can('list-pages') || Auth::user()->is('superadmin'))
+                        <li class="sub-menu">
+                            <a href="javascript:void(0);"><i class="fa fa-file"></i><span>Pages</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                            <ul>
+                                <li><a href="/admin/pages/"><i class="arrow fa fa-angle-right"></i>List Pages</a></li>
+                                <li><a href="/admin/pages/create/"><i class="arrow fa fa-angle-right"></i>Create Page</a></li>
+                            </ul>
+                        </li>
+                    @endif
+                    
                     {!! $postTypesSubmenu !!}
 
-                    <li class="">
-                        <a href="/admin/categories"><i class="fa fa-sitemap"></i><span>Categories</span></a>
-                    </li> 
+                    @if(Auth::user()->can('manage-categories') || Auth::user()->is('superadmin'))
+                        <li class="">
+                            <a href="/admin/categories"><i class="fa fa-sitemap"></i><span>Categories</span></a>
+                        </li> 
+                    @endif
                 </ul>
             </div>
         </aside>

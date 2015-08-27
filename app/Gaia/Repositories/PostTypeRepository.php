@@ -2,6 +2,7 @@
 
 use App\Models\PostType;
 use View;
+use Auth;
 
 class PostTypeRepository extends DbRepository implements PostTypeRepositoryInterface 
 {
@@ -91,7 +92,7 @@ class PostTypeRepository extends DbRepository implements PostTypeRepositoryInter
 		{
 			foreach($postTypes as $postType)
 			{
-				$html = View::make('admin.post-types.menu-item', ['postType' => $postType]);
+				$html = View::make('admin.post-types.menu-item', ['postType' => $postType, 'authUser' => Auth::user() ]);
 				$view .= $html->render();
 			}
 		}
