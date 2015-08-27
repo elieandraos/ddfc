@@ -8,5 +8,6 @@
 		public function getDescendants($category);
 		public function getCategoryTree($category);
 		public function getCategoryBySlug($slug);
+		public function find($id);
 	}
 ?>

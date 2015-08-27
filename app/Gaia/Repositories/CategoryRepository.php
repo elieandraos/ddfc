@@ -14,6 +14,10 @@ class CategoryRepository implements CategoryRepositoryInterface
 		return Category::all();
 	}
 
+	public function find($id)
+	{
+		return Category::find($id);
+	}
 
 	/**
 	 * Get Categories that are roots

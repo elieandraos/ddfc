@@ -52,18 +52,18 @@ class PostController extends Controller {
          ]);
         MetaTag::setTwitterDescription($postType->description);
 
+		$categoryId = $postType->getConfiguredRootCategory();
+		$category = $this->categoryRepos->find($categoryId);
+
 		if($postType->slug == "entities")
 		{
 			$posts = ['gov' => [], 'org' => [] ];
 			$posts['postsGov'] = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, 30, 50);
 			$posts['postsOrg'] = $this->postRepos->getAllByPostTypeIdAndCategoryId($postType->id, 31, 50);
-			$cats['Gov'] = $this->categoryRepos->getCategoryBySlug('government-entities');
-			$cats['Org'] = $this->categoryRepos->getCategoryBySlug('organizations');
 		}
 		else
 		{
 			$posts = $this->postRepos->getAll($postType->id, $this->limit);
-			$cats['Gov'] = $cats['Org'] = null;
 		}
 
 		//get the view name
@@ -72,7 +72,7 @@ class PostController extends Controller {
 		else
 			$viewName = "front.posts.index";
 
-		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title, 'cats' => $cats]);
+		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title, 'pageDescription' => $category->description ]);
 	}
 
 

@@ -1,7 +1,16 @@
 @extends('front.layout')
 
 @section('content')
-	
+		
+		
+		
+		<div class="row">
+			<div class="col-sm-12" style="margin-top: 35px;">
+				<p class="heading4" style="margin-bottom: 0">{!! $pageDescription !!}</p>
+			</div>
+		</div>
+
+
 		<!--  Gov Entities Title -->
 		<div class="row">
 			<div class="col-sm-12">
@@ -11,14 +20,6 @@
 			</div>
 		</div>
 
-		
-		<div class="row">
-			<div class="col-sm-12">
-				<p class="heading4">{!! $cats['Gov']->description !!}</p>
-			</div>
-		</div>
-		
-		<!-- End Of Page Desc -->
 
 		<!-- posts listing -->
 		<div class="row">
@@ -36,12 +37,6 @@
 				<div class="title-container">
 					<h1 class="heading1"> {{trans('messages.organization')}}</h1>
 				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-sm-12">
-				<p class="heading4">{!! $cats['Org']->description !!}</p>
 			</div>
 		</div>
 		
