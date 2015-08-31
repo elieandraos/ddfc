@@ -1,3 +1,23 @@
+<!-- Logos -->
+<div class="container" style="position:relative">
+  <div class="row" id="logos" style="height:auto;padding-bottom: 35px;">
+    <div class='col-sm-6 header-logo-left header-logo'>
+      <a href="http://www.dubai.ae" target="_blank">
+        <img src='/images/header-logo-left.png' alt='Government Of Dubai' />
+      </a>
+    </div>
+
+    <div class='col-sm-6 header-logo-right header-logo pull-right'>
+      <a href="http://tec.gov.ae/" target="_blank">
+        <img src='/images/header-logo-right.png' alt='The Executive Council' />
+      </a>
+
+    </div>
+  </div>
+</div>
+<!-- End Of Logos -->
+
+
 <!-- Bottom Bar -->
 <div class="container-fluid" id="bottom-bar">
   <div class="container" >
@@ -34,7 +54,7 @@
         
         @if(!Request::is('page/act-now'))
              <div class="col-sm-3 col-sm-push-1">
-                <a href="/page/act-now">
+                <a href="/page/act-now" style="margin-bottom: 15px;display: block;">
                     <img src="/images/ActNow.jpg" alt="ACT NOW"/>
                 </a> 
                  <!-- Social Links --> 

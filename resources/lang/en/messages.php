@@ -103,6 +103,8 @@ return [
                     <br/><br/>[Article 1 of the UN Convention on the Rights of People with Disablities]
                     ',
 
-    'AccessibilityOptions' => 'Accessibility Options'
+    'AccessibilityOptions' => 'Accessibility Options',
+
+    'Stay Connected' => 'Stay Connected'
 
 ];

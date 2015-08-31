@@ -103,7 +103,8 @@ return [
                 <br/>[Article 1 of the UN Convention on the Rights of People with Disablities]
                 ',
                     
-    'AccessibilityOptions' => 'خيارات الوصول'
+    'AccessibilityOptions' => 'خيارات الوصول',
+    'Stay Connected' => 'ابقى على إتصال'
 
 
 

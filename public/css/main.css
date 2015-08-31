@@ -330,7 +330,11 @@ div.breadcrumb-nav a:last-child:after
 {
 	width: 24px;
 	height: 21px;
-	margin-top: 30px;
+}
+.social-top
+{
+	text-align: right;
+	padding-top: 120px;
 }
 
 /*********************************

@@ -44,18 +44,13 @@
 <!-- Logos -->
 <div class="container" style="position:relative">
   <div class="row" id="logos">
-    <div class='col-sm-6 header-logo-left header-logo'>
-      <a href="http://www.dubai.ae" target="_blank">
-        <img src='/images/header-logo-left.png' alt='Government Of Dubai' />
-      </a>
-    </div>
+
     <a href="/" class="header-logo-middle">
       <img src='/images/header-logo-middle.png' alt='My Community Dubai Homepage' />
     </a>
-    <div class='col-sm-6 header-logo-right header-logo pull-right'>
-      <a href="http://tec.gov.ae/" target="_blank">
-        <img src='/images/header-logo-right.png' alt='The Executive Council' />
-      </a>
+    <div class='col-sm-6 pull-right social-top'>
+        
+      <span>{{trans('messages.Stay Connected')}}</span>
       <!-- Social Links --> 
         <a href="https://www.facebook.com/mycommunitydubai" target="_blank"><img src="/images/facebook-btn.png" class="social-icon" alte="Our page on facebook"/></a>
         <a href="https://twitter.com/communitydubai" target="_blank"><img src="/images/twitter-btn.png" class="social-icon" alte="Our page on twotter"/></a>
