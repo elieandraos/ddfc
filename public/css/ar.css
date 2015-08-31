@@ -74,3 +74,11 @@ ul.dropdown-menu>li>a {
 {
     content: " <";
 }
+
+.caption-content {
+    bottom: 29%;
+}
+
+.caption-overlay h1 {
+    margin-bottom: 21px;
+}
