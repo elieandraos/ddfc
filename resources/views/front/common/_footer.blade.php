@@ -1,23 +1,3 @@
-<!-- Logos -->
-<div class="container" style="position:relative">
-  <div class="row" id="logos" style="height:auto;padding-bottom: 35px;">
-    <div class='col-sm-6 header-logo-left header-logo'>
-      <a href="http://www.dubai.ae" target="_blank">
-        <img src='/images/header-logo-left.png' alt='Government Of Dubai' />
-      </a>
-    </div>
-
-    <div class='col-sm-6 header-logo-right header-logo pull-right'>
-      <a href="http://tec.gov.ae/" target="_blank">
-        <img src='/images/header-logo-right.png' alt='The Executive Council' />
-      </a>
-
-    </div>
-  </div>
-</div>
-<!-- End Of Logos -->
-
-
 <!-- Bottom Bar -->
 <div class="container-fluid" id="bottom-bar">
   <div class="container" >
@@ -57,6 +37,15 @@
                 <a href="/page/act-now" style="margin-bottom: 15px;display: block;">
                     <img src="/images/ActNow.jpg" alt="ACT NOW"/>
                 </a> 
+
+                <!--Newsletter --> 
+                <p>{{ trans('messages.subscriberText')}}</p>
+                {!! Form::open(['route' => 'search.newsletter', 'method' => 'POST', 'role' => 'form']) !!}
+                    <input type="text" class="btn-newsletter" name="newsletter_email" id="newsletter_email" />
+                    <input type="submit" class="submit-newsletter" value="{{ trans('messages.subscriberBtn')}}" />
+                {!! Form::close() !!}
+
+                <!-- -->
                  <!-- Social Links --> 
                 <div class="pull-right">
                 <a href="https://www.facebook.com/mycommunitydubai" target="_blank"><img src="/images/facebook-btn.png" class="social-icon" alte="Our page on facebook"/></a>
@@ -71,8 +60,27 @@
 </div>
 <!-- End Of Bottom Bar -->
 
-<!-- Bottom Navigation -->
 
+<!-- Logos -->
+<div class="container" style="position:relative">
+  <div class="row" id="logos" style="height:auto;padding-bottom: 35px;">
+    <div class='col-sm-6 header-logo-left header-logo'>
+      <a href="http://www.dubai.ae" target="_blank">
+        <img src='/images/header-logo-left.png' alt='Government Of Dubai' />
+      </a>
+    </div>
+
+    <div class='col-sm-6 header-logo-right header-logo pull-right'>
+      <a href="http://tec.gov.ae/" target="_blank">
+        <img src='/images/header-logo-right.png' alt='The Executive Council' />
+      </a>
+
+    </div>
+  </div>
+</div>
+<!-- End Of Logos -->
+
+<!-- Bottom Navigation -->
 <div class="container-fluid navbar-bottom">
     <div class="container">
         <div class="row" id="logos-bottom">

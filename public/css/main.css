@@ -779,7 +779,25 @@ p.heading4
 	margin-bottom: 35px;
 }
 
-
+/*************************
+ * 	    NEWSLETTER 		 *
+ *************************/
+.btn-newsletter
+{
+	border: none;
+	background-color: #909cb7;
+	padding: 8px;
+	color: #FFF;
+	width: 67%;
+}
+.submit-newsletter
+{
+	border: none;
+	background-color: #3c5287;
+	padding: 8px;
+	color: #FFF;
+	margin-left: -5px;
+}
 /*************************
  * 	    Ellipsis 		 *
  *************************/
@@ -827,6 +845,12 @@ p.heading4
 	#carousel-example-generic
 	{
 		display: none;
+	}
+
+	.search-placeholder input#search, 
+	.search-placeholder .search-icon
+	{
+		height: 55px;
 	}
 }
 

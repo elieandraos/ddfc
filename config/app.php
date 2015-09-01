@@ -165,7 +165,8 @@ return [
 		'Laracasts\Flash\FlashServiceProvider',
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Spatie\MediaLibrary\MediaLibraryServiceProvider',
-		'Vinkla\Translator\TranslatorServiceProvider'
+		'Vinkla\Translator\TranslatorServiceProvider',
+		'Spatie\Newsletter\NewsletterServiceProvider'
 
 	],
 
@@ -220,6 +221,7 @@ return [
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
 		'MetaTag'   => 'Gaia\Seo\Facades\MetaTag',
+		'Newsletter' => 'Spatie\Newsletter\NewsletterFacade'
 
 	]
 

@@ -104,9 +104,10 @@ return [
                 ',
                     
     'AccessibilityOptions' => 'خيارات الوصول',
-    'Stay Connected' => 'ابقى على إتصال'
-
-
+    'Stay Connected' => 'ابقى على إتصال',
+    'newsletter' => 'أشكركم على الاشتراك في النشرة الإخبارية.',
+    'subscriberText' => 'اشترك في نشرتنا الإخبارية',
+    'subscriberBtn' => 'الاشتراك'
 
 
 

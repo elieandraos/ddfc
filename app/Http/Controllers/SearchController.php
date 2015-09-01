@@ -9,6 +9,7 @@ use App\Models\PostTranslation;
 use Input;
 use Lang;
 use App\Models\Locale;
+use Newsletter;
 
 
 class SearchController extends Controller {
@@ -29,6 +30,16 @@ class SearchController extends Controller {
 
 		return view('front.search.index', ['newsTranslations' => $newsTranslations, 'postsTranslations' => $postsTranslations]);
 		
+	}
+
+
+	public function newsletter()
+	{
+		$input = Input::all();
+		$email = $input['newsletter_email'];
+		$subscriber = Newsletter::subscribe($email);
+
+		return view('front.search.newsletter');
 	}
 
 }

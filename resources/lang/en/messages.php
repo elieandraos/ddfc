@@ -105,6 +105,9 @@ return [
 
     'AccessibilityOptions' => 'Accessibility Options',
 
-    'Stay Connected' => 'Stay Connected'
+    'Stay Connected' => 'Stay Connected',
+    'newsletter' => 'Thank you for subscribing to our newsletter.',
+    'subscriberText' => 'Subscribe to our newsletter',
+    'subscriberBtn' => 'subscribe'
 
 ];

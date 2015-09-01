@@ -86,3 +86,14 @@ ul.dropdown-menu>li>a {
 {
     text-align: left;
 }
+
+
+.btn-newsletter {
+    padding: 4px;
+    width: 71%;
+}
+.submit-newsletter {
+    margin-right: -5px;
+    margin-left: 0;
+        padding-top: 9px;
+}

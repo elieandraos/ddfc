@@ -13,6 +13,7 @@ use App\Models\News;
 |--------------------------------------------------------------------------
 */
 Route::post('/search/', ['as' => 'search.index', 'uses' => 'SearchController@index']);
+Route::post('/newsletter/', ['as' => 'search.newsletter', 'uses' => 'SearchController@newsletter']);
 
 /*
 |--------------------------------------------------------------------------
