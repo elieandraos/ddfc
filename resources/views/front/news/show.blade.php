@@ -14,7 +14,9 @@
 
 		<!-- posts listing -->
 		<div class='col-sm-7 top35'>
+		       @if($news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured'))
 		        <img class='featured-img' src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
+		      @endif
 			<h2 class="heading3">{!! $news->title !!}</h2>
 			<p>{!! $news->description !!}</p>	
 			@include("front.common._social_buttons", ["link" => route('news.show', [$news->slug]) ])

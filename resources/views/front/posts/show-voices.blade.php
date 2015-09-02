@@ -5,7 +5,7 @@
 	 <div class="row breadcrumb-nav">
         <div class="col-sm-12">
             <a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
-            <a href="/posts/{!! $post->postType->title !!}">{!! $post->postType->title !!} </a>
+            <a href="/posts/{!! $post->postType->title !!}">{!! trans('messages.Voices') !!} </a>
             <a href="#">{!! $post->title !!}</a>
         </div>
     </div>

@@ -126,6 +126,17 @@ ul.alert li
 {
 	list-style: none;
 }
+img.related-news-thumb
+{
+	max-height: 120px;
+	height: 100%;
+}
+img.list-news
+{
+	max-height: 150px;
+	height: 100%;
+}
+
 
 /********************************
  *      IMAGES FILTER           *

@@ -97,3 +97,7 @@ ul.dropdown-menu>li>a {
     margin-left: 0;
         padding-top: 9px;
 }
+.decreaseFont {
+    font-size: 10px;
+    margin-left: 15px;
+}

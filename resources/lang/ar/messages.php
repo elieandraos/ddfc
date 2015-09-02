@@ -61,8 +61,8 @@ return [
 
 
     'Join us now and be part of the change' => 'انضم إلينا الآن وتكون جزءا من التغيير',
-    'Inspirational success stories and best practices' => 'قصص نجاح ملهمة وأفضل الممارسات',
-    'Read the latest news and learn about our activities' => 'قراءة آخر الأخبار ومعرفة المزيد عن أنشطتنا',
+    'Inspirational success stories and best practices' => 'أصداء ملهمة من مجتمع دبي',
+    'Read the latest news and learn about our activities' => 'آخر أخبار ونشاطات مجتمعي',
     'Find Support' => 'البحث عن الدعم',
     "Listing of government entities, NGO's and care centers" => 'قائمة من الجهات الحكومية والمنظمات غير الحكومية ومراكز الرعاية',
 

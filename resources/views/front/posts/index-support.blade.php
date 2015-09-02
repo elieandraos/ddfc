@@ -68,6 +68,10 @@
 					@endforeach
 				</div>
 			</div>
+
+			<div class="col-sm-5">
+				<img src="/images/noimage.jpg">
+			</div>
 		</div>
 
 	@else

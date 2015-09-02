@@ -2,7 +2,6 @@
 
 @section('content')
 	
-	@if($posts->count())
 
 		<!-- Page Title -->
 		@if(isset($pageTitle))
@@ -25,30 +24,26 @@
 		@endif
 		<!-- End Of Page Desc -->
 
-
-		<!-- posts listing -->
-		<div class="row">
-			@foreach($posts as $k => $post)
-				@include('front.posts._listItem', ['post' => $post])
-				@if($k%2 == 0 && $k != 0)
-					<div style="height:1px;clear:both"></div>
-				@endif
-			@endforeach
-		</div>
-
-
-		<!-- posts pagination -->
-		<div class="row">
-			<div class=" col-sm-12 text-center">
-				{!! $posts->render() !!}
+		@if($posts->count())
+			<!-- posts listing -->
+			<div class="row">
+				@foreach($posts as $k => $post)
+					@include('front.posts._listItem', ['post' => $post])
+					@if($k%2 == 0 && $k != 0)
+						<div style="height:1px;clear:both"></div>
+					@endif
+				@endforeach
 			</div>
-		</div>
-	@else
-		<div class="row">
-			<div class=" col-sm-12 text-center show-item top35">
-				<p>No posts available for this section.</p>
+
+
+			<!-- posts pagination -->
+			<div class="row">
+				<div class=" col-sm-12 text-center">
+					{!! $posts->render() !!}
+				</div>
 			</div>
-		</div>
-	@endif
+		@else
+			<div style="height:35px;"></div>
+		@endif
 	
 @stop
