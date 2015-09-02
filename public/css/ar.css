@@ -101,3 +101,8 @@ ul.dropdown-menu>li>a {
     font-size: 10px;
     margin-left: 15px;
 }
+.caption-overlay h1 {
+    line-height: 1.4;
+}
+
+
