@@ -33,8 +33,12 @@ class SearchController extends Controller {
 	}
 
 
-	public function newsletter()
+	public function newsletter(Request $request)
 	{
+		 $this->validate($request, [
+	        'newsletter_email' => 'required|email'
+	    ]);
+
 		$input = Input::all();
 		$email = $input['newsletter_email'];
 

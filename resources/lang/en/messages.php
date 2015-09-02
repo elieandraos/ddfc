@@ -26,7 +26,7 @@ return [
 
     'ActNowText' =>'Join us now and be part of the change',
     'VoicesText' =>'Inspirational voices from the Dubai community',
-    'NewsText' =>'Latest news and activities related to My Community ',
+    'NewsText' =>'Latest news and activities related to My Community',
     'SupportText' =>'Find support with government entities, associations and disability centers',
 
     'My Community' => 'My Community',

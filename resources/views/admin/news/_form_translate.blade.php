@@ -1,5 +1,13 @@
-<!-- Panel start -->
+@if(App::getLocale() == "ar")
+    <style>
+        div.nicEdit-main 
+        {
+             direction: rtl;
+        }
+    </style> 
+@endif
 
+<!-- Panel start -->
 <div class="row">
     <div class="col-md-2 col-md-push-10">
         <div class="form-group" style="text-align:right;margin-right:0">

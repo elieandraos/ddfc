@@ -1,3 +1,12 @@
+@if(App::getLocale() == "ar")
+    <style>
+        div.nicEdit-main 
+        {
+             direction: rtl;
+        }
+    </style> 
+@endif
+
 <!-- Panel start -->
 <div class="row">
     <div class="col-md-2 col-md-push-10">
