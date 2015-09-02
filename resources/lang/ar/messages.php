@@ -97,10 +97,8 @@ return [
     'Universal Accessibility' => 'مدينة متاحة للجميع',
     'Sustainable Social Protection System' => 'الحماية الاجتماعية المستدامة',
 
-    'AboutText' => 'Persons with disablities include those who have long-term physical, mental, 
-                intellectual or sensory impairments which in interaction with various barriers 
-                may hinder their full and effective participation in society on an <b>equal basis with others.</b>
-                <br/>[Article 1 of the UN Convention on the Rights of People with Disablities]
+    'AboutText' => 'يشمل مصطلح ”الأشخاص ذوي الإعاقة“ كل من يعانون من عاهات طويلة الأجل بدنية أو عقلية أو ذهنية أو حسية، قد تمنعهم لدى التعامل مع مختلف الحواجز من المشاركة بصورة كاملة وفعالة في المجتمع على قدم المساواة مع الآخرين.
+                <br/>]المادة الأولى من اتفاقية الأمم المتحدة لحقوق الأشخاص ذوي الإعاقة[
                 ',
                     
     'AccessibilityOptions' => 'خيارات الوصول',
