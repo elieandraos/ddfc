@@ -37,7 +37,23 @@ class SearchController extends Controller {
 	{
 		$input = Input::all();
 		$email = $input['newsletter_email'];
-		$subscriber = Newsletter::subscribe($email);
+
+		$api = Newsletter::getApi();
+		$info = $api->call('lists/member-info' , [ 
+			"id" => "87a6a82cfb", 
+			"emails" => [ ["email" =>$email] ] 
+		]);
+
+		if($info['success_count'] == 1)
+		{
+
+		}
+		else
+		{
+			$subscriber = Newsletter::subscribe($email);
+		}
+		
+		
 
 		return view('front.search.newsletter');
 	}
