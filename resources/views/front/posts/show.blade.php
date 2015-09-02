@@ -5,7 +5,14 @@
 	 <div class="row breadcrumb-nav">
         <div class="col-sm-12">
             <a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
-            <a href="/posts/{!! $post->postType->title !!}">{!! $post->postType->title !!} </a>
+            <a href="/posts/{!! $post->postType->title !!}">
+            	@if($post->postType->title == "Knowledge")
+            		{!! trans('messages.Knowledge') !!}
+            	@else
+            		{!! $post->postType->title !!} 
+            	@endif
+            </a>
+
             <a href="#">{!! $post->title !!}</a>
         </div>
     </div>
@@ -38,8 +45,8 @@
 			<h2 class="heading3">{!! $post->title !!}</h2>
 			<p>{!! $post->description !!}</p>	
 			
-			@if($post->getMeta('meta_document'))
-				<a href="{!! url($post->getMeta('meta_document')) !!}">{!! $post->getMeta('meta_document_text') !!}</a>
+			@if($post->getMeta('meta_document_'.App::getLocale()))
+				<a href="{!! url($post->getMeta('meta_document_'.App::getLocale())) !!}">{!! $post->getMeta('meta_document_text') !!}</a>
 			@endif
 
 			@include("front.common._social_buttons", ["link" => route('posts.show', [$post->postType->slug, $post->slug]) ])
