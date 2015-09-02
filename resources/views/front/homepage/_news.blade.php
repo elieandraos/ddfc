@@ -19,7 +19,7 @@
 							<div class="col-sm-6">
 								<div class="tint black">
 									
-									@if($single_news->getFirstMediaURL( $single_news->getMediaCollectionName(), 'thumb-medium'))
+									@if($n->getFirstMediaURL( $single_news->getMediaCollectionName(), 'thumb-medium'))
 										<img class="home-news-thumb" src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
 									@else
 										<img src="/images/noimage.jpg" class="home-news-thumb" />
