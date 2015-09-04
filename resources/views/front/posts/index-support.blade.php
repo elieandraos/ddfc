@@ -70,7 +70,7 @@
 			</div>
 
 			<div class="col-sm-5">
-				<img src="/images/noimage.jpg">
+				<img src="/images/faq.jpg">
 			</div>
 		</div>
 

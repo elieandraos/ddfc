@@ -4,7 +4,7 @@
 		<div class="row">
 			<div class="col-sm-12 title-container">
 				<h1 class="heading1">{{trans('messages.Voices')}}</h3>
-				<h2 class="heading2">{{trans('messages.Inspirational success stories and best practices')}}</h5>
+				<h2 class="heading2">{{trans('messages.VoicesText')}}</h5>
 			</div>
 		</div>
 		<!-- End Of Block Title -->
