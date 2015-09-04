@@ -158,10 +158,6 @@ var nicUploadButton = nicEditorAdvancedButton.extend({
 
 	uploadFile : function() {
 		var file = this.fileInput.files[0];
-		//if (!file || !file.type.match(/image.*/)) {
-		//	this.onError("Only image files can be uploaded");
-	//		return;
-	//	}
 		this.fileInput.setStyle({ display: 'none' });
 		this.setProgress(0);
 
@@ -201,22 +197,6 @@ var nicUploadButton = nicEditorAdvancedButton.extend({
 			alert("Failed to upload file");
 			return;
 		}
-		//var src = options.links.original;
-		/*
-		if(!this.im) {
-			this.ne.selectedInstance.restoreRng();
-			var tmp = 'javascript:nicImTemp();';
-			this.ne.nicCommand("insertImage", src);
-			this.im = this.findElm('IMG','src', src);
-		}
-		var w = parseInt(this.ne.selectedInstance.elm.getStyle('width'));
-		if(this.im) {
-			this.im.setAttributes({
-				src : src,
-				width : (w && options.image.width) ? Math.min(w, options.image.width) : ''
-			});
-		}*/
-
 		if(!this.im) {
 			var tmp = 'download';
 			this.ne.nicCommand("createlink",tmp);
