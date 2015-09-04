@@ -89,3 +89,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+
+//upload route:
+Route::post('/upload', [
+    'as' => 'media.upload',
+    'uses' => 'MediaController@upload',
+    'middleware' => 'auth',
+]);

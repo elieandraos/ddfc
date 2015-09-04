@@ -120,7 +120,7 @@ var app = function() {
          $(".richtexteditor").each(function(){
             var id = $(this).attr('id');
             bkLib.onDomLoaded(function() {
-                new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif', fullPanel : true}).panelInstance(id);
+                new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif', fullPanel : true, uploadURI:"/upload", uploadToken:$('meta[name="csrf-token"]').attr('content')}).panelInstance(id);
             });
         })
     }

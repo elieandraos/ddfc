@@ -30,7 +30,7 @@ var nicEditorConfig = bkClass.extend({
 	},
 	iconsPath : '../nicEditorIcons.gif',
 	buttonList : ['save','bold','italic','underline','left','center','right','justify','ol','ul','fontSize','fontFamily','fontFormat','indent','outdent','image','upload','link','unlink','forecolor','bgcolor'],
-	iconList : {"xhtml":1,"bgcolor":2,"forecolor":3,"bold":4,"center":5,"hr":6,"indent":7,"italic":8,"justify":9,"left":10,"ol":11,"outdent":12,"removeformat":13,"right":14,"save":25,"strikethrough":16,"subscript":17,"superscript":18,"ul":19,"underline":20,"image":21,"link":22,"unlink":23,"close":24,"arrow":26}
+	iconList : {"xhtml":1,"upload":15, "bgcolor":2,"forecolor":3,"bold":4,"center":5,"hr":6,"indent":7,"italic":8,"justify":9,"left":10,"ol":11,"outdent":12,"removeformat":13,"right":14,"save":25,"strikethrough":16,"subscript":17,"superscript":18,"ul":19,"underline":20,"image":21,"link":22,"unlink":23,"close":24,"arrow":26}
 	
 });
 ;
@@ -110,3 +110,126 @@ var nicCodeOptions = {
 
 var nicCodeButton=nicEditorAdvancedButton.extend({width:"350px",addPane:function(){this.addForm({"":{type:"title",txt:"Edit HTML"},code:{type:"content",value:this.ne.selectedInstance.getContent(),style:{width:"340px",height:"200px"}}})},submit:function(B){var A=this.inputs.code.value;this.ne.selectedInstance.setContent(A);this.removePane()}});nicEditors.registerPlugin(nicPlugin,nicCodeOptions);
 
+/* START CONFIG */
+var nicUploadOptions = {
+	buttons : {
+		'upload' : {name : 'Upload File', type : 'nicUploadButton'}
+	}
+
+};
+/* END CONFIG */
+
+var nicUploadButton = nicEditorAdvancedButton.extend({
+	nicURI : '',
+	errorText : 'Failed to upload file',
+
+	addPane : function() {
+
+		if(typeof window.FormData === "undefined") {
+			return this.onError("File uploads are not supported in this browser, use Chrome, Firefox, or Safari instead.");
+		}
+		this.im = this.ne.selectedInstance.selElm().parentTag('IMG');
+
+		var container = new bkElement('div')
+			.setStyle({ padding: '10px' })
+			.appendTo(this.pane.pane);
+
+		new bkElement('div')
+			.setStyle({ fontSize: '14px', fontWeight : 'bold', paddingBottom: '5px' })
+			.setContent('Upload File')
+			.appendTo(container);
+
+		this.fileInput = new bkElement('input')
+			.setAttributes({ 'type' : 'file' })
+			.appendTo(container);
+
+		this.progress = new bkElement('progress')
+			.setStyle({ width : '100%', display: 'none' })
+			.setAttributes('max', 100)
+			.appendTo(container);
+
+		this.fileInput.onchange = this.uploadFile.closure(this);
+	},
+
+	onError : function(msg) {
+		this.removePane();
+		alert(msg || "Failed to upload file");
+	},
+
+	uploadFile : function() {
+		var file = this.fileInput.files[0];
+		//if (!file || !file.type.match(/image.*/)) {
+		//	this.onError("Only image files can be uploaded");
+	//		return;
+	//	}
+		this.fileInput.setStyle({ display: 'none' });
+		this.setProgress(0);
+
+		var fd = new FormData(); // https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/
+		fd.append("file", file);
+		fd.append('_token', this.ne.options.uploadToken);
+		var xhr = new XMLHttpRequest();
+		xhr.open("POST", this.ne.options.uploadURI || this.nicURI);
+
+		xhr.onload = function() {
+			try {
+				var res = JSON.parse(xhr.responseText);
+			} catch(e) {
+				return this.onError();
+			}
+			this.onUploaded(res);
+		}.closure(this);
+		xhr.onerror = this.onError.closure(this);
+		xhr.upload.onprogress = function(e) {
+			this.setProgress(e.loaded / e.total);
+		}.closure(this);
+		xhr.send(fd);
+	},
+
+	setProgress : function(percent) {
+		this.progress.setStyle({ display: 'block' });
+		if(percent < .98) {
+			this.progress.value = percent;
+		} else {
+			this.progress.removeAttribute('value');
+		}
+	},
+
+	onUploaded : function(options) {
+		this.removePane();
+		if(!options || options.message != "success"){
+			alert("Failed to upload file");
+			return;
+		}
+		//var src = options.links.original;
+		/*
+		if(!this.im) {
+			this.ne.selectedInstance.restoreRng();
+			var tmp = 'javascript:nicImTemp();';
+			this.ne.nicCommand("insertImage", src);
+			this.im = this.findElm('IMG','src', src);
+		}
+		var w = parseInt(this.ne.selectedInstance.elm.getStyle('width'));
+		if(this.im) {
+			this.im.setAttributes({
+				src : src,
+				width : (w && options.image.width) ? Math.min(w, options.image.width) : ''
+			});
+		}*/
+
+		if(!this.im) {
+			var tmp = 'download';
+			this.ne.nicCommand("createlink",tmp);
+			this.im = this.findElm('A','href',tmp);
+		}
+		if(this.im) {
+			this.im.setAttributes({
+				href : options.url,
+				title : '',
+				target : '_blank'
+			});
+		}
+	}
+});
+
+nicEditors.registerPlugin(nicPlugin,nicUploadOptions);
