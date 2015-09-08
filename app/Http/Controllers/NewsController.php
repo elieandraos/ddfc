@@ -39,7 +39,7 @@ class NewsController extends Controller {
 	 */
 	public function index()
 	{
-		$news = $this->newsRepos->getAll(5);
+		$news = $this->newsRepos->getOnlyWithContent(5);
 		
 		$featured_news = $this->newsRepos->getByIsFeatured(2);
 
@@ -57,7 +57,10 @@ class NewsController extends Controller {
 	 * @return Response
 	 */
 	public function show(News $news)
-	{
+	{		
+		if(!$news->title)
+			return redirect('/');
+
 		 MetaTag::setTitle($news->seo->meta_title);
          MetaTag::setDescription($news->seo->meta_description);
          MetaTag::setKeywords($news->seo->meta_keywords);
@@ -77,7 +80,6 @@ class NewsController extends Controller {
 	public function category($id)
 	{
 		$news = $this->newsRepos->getByCategory($id, 5);
-
 		 if (Request::ajax()) {
             return View::make('front.news.ajax_news_list', ['news' => $news])->render();
         }

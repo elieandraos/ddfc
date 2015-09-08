@@ -5,6 +5,7 @@
 	interface NewsRepositoryInterface
 	{
 		public function getAll($limit);
+		public function getOnlyWithContent($limit);
 		public function find($id);
 		public function create($input);
 		public function update($id, $input);

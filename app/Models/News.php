@@ -6,6 +6,7 @@ use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelInterface;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 use Vinkla\Translator\Translatable;
 use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
+use App\Models\NewsTranslation;
 
 class News extends Model implements MediaLibraryModelInterface, TranslatableContract {
 
@@ -34,6 +35,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	{
 	    return $this->morphOne('App\Models\Seo', 'seoable');
 	}
+
 
 	/******************
 	 * DATE FUNCTIONS *

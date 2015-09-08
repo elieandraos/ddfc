@@ -1,6 +1,10 @@
 <?php namespace Gaia\Repositories; 
 
 use App\Models\News;
+use App\Models\NewsTranslation;
+use App\Models\Locale;
+use Lang;
+use DB;
 
 class NewsRepository extends DbRepository implements NewsRepositoryInterface 
 {
@@ -17,9 +21,26 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 			$limit = $this->limit;
 
 		return News::latest('published_at')->paginate($limit);
+
+      	
+        return $news;
 	}
 
 
+	public function getOnlyWithContent($limit = null)
+	{	
+		$locale = Locale::where('language', '=', Lang::getLocale())->first();
+
+		$news = NewsTranslation::leftJoin('news', 'news_translations.news_id', '=', 'news.id')
+             ->where('news_translations.locale_id', '=', $locale->id)
+             ->whereNotNull('news_translations.title')
+             ->orderBy('published_at', 'DESC')
+             ->paginate();
+
+        return $news;
+	}
+
+	
 	/**
 	 * Returns one news by id
 	 * @param int $id 
@@ -74,7 +95,19 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 		if(!$limit)
 			$limit = $this->limit;
 
-		return News::latest('published_at')->where('category_id', '=', $category_id)->whereNotIn('id', $except)->paginate($limit);
+		$locale = Locale::where('language', '=', Lang::getLocale())->first();
+
+		$news = NewsTranslation::leftJoin('news', 'news_translations.news_id', '=', 'news.id')
+             ->where('news_translations.locale_id', '=', $locale->id)
+             ->whereNotNull('news_translations.title')
+             ->where('category_id', '=', $category_id)
+             ->whereNotIn('news.id', $except)
+             ->orderBy('published_at', 'DESC')
+             ->paginate();
+
+        return $news;
+
+		//return News::latest('published_at')->where('category_id', '=', $category_id)->whereNotIn('id', $except)->paginate($limit);
 	}
 
 

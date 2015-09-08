@@ -7,8 +7,8 @@
 		<div class='col-sm-5'>
 			<a href="{!! route('news.show', [$related_n->slug]) !!}" title="{!! $related_n->title !!}" >
 				<div class="tint black">
-					@if($related_n->getFirstMediaURL( $related_n->getMediaCollectionName(), 'thumb-small'))
-						<img src="{!! $related_n->getFirstMediaURL( $related_n->getMediaCollectionName(), 'thumb-small') !!}" alt="{!! $related_n->title !!}" title="{!! $related_n->title !!}" />
+					@if($related_n->news->getFirstMediaURL( $related_n->news->getMediaCollectionName(), 'thumb-small'))
+						<img src="{!! $related_n->news->getFirstMediaURL( $related_n->news->getMediaCollectionName(), 'thumb-small') !!}" alt="{!! $related_n->title !!}" title="{!! $related_n->title !!}" />
 					@else
 						<img src="/images/noimage.jpg" class="related-news-thumb" />
 					@endif
