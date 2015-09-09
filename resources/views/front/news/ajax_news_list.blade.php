@@ -3,7 +3,7 @@
 	@foreach($news as $single_news)
 		<div class="col-sm-10 col-push-1">
 			<div class="row news-list-row">
-				@include('front.news._list_item', ['single_news' => $single_news->news])
+				@include('front.news._list_item', ['single_news' => $single_news])
 			</div>
 		</div>
 	@endforeach

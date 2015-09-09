@@ -10,6 +10,7 @@ use App\Models\News;
 use Response;
 use Request;
 use View;
+use Lang;
 
 use MetaTag;
 
@@ -58,7 +59,7 @@ class NewsController extends Controller {
 	 */
 	public function show(News $news)
 	{		
-		if(!$news->title)
+		if( (Lang::getLocale() == "ar" && !$news->is_ar) || (Lang::getLocale() == "en" && !$news->is_en) )
 			return redirect('/');
 
 		 MetaTag::setTitle($news->seo->meta_title);

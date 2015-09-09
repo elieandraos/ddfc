@@ -60,7 +60,29 @@
                 {!! Form::textarea('excerpt', (isset($news))?$news->excerpt:null, ['class' => 'form-control', 'rows' => 3]) !!}
             </div>
         </div>
-         <div class="form-group">
+        
+        <div class="form-group">
+            {!! Form::label('is_en', 'Available in english', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_en', 
+                    1, 
+                    (isset($news->is_en))?$news->is_featured:true)
+                !!} 
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('is_ar', 'Available in arabic', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_ar', 
+                    1, 
+                    (isset($news->is_ar))?$news->is_featured:true)
+                !!} 
+            </div>
+        </div>
+
+        <div class="form-group">
             {!! Form::label('is_featured', 'Is Featured', ['class' => 'col-sm-3 control-label']) !!}
             <div class="col-sm-6">
                 {!! Form::checkbox(

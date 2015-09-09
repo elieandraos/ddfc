@@ -29,13 +29,11 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 
 	public function getOnlyWithContent($limit = null)
 	{	
-		$locale = Locale::where('language', '=', Lang::getLocale())->first();
-
-		$news = NewsTranslation::leftJoin('news', 'news_translations.news_id', '=', 'news.id')
-             ->where('news_translations.locale_id', '=', $locale->id)
-             ->whereNotNull('news_translations.title')
-             ->orderBy('published_at', 'DESC')
-             ->paginate();
+		
+		if(Lang::getLocale() == "ar")
+			$news =  News::latest('published_at')->arabic()->paginate($limit);
+		else
+			$news = News::latest('published_at')->english()->paginate($limit);
 
         return $news;
 	}
@@ -59,6 +57,10 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 	 */
 	public function create($input)
 	{
+		if(!isset($input['is_en']))
+			$input['is_en'] = 0;
+		if(!isset($input['is_ar']))
+			$input['is_ar'] = 0;
 		return News::create($input);
 	}
 
@@ -73,6 +75,10 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 		$news = $this->find($id);
 		if(!isset($input['is_featured']))
 			$input['is_featured'] = 0;
+		if(!isset($input['is_en']))
+			$input['is_en'] = 0;
+		if(!isset($input['is_ar']))
+			$input['is_ar'] = 0;
 		
 		return $news->update($input); 
 	}
@@ -95,19 +101,12 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 		if(!$limit)
 			$limit = $this->limit;
 
-		$locale = Locale::where('language', '=', Lang::getLocale())->first();
+		$news = News::latest('published_at')->where('category_id', '=', $category_id)->whereNotIn('id', $except);
+		if(Lang::getLocale() == "ar")
+			return $news->arabic()->paginate($limit);
 
-		$news = NewsTranslation::leftJoin('news', 'news_translations.news_id', '=', 'news.id')
-             ->where('news_translations.locale_id', '=', $locale->id)
-             ->whereNotNull('news_translations.title')
-             ->where('category_id', '=', $category_id)
-             ->whereNotIn('news.id', $except)
-             ->orderBy('published_at', 'DESC')
-             ->paginate();
-
-        return $news;
-
-		//return News::latest('published_at')->where('category_id', '=', $category_id)->whereNotIn('id', $except)->paginate($limit);
+		if(Lang::getLocale() == "en")
+			return $news->english()->paginate($limit);
 	}
 
 

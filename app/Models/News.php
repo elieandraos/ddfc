@@ -13,7 +13,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	use MediaLibraryModelTrait, Translatable;
 
 	protected $table = 'news';
-	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured'];
+	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured', 'is_en', 'is_ar'];
 	protected $translatedAttributes = ['title', 'excerpt', 'description'];
 	protected $translator = 'App\Models\NewsTranslation';
 	
@@ -36,6 +36,20 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	    return $this->morphOne('App\Models\Seo', 'seoable');
 	}
 
+	/******************
+	 *    SCOPES      *
+	 ******************/
+
+	public function scopeEnglish($query)
+    {
+        return $query->where('is_en', '=', 1);
+    }
+
+
+    public function scopeArabic($query)
+    {
+        return $query->where('is_ar', '=', 1);
+    }
 
 	/******************
 	 * DATE FUNCTIONS *
