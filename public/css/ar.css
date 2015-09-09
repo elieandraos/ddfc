@@ -55,11 +55,21 @@ ul.dropdown-menu>li>a {
  *********************************/
 @font-face {
     font-family: avenirNextRegular;
-    src: url('/fonts/DroidArabicKufi.ttf');
+    src: url('/fonts/DroidArabicKufi.eot');
+    src: url('/fonts/DroidArabicKufi?#iefix') format('embedded-opentype'),
+       url('/fonts/DroidArabicKufi.woff2') format('woff2'),
+       url('/fonts/DroidArabicKufi.woff') format('woff'),
+       url('/fonts/DroidArabicKufi.ttf') format('truetype'),
+       url('/fonts/DroidArabicKufi#DroidArabicKufi') format('svg');
 }
 @font-face {
     font-family: avenirNextBold;
-    src: url('/fonts/DroidArabicKufi-Bold.ttf');
+    src: url('/fonts/DroidArabicKufi-Bold.eot');
+    src: url('/fonts/DroidArabicKufi-Bold?#iefix') format('embedded-opentype'),
+       url('/fonts/DroidArabicKufi-Bold.woff2') format('woff2'),
+       url('/fonts/DroidArabicKufi-Bold.woff') format('woff'),
+       url('/fonts/DroidArabicKufi-Bold.ttf') format('truetype'),
+       url('/fonts/DroidArabicKufi-Bold#DroidArabicKufi-Bold') format('svg');
 }
 
 .heading1, .heading1 a,

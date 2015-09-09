@@ -63,6 +63,29 @@
                 {!! Form::textarea('excerpt', (isset($post))?$post->excerpt:null, ['class' => 'form-control', 'rows' => 3]) !!}
             </div>
         </div>
+
+         <div class="form-group">
+            {!! Form::label('is_en', 'Available in english', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_en', 
+                    1, 
+                    (isset($post->is_en))?$post->is_featured:true)
+                !!} 
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('is_ar', 'Available in arabic', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_ar', 
+                    1, 
+                    (isset($post->is_ar))?$post->is_featured:true)
+                !!} 
+            </div>
+        </div>
+
+        
         <div class="form-group">
             {!! Form::label('image', 'Image', ['class' => 'col-sm-3 control-label']) !!}
             <div class="col-sm-6">

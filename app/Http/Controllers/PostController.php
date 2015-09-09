@@ -63,7 +63,7 @@ class PostController extends Controller {
 		}
 		else
 		{
-			$posts = $this->postRepos->getAll($postType->id, $this->limit);
+			$posts = $this->postRepos->getOnlyWithContent($postType->id, $this->limit);
 		}
 
 		//get the view name

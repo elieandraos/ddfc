@@ -5,6 +5,7 @@ use Gaia\Repositories\PostTypeRepositoryInterface;
 use App\Models\Component;
 use App\Models\ComponentPost;
 use Gaia\Services\ComponentPostService;
+use Lang;
 
 class PostRepository extends DbRepository implements PostRepositoryInterface 
 {
@@ -36,6 +37,17 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	}
 
 
+	public function getOnlyWithContent($postTypeId = null, $limit = null)
+	{	
+		
+		if(Lang::getLocale() == "ar")
+			$posts =  Post::latest('published_at')->arabic()->where('post_type_id', '=', $postTypeId)->paginate($limit);
+		else
+			$posts = Post::latest('published_at')->english()->where('post_type_id', '=', $postTypeId)->paginate($limit);
+
+        return $posts;
+	}
+
 	/**
 	 * Returns one post by id
 	 * @param int $id 
@@ -54,6 +66,11 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	 */
 	public function create($input)
 	{
+		if(!isset($input['is_en']))
+			$input['is_en'] = 0;
+		if(!isset($input['is_ar']))
+			$input['is_ar'] = 0;
+
 		$post = Post::create($input);
 		//save the components values		
 		$componentIds = $post->retrieveComponentIds($input);
@@ -76,6 +93,11 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 		$componentIds = $post->retrieveComponentIds($input);
 		$this->attachComponentPosts($componentIds, $id, $input);
 		
+		if(!isset($input['is_en']))
+			$input['is_en'] = 0;
+		if(!isset($input['is_ar']))
+			$input['is_ar'] = 0;
+
 		return $post->update($input); 
 	}
 

@@ -8,5 +8,6 @@
 		public function create($input);
 		public function update($id, $input);
 		public function delete($id);
+		public function getOnlyWithContent($limit);
 	}
 ?>
