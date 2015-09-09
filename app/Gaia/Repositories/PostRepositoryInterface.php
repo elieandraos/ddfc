@@ -12,5 +12,6 @@
 		public function getAllByPostTypeIdAndCategoryId($slug, $categoryId, $limit);
 		public function getAllRelated($post);
 		public function attachComponentPosts($componentIds, $id, $input);
+		public function getOnlyWithContent($limit);
 	}
 ?>
