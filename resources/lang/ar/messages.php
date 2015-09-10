@@ -105,7 +105,14 @@ return [
     'Stay Connected' => 'ابقى على إتصال',
     'newsletter' => 'أشكركم على الاشتراك في النشرة الإخبارية.',
     'subscriberText' => 'اشترك في نشرتنا الإخبارية',
-    'subscriberBtn' => 'الاشتراك'
+    'subscriberBtn' => 'الاشتراك',
+
+    'First Name' => 'الاسم الأول',
+    'Last Name' => 'اسم العائلة',
+    'Phone' => 'الهاتف',
+    'Email' => 'البريد الإلكتروني',
+    'Submit' => 'ارسال',
+    'Forum Success' => 'شكرا لك على الاشتراك في منتدانا.'
 
 
 

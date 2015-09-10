@@ -108,6 +108,14 @@ return [
     'Stay Connected' => 'Stay Connected',
     'newsletter' => 'Thank you for subscribing to our newsletter.',
     'subscriberText' => 'Subscribe to our newsletter',
-    'subscriberBtn' => 'subscribe'
+    'subscriberBtn' => 'subscribe',
+
+
+    'First Name' => 'First Name',
+    'Last Name' => 'Last Name',
+    'Phone' => 'Phone',
+    'Email' => 'Email',
+    'Submit' => 'Submit',
+    'Forum Success' => 'Thank you for signing up to our forum.'
 
 ];

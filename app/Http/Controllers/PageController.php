@@ -11,10 +11,13 @@ use Gaia\Repositories\PostTypeRepositoryInterface;
 use App\Models\Section;
 use App\Models\ComponentPost;
 use App\Models\Post;
+use App\Models\Subscriber;
 use MediaLibrary;
 use MetaTag;
 use Redirect;
 use Mail;
+use Hash;
+use Input;
 
 
 class PageController extends Controller {
@@ -95,6 +98,39 @@ class PageController extends Controller {
 		});
 
 		return redirect('page/contact-us?success=1');
+	}
+
+
+	public function forum(Request $request)
+	{
+		$this->validate($request, [
+	        'first_name' => 'required',
+	        'last_name' => 'required',
+	        'email' => 'required|email|unique:subscribers'
+	    ]);
+
+		$data['email'] = $request->email;
+		$data['first_name'] = $request->first_name;
+		$data['last_name'] = $request->last_name;
+		$data['phone'] = $request->phone;
+		$data['is_verified'] = 0;
+		$data['verification_token'] = Hash::make(uniqid());
+
+		Subscriber::create($data);
+		/*
+		$data['email'] = $request->email;
+		$data['message'] = $request->message;
+		$data['subject'] = $request->subject;
+		$data['phone'] = $request->phone;
+
+		Mail::send('emails.contact', ['data' => $data],  function($m) use ($data) {
+		    $m->from($data['email'], 'DDFC Contact');
+		    $m->to('info@communitydubai.com');
+		    $m->subject($data['subject']);
+		});
+		*/
+
+		return redirect('page/forum?success=1');
 	}
 
 }
