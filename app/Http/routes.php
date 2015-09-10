@@ -76,6 +76,19 @@ Route::get('/posts/{posttypeslug}/category/{categorySlug}', ['as' => 'posts.cate
 Route::get('/posts/{posttypeslug}/{postslug}', ['as' => 'posts.show', 'uses' => 'PostController@show']);
 
 
+
+/*
+|--------------------------------------------------------------------------
+| Admin Subscriber Routs
+|--------------------------------------------------------------------------
+*/
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function()
+{
+   Route::get('/subscribers', ['as' => 'admin.subscribers.list', 'uses' => 'SubscriberController@index']);
+   Route::post('/subscribers/{id}/delete', ['as' => 'admin.subscribers.delete', 'uses' => 'SubscriberController@destroy']);
+});
+
+
 /*
 |--------------------------------------------------------------------------
 | HOME ROUTES

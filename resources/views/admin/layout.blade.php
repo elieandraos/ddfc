@@ -120,6 +120,9 @@
                         <li class="">
                             <a href="/admin/categories"><i class="fa fa-sitemap"></i><span>Categories</span></a>
                         </li> 
+                        <li class="">
+                            <a href="/admin/subscribers"><i class="fa fa-users"></i><span>Subscribers</span></a>
+                        </li> 
                     @endif
                 </ul>
             </div>
