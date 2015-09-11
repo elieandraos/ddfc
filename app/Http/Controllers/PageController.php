@@ -121,14 +121,14 @@ class PageController extends Controller {
 		$data['ticket_id'] = $data['verification_token'];
 
 		Mail::send('emails.rsvp', ['data' => $data],  function($m) use ($data) {
-		    $m->from('info@communitydubai.com', 'DDFC Contact');
+		    $m->from('info@communitydubai.com', 'Community Dubai');
 		    $m->to($data['email']);
 		    $m->subject("RSVP auto-reply");
 		});
 		
 
 		Mail::send('emails.rsvp_admin', ['data' => $data],  function($m) use ($data) {
-		    $m->from('info@communitydubai.com', 'DDFC Contact');
+		    $m->from('info@communitydubai.com', 'Community Dubai');
 		    $m->to('info@communitydubai.com');
 		    $m->subject("RSVP");
 		});

@@ -2,6 +2,7 @@
 
 use Gaia\Repositories\PostRepositoryInterface;
 use Gaia\Repositories\NewsRepositoryInterface;
+use Auth;
 
 class WelcomeController extends Controller {
 
@@ -18,7 +19,7 @@ class WelcomeController extends Controller {
 	{
 		$this->postRepos = $postRepos;
 		$this->newsRepos = $newRepos;
-		$this->middleware('auth');
+		//$this->middleware('auth');
 	}
 
 
@@ -34,7 +35,10 @@ class WelcomeController extends Controller {
 
 		$news = $this->newsRepos->getOnlyWithContent(2);
 
-		return view('front.index', ['voices' => $voices, 'news' => $news, 'slides' => $slides]);
+		if(Auth::user())
+			return view('front.index', ['voices' => $voices, 'news' => $news, 'slides' => $slides]);
+		else
+			return view('front.comingsoon');
 	}
 
 }
