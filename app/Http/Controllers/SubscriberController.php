@@ -4,7 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Models\subscriber;
+use App\Models\Subscriber;
 use Auth;
 use View;
 use Gaia\Repositories\PostTypeRepositoryInterface;
