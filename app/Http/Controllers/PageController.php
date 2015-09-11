@@ -133,7 +133,7 @@ class PageController extends Controller {
 		    $m->subject("RSVP");
 		});
 
-		return redirect('page/forum?success=1');
+		return redirect('rsvp?success=1');
 	}
 
 
