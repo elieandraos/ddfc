@@ -42,6 +42,18 @@
     </nav>
     <!-- End Of Top Bar -->
     
+
+    <!-- Logos -->
+  <div class="container" style="position:relative">
+    <div class="row" id="logos">
+
+      <a href="/" class="header-logo-middle">
+        <img src='/images/header-logo-middle.png' alt='My Community Dubai Homepage' />
+      </a>
+    </div>
+  </div>
+  <!-- End Of Logos -->
+
     <div class="container body-content" id='main-content'>
       @yield('content')
     </div>
