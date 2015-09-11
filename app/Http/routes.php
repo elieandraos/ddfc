@@ -46,8 +46,6 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/page/{pageslug}/', ['as' => 'pages.show', 'uses' => 'PageController@show']);
     Route::post('/page/contact/', ['as' => 'pages.contact', 'uses' => 'PageController@contact']);
-    Route::post('/page/forum-store/', ['as' => 'pages.forum', 'uses' => 'PageController@forum']);
-
 
     /*
     |--------------------------------------------------------------------------
@@ -99,6 +97,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 Route::get('/rsvp/', ['as' => 'pages.rsvp', 'uses' => 'PageController@rsvp']);
+Route::post('/page/forum-store/', ['as' => 'pages.forum', 'uses' => 'PageController@forum']);
+
 
 Route::get('/', 'WelcomeController@index');
 Route::get('home', 'HomeController@index');
