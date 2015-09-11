@@ -19,4 +19,10 @@ class Subscriber extends Model {
         return Carbon::parse($this->published_at)->format('d-M-Y');
     }
 
+
+    public function country()
+    {
+    	return $this->belongsTo('App\Models\Country');
+    }
+
 }

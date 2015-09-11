@@ -40,6 +40,13 @@ class SubscriberController extends Controller {
 	}
 
 
+	public function show($id)
+	{
+		$subscriber = Subscriber::find($id);
+		return view('admin.subscribers.show', ['subscriber' => $subscriber]);
+	}
+
+
 	/**
 	 * Remove the specified resource from storage.
 	 *

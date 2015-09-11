@@ -88,6 +88,7 @@ Route::group(['middleware' => 'auth'], function () {
     {
        Route::get('/subscribers', ['as' => 'admin.subscribers.list', 'uses' => 'SubscriberController@index']);
        Route::post('/subscribers/{id}/delete', ['as' => 'admin.subscribers.delete', 'uses' => 'SubscriberController@destroy']);
+       Route::get('/subscribers/{id}/show', ['as' => 'admin.subscribers.show', 'uses' => 'SubscriberController@show']);
     });
 
 

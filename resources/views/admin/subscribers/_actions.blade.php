@@ -5,4 +5,9 @@
 			<i class="fa fa-trash-o"></i>
 		</button>
 	</a>
+
 {!! Form::close() !!}
+
+	<a href="{!! route('admin.subscribers.show', $subscriber->id) !!}">
+		<i class="fa fa-info"></i>
+	</a>
