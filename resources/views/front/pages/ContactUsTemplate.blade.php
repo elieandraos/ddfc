@@ -23,22 +23,22 @@
 				</ul> 
 			<?php endif; ?>
 
-			<div class="form-group @if($errors->has('subject')) has-error @endif">
+			<div class="form-front @if($errors->has('subject')) has-error @endif">
 				{!! Form::label('subject', 'Subject', ['class' => 'control-label']) !!}
 	            {!! Form::text('subject', null, ['class' => 'form-control']) !!}
 	        </div>
 
-	        <div class="form-group @if($errors->has('email')) has-error @endif">
+	        <div class="form-front @if($errors->has('email')) has-error @endif">
 				{!! Form::label('email', 'Email', ['class' => 'control-label']) !!}
 	            {!! Form::text('email', null, ['class' => 'form-control']) !!}
 	        </div>
 
-	        <div class="form-group @if($errors->has('phone')) has-error @endif">
+	        <div class="form-front @if($errors->has('phone')) has-error @endif">
 				{!! Form::label('phone', 'Phone', ['class' => 'control-label']) !!}
 	            {!! Form::text('phone', null, ['class' => 'form-control']) !!}
 	        </div>
 
-	        <div class="form-group @if($errors->has('message')) has-error @endif">
+	        <div class="form-front @if($errors->has('message')) has-error @endif">
 				{!! Form::label('message', 'Message', ['class' => 'control-label']) !!}
 	            {!! Form::textarea('message', null, ['class' => 'form-control']) !!}
 	        </div>
