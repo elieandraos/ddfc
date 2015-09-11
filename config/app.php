@@ -166,7 +166,8 @@ return [
 		'Zizaco\Entrust\EntrustServiceProvider',
 		'Spatie\MediaLibrary\MediaLibraryServiceProvider',
 		'Vinkla\Translator\TranslatorServiceProvider',
-		'Spatie\Newsletter\NewsletterServiceProvider'
+		'Spatie\Newsletter\NewsletterServiceProvider',
+		'Webpatser\Countries\CountriesServiceProvider'
 
 	],
 
@@ -221,7 +222,8 @@ return [
 		'Entrust' => 'Zizaco\Entrust\EntrustFacade',
 		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
 		'MetaTag'   => 'Gaia\Seo\Facades\MetaTag',
-		'Newsletter' => 'Spatie\Newsletter\NewsletterFacade'
+		'Newsletter' => 'Spatie\Newsletter\NewsletterFacade',
+		'Countries' => 'Webpatser\Countries\CountriesFacade'
 
 	]
 
