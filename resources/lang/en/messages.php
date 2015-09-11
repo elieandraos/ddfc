@@ -116,6 +116,21 @@ return [
     'Phone' => 'Phone',
     'Email' => 'Email',
     'Submit' => 'Submit',
-    'Forum Success' => 'Thank you for signing up to our forum.'
+    'Forum Success' => 'Thank you for signing up to our forum.',
+
+    'Personal Information' => 'Personal Information',
+    'Title' => 'Title',
+    'Work Information' => 'Work Information',
+    'Job Title' => 'Job Title',
+    'Company' => 'Company', 
+    'Field' => 'Field',
+    'Country' => 'Country',
+    'RSVP Paragraph' => ' If you require accommodations for a disability to participate at the Forum (such as American Sign Language interpretation, Braille, electronic format, etc.), please indicate as many as apply below before October 8th 2015',
+    'Is Sign' => 'Arabic Sign Language Interpreter',
+    'is_braille' => 'Braille', 
+    'is_large' => 'Large print',
+    'is_electronic' => 'Electronic Format (applies to workshop materials only)',
+    'Other' => 'Other',
+    'Additional Notes' => 'Additional Notes'
 
 ];

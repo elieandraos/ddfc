@@ -12,6 +12,7 @@ use App\Models\Section;
 use App\Models\ComponentPost;
 use App\Models\Post;
 use App\Models\Subscriber;
+use App\Models\Country;
 use MediaLibrary;
 use MetaTag;
 use Redirect;
@@ -106,13 +107,12 @@ class PageController extends Controller {
 		$this->validate($request, [
 	        'first_name' => 'required',
 	        'last_name' => 'required',
+	        'phone' => 'required',
+	        'title' => 'required',
 	        'email' => 'required|email|unique:subscribers'
 	    ]);
 
-		$data['email'] = $request->email;
-		$data['first_name'] = $request->first_name;
-		$data['last_name'] = $request->last_name;
-		$data['phone'] = $request->phone;
+		$data = Input::all();
 		$data['is_verified'] = 0;
 		$data['verification_token'] = uniqid();
 
@@ -147,7 +147,8 @@ class PageController extends Controller {
 	{
 		
 		$page = Page::where('slug', "=", "rsvp")->first();
-		
+		$countries = Country::all()->lists('full_name', 'id');
+
 		MetaTag::setTitle($page->seo->meta_title);
         MetaTag::setDescription($page->seo->meta_description);
         MetaTag::setKeywords($page->seo->meta_keywords);
@@ -176,7 +177,7 @@ class PageController extends Controller {
 
 	
 
-		return view('front.pages.'.$page->template->title, ['page' => $page, 'content' => $metas]);
+		return view('front.pages.'.$page->template->title, ['page' => $page, 'content' => $metas, 'countries' => $countries]);
 	}
 
 }
