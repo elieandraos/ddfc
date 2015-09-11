@@ -25,6 +25,7 @@
 				      <th>Name</th>
 				      <th>Email</th>
 				      <th>Phone</th>
+				      <th>Ticket ID</th>
 				      <th>Subscription Date</th>
 				      <th>Action</th>
 				    </tr>
@@ -35,6 +36,7 @@
 							<td>{{ $subscriber->first_name." ".$subscriber->last_name }}</td>
 							<td>{{ $subscriber->email }}</td>
 							<td>{{ $subscriber->phone }}</td>
+							<td>{{ $subscriber->verification_token }}</td>
 							<td>{{ $subscriber->getHumanPublishedAt() }}</td>
 							<td>
 								@include('admin.subscribers._actions', ["subscriber" => $subscriber])

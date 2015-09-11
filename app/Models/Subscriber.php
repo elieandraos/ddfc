@@ -16,7 +16,7 @@ class Subscriber extends Model {
 	 */
 	public function getHumanPublishedAt()
     {
-        return Carbon::parse($this->published_at)->diffForHumans();
+        return Carbon::parse($this->published_at)->format('d-M-Y');
     }
 
 }

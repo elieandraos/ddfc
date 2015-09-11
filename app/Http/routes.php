@@ -41,6 +41,7 @@ Route::bind('pageslug', function($value)
 });
 
 Route::get('/page/{pageslug}/', ['as' => 'pages.show', 'uses' => 'PageController@show']);
+Route::get('/rsvp/', ['as' => 'pages.rsvp', 'uses' => 'PageController@rsvp']);
 Route::post('/page/contact/', ['as' => 'pages.contact', 'uses' => 'PageController@contact']);
 Route::post('/page/forum-store/', ['as' => 'pages.forum', 'uses' => 'PageController@forum']);
 
