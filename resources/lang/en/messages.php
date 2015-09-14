@@ -140,5 +140,13 @@ return [
                     <br/><br/>
                     We look forward to seeing you. 
                     <br/> 
-                    Together for a disability-friendly city.'
+                    Together for a disability-friendly city.',
+    'Address Lines' => '<p>
+                Madinat Jumeirah, Al Jawhara Ballroom
+            </p>
+            <p>
+                Sunday 11th October 2015 from 08:00 to 17:00
+                <br/>
+                Monday 12th October 2015 from 09:00 to 17:00
+            </p>'
 ];

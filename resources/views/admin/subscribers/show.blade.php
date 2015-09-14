@@ -97,7 +97,7 @@
 				    </tr>
 				    <tr>
 				      <td>Other</td>
-				      <td>{{ $subscriber->other }}</td>
+				      <td>@if($subscriber->other) {{ $subscriber->other }} @endif</td>
 				    </tr>
 				    <tr>
 				      <td>Additional Notes</td>

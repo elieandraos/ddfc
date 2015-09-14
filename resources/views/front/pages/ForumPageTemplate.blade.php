@@ -35,7 +35,7 @@
 
 			<div class="form-front @if($errors->has('first_name')) has-error @endif">
 				{!! Form::label('first_name', trans('messages.First Name'), ['class' => 'control-label']) !!}
-	            {!! Form::text('first_name', null, ['class' => 'form-control']) !!}
+	            {!! Form::text('first_name', old('first_name'), ['class' => 'form-control']) !!}
 	        </div>
 
 	        <div class="form-front @if($errors->has('last_name')) has-error @endif">
@@ -140,6 +140,8 @@
 
 		<div class='col-sm-5 col-sm-push-1' style="padding-top:35px">
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.076671528596!2d55.18346599999999!3d25.13309860000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6a5521444459%3A0xaa1def0deb229c76!2sMadinat+Jumeirah!5e0!3m2!1sen!2slb!4v1442221528618" width="100%" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<br/><br/>
+			{!! trans('messages.Address Lines') !!}
 		</div>
 	</div>
 	
