@@ -113,6 +113,7 @@ return [
 
     'First Name' => 'First Name',
     'Last Name' => 'Last Name',
+    'Address' => 'Address',
     'Phone' => 'Phone',
     'Email' => 'Email',
     'Submit' => 'Submit',
@@ -123,14 +124,15 @@ return [
     'Work Information' => 'Work Information',
     'Job Title' => 'Job Title',
     'Company' => 'Company', 
-    'Field' => 'Field',
+    'Field' => 'Industry',
     'Country' => 'Country',
-    'RSVP Paragraph' => ' If you require accommodations for a disability to participate at the Forum (such as American Sign Language interpretation, Braille, electronic format, etc.), please indicate as many as apply below before October 8th 2015',
     'Is Sign' => 'Arabic Sign Language Interpreter',
     'is_braille' => 'Braille', 
     'is_large' => 'Large print',
     'is_electronic' => 'Electronic Format (applies to workshop materials only)',
     'Other' => 'Other',
-    'Additional Notes' => 'Additional Notes'
+    'Additional Notes' => 'Additional Notes',
+    'Notes Info' => 'Please share any specific comments or special considerations',
+    'RSVP Paragraph' => ' If you require accommodations for a disability to participate at the Forum (such as American Sign Language interpretation, Braille, electronic format, etc.), please indicate as many as apply below before October 8th 2015',
 
 ];

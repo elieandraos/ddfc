@@ -82,4 +82,40 @@ class Page extends Model {
     	return "collection-".$this->id;
     }
 
+
+    /**
+	 * Front Related: Get All Metas
+	 * @return type
+	 */
+	public function getMetas()
+	{
+		$metas = [];
+		foreach($this->componentPages as $componentPage)
+		{
+			$key = $componentPage->component->unique_id;
+			if($componentPage->component->component_type_id == 3) //image
+			{
+
+				$mediaItems = MediaLibrary::getCollection($componentPage, $componentPage->getMediaCollectionName(), []);
+				(count($mediaItems))?$url = $mediaItems[0]->getURL():$url = null;
+				$metas[$key] = $url;
+			}	 
+			else
+				$metas[$key] = $componentPage->value;
+		}
+
+		return $metas;
+	}
+
+
+	public function getMeta($id)
+	{
+		$metas = $this->getMetas();
+		
+		if(isset($metas[$id]))
+			return $metas[$id];
+
+		return null;
+	}
+
 }

@@ -19,6 +19,7 @@ use Redirect;
 use Mail;
 use Hash;
 use Input;
+use App;
 
 
 class PageController extends Controller {
@@ -107,6 +108,7 @@ class PageController extends Controller {
 		$this->validate($request, [
 	        'first_name' => 'required',
 	        'last_name' => 'required',
+	        'address' => 'required',
 	        'phone' => 'required',
 	        'title' => 'required',
 	        'email' => 'required|email|unique:subscribers'
@@ -148,6 +150,35 @@ class PageController extends Controller {
 		
 		$page = Page::where('slug', "=", "rsvp")->first();
 		$countries = Country::all()->lists('full_name', 'id');
+		$titles = [ 
+			"Mr." => "Mr.", 
+			"Mrs." => "Mrs.", 
+			"Miss" => "Miss", 
+			"Dr." => "Dr.", 
+			"Eng." => "Eng."
+		];
+
+		$titles_ar = [ 
+			"السيد" => "السيد", 
+			"السيدة" => "السيدة", 
+			"الآنسة" => "الآنسة", 
+			"الدكتور" => "الدكتور", 
+			"المهندس" => "المهندس"
+		];
+
+
+		$fields = [ 
+			"Communication" => "Communication", 
+			"Health" => "Health", 
+			"Tourism" => "Tourism"
+		];
+
+		$fields_ar = [ 
+			"الاتصالات" => "الاتصالات", 
+			"الصحة" => "الصحة", 
+			"سياحة" => "سياحة"
+		];
+
 
 		MetaTag::setTitle($page->seo->meta_title);
         MetaTag::setDescription($page->seo->meta_description);
@@ -176,8 +207,11 @@ class PageController extends Controller {
 		}
 
 	
+		if(App::getLocale() == "ar")
+			return view('front.pages.'.$page->template->title, ['page' => $page, 'content' => $metas, 'countries' => $countries, "titles" => $titles_ar, 'fields' => $fields_ar]);
+		else
+			return view('front.pages.'.$page->template->title, ['page' => $page, 'content' => $metas, 'countries' => $countries, "titles" => $titles, 'fields' => $fields]);
 
-		return view('front.pages.'.$page->template->title, ['page' => $page, 'content' => $metas, 'countries' => $countries]);
 	}
 
 }
