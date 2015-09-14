@@ -80,6 +80,10 @@
 				      <td>@if($subscriber->is_sign) <i class="fa fa-check-circle"></i> @endif </td>
 				    </tr>
 				    <tr>
+				      <td>English Sign Language Interpreter</td>
+				      <td>@if($subscriber->is_english_sign) <i class="fa fa-check-circle"></i> @endif </td>
+				    </tr>
+				    <tr>
 				      <td>Braille</td>
 				      <td>@if($subscriber->is_braille) <i class="fa fa-check-circle"></i> @endif</td>
 				    </tr>
@@ -96,7 +100,7 @@
 				      <td>{{ $subscriber->other }}</td>
 				    </tr>
 				    <tr>
-				      <td>Other</td>
+				      <td>Additional Notes</td>
 				      <td>{{ $subscriber->additional_notes }}</td>
 				    </tr>
 				</table>

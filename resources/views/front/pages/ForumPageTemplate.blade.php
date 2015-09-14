@@ -100,6 +100,11 @@
 	        </div>
 
 	        <div class="form-front">
+	            {!! Form::checkbox('is_english_sign', 1, false) !!} 
+	            {!! Form::label('is_english_sign', trans('messages.Is Eglish Sign') , ['class' => 'control-label']) !!}
+	        </div>
+
+	        <div class="form-front">
 	            {!! Form::checkbox('is_braille', 1, false) !!} 
 	            {!! Form::label('is_braille', trans('messages.is_braille') , ['class' => 'control-label']) !!}
 	        </div>
