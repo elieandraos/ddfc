@@ -24,7 +24,7 @@ class AddFieldsToSubscribersTable extends Migration {
 			$table->boolean('is_braille');
 			$table->boolean('is_large');
 			$table->boolean('is_electronic');
-			$table->boolean('other');
+			$table->string('other');
 			$table->text('additional_notes');
 
 		});
