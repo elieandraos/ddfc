@@ -71,13 +71,17 @@
 	        </div>
 
 	        <div class="form-front @if($errors->has('field')) has-error @endif">
+
+
 				{!! Form::label('field', trans('messages.Field'), ['class' => 'control-label']) !!}
-	            {!! Form::select(
-                    'field', 
-                    $fields, 
-                    null, 
-                    ['class' => 'form-control', 'id' => 'field']
-                ) !!}  
+				{!! Form::text('field', null, ['class' => 'form-control']) !!}
+				{{-- {!! Form::select(
+                     'field',
+                     $fields,
+                     null,
+                     ['class' => 'form-control', 'id' => 'field']
+                 ) !!}
+                 --}}
 	        </div>
 
 	        <div class="form-front @if($errors->has('country')) has-error @endif">
