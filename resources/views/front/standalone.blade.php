@@ -81,5 +81,13 @@
     <script type="text/javascript" src="/admin/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/js/app.js"></script>
+
+      <script>
+        $(document).ready(function(){
+          $("#is_other").click(function(){
+            $('#other').prop('disabled', function(i, v) { return !v; });
+          })
+        })
+      </script>
 </body>
 </html>

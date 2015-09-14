@@ -1,11 +1,5 @@
 @extends('front.standalone')
 
-<style>
-	strong {
-		font-family: avenirNextBold;
-	}
-</style>
-
 @section('content')
 
 	<div class="row show-item">
@@ -121,8 +115,9 @@
 	        </div>
 
 	        <div class="form-front">
+				{!! Form::checkbox('is_other', 1, false, ['id' => 'is_other']) !!} 
 				{!! Form::label('other', trans('messages.Other'), ['class' => 'control-label']) !!}
-	            {!! Form::text('other', null, ['class' => 'form-control']) !!}
+	            {!! Form::text('other', null, ['class' => 'form-control', 'disabled' => 'disabled']) !!}
 	        </div>	
 
 	       	<h1 class="heading3" style="font-size: 17px;">{!! trans('messages.Additional Notes') !!}</h4>
