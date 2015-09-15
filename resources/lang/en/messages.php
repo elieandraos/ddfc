@@ -135,21 +135,26 @@ return [
     'Additional Notes' => 'Additional Notes',
     'Notes Info' => 'Please share any specific comments or special considerations',
     'RSVP Paragraph' => 'We have ensured that all disability accommodations are taken care of for you during the event. Should you require any special assistance, please mention it in the below text box.',
-    'RSVP Mail' => '<div style="direction:rtl;font-size:14px">نشكرك على التسجيل في منتدى دبي للتنمية الدامجة. الرقم المرجعي للتسجيل الخاص بك هو <br/> :ticket.<br/><br/>
-                    نقدّر حضورك الكريم.
-                    <br/><br/>
-                    نتطلّع لرؤيتك.
-                    معاً نحو مدينة صديقة للأشخاص ذوي الإعاقة.
-                    </div>
-                    <div style="direction: ltr;margin-top: 50px">
-                    Thank you for registering for The Dubai Inclusive Development Forum. Your registration reference number is :ticket <br/>
-                    Your esteemed presence is highly valued.
-                    <br/><br/>
-                    We look forward to seeing you. 
-                    <br/> 
-                    Together for a disability-friendly city.
-                    </div>
-                    ',
+    'RSVP Mail' => '<div style="direction:rtl;font-size:15px">
+نشكرك على التسجيل في منتدى دبي للتنمية الدامجة.
+<br/><br/>
+ :الرقم المرجعي للتسجيل الخاص بك هو <br/>
+:ticket<br/><br/>
+نقدّر حضورك الكريم. نتطلّع لرؤيتك.
+ <br/><br/>
+معاً نحو مدينة صديقة للأشخاص ذوي الإعاقة.
+ <br/><br/>
+ </div>
+<div style="direction: ltr;margin-top: 50px;font-size:14px;">
+Thank you for registering for The Dubai Inclusive Development Forum.
+ <br/><br/>
+Your registration reference number is:<br/>
+ :ticker<br/><br/>
+Your esteemed presence is highly valued. We look forward to seeing you.
+ <br/><br/>
+Together for a disability-friendly city.<br/><br/>
+</div>
+',
     'Address Lines' => '<p>
                 Madinat Jumeirah, Al Jawhara Ballroom
             </p>

@@ -125,7 +125,7 @@ class PageController extends Controller {
 		Mail::send('emails.rsvp', ['data' => $data],  function($m) use ($data) {
 		    $m->from('info@mycommunitydubai.com', 'My Community Dubai');
 		    $m->to($data['email']);
-		    $m->subject("RSVP auto-reply");
+		    $m->subject("Dubai Inclusive Development Forum Confirmation of Registration");
 		});
 		
 
