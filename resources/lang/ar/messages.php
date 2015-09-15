@@ -146,13 +146,11 @@ return [
                     Together for a disability-friendly city.
                     </div>
                     ',
-    'Address Lines' => '<p>
-                Madinat Jumeirah, Al Jawhara Ballroom
-            </p>
+    'Address Lines' => '<p>مدينة جميرا، قاعة الجوهرة</p>
             <p>
-                Sunday 11th October 2015 from 08:30 to 16:00
+                الأحد 11 أكتوبر 2015 من الساعة 8:30 صباحا لغاية الساعة 4 عصرا
                 <br/>
-                Monday 12th October 2015 from 08:30 to 16:00
+                الاثنين 12 أكتوبر 2015  من الساعة 8:30 صباحا  لغاية الساعة 4 عصرا
             </p>'
 
 
