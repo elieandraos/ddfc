@@ -108,7 +108,7 @@ class PageController extends Controller {
 		$this->validate($request, [
 	        'first_name' => 'required',
 	        'last_name' => 'required',
-	        'address' => 'required',
+	        //'address' => 'required',
 	        'phone' => 'required',
 	        'title' => 'required',
 	        'email' => 'required|email|unique:subscribers'
@@ -152,8 +152,8 @@ class PageController extends Controller {
 		$countries = Country::all()->lists('full_name', 'id');
 		$titles = [ 
 			"Mr." => "Mr.", 
-			"Mrs." => "Mrs.", 
-			"Miss" => "Miss", 
+			"Mrs." => "Mrs.",  
+			"Ms." => "Ms.", 
 			"Dr." => "Dr.", 
 			"Eng." => "Eng."
 		];

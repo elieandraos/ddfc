@@ -43,10 +43,10 @@
 	            {!! Form::text('last_name', null, ['class' => 'form-control']) !!}
 	        </div>
 
-	         <div class="form-front @if($errors->has('address')) has-error @endif">
+	        {{-- <div class="form-front @if($errors->has('address')) has-error @endif">
 	         	{!! Form::label('address', trans('messages.Address'), ['class' => 'control-label']) !!}
 	            {!! Form::textarea('address', null, ['class' => 'form-control', 'rows' => 4]) !!}
-	        </div>
+	        </div> --}}
 
 	        <div class="form-front @if($errors->has('phone')) has-error @endif">
 				{!! Form::label('phone', trans('messages.Phone'), ['class' => 'control-label']) !!}
@@ -70,21 +70,12 @@
 	            {!! Form::text('company', null, ['class' => 'form-control']) !!}
 	        </div>
 
-	        <div class="form-front @if($errors->has('field')) has-error @endif">
-
-
+	       {{--  <div class="form-front @if($errors->has('field')) has-error @endif">
 				{!! Form::label('field', trans('messages.Field'), ['class' => 'control-label']) !!}
 				{!! Form::text('field', null, ['class' => 'form-control']) !!}
-				{{-- {!! Form::select(
-                     'field',
-                     $fields,
-                     null,
-                     ['class' => 'form-control', 'id' => 'field']
-                 ) !!}
-                 --}}
-	        </div>
+	        </div> --}}
 
-	        <div class="form-front @if($errors->has('country')) has-error @endif">
+	        {{-- <div class="form-front @if($errors->has('country')) has-error @endif">
 				{!! Form::label('country', trans('messages.Country'), ['class' => 'control-label']) !!}
                 {!! Form::select(
                     'country_id', 
@@ -92,13 +83,13 @@
                     null, 
                     ['class' => 'form-control', 'id' => 'country_id']
                 ) !!}  
-	        </div>
+	        </div> --}}
 
 	        <p>
 	        	{!! trans('messages.RSVP Paragraph') !!}
 	        </p>
 
-	        <div class="form-front">
+	       {{--  <div class="form-front">
 	            {!! Form::checkbox('is_sign', 1, false) !!} 
 	            {!! Form::label('is_sign', trans('messages.Is Sign') , ['class' => 'control-label']) !!}
 	        </div>
@@ -121,12 +112,10 @@
 	       	<div class="form-front">
 	            {!! Form::checkbox('is_electronic', 1, false) !!} 
 	            {!! Form::label('is_electronic', trans('messages.is_electronic') , ['class' => 'control-label']) !!}
-	        </div>
+	        </div> --}}
 
 	        <div class="form-front">
-				{!! Form::checkbox('is_other', 1, false, ['id' => 'is_other']) !!} 
-				{!! Form::label('other', trans('messages.Other'), ['class' => 'control-label']) !!}
-	            {!! Form::text('other', null, ['class' => 'form-control', 'disabled' => 'disabled']) !!}
+	            {!! Form::textarea('other', null, ['class' => 'form-control', 'rows' => 4]) !!}
 	        </div>	
 
 	       	<h1 class="heading3" style="font-size: 17px;">{!! trans('messages.Additional Notes') !!}</h4>

@@ -28,9 +28,10 @@
 
 		<!-- posts listing -->
 		<div class="row">
+			
 			@foreach($posts as $k => $post)
 				@include('front.posts._listItem', ['post' => $post])
-				@if($k%2 == 0 && $k != 0)
+				@if( (($k+1)%3) == 0)
 					<div style="height:1px;clear:both"></div>
 				@endif
 			@endforeach
