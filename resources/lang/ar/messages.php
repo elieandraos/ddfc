@@ -131,21 +131,26 @@ return [
     'Additional Notes' => 'ملاحظات إضافية',
     'Notes Info' => 'يرجى مشاركة تعليقات أو اعتبارات خاصة',
     'RSVP Paragraph' => 'لقد حرصنا على تلبية جميع الاحتياجات الخاصّة  لكم خلال المنتدى. وإذا احتجتم أي مساعدة إضافيّة، الرجاء ذكرها في الخانة أدناه.',
-    'RSVP Mail' => '<div style="direction:rtl;font-size:14px">نشكرك على التسجيل في منتدى دبي للتنمية الدامجة. الرقم المرجعي للتسجيل الخاص بك هو <br/> :ticket.<br/><br/>
-                    نقدّر حضورك الكريم.
-                    <br/><br/>
-                    نتطلّع لرؤيتك.
-                    معاً نحو مدينة صديقة للأشخاص ذوي الإعاقة.
-                    </div>
-                    <div style="direction: ltr;margin-top: 50px">
-                        Thank you for registering for The Dubai Inclusive Development Forum. Your registration reference number is :ticket <br/>
-                    Your esteemed presence is highly valued.
-                    <br/><br/>
-                    We look forward to seeing you. 
-                    <br/> 
-                    Together for a disability-friendly city.
-                    </div>
-                    ',
+    'RSVP Mail' => '<div style="direction:rtl;font-size:15px">
+نشكرك على التسجيل في منتدى دبي للتنمية الدامجة.
+<br/><br/>
+الرقم المرجعي للتسجيل الخاص بك هو: <br/>
+:ticket<br/><br/>
+نقدّر حضورك الكريم. نتطلّع لرؤيتك.
+ <br/><br/>
+معاً نحو مدينة صديقة للأشخاص ذوي الإعاقة.
+ <br/><br/>
+ </div>
+<div style="direction: ltr;margin-top: 50px;font-size:14px;">
+Thank you for registering for The Dubai Inclusive Development Forum.
+ <br/><br/>
+Your registration reference number is:<br/>
+ :ticket<br/><br/>
+Your esteemed presence is highly valued. We look forward to seeing you.
+ <br/><br/>
+Together for a disability-friendly city.<br/><br/>
+</div>
+',
     'Address Lines' => '<p>مدينة جميرا، قاعة الجوهرة</p>
             <p>
                 الأحد 11 أكتوبر 2015 من الساعة 8:30 صباحا لغاية الساعة 4 عصرا

@@ -138,7 +138,7 @@ return [
     'RSVP Mail' => '<div style="direction:rtl;font-size:15px">
 نشكرك على التسجيل في منتدى دبي للتنمية الدامجة.
 <br/><br/>
- :الرقم المرجعي للتسجيل الخاص بك هو <br/>
+الرقم المرجعي للتسجيل الخاص بك هو: <br/>
 :ticket<br/><br/>
 نقدّر حضورك الكريم. نتطلّع لرؤيتك.
  <br/><br/>
@@ -149,7 +149,7 @@ return [
 Thank you for registering for The Dubai Inclusive Development Forum.
  <br/><br/>
 Your registration reference number is:<br/>
- :ticker<br/><br/>
+ :ticket<br/><br/>
 Your esteemed presence is highly valued. We look forward to seeing you.
  <br/><br/>
 Together for a disability-friendly city.<br/><br/>
