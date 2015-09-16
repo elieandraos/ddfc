@@ -66,13 +66,13 @@
 
 
   <div class="row" id="logos" style="height:auto;padding-bottom: 35px;">
-    <div class='col-sm-6 header-logo-left header-logo' style="">
+    <div class='col-sm-6 header-logo-left header-logo' style="float:left;">
       <a href="http://www.dubai.ae" target="_blank">
         <img src='/images/header-logo-left.png' alt='Government Of Dubai' />
       </a>
     </div>
 
-    <div class='col-sm-6 header-logo-right header-logo pull-right' style="">
+    <div class='col-sm-6 header-logo-right header-logo pull-right' style="float:right !important;">
       <a href="http://tec.gov.ae/" target="_blank">
         <img src='/images/header-logo-right.png' alt='The Executive Council' />
       </a>
