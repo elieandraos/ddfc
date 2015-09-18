@@ -348,6 +348,19 @@ div.breadcrumb-nav a:last-child:after
 	margin-left: -64px;
 	position: absolute;
 }
+
+#logos .header-logo-middle-new
+{
+	width: 158px !important;
+	height: 240px  !important;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -64px;
+	position: absolute;
+}
+
+
+
 #logos .header-logo.header-logo-right
 {
 	width: 168px;

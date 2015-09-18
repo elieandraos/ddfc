@@ -45,11 +45,16 @@
 
     <!-- Logos -->
   <div class="container" style="position:relative">
-    <div class="row" id="logos">
+    <div class="row" id="logos" style="height:285px;">
 
-      <a href="/" class="header-logo-middle">
-        <img src='/images/header-logo-middle.png' alt='My Community Dubai Homepage' />
-      </a>
+      <div class="header-logo-middle-new">
+          <div>
+              <img src='/images/header-logo-middle_new.png' alt='My Community Dubai Homepage' />
+          </div>
+          <div style="padding-top:30px;">
+              <img src='/images/forum_logo.png' alt='DUBAI INCLUSIVE DEVELOPMENT FORUM' />
+          </div>
+      </div>
     </div>
   </div>
   <!-- End Of Logos -->
