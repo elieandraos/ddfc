@@ -14,7 +14,8 @@ return [
     'Tel' => 'Tel',
     'Web' => 'Web',
     'government entities' => 'government entities',
-    'organization' => 'organization',
+    'organization' => 'organizations',
+    'related' => 'Related',
 
 
     'Home' =>'Home',

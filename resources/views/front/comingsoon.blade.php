@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>DDFC</title>
+	<title>My Community</title>
 	<style>
 		body 
 		{

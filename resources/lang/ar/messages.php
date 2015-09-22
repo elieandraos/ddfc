@@ -18,6 +18,8 @@ return [
     'organization' => 'المنظمات',
     'the higher committee' => 'اللجنة العليا',
 
+    'related' => 'ذات صلة',
+
     'Home' =>'الرئيسية',
     'Copyright' =>'حق النشر',
     'CopyrightText' =>'المجلس التنفيذي لإمارة دبي - جميع الحقوق محفوظة 2015 © ',

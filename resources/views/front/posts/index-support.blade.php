@@ -28,7 +28,7 @@
 
 		<!-- posts listing -->
 		<div class="row">
-			<div class="col-sm-7">
+			<div class="col-sm-12">
 				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 					{{--*/ $first = $posts->first()  /*--}}
 
@@ -69,9 +69,6 @@
 				</div>
 			</div>
 
-			<div class="col-sm-5">
-				<img src="/images/faq.jpg">
-			</div>
 		</div>
 
 	@else

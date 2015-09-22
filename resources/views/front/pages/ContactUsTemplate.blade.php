@@ -13,6 +13,8 @@
 	<div class="row show-item">
 		<div class="col-sm-6">
 
+			<span>{!! $content['content_field']; !!}</span>
+
 			{!! Form::open(['route' => 'pages.contact', 'class' => 'form-horizontal', 'role' => 'form']) !!}
 
 			@include('admin.form-errors')
