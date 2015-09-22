@@ -47,7 +47,7 @@
   <div class="container" style="position:relative">
     <div class="row" id="logos" style="height:285px;">
 
-      <div class="header-logo-middle-new">
+      <div class="header-logo-middle-new" style="left:0px;margin-left:15px;">
           <div>
               <img src='/images/header-logo-middle_new.png' alt='My Community Dubai Homepage' />
           </div>

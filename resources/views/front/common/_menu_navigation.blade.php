@@ -98,7 +98,7 @@
                 <ul class="dropdown-menu" role="menu">
                     <li class="{{ Request::is('*entities*') ?  "active" : '' }}"><a href="/posts/entities">{{trans('messages.Entities')}}</a></li>
                     <li class="{{ Request::is('*support*faq*') ?  "active" : '' }}"><a href="/posts/support/category/faq">{{trans('messages.FAQ')}}</a></li>
-                    <li class="{{ Request::is('*page*act-now*') ?  "active" : '' }}"><a href="/page/act-now">{{trans('messages.Act Now')}}</a></li>
+                    {{--<li class="{{ Request::is('*page*act-now*') ?  "active" : '' }}"><a href="/page/act-now">{{trans('messages.Act Now')}}</a></li>--}}
                 </ul>
             </li>
             @else
