@@ -18,6 +18,13 @@ return [
     'organization' => 'المنظمات',
     'the higher committee' => 'اللجنة العليا',
 
+    'contactus_subject' => 'الموضوع',
+    'contactus_email' => 'البريد الإلكتروني',
+    'contactus_phone' => 'الهاتف',
+    'contactus_message' => 'الرسالة',
+    'contactus_submit' => 'أرسل',
+
+
     'related' => 'ذات صلة',
 
     'Home' =>'الرئيسية',

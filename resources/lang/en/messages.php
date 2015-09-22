@@ -17,6 +17,11 @@ return [
     'organization' => 'organizations',
     'related' => 'Related',
 
+    'contactus_subject' => 'Subject',
+    'contactus_email' => 'Email',
+    'contactus_phone' => 'Phone',
+    'contactus_message' => 'Message',
+    'contactus_submit' => 'Submit',
 
     'Home' =>'Home',
     'Copyright' =>'Copyright',
