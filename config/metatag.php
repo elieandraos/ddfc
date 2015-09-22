@@ -4,8 +4,8 @@ return [
      * The default configurations to be used by the meta generator.
      */
     'defaults'       => [
-        'title'       => 'DDFC',
-        'description' => 'Dubai Disabled Friendly City',
+        'title'       => 'My Community',
+        'description' => 'A City for Everyone',
         'separator'   => ' | ',
         'keywords'    => [],
     ],
