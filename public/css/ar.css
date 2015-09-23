@@ -149,4 +149,9 @@ ul.share-buttons li{
     line-height: 1.4;
 }
 
+.nav-float
+{
+    float:right;
+}
+
 
