@@ -136,6 +136,74 @@
 			<br/><br/>
 			{!! trans('messages.Address Lines') !!}
 		</div>
+		<a name="agenda"></a>
 	</div>
+
+	<div class="row">
+		<div class='col-sm-6'>
+
+			<div class="title-container-left">
+				<h1 class="heading1">{!! trans('messages.agenda_title') !!}</h1>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class='col-sm-6'>
+
+			<div>
+				<h4 class="heading3" style="font-size: 17px;">{!! trans('messages.agenda_day1') !!}</h4>
+			</div>
+		</div>
+	</div>
+
+	@foreach($agenda['day1'] as $agenda_item)
+		<div class="row">
+			<div class='col-sm-6'>
+			{!! $agenda_item['time'] !!}
+			</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6'>
+				<span class="heading11">{!! $agenda_item['activity'] !!} </span>
+				{!! $agenda_item['description'] !!}
+			</div>
+
+			<div class='col-sm-5 col-sm-push-1'>
+				{!! $agenda_item['speakers'] !!}
+			</div>
+		</div>
+		<hr/>
+	@endforeach
+
+
+	<div class="row">
+		<div class='col-sm-6'>
+
+			<div>
+				<h4 class="heading3" style="font-size: 17px;">{!! trans('messages.agenda_day2') !!}</h4>
+			</div>
+		</div>
+	</div>
+
+	@foreach($agenda['day2'] as $agenda_item)
+		<div class="row">
+			<div class='col-sm-6'>
+				{!! $agenda_item['time'] !!}
+			</div>
+		</div>
+		<div class="row">
+			<div class='col-sm-6'>
+				<span class="heading11">{!! $agenda_item['activity'] !!} </span>
+				{!! $agenda_item['description'] !!}
+			</div>
+
+			<div class='col-sm-5 col-sm-push-1'>
+				{!! $agenda_item['speakers'] !!}
+			</div>
+		</div>
+		<hr/>
+	@endforeach
+
 	
 @stop

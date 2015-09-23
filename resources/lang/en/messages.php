@@ -23,6 +23,12 @@ return [
     'contactus_message' => 'Message',
     'contactus_submit' => 'Submit',
 
+    'agenda_title' =>'Agenda',
+    'agenda_day1' =>'Day 1 October 11th 2015',
+    'agenda_day2' =>'Day 2 October 12th 2015',
+    'registration_form' =>'Registration Form',
+
+
     'Home' =>'Home',
     'Copyright' =>'Copyright',
     'CopyrightText' =>'© The Executive Council of Dubai - All Rights Reserved 2015',

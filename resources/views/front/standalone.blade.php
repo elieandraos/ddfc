@@ -14,9 +14,12 @@
 </head>
 <body>
    <!-- Top Bar -->
+   <div style="position:fixed;z-index: 999;width:100%;">
     <nav class="navbar navbar-top" role="navigation">
         <div class="container">
-            <div class='col-sm-4 pull-left top-buffer'></div>
+            <div class='col-sm-4 pull-left top-buffer'>
+                <a href="#form">{!! trans('messages.registration_form') !!}</a> &nbsp;|&nbsp; <a href="#agenda">{!! trans('messages.agenda_title') !!}</a>
+            </div>
 
             <div class='col-sm-4 pull-right text-right top-buffer'>
               <div class="dropdown pull-right" style="margin-left: 20px;">
@@ -40,11 +43,12 @@
             </div>
         </div>
     </nav>
+   </div>
     <!-- End Of Top Bar -->
     
 
     <!-- Logos -->
-  <div class="container" style="position:relative">
+  <div class="container" style="position:relative;padding-top:45px;">
     <div class="row" id="logos" style="height:285px;">
 
         @if(App::getLocale() == 'ar')
@@ -62,7 +66,7 @@
     </div>
   </div>
   <!-- End Of Logos -->
-
+      <a name="form"></a>
     <div class="container body-content" id='main-content'>
       @yield('content')
     </div>

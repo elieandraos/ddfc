@@ -24,6 +24,13 @@ return [
     'contactus_message' => 'الرسالة',
     'contactus_submit' => 'أرسل',
 
+    'agenda_title' =>'جدول الأعمال',
+    'agenda_day1' =>'اليوم الأول: 11 أكتوبر 2015',
+    'agenda_day2' =>'اليوم الثاني: 12 أكتوبر 2015',
+
+    'registration_form' => 'استمارة التسجيل',
+
+
 
     'related' => 'ذات صلة',
 

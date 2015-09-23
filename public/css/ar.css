@@ -3,6 +3,9 @@ body
 	direction: rtl;
 	text-align: right;
 }
+body p {
+    line-height: 26px;
+}
 div.navbar-collapse,
 .navbar-nav>li
 {
@@ -49,6 +52,38 @@ ul.dropdown-menu>li>a {
 .search-placeholder
 {
     margin-left: -15px;
+}
+.social-icon {
+    margin-left: 0;
+    margin-right: 12px;
+}
+ul.share-buttons li{
+    margin-right: 0;
+    margin-left: 6px;
+}
+#copyright-text {
+    text-align: left;
+}
+.heading6, .heading6 a,
+.heading10, .heading10 a {
+    font-family: inherit;
+    font-size: 17px;
+}
+.heading11, .heading11 a {
+    line-height: 26px;
+}
+#bottom-bar a {
+    line-height: 17px;
+}
+.caret {
+    margin-top: 9px;
+}
+.btn .caret {
+    margin-top: 5px;
+}
+.pull-right > .dropdown-menu {
+    right: auto;
+    left: 0;
 }
 /*********************************
  *          FONT                 *
@@ -99,7 +134,6 @@ ul.dropdown-menu>li>a {
 
 
 .btn-newsletter {
-    padding: 4px;
     width: 71%;
 }
 .submit-newsletter {
