@@ -509,7 +509,7 @@ nav.navbar-main
 
 .search-placeholder input#search
 {
-	height: 100%;
+	height: 55px;
 	padding: 10px;
     width: 270px;
     background-color: #23c4fd;
@@ -519,7 +519,7 @@ nav.navbar-main
 .search-placeholder .search-icon 
 {
 	width: 60px;
-	height: 100%;
+	height: 55px;
 	background-color: #28ade5;
 	background-image: url('/images/Search-Icon.png');
 	background-repeat: no-repeat;
