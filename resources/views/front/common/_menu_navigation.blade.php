@@ -6,7 +6,7 @@
             <div class="pull-right search-placeholder">
                 <div class="search-icon"></div>
                 {!! Form::open(['route' => 'search.index', 'method' => 'POST', 'role' => 'form']) !!}
-                    <input type="text" name="search" id="search" />
+                    <label for="search" style="display:none">Search</label><input type="text" name="search" id="search" />
                 {!! Form::close() !!}
             </div>
             <!-- end of search -->

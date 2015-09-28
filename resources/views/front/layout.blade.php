@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="{!! Lang::getLocale() !!}">
 <head>
 	<meta charset="utf-8"> 

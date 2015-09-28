@@ -4,8 +4,8 @@
 		<!-- Block Title -->
 		<div class="row">
 			<div class="col-sm-12 title-container">
-				<h1 class="heading1">{{trans('messages.News')}}</h3>
-				<h2 class="heading2">{{trans('messages.NewsText')}}</h5>
+				<h1 class="heading1">{{trans('messages.News')}}</h1>
+				<h2 class="heading2">{{trans('messages.NewsText')}}</h2>
 			</div>
 		</div>
 		<!-- End Of Block Title -->
@@ -22,7 +22,7 @@
 									@if($n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium'))
 										<img class="home-news-thumb" src="{!! $n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $n->excerpt !!}"  />
 									@else
-										<img src="/images/noimage.jpg" class="home-news-thumb" />
+										<img src="/images/noimage.jpg" class="home-news-thumb" alt="{!! $n->excerpt !!}" />
 									@endif
 								</div>
 							</div>
