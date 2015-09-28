@@ -50,7 +50,7 @@
 
                 <!-- -->
                  <!-- Social Links --> 
-                <div class="pull-right">
+                <div class="pull-right" style="margin-top:20px;">
                  <a href="https://www.facebook.com/mycommunitydubai" target="_blank" title="Follow our page on Facebook">
                     <img src="/images/facebook-btn.png" class="social-icon" alt="Our page on facebook"/>
                   </a>
