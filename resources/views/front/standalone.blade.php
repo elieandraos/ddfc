@@ -66,7 +66,7 @@
     </div>
   </div>
   <!-- End Of Logos -->
-      <a name="form"></a>
+      <a name="form" style="display:inline-block">&nbsp;</a>
     <div class="container body-content" id='main-content'>
       @yield('content')
     </div>

@@ -136,7 +136,7 @@
 			<br/><br/>
 			{!! trans('messages.Address Lines') !!}
 		</div>
-		<a name="agenda"></a>
+		<a name="agenda" style="display:inline-block">&nbsp;</a>
 	</div>
 
 	<div class="row">
