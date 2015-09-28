@@ -7,7 +7,9 @@
 		<div class='col-sm-6'>
 			
 			<div class="title-container-left">
+				<a name="form" id="form" style="">
 				<h1 class="heading1"> {!! $page->title !!}</h1>
+				</a>
 			</div>
 
 			{!! $page->getMeta('description') !!}
@@ -136,14 +138,16 @@
 			<br/><br/>
 			{!! trans('messages.Address Lines') !!}
 		</div>
-		<a id="agenda" name="agenda" style=""></a>
+
+
 	</div>
 
 	<div class="row">
 		<div class='col-sm-6'>
 
 			<div class="title-container-left">
-				<h1 class="heading1">{!! trans('messages.agenda_title') !!}</h1>
+
+				<a id="agenda"><h1 class="heading1">{!! trans('messages.agenda_title') !!}</h1></a>
 			</div>
 		</div>
 	</div>

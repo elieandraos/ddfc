@@ -66,7 +66,7 @@
     </div>
   </div>
   <!-- End Of Logos -->
-      <a name="form" id="form" style=""></a>
+
     <div class="container body-content" id='main-content'>
       @yield('content')
     </div>
