@@ -921,8 +921,8 @@ p.heading4
 		height: 55px;
 	}
 
-	.moveLeft{
-		float:left !important;
+	.top-buffer{
+		font-size:10px;
 	}
 }
 
