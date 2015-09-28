@@ -21,7 +21,7 @@
                 <a href="#form">{!! trans('messages.registration_form') !!}</a> &nbsp;|&nbsp; <a href="#agenda">{!! trans('messages.agenda_title') !!}</a>
             </div>
 
-            <div class='col-sm-2 pull-right text-right top-buffer'>
+            <div class='col-sm-2 pull-right text-right top-buffer moveLeft'>
               <div class="dropdown pull-right" style="margin-left: 20px;">
                   <a class="btn dropdown-toggle" type="button" data-toggle="dropdown">
                     @if (Lang::getLocale() =="en")
