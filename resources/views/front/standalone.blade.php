@@ -17,7 +17,8 @@
    <div style="position:fixed;z-index: 999;width:100%;">
     <nav class="navbar navbar-top" role="navigation">
         <div class="container">
-            <div class='col-sm-3 pull-left top-buffer'>
+            <div class="row">
+            <div class='col-sm-4 pull-left top-buffer'>
                 <a href="#form">{!! trans('messages.registration_form') !!}</a> &nbsp;|&nbsp; <a href="#agenda">{!! trans('messages.agenda_title') !!}</a>
             </div>
 
@@ -41,6 +42,7 @@
                   </ul>
               </div>
             </div>
+        </div>
         </div>
     </nav>
    </div>
