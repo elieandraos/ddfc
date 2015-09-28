@@ -186,7 +186,7 @@ class PageController extends Controller {
 					[
 						'time' => '08:00- 09:30',
 						'activity' =>'Registration',
-						'speakers' => '',
+						'speakers' => 'Live Art by PWD',
 						'description' => ''
 					],
 					[
@@ -198,25 +198,25 @@ class PageController extends Controller {
 					[
 						'time' => '10:00-10:30',
 						'activity' =>'Official Opening',
-						'speakers' => 'Under the Patronage of H.H. Sheikh Mansoor Bin Mohammed Bin Rashid Al Maktoum',
+						'speakers' => '<span class="heading11">Under the Patronage of H.H. Sh. Mansour Bin Mohammed Bin Rashid Al Maktoum.</span>',
 						'description' => ''
 					],
 					[
 						'time' => '10:30- 11:00',
 						'activity' =>'Keynote 1:',
-						'speakers' => '<span class="heading11">Ms. Charlotte McClain-Nhlapo</span>, Global Disability Advisor- World Bank Group',
+						'speakers' => '<span class="heading11">Ms. Charlotte McClain-Nhlapo</span>, Global Disability Advisor- World Bank Group, USA',
 						'description' => 'Inclusive Planning & Policy Development: Translating the UNCRPD into National & Local Strategies'
 					],
 					[
 						'time' => '11:00- 11:30',
 						'activity' =>'Keynote 2:',
-						'speakers' => '<span class="heading11">Mr. Victor Calise</span>, Commissioner- New York City Mayor’s Office for People with Disabilities.',
+						'speakers' => '<span class="heading11">Mr. Victor Calise</span>, Commissioner- New York City Mayor’s Office for People with Disabilities, USA',
 						'description' => 'Achieving Inclusion in a Global Mega-City: The  Case of New York City'
 					],
 					[
 						'time' => '11:30- 12:00',
 						'activity' =>'Keynote 3:',
-						'speakers' => 'Dr. Ivor Ambrose, Managing Director ENAT - European Network for Accessible Tourism',
+						'speakers' => '<span class="heading11">Dr. Ivor Ambrose</span>, Managing Director ENAT - European Network for Accessible Tourism, Greece',
 						'description' => 'Accessible Tourism: a Driver of Inclusive Destination Development'
 					],
 					[
@@ -249,14 +249,14 @@ class PageController extends Controller {
 
 					[
 						'time' => '09:00-09:15',
-						'activity' =>'Keynote 3:',
-						'speakers' => '<span class="heading11">Mrs. Aisha A. Miran</span>, Assistant Secretary General- Strategy Management Sector- The General Secretariat of the Executive Council of Dubai',
+						'activity' =>'Keynote 1:',
+						'speakers' => '<span class="heading11">Mrs. Aisha A. Miran</span>, Assistant Secretary General- Strategy Management Sector- The General Secretariat of the Executive Council of Dubai, UAE',
 						'description' => 'My Community: Dubai’s Journey Towards Full Inclusion by the Year 2020'
 					],
 					[
 						'time' => '09:15-9:45',
-						'activity' =>'Keynote 4:',
-						'speakers' => '<span class="heading11">Dr. Peyvand Khaleghian</span>, Managing Partner- Avicenna Partners',
+						'activity' =>'Keynote 2:',
+						'speakers' => '<span class="heading11">Dr. Peyvand Khaleghian</span>, Managing Partner- Avicenna Partners, UAE',
 						'description' => 'Innovations in Inclusive Development for People with Complex Medical Needs'
 					],
 					[
@@ -268,8 +268,8 @@ class PageController extends Controller {
 					[
 						'time' => '10:00- 12:00',
 						'activity' =>'Barrier Analysis & Recommendations',
-						'speakers' => '<br/><br/><br/><span class="heading11">Facilitator: Dr. Michael Gamal-McCormack</span> <br/>Led By: DHA & Task Force<br/><br/> <span class="heading11">Facilitator: Prof. Bill Sarnecky</span>  <br/>Led by: RTA & Task Force<br/><br/> <span class="heading11">Facilitator: Dr. Maha Damaj</span> <br/>Led by: Dr. Alya Al Qassimi & Task Force',
-						'description' => 'UNCRPD Translated into Specific Policies and Programs.<br/><br/><span class="heading11">1-	Developmental Screening and Early Intervention  <br/><br/> 2- Inclusive Urban Development <br/><br/>3- Social Protection</span>'
+						'speakers' => '<br/><br/><br/><span class="heading11">Facilitator: Dr. Michael Gamal-McCormack</span>, <br/>Associate Executive Director for Research and Policy, Association of University Centers on Disabilities (AUCD), USA<br/><br/> <span class="heading11">Facilitator: Dr. Bill Sarnecky</span>,<br/>Associate Professor of Architecture at American University of Sharjah, UAE<br/><br/> <span class="heading11">Facilitator: Dr. Maha Damaj</span>,<br/>Assistant Professor of Public Health Practice, American University of Beirut, Lebanon',
+						'description' => 'UNCRPD Translated into Specific Policies and Programs.<br/><br/><span class="heading11">1- Developmental Screening and Early Intervention  <br/><br/> 2- Inclusive Urban Development <br/><br/>3- Social Protection</span>'
 					],
 					[
 						'time' => '12:00- 13:00',
@@ -280,12 +280,12 @@ class PageController extends Controller {
 					[
 						'time' => '13:00- 15:00',
 						'activity' =>'Barrier Analysis & Recommendations:',
-						'speakers' => '<br/><br/><br/><span class="heading11">Facilitator:  Dr. Paula Hunt</span><br/> Led by: KHDA & Task Force<br/><br/> <span class="heading11">Facilitators:  Dr. William Kiernan</span><br/>Led by: CDA & Task Force <br/><br/><span class="heading11">Facilitators: Dr. Ivor Ambrose</span><br/>Led by Dubai Tourism',
+						'speakers' => '<br/><br/><br/><span class="heading11">Facilitator:  Dr. Paula Hunt</span>,<br/>Senior Expert on Inclusive Education and Disability, DED - Disability, Education and Development, Lda., Portugal<br/><br/> <span class="heading11">Facilitators:  Dr. William Kiernan</span>,<br/>Dean, School for Global Inclusion and Social Development at University of Massachusetts Boston & Director Of ICI, USA<br/><br/><span class="heading11">Facilitator: Dr. Ivor Ambrose</span>,<br/>Managing Director, ENAT - European Network for Accessible Tourism, Greece',
 						'description' => 'UNCRPD Translated into Specific Policies and Programs.<br/><br/><span class="heading11"> 4-	Inclusive Education<br/><br/> 5-	Inclusive Employment & Entrepreneurship<br/><br/> 6-	Inclusive Tourism, Leisure and Hospitality </span> '
 					],
 					[
 						'time' => '15:00- 16:00',
-						'activity' =>'The Dubai Declaration',
+						'activity' =>'Concluding Remarks',
 						'speakers' => '',
 						'description' => ''
 					],
@@ -311,30 +311,30 @@ class PageController extends Controller {
 					[
 						'time' => '10:00 - 10:30 صباحاً',
 						'activity' =>'الكلمة الافتتاحيّة',
-						'speakers' => 'تحت رعاية سمو الشيخ منصور بن محمد بن راشد آل مكتوم',
+						'speakers' => '<span class="heading11">تحت رعاية سمو الشيخ منصور بن محمد بن راشد آل مكتوم</span>',
 						'description' => ''
 					],
 					[
 						'time' => '10:30 - 11:00 صباحاً',
 						'activity' =>'الكلمة الرئيسيّة الأولى:',
-						'speakers' => 'السيدة شارلوت ماكلين-نلابو، مستشارة لشؤون الإعاقة العالمية - مجموعة البنك الدولي',
-						'description' => 'التخطيط الدامج وتطوير السياسات:
- تحويل اتفاقية حقوق الأشخاص ذوي الإعاقة إلى استراتيجيات وطنيّة ومحلية
+						'speakers' => 'السيدة شارلوت ماكلين- نهلابو، المستشارة العالمية لشؤون الإعاقة - مجموعة البنك الدولي',
+						'description' => 'التخطيط وسياسات التنمية الدامجة:
+ ترجمة الاتفاقية الدولية لحقوق الأشخاص ذوي الإعاقة إلى استراتيجيات وطنيّة ومحلية
 '
 					],
 					[
 						'time' => '11:00 - 11:30 صباحاً',
 						'activity' =>'الكلمة الرئيسيّة الثانية:',
-						'speakers' => 'السيد فيكتور كاليس، مفوض - مكتب عمدة مدينة نيويورك لشؤون الأشخاص ذوي الإعاقة ',
-						'description' => 'تحقيق التنمية الدامجة في مدينة عالمية عملاقة:
+						'speakers' => 'السيد فيكتور كالايس، مفوض - مكتب عمدة مدينة نيويورك لشؤون الأشخاص ذوي الإعاقة ',
+						'description' => 'تحقيق التنمية الدامجة في المدن العالمية الكبرى:
 مدينة نيويورك نموذجاً
 '
 					],
 					[
 						'time' => '11:30 - 12:00 ظهراً',
 						'activity' =>'الكلمة الرئيسيّة الثالثة:',
-						'speakers' => 'الدكتور ايفور أمبروز، عضو منتدب - الشبكة الأوروبية لإتاحة السياحة (ENAT)',
-						'description' => 'السياحة المتاحة للجميع: حافز للتنمية الدامجة للوجهات السياحيّة'
+						'speakers' => 'الدكتور آيفور أمبروس، مدير تنفيذي - الشبكة الأوروبية للسياحة الدامجة (ENAT)',
+						'description' => 'السياحة الدامجة'
 					],
 					[
 						'time' => '12:00 - 1:00 ظهراً',
@@ -344,9 +344,9 @@ class PageController extends Controller {
 					],
 					[
 						'time' => '1:00 - 2:30 ظهراً',
-						'activity' =>'جلسة المناقشة الأولى:',
+						'activity' =>'الجلسة الحوارية الأولى:',
 						'speakers' => '',
-						'description' => '	الكشف والعلاج المبكران<br><span class="heading11"> جلسة المناقشة الثانية:</span> التنمية العمرانية الدامجة<br><span class="heading11"> جلسة المناقشة الثالثة: </span>التوظيف الدامج وتأسيس الأعمال'
+						'description' => 'الكشف والتدخل المبكر<br><span class="heading11">الجلسة الحوارية الثانية:</span> التنمية العمرانية الدامجة<br><span class="heading11">الجلسة الحوارية الثالثة: </span>التوظيف الدامج وتأسيس الأعمال'
 					],
 					[
 						'time' => '2:30 -  2:45 ظهراً',
@@ -356,9 +356,9 @@ class PageController extends Controller {
 					],
 					[
 						'time' => '2:45 - 4:15 عصراً',
-						'activity' =>'جلسة المناقشة الرابعة:',
+						'activity' =>'الجلسة الحوارية الرابعة:',
 						'speakers' => '',
-						'description' => 'التعليم الدامج <br/> <span class="heading11">جلسة المناقشة الخامسة:</span> خدمات الضيافة والسياحة والسفر<br/> <span class="heading11">جلسة المناقشة السادسة:</span> الحماية الاجتماعية'
+						'description' => 'التعليم الدامج <br/> <span class="heading11">الجلسة الحوارية الخامسة: </span> السياحة والضيافة والترفيه الدامج<br/> <span class="heading11">الجلسة الحوارية السادسة:</span> الحماية الاجتماعية'
 					],
 				],
 			'day2' =>
@@ -366,13 +366,13 @@ class PageController extends Controller {
 
 					[
 						'time' => '9:00 - 9:15 صباحاً',
-						'activity' =>'الكلمة الرئيسية الثالثة:',
-						'speakers' => 'السيدة عائشة ميران، مساعد الأمين العام - قطاع الإدارة الاستراتيجية - الأمانة العامة للمجلس التنفيذي لإمارة دبي',
+						'activity' =>'الكلمة الرئيسة الأولى:',
+						'speakers' => 'السيدة عائشة ميران، مساعد الأمين العام - قطاع الإدارة الاستراتيجية والحوكمة - الأمانة العامة للمجلس التنفيذي لإمارة دبي',
 						'description' => 'مجتمعي: مسيرة دبي نحو مدينة دامجة وصديقة للأشخاص ذوي الإعاقة بحلول العام 2020'
 					],
 					[
 						'time' => '9:15 - 9:45 صباحاً',
-						'activity' =>'الكلمة الرئيسية الرابعة:',
+						'activity' =>'الكلمة الرئيسة الثانية:',
 						'speakers' => 'الدكتور بيفاند خاليغان، الشريك الإداري - شركة افيسينا',
 						'description' => 'ابتكارات في التخطيط الدامج للأشخاص ذوي الاحتياجات الطبيّة المعقدة'
 					],
@@ -384,9 +384,9 @@ class PageController extends Controller {
 					],
 					[
 						'time' => '10:00 - 12:00 ظهراً',
-						'activity' =>'تحليل العقبات والتوصيات:',
-						'speakers' => '<br/><br/><br/><span class="heading11">المنسق: الدكتور مايكل جامل-ماكورماك</span> <br/>بقيادة: هيئة الصحة بدبي وفرقة العمل<br/><br/> <span class="heading11">المنسق: البروفيسور بيل سارنكي</span>  <br/>بقيادة: هيئة الطرق والمواصلات وفرقة العمل<br/><br/> <span class="heading11">المنسق: الدكتورة مها دماج</span> <br/>بقيادة: الدكتورة علياء القاسمي وفرقة العمل',
-						'description' => 'تحويل اتفاقية حقوق الأشخاص ذوي الإعاقة إلى سياسات وبرامج محددة<br/><br/><span class="heading11">1- الكشف والعلاج المبكران<br/><br/> 2- التنمية العمرانية الدامجة <br/><br/>3- الحماية الاجتماعية</span>'
+						'activity' =>'مناقشة وتحليل العقبات والتوصيات:',
+						'speakers' => '<br/><br/><br/><span class="heading11">مدير الجلسة: الدكتور مايكل ماكورماك</span><br/><br/> <span class="heading11">مدير الجلسة: البروفيسور بيل سارنكي </span> <br/><br/> <span class="heading11">مدير الجلسة: الدكتورة مها دماج</span>',
+						'description' => 'ترجمة الاتفاقية الدولية لحقوق الأشخاص ذوي الإعاقة إلى سياسات وبرامج محددة<br/><br/><span class="heading11">1. الكشف والتدخل المبكر<br/><br/> 2- التنمية العمرانية الدامجة <br/><br/>3- الحماية الاجتماعية</span>'
 					],
 					[
 						'time' => '12:00 - 1:00 ظهراً',
@@ -396,13 +396,13 @@ class PageController extends Controller {
 					],
 					[
 						'time' => '1:00 - 3:00 ظهراً',
-						'activity' =>'تحليل العقبات والتوصيات:',
-						'speakers' => '<br/><br/><br/><span class="heading11">المنسق: الدكتورة بولا هانت</span><br/> بقيادة: هيئة المعرفة والتنمية البشرية وفرقة العمل<br/><br/> <span class="heading11">المنسق: الدكتور وليام كيرنان</span><br/>بقيادة: هيئة تنمية المجتمع وفرقة العمل<br/><br/><span class="heading11">المنسق: الدكتور ايفور أمبروز</span><br/>بقيادة: دائرة السياحة في دبي',
-						'description' => 'تحويل اتفاقية حقوق الأشخاص ذوي الإعاقة إلى سياسات وبرامج محددة<br/><br/><span class="heading11">4- التعليم الدامج<br/><br/>5- التوظيف الدامج وتأسيس الأعمال<br/><br/>6- خدمات الضيافة والسياحة والسفر</span> '
+						'activity' =>'مناقشة وتحليل العقبات والتوصيات:',
+						'speakers' => '<br/><br/><br/><span class="heading11">مدير الجلسة: الدكتورة بولا هانت</span><br/><br/> <span class="heading11">مدير الجلسة: الدكتور وليام كيرنان</span><br/><br/><span class="heading11">مدير الجلسة: الدكتور ايفور أمبروس</span>',
+						'description' => 'تحويل اتفاقية حقوق الأشخاص ذوي الإعاقة إلى سياسات وبرامج محددة<br/><br/><span class="heading11">4- التعليم الدامج<br/><br/>5- التوظيف الدامج وتأسيس الأعمال<br/><br/>6.	السياحة والضيافة والترفيه الدامج</span> '
 					],
 					[
 						'time' => '3:00 - 4:00 عصراً',
-						'activity' =>'"إعلان دبي"',
+						'activity' =>'الكلمة الختامية',
 						'speakers' => '',
 						'description' => ''
 					],
