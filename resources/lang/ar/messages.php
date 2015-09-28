@@ -134,7 +134,7 @@ return [
     'Personal Information' => 'معلومات شخصية',
     'Title' => 'اللقب',
     'Work Information' => 'معلومات مهنية',
-    'Job Title' => 'المسمّى الوظيفي',
+    'Job Title' => 'المهنة',
     'Company' => 'الشركة / المنظمة', 
     'Field' => 'المجال',
     'Country' => 'البلد',

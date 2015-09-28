@@ -171,8 +171,8 @@ Together for a disability-friendly city.<br/><br/>
                 Madinat Jumeirah, Al Jawhara Ballroom
             </p>
             <p>
-                Sunday 11th October 2015 from 08:30 to 16:00
+                Sunday 11th of October 2015 from 08:30 to 16:00
                 <br/>
-                Monday 12th October 2015 from 08:30 to 16:00
+                Monday 12th of October 2015 from 08:30 to 16:00
             </p>'
 ];
