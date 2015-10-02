@@ -114,7 +114,9 @@ ul.share-buttons li{
 {
     letter-spacing: 0;
 }
-
+.heading9, .heading9 a {
+    line-height: 27px;
+}
 .breadcrumb-nav a:after 
 {
     content: " <";
