@@ -13,8 +13,8 @@
 		</div>
 		<div class='col-sm-7'>
 			<a href="{!! route('posts.show', [$related_post->postType->slug, $related_post->slug]) !!}" title="{!! $related_post->title !!}" >
-				<h3 class="heading9">{!! $related_post->title !!}</h3>
-				<p class="heading7">{!! $related_post->excerpt !!}</p>
+				<h3 class="heading9">{!! str_limit($related_post->title,40,$end='...') !!}</h3>
+				<p  class="heading7">{!! str_limit($related_post->excerpt,65,$end='...') !!}</p>
 			</a>
 		</div>
 	</div>
