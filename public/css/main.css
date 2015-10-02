@@ -334,7 +334,7 @@ div.breadcrumb-nav a:last-child:after
 }
 #logos 
 {
-	height: 165px;
+	height: 185px;
 }
 
 #logos .header-logo
@@ -355,7 +355,7 @@ div.breadcrumb-nav a:last-child:after
 {
 	width: 129px !important;
 	height: 102px  !important;
-	bottom: 20px;
+	top: 20px;
 	left: 50%;
 	margin-left: -64px;
 	position: absolute;
@@ -388,7 +388,7 @@ div.breadcrumb-nav a:last-child:after
 .social-top
 {
 	text-align: right;
-	padding-top: 120px;
+	padding-top: 140px;
 }
 
 /*********************************
