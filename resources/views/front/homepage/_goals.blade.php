@@ -10,9 +10,10 @@
 
 	<!-- Goals -->
 	<div class="row">
-		<div class="col-sm-12 col-sm-push-1">
+		<div class="col-sm-12">
 			<div class="row">
-
+				<div class="col-sm-1"></div>
+				
 				<div class="col-sm-2 goal">
 				    <a href="/posts/goals/category/quality-health-and-rehabilitation-services">
                         <img src="/images/icon-01.png" alt="{{trans('messages.Health Alt')}}"/>

@@ -99,7 +99,7 @@
             <div class="col-sm-8" id="copyright-text">
                 <span>{{trans('messages.CopyrightText')}}</span>
                 <span> | </span><span class="white-link">&nbsp;<a href="/page/privacy-policy">{{trans('messages.Privacy Policy')}}</a></span>
-                 <span> | </span><span class="white-link">&nbsp;<a href="/page/terms-and-conditions">{{trans('messages.Terms and Conditions')}}</a></span>
+                 <!-- <span> | </span><span class="white-link">&nbsp;<a href="/page/terms-and-conditions">{{trans('messages.Terms and Conditions')}}</a></span> -->
                  <span> | </span><span class="white-link">&nbsp;<a href="/page/contact-us">{{trans('messages.Contact Us')}}</a></span>
             </div>
         </div>
