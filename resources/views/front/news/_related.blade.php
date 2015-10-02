@@ -17,8 +17,8 @@
 		</div>
 		<div class='col-sm-7'>
 			<a href="{!! route('news.show', [$related_n->slug]) !!}" title="{!! $related_n->title !!}" >
-				<h3 class="heading9">{!! str_limit($related_n->title,10,$end='...') !!}</h3>
-				<p  class="heading7">{!! str_limit($related_n->excerpt,10,$end='...') !!}</p>
+				<h3 class="heading9">{!! str_limit($related_n->title,20,$end='...') !!}</h3>
+				<p  class="heading7">{!! str_limit($related_n->excerpt,40,$end='...') !!}</p>
 			</a>
 		</div>
 	</div>
