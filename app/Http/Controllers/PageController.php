@@ -95,7 +95,7 @@ class PageController extends Controller {
 
 		Mail::send('emails.contact', ['data' => $data],  function($m) use ($data) {
 		    $m->from($data['email'], 'DDFC Contact');
-		    $m->to('info@communitydubai.com');
+		    $m->to('info@mycommunitydubai.com');
 		    $m->subject($data['subject']);
 		});
 
