@@ -8,7 +8,7 @@ use App\Models\News;
 
 
 
-Route::group(['middleware' => 'auth'], function () {
+//Route::group(['middleware' => 'auth'], function () {
 
 
     /*
@@ -92,7 +92,7 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
 
-});
+//});
 
 
 

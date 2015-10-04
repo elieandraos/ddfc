@@ -35,10 +35,10 @@ class WelcomeController extends Controller {
 
 		$news = $this->newsRepos->getOnlyWithContent(2);
 
-		if(Auth::user())
+		//if(Auth::user())
 			return view('front.index', ['voices' => $voices, 'news' => $news, 'slides' => $slides]);
-		else
-			return view('front.comingsoon');
+		//else
+		//	return view('front.comingsoon');
 	}
 
 }
