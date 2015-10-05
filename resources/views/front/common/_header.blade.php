@@ -57,7 +57,7 @@
         <a href="https://twitter.com/communitydubai" target="_blank" title="Follow our account on Twitter">
           <img src="/images/twitter-btn.png" class="social-icon" alt="Our account on twitter"/>
         </a>
-        <a href=" https://instagram.com/communitydubai" target="_blank" title="Follow our account on Instagram">
+        <a href=" https://instagram.com/mycommunitydubai" target="_blank" title="Follow our account on Instagram">
           <img src="/images/insta-btn.png" class="social-icon" alt="Our page on instagram"/>
         </a>
       <!-- End of Social Links -->
