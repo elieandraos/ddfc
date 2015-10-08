@@ -167,7 +167,8 @@ return [
 		'Spatie\MediaLibrary\MediaLibraryServiceProvider',
 		'Vinkla\Translator\TranslatorServiceProvider',
 		'Spatie\Newsletter\NewsletterServiceProvider',
-		'Webpatser\Countries\CountriesServiceProvider'
+		'Webpatser\Countries\CountriesServiceProvider',
+		'Maatwebsite\Excel\ExcelServiceProvider',
 
 	],
 
@@ -223,7 +224,8 @@ return [
 		'MediaLibrary' => 'Spatie\MediaLibrary\MediaLibraryFacade',
 		'MetaTag'   => 'Gaia\Seo\Facades\MetaTag',
 		'Newsletter' => 'Spatie\Newsletter\NewsletterFacade',
-		'Countries' => 'Webpatser\Countries\CountriesFacade'
+		'Countries' => 'Webpatser\Countries\CountriesFacade',
+		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
 
 	]
 

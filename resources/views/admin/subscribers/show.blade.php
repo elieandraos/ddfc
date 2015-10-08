@@ -67,6 +67,7 @@
 				      <td>Company</td>
 				      <td>{{ $subscriber->company }}</td>
 				    </tr>
+					{{--
 				    <tr>
 				      <td>Field</td>
 				      <td>{{ $subscriber->field }}</td>
@@ -75,6 +76,7 @@
 				      <td>Country</td>
 				      <td>{{ $subscriber->country->full_name }}</td>
 				    </tr>
+
 				    <tr>
 				      <td>Arabic Sign Language Interpreter</td>
 				      <td>@if($subscriber->is_sign) <i class="fa fa-check-circle"></i> @endif </td>
@@ -95,6 +97,7 @@
 				      <td>Electronic Format</td>
 				      <td>@if($subscriber->is_electronic) <i class="fa fa-check-circle"></i> @endif</td>
 				    </tr>
+				    --}}
 				    <tr>
 				      <td>Other</td>
 				      <td>@if($subscriber->other) {{ $subscriber->other }} @endif</td>

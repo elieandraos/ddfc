@@ -89,6 +89,7 @@ use App\Models\News;
        Route::get('/subscribers', ['as' => 'admin.subscribers.list', 'uses' => 'SubscriberController@index']);
        Route::post('/subscribers/{id}/delete', ['as' => 'admin.subscribers.delete', 'uses' => 'SubscriberController@destroy']);
        Route::get('/subscribers/{id}/show', ['as' => 'admin.subscribers.show', 'uses' => 'SubscriberController@show']);
+        Route::get('/subscribers/export', ['as' => 'admin.subscribers.export', 'uses' => 'SubscriberController@export']);
     });
 
 
@@ -99,6 +100,8 @@ use App\Models\News;
 
 Route::get('/rsvp/', ['as' => 'pages.rsvp', 'uses' => 'PageController@rsvp']);
 Route::post('/page/forum-store/', ['as' => 'pages.forum', 'uses' => 'PageController@forum']);
+
+
 
 
 Route::get('/', 'WelcomeController@index');
