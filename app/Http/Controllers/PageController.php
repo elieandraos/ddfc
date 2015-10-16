@@ -85,7 +85,7 @@ class PageController extends Controller {
 		$this->validate($request, [
 	        'subject' => 'required',
 	        'message' => 'required',
-	        'email' => 'required|email'
+	        'email' => 'required|email',
 	    ]);
 
 		$data['email'] = $request->email;

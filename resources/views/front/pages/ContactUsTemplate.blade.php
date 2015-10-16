@@ -17,7 +17,10 @@
 
 			{!! Form::open(['route' => 'pages.contact', 'class' => 'form-horizontal', 'role' => 'form']) !!}
 
-			@include('admin.form-errors')
+			
+			@if( !($errors->has('newsletter_email')))
+				@include('admin.form-errors')
+			@endif
 
 			<?php if(isset($_GET['success'])): ?>
 				<ul class="alert alert-success">

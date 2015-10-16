@@ -12,7 +12,8 @@
 
 <div class="col-sm-9">
 	<a href="{!! route('news.show', [$single_news->slug]) !!}" title="{!! $single_news->title !!}" >
-		<h2 class="heading6">{!! $single_news->title !!}</h2>
+		<h2 class="heading6" style="margin-bottom: 0px;">{!! $single_news->title !!}</h2>
+		<p class="heading5">{!! $single_news->getReadablePublishedAt() !!}</p>
 		<p class="heading5">{!! $single_news->excerpt !!}</p>	
 	</a>
 </div>

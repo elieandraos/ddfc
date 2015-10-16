@@ -17,6 +17,9 @@ use App\Models\News;
     |--------------------------------------------------------------------------
     */
     Route::post('/search/', ['as' => 'search.index', 'uses' => 'SearchController@index']);
+    Route::get('/search/', function(){
+        return redirect()->route('homepage');
+    });
     Route::post('/newsletter/', ['as' => 'search.newsletter', 'uses' => 'SearchController@newsletter']);
 
     /*
@@ -104,7 +107,7 @@ Route::post('/page/forum-store/', ['as' => 'pages.forum', 'uses' => 'PageControl
 
 
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', [ 'uses' => 'WelcomeController@index', 'as' => 'homepage']);
 Route::get('home', 'HomeController@index');
 Route::controllers([
 	'auth' => 'Auth\AuthController',

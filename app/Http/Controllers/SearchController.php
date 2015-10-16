@@ -35,7 +35,7 @@ class SearchController extends Controller {
 
 	public function newsletter(Request $request)
 	{
-		 $this->validate($request, [
+		$this->validate($request, [
 	        'newsletter_email' => 'required|email'
 	    ]);
 

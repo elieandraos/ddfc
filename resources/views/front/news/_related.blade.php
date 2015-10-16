@@ -1,5 +1,9 @@
 <div class="title-container-left">
-	<h1 class="heading1"> {{trans('messages.other')}} {!! $news->category->title !!}</h1>
+	@if(Lang::getLocale() == "en")
+		<h1 class="heading1"> {{trans('messages.other')}} {!! $news->category->title !!}</h1>
+	@else
+		<h1 class="heading1">{!! $news->category->title !!} {{trans('messages.other')}} </h1>
+	@endif
 </div>
 
 @foreach($related_news as $related_n)
