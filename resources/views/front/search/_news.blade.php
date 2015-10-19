@@ -4,7 +4,11 @@
 	<a href="{!! route('news.show', [$newTranslations->news->slug]) !!}">
 		<div class="col-sm-3">
 			<div class="tint black">
-				<img class="home-news-thumb" src="{!! $newTranslations->news->getFirstMediaURL( $newTranslations->news->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $newTranslations->news->excerpt !!}"  />
+				@if($newTranslations->news->getFirstMediaURL( $newTranslations->news->getMediaCollectionName(), 'thumb-medium'))
+					<img class="home-news-thumb" src="{!! $newTranslations->news->getFirstMediaURL( $newTranslations->news->getMediaCollectionName(), 'thumb-medium') !!}" alt="{!! $newTranslations->news->excerpt !!}"  />
+				@else
+					<img src="/images/noimage.jpg" class="home-news-thumb" alt="{!! $newTranslations->news->excerpt !!}" />
+				@endif
 			</div>
 		</div>
 		<div class="col-sm-9">
