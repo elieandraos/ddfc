@@ -12,6 +12,7 @@ var app = function() {
         toggleTranslate();
         initNestedCategories();
         initRichTextEditor();
+        initMetaAutoFill();
     };
 
     //set up tooltips
@@ -122,6 +123,24 @@ var app = function() {
             bkLib.onDomLoaded(function() {
                 new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif', fullPanel : true, uploadURI:"/upload", uploadToken:$('meta[name="csrf-token"]').attr('content')}).panelInstance(id);
             });
+        })
+    }
+
+    //autofill facebook meta title and desc
+    var initMetaAutoFill = function()
+    {
+        $("input[name=title]").keyup(function(){
+           value = $(this).val();
+           $("input[name=facebook_title]").val(value);
+           $("input[name=meta_title]").val(value);
+           $("input[name=twitter_title]").val(value);
+        })
+
+        $("textarea[name=excerpt]").keyup(function(){
+           value = $(this).val();
+           $("textarea[name=facebook_description]").val(value);
+           $("textarea[name=meta_description]").val(value);
+           $("textarea[name=twitter_description]").val(value);
         })
     }
 
