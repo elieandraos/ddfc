@@ -38,7 +38,11 @@
                 </a>
 
             @else
-		        <img class='featured-img' src="{!! $post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
+            	@if($post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured'))
+		        	<img class='featured-img' src="{!! $post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured') !!}" alt="{!! $post->title !!}" title="{!! $post->title !!}" />
+		        @else
+		        	<img src="/images/noimage.jpg" class="featured-img" alt="{!! $post->title !!}" />
+		        @endif
 		    @endif
 
 

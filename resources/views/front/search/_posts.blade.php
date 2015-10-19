@@ -3,7 +3,13 @@
 	<a href="{!! route('posts.show', [$postTranslation->post->postType->slug, $postTranslation->post->slug]) !!}">
 		<div class="col-sm-3">
 			<div class="tint black">
-				<img class="home-news-thumb" src="{!! $postTranslation->post->getFirstMediaURL( $postTranslation->post->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $postTranslation->post->excerpt !!}" />		
+
+				@if($postTranslation->post->getFirstMediaURL( $postTranslation->post->getMediaCollectionName(), 'thumb-large'))
+					<img class="home-news-thumb" src="{!! $postTranslation->post->getFirstMediaURL( $postTranslation->post->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $postTranslation->post->excerpt !!}" />
+				@else 
+					<img src="/images/noimage.jpg" class="home-news-thumb" alt="{!! $postTranslation->post->excerpt !!}" />
+				@endif
+
 			</div>
 		</div>
 		<div class="col-sm-9">
