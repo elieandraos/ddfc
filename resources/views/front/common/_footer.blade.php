@@ -1,16 +1,16 @@
 <!-- Bottom Bar -->
 <div class="container-fluid" id="bottom-bar">
-  <div class="container" >
+  <div class="container bottom_menu_holder" >
     <div class="row" style="padding-top:35px;">
         <div class="col-sm-2">
-            <h1 class="heading12">{{trans('messages.My Community')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.My Community')}}</h1>
             <p><a href="/page/about">{{trans('messages.About')}}</a></p>
             <p><a href="/page/the-higher-committee">{{trans('messages.the higher committee')}}</a></p>
             <p><a href="/page/strategy">{{trans('messages.Strategy')}}</a></p>
         </div>
         
         <div class="col-sm-2">
-            <h1 class="heading12">{{trans('messages.Goals')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.Goals')}}</h1>
             <p><a href="/posts/goals/category/quality-health-and-rehabilitation-services">{{trans('messages.Health')}}</a></p>
             <p><a href="/posts/goals/category/inclusive-education">{{trans('messages.Education')}}</a></p>
             <p><a href="/posts/goals/category/equal-employment-opportunities">{{trans('messages.Employment')}}</a></p>
@@ -19,21 +19,21 @@
         </div>
         
          <div class="col-sm-2">
-            <h1 class="heading12">{{trans('messages.Support')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.Support')}}</h1>
             <p><a href="/posts/entities">{{trans('messages.Entities')}}</a></p>
             <p><a href="/posts/support/category/faq">{{trans('messages.FAQ')}}</a></p>
             {{--<p><a href="/page/act-now">{{trans('messages.Act Now')}}</a></p>--}}
         </div>
 
         <div class="col-sm-2">
-            <h1 class="heading12">{{trans('messages.Other Sections')}}</h1><br/>
+            <h1 class="heading12">{{trans('messages.Other Sections')}}</h1>
             <p><a href="/news">{{trans('messages.News')}}</a></p>
             <p><a href="/posts/voices">{{trans('messages.Voices')}}</a></h4></p>
             <p><a href="/posts/knowledge">{{trans('messages.Knowledge')}}</a></p>
         </div>
         
         @if(!Request::is('page/act-now'))
-             <div class="col-sm-3 col-sm-push-1">
+             <div class="col-sm-3 col-sm-push-1 newsletter_bottom">
                  {{--
                 <a href="/page/act-now" style="margin-bottom: 15px;display: block;">
                     <img src="/images/ActNow.jpg" alt="ACT NOW"/>
@@ -50,7 +50,7 @@
 
                 <!-- -->
                  <!-- Social Links --> 
-                <div class="pull-right" style="margin-top:20px;">
+                <div class="pull-right social_media_bottom" style="margin-top:20px;">
                  <a href="https://www.facebook.com/mycommunitydubai" target="_blank" title="Follow our page on Facebook">
                     <img src="/images/facebook-btn.png" class="social-icon" alt="Our page on facebook"/>
                   </a>
