@@ -44,7 +44,7 @@
 <!-- Logos -->
 <div class="container" style="position:relative">
   <div class="row" id="logos">
-    <a href="/" class="header-logo-middle" style="width:158px !important; height:140px !important;">
+    <a href="/" class="header-logo-middle" style="width:158px; height:140px;">
       <img src='/images/header-logo-middle_new.png' alt='My Community Dubai Homepage' />
     </a>
     <div class='col-sm-6 pull-right social-top'>

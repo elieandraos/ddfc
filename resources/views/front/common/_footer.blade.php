@@ -1,7 +1,7 @@
 <!-- Bottom Bar -->
 <div class="container-fluid" id="bottom-bar">
   <div class="container bottom_menu_holder" >
-    <div class="row" style="padding-top:35px;">
+    <div class="row" style="">
         <div class="col-sm-2">
             <h1 class="heading12">{{trans('messages.My Community')}}</h1>
             <p><a href="/page/about">{{trans('messages.About')}}</a></p>
