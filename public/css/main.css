@@ -922,7 +922,7 @@ p.heading4
     	min-height: auto !important;
     	height: auto !important;
     	font-size: 13px;
-    	line-height: 1.5;
+    	/*line-height: 1.5;*/
 	}
 	#menu-navigation ul.navbar-nav > li > .dropdown-menu li a {
 	    font-size: 12px;
