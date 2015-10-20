@@ -11,8 +11,8 @@ class NewsTranslation extends Model {
 	protected $searchable = [
         'columns' => [
             'title' => 10,
-            'description' => 10,
-            'excerpt'	=> 10
+            'description' => 5,
+            'excerpt'	=> 2
         ],
         'joins' => [
             'news' => ['news.id','news_translations.news_id'],
