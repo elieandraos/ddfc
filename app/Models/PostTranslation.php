@@ -10,7 +10,7 @@ class PostTranslation extends Model {
 	protected $searchable = [
         'columns' => [
             'title' => 10,
-            'description' => 1,
+            'description' => 2,
             'excerpt'	=> 10
         ],
         'joins' => [
