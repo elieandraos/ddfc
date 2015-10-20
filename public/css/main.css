@@ -1151,6 +1151,8 @@ padding-bottom: 25px !important;
 
 .newsletter_bottom {
     margin-top: 20px;
+    	    width: 100%;
+    	right: 0 !important;
 }
 .btn-newsletter {
     background-color: #909cb7;
