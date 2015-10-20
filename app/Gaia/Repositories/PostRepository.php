@@ -92,12 +92,13 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 		//save the components values		
 		$componentIds = $post->retrieveComponentIds($input);
 		$this->attachComponentPosts($componentIds, $id, $input);
-		
-		if(!isset($input['is_en']))
-			$input['is_en'] = 0;
-		if(!isset($input['is_ar']))
-			$input['is_ar'] = 0;
-
+		if(Lang::getLocale() == 'en')
+		{
+			if(!isset($input['is_en']))
+				$input['is_en'] = 0;
+			if(!isset($input['is_ar']))
+				$input['is_ar'] = 0;
+		}
 		return $post->update($input); 
 	}
 

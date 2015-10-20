@@ -73,13 +73,18 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 	public function update($id, $input)
 	{
 		$news = $this->find($id);
-		if(!isset($input['is_featured']))
-			$input['is_featured'] = 0;
-		if(!isset($input['is_en']))
-			$input['is_en'] = 0;
-		if(!isset($input['is_ar']))
-			$input['is_ar'] = 0;
 		
+		//when not in translating, dont change values
+		if(Lang::getLocale() == 'en')
+		{
+			if(!isset($input['is_featured']))
+				$input['is_featured'] = 0;
+			if(!isset($input['is_en']))
+				$input['is_en'] = 0;
+			if(!isset($input['is_ar']))
+				$input['is_ar'] = 0;
+		}
+
 		return $news->update($input); 
 	}
 
