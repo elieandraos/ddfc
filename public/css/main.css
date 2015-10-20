@@ -1123,7 +1123,7 @@ p.heading4
     margin: 0 -10px;
 }
 .navbar-nav > li > a {
-    line-height: 20px;
+    line-height: 1px;
     padding-bottom: 8px;
     padding-top: 8px;
 }
