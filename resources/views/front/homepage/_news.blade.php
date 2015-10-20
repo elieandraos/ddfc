@@ -3,7 +3,7 @@
 		
 		<!-- Block Title -->
 		<div class="row">
-			<div class="col-sm-12 title-container">
+			<div class="col-sm-12 col-xs-12 title-container">
 				<h1 class="heading1">{{trans('messages.News')}}</h1>
 				<h2 class="heading2">{{trans('messages.NewsText')}}</h2>
 			</div>

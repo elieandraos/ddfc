@@ -2,14 +2,14 @@
 <div class="container-fluid" id="bottom-bar">
   <div class="container bottom_menu_holder" >
     <div class="row" style="">
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-12">
             <h1 class="heading12">{{trans('messages.My Community')}}</h1>
             <p><a href="/page/about">{{trans('messages.About')}}</a></p>
             <p><a href="/page/the-higher-committee">{{trans('messages.the higher committee')}}</a></p>
             <p><a href="/page/strategy">{{trans('messages.Strategy')}}</a></p>
         </div>
         
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-12">
             <h1 class="heading12">{{trans('messages.Goals')}}</h1>
             <p><a href="/posts/goals/category/quality-health-and-rehabilitation-services">{{trans('messages.Health')}}</a></p>
             <p><a href="/posts/goals/category/inclusive-education">{{trans('messages.Education')}}</a></p>
@@ -18,14 +18,14 @@
             <p><a href="/posts/goals/category/sustainable-social-protection-system">{{trans('messages.Social Protection')}}</a></p>
         </div>
         
-         <div class="col-sm-2">
+         <div class="col-sm-2 col-xs-12">
             <h1 class="heading12">{{trans('messages.Support')}}</h1>
             <p><a href="/posts/entities">{{trans('messages.Entities')}}</a></p>
             <p><a href="/posts/support/category/faq">{{trans('messages.FAQ')}}</a></p>
             {{--<p><a href="/page/act-now">{{trans('messages.Act Now')}}</a></p>--}}
         </div>
 
-        <div class="col-sm-2">
+        <div class="col-sm-2 col-xs-12">
             <h1 class="heading12">{{trans('messages.Other Sections')}}</h1>
             <p><a href="/news">{{trans('messages.News')}}</a></p>
             <p><a href="/posts/voices">{{trans('messages.Voices')}}</a></h4></p>
@@ -33,7 +33,7 @@
         </div>
         
         @if(!Request::is('page/act-now'))
-             <div class="col-sm-3 col-sm-push-1 newsletter_bottom">
+             <div class="col-sm-3 col-sm-push-1 col-xs-10 newsletter_bottom">
                  {{--
                 <a href="/page/act-now" style="margin-bottom: 15px;display: block;">
                     <img src="/images/ActNow.jpg" alt="ACT NOW"/>
@@ -96,7 +96,7 @@
     <div class="container">
         <div class="row" id="logos-bottom">
             <div class='col-sm-4 header-logo-left header-logo'><img src='/images/small_logo.png' alt='Government Of Dubai' title='Government of Dubai'  /></div>
-            <div class="col-sm-8" id="copyright-text">
+            <div class="col-sm-8 col-xs-12" id="copyright-text">
                 <span>{{trans('messages.CopyrightText')}}</span>
                  <!-- <span> | </span><span class="white-link">&nbsp;<a href="/page/privacy-policy">{{trans('messages.Privacy Policy')}}</a></span> -->
                  <!-- <span> | </span><span class="white-link">&nbsp;<a href="/page/terms-and-conditions">{{trans('messages.Terms and Conditions')}}</a></span> -->
