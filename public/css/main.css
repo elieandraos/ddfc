@@ -1235,7 +1235,7 @@ margin-left: -10px;
 .nav>li
 {
 	width:100%;
-	height: 36px;
+	height: auto;
 }
 }
 
