@@ -899,6 +899,8 @@ p.heading4
      	padding-left: 10px;
      	font-size: 13px;
      	z-index: 9999999999;
+     	position: absolute;
+    	width: 100%;
     }
 	nav.navbar-main {
 	    background-color: #3b5287;
@@ -911,6 +913,10 @@ p.heading4
     ul.navbar-nav
     {
     	background-color: #3b5287;
+    }
+    .navbar-nav>li>.dropdown-menu
+    {
+    	width:100%;
     }
     #menu-navigation ul.navbar-nav li a {
     	min-height: auto !important;
