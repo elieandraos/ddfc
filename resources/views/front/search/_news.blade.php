@@ -1,5 +1,5 @@
 @foreach($newsTranslations as $newTranslations)
-
+@if( (Lang::getLocale() == "en" && $newTranslations->news->is_en == 1) || (Lang::getLocale() == "ar" && $newTranslations->news->is_ar == 1))
 <div class="row show-item">
 	<a href="{!! route('news.show', [$newTranslations->news->slug]) !!}">
 		<div class="col-sm-3">
@@ -17,4 +17,5 @@
 		</div>
 	</a>
 </div>
+@endif
 @endforeach
