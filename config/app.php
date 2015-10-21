@@ -169,6 +169,7 @@ return [
 		'Spatie\Newsletter\NewsletterServiceProvider',
 		'Webpatser\Countries\CountriesServiceProvider',
 		'Maatwebsite\Excel\ExcelServiceProvider',
+		'Jenssegers\Date\DateServiceProvider'
 
 	],
 
@@ -226,6 +227,7 @@ return [
 		'Newsletter' => 'Spatie\Newsletter\NewsletterFacade',
 		'Countries' => 'Webpatser\Countries\CountriesFacade',
 		'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+		'Date' => Jenssegers\Date\Date::class,
 
 	]
 

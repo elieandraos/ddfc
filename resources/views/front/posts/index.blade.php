@@ -1,7 +1,13 @@
 @extends('front.layout')
 
 @section('content')
-	
+	<div class="row breadcrumb-nav">
+			<div class="col-sm-12">
+				<a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+				<a href="/posts/{{ $postType->title }}">{!! trans('messages.'.$pageTitle) !!}</a>
+			</div>
+	</div>
+
 	@if($posts->count())
 
 		<!-- Page Title -->

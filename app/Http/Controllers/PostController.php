@@ -72,7 +72,7 @@ class PostController extends Controller {
 		else
 			$viewName = "front.posts.index";
 
-		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title, 'pageDescription' => $category->description ]);
+		return view($viewName, ['posts' => $posts, 'pageTitle' => $postType->title, 'pageDescription' => $category->description, "postType" => $postType ]);
 	}
 
 
@@ -109,7 +109,7 @@ class PostController extends Controller {
 		else
 			$viewName = "front.posts.index";
 
-		return view($viewName, ['posts' => $posts, 'pageTitle' => $category->title, 'pageDescription' => $category->description]);
+		return view($viewName, ['posts' => $posts, 'pageTitle' => $category->title, 'pageDescription' => $category->description, 'category' => $category]);
 	}
 
 

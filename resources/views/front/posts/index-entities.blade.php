@@ -2,7 +2,13 @@
 
 @section('content')
 		
-		
+		<div class="row breadcrumb-nav">
+			<div class="col-sm-12">
+				<a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+				<a href="javascript::void(0)">{{trans('messages.Support')}}</a>
+				<a href="/posts/{{ $postType->title }}">{!! trans('messages.'.$pageTitle) !!}</a>
+			</div>
+		</div>
 		
 		<div class="row">
 			<div class="col-sm-12" style="margin-top: 35px;">

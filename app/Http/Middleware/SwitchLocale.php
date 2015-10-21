@@ -29,7 +29,7 @@ class SwitchLocale {
             return $next($request);
         }
 
-        $this->localeSwitcher->setAppLocale();
+        $this->localeSwitcher->setAppLocale(); 
 		return $next($request);
 	}
 

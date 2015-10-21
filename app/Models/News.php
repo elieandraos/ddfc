@@ -7,6 +7,8 @@ use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 use Vinkla\Translator\Translatable;
 use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
 use App\Models\NewsTranslation;
+use Jenssegers\Date\Date;
+use Lang;
 
 class News extends Model implements MediaLibraryModelInterface, TranslatableContract {
 
@@ -82,7 +84,8 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	 */
 	public function getReadablePublishedAt()
     {
-        return Carbon::parse($this->published_at)->format('M d,Y');
+    	Date::setLocale(Lang::getLocale());
+        return Date::parse($this->published_at)->format('j F Y');
     }
 
 

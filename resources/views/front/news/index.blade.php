@@ -2,6 +2,12 @@
 
 @section('content')
 	
+		<div class="row breadcrumb-nav">
+			<div class="col-sm-12">
+				<a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+				<a href="/posts/news">{{ trans('messages.News')}}</a>
+			</div>
+		</div>
 	@if($news->count())
 
 		<div class="row">

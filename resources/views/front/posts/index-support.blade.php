@@ -2,6 +2,14 @@
 
 @section('content')
 	
+	<div class="row breadcrumb-nav">
+		<div class="col-sm-12">
+			<a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+			<a href="javascript::void(0)">{{trans('messages.Support')}}</a>
+			<a href="/posts/support/category/faq">{!! $pageTitle !!}</a>
+		</div>
+	</div>
+
 	@if($posts->count())
 
 		<!-- Page Title -->

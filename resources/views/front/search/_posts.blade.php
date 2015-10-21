@@ -1,4 +1,8 @@
 @foreach($postsTranslations as $postTranslation)
+	@if( in_array($postTranslation->post->post_type_id, [4,5]))
+		<?php continue; ?>
+	@endif
+
 	@if( (Lang::getLocale() == "en" && $postTranslation->post->is_en == 1) || (Lang::getLocale() == "ar" && $postTranslation->post->is_ar == 1))
 		<div class="row show-item">
 			<a href="{!! route('posts.show', [$postTranslation->post->postType->slug, $postTranslation->post->slug]) !!}">

@@ -2,6 +2,13 @@
 
 @section('content')
 	
+		<div class="row breadcrumb-nav">
+			<div class="col-sm-12">
+				<a href="{!! url('/') !!}">{{trans('messages.Home')}}</a>
+				<a href="javscript:void(0)">{{trans('messages.Goals')}}</a>
+				<a href="/posts/goals/category/{{ $category->slug }}">{{ $category->title }}</a>
+			</div>
+		</div>
 
 		<!-- Page Title -->
 		@if(isset($pageTitle))
