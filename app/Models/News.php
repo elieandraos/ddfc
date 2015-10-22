@@ -85,7 +85,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	public function getReadablePublishedAt()
     {
     	Date::setLocale(Lang::getLocale());
-        return Date::parse($this->published_at)->format('j F Y');
+        return Date::parse($this->published_at)->format('d-m-Y');
     }
 
 
