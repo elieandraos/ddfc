@@ -9,7 +9,7 @@ class Page extends Model {
 	use Translatable;
 
 	protected $table = 'page';
-	protected $fillable = ['title', 'slug', 'description', 'template_id', 'created_at'];
+	protected $fillable = ['title', 'slug', 'description', 'template_id'];
 	protected $hidden = [];
 	//translator
 	protected $translatedAttributes = ['title', 'description'];
