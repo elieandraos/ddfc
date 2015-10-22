@@ -1245,6 +1245,11 @@ margin-left: -10px;
 	height: 36px !important;
 	min-height: 36px !important;
 }
+.newsletter-ar .btn-newsletter
+{
+	float: right;
+}
+
 }
 
 

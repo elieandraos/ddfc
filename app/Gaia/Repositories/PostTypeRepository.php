@@ -85,16 +85,25 @@ class PostTypeRepository extends DbRepository implements PostTypeRepositoryInter
 	 */
 	public function renderMenu()
 	{
-		$postTypes = $this->getAll();
+		//$postTypes = $this->getAll();
 		$view = "";
 
-		if($postTypes->count())
+		$postTypes = ['goals','voices', 'news', 'support', 'entities', 'knowledge', 'slides', 'members',];
+		
+		foreach($postTypes as $slug)
 		{
-			foreach($postTypes as $postType)
+			if($slug != "news")
 			{
+				$postType = $this->getBySlug($slug);
 				$html = View::make('admin.post-types.menu-item', ['postType' => $postType, 'authUser' => Auth::user() ]);
 				$view .= $html->render();
 			}
+			else 
+			{
+				$html = View::make('admin.news.menu-item');
+				$view .= $html->render();
+			}
+			
 		}
 
 		return $view;

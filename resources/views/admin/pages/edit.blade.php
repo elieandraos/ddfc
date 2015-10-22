@@ -37,6 +37,16 @@
 		            </div>
 		        </div>
 
+		        <div class="form-group @if($errors->has('created_at')) has-error @endif">
+		            {!! Form::label('created_at', 'Publish Date', ['class' => 'col-sm-3 control-label']) !!}
+		            <div class="col-sm-3">
+		                <div class="input-group">
+		                  {!! Form::text('created_at', null, ['class' => 'form-control']) !!}
+		                  <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+		                </div>  
+		            </div>
+		        </div>
+
 {{-- 		        <div class="form-group @if($errors->has('description')) has-error @endif">
 					{!! Form::label('description', 'Content', ['class' => 'col-sm-3 control-label']) !!}
 		            <div class="col-sm-6">

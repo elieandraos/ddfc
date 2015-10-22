@@ -36,6 +36,7 @@
             </div>
         </div>
 
+
 {{--         <div class="form-group @if($errors->has('description')) has-error @endif">
 			{!! Form::label('description', 'Description', ['class' => 'col-sm-3 control-label']) !!}
             <div class="col-sm-6">

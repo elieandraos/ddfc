@@ -2,7 +2,7 @@
 
 @section('content')
 
-dashboard homepage after login
+You are now logged in
 
 
 @stop
