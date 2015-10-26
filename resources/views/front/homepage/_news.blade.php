@@ -16,7 +16,7 @@
 				<div class="col-sm-6">
 					<div class="row">
 						<a href="{!! route('news.show', [$n->slug]) !!}">
-							<div class="col-sm-6">
+							<div class="col-md-6">
 								<div class="tint black">
 									
 									@if($n->getFirstMediaURL( $n->getMediaCollectionName(), 'thumb-medium'))
@@ -26,7 +26,7 @@
 									@endif
 								</div>
 							</div>
-							<div class="col-sm-6">
+							<div class="col-md-6">
 								<p class="heading5">{!! $n->getReadablePublishedAt() !!}</p>
 								<h3 class="heading6">{!! str_limit($n->title,50,$end='...') !!}</h3>
 								<p  class="heading7">{!! $n->excerpt !!}</p>
