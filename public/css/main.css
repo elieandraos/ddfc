@@ -1249,7 +1249,10 @@ margin-left: -10px;
 {
 	float: right;
 }
-
+img.home-news-thumb {
+    max-height: none;
+    height: auto;
+}
 }
 
 
