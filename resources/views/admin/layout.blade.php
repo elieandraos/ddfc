@@ -90,7 +90,7 @@
             <div id="leftside-navigation" class="nano">
                 <ul class="nano-content">
                     <li class="">
-                        <a href="/admin/dashboard"><i class="fa fa-dashboard"></i><span>Dashboard</span></a>
+                        <a href="/admin/dashboard"><i class="fa fa-dashboard"></i><span>Home</span></a>
                     </li>
 
 
