@@ -118,12 +118,15 @@ var app = function() {
     //init the rich text editors
     var initRichTextEditor = function()
     {
+
          $(".richtexteditor").each(function(){
             var id = $(this).attr('id');
             bkLib.onDomLoaded(function() {
-                new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif', fullPanel : true, uploadURI:"/upload", uploadToken:$('meta[name="csrf-token"]').attr('content')}).panelInstance(id);
+                new nicEditor({iconsPath : '/admin/img/nicEditorIcons.gif',fullPanel : true, uploadURI:"/upload", uploadToken:$('meta[name="csrf-token"]').attr('content')}).panelInstance(id);
             });
         })
+
+        $(".nicEdit-main").css('overflow','scroll');
     }
 
     //autofill facebook meta title and desc
