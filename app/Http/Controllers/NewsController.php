@@ -25,10 +25,10 @@ class NewsController extends Controller {
 
 		//categories
 		$this->categories = [];
-		$this->categories['feature'] = $this->categoryRepos->getCategoryBySlug('feature');
-		$this->categories['event'] = $this->categoryRepos->getCategoryBySlug('event');
-		$this->categories['editorial'] = $this->categoryRepos->getCategoryBySlug('editorial');
-		$this->categories['press'] = $this->categoryRepos->getCategoryBySlug('press-release');
+		$this->categories['feature'] = $this->categoryRepos->getCategoryBySlug('features');
+		$this->categories['event'] = $this->categoryRepos->getCategoryBySlug('events');
+		$this->categories['editorial'] = $this->categoryRepos->getCategoryBySlug('editorials');
+		$this->categories['press'] = $this->categoryRepos->getCategoryBySlug('press-releases');
 		$this->categories['other'] = $this->categoryRepos->getCategoryBySlug('other');
 	}
 
