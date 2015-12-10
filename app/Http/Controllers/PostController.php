@@ -42,6 +42,11 @@ class PostController extends Controller {
 	public function index(PostType $postType)
 	{
 		
+		if(!isset($postType->id))
+		{
+			return redirect('/');
+		}
+		
 		 MetaTag::setTitle($postType->title);
          MetaTag::setDescription($postType->description);
          MetaTag::setKeywords($postType->title);
