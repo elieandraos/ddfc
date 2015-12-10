@@ -12,6 +12,7 @@ use Gaia\Repositories\CategoryRepositoryInterface;
 use Route;
 use App;
 use File;
+use Lang;
 //Models 
 use App\Models\Category;
 use App\Models\PostType;
@@ -143,6 +144,10 @@ class PostController extends Controller {
             preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $post->youtube_url, $matches);
             $youtubeid = $matches[1];
         }
+
+        //check the lang availability
+        if(Lang::getLocale() =="ar" && !$post->is_ar)
+        	return  view('front.notavailable_ar');
 
 		//get the view name
 		if( File::exists($this->viewsPath."/show-".$postType->slug.".blade.php" ))
