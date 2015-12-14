@@ -7,5 +7,5 @@
 		<p><b>{!! $post->title !!}</b></p>
 		{{trans('messages.Tel')}}: <span class="tel">&#x200E;{!! $post->getMeta('contact_phone') !!}</span>
 		<br/>
-		{{trans('messages.Web')}}: <a href="{!! $post->getMeta('contact_website') !!}" title="{!! $post->getMeta('contact_website') !!}" target="_blank"> {!! $post->getMeta('contact_website') !!} </a>	
+		{{trans('messages.Web')}}: <a href="http://{!! $post->getMeta('contact_website') !!}" title="{!! $post->getMeta('contact_website') !!}" target="_blank"> {!! $post->getMeta('contact_website') !!} </a>	
 </div>
