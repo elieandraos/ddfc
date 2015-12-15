@@ -23,12 +23,20 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	 * Returns all the posts sorted by published_at
 	 * @return PostCollection
 	 */
-	public function getAll($postTypeId = null, $limit = null)
+	public function getAll($postTypeId = null, $limit = null, $restrictLang = false)
 	{	
 		$posts = Post::latest('published_at');
 		
 		if(!$limit)
 			$limit = $this->limit;
+
+		if($restrictLang)
+		{
+			if(Lang::getLocale() == "ar")
+				$posts = $posts->where('is_ar', '=', true);
+			if(Lang::getLocale() == "en")
+				$posts = $posts->where('is_en', '=', true);
+		}
 
 		if($postTypeId)
 			return $posts->where('post_type_id', '=', $postTypeId)->paginate($limit);
@@ -119,7 +127,7 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	 * Returns all the posts sorted by published_at
 	 * @return PostCollection
 	 */
-	public function getAllByPostTypeSlug($slug, $limit = null)
+	public function getAllByPostTypeSlug($slug, $limit = null, $restrictLang = false)
 	{	
 		
 		if(!$slug) return null;
@@ -127,7 +135,7 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 
 		$postType = $this->postTypeRepos->getBySlug($slug);
 
-		return $this->getAll($postType->id, $limit);
+		return $this->getAll($postType->id, $limit, $restrictLang);
 	}
 
 
