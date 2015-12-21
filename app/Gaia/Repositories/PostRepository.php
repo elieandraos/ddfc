@@ -165,20 +165,27 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	 */
 	public function getAllRelated($post, $limit = 5)
 	{
-		$posts = Post::latest('published_at')
-				->where('post_type_id', '=', $post->post_type_id)
-				->where('category_id', '=', $post->category_id)
-				->where('id', '!=', $post->id);
-
 		if(Lang::getLocale() == "ar")
-			$posts->where('is_ar', '=', true);
-
+		{
+			return Post::latest('published_at')
+						->where('post_type_id', '=', $post->post_type_id)
+						->where('category_id', '=', $post->category_id)
+						->where('id', '!=', $post->id)
+						->where('is_ar', '=', true)
+						->take($limit)
+						->get();
+		}
+		
 		if(Lang::getLocale() == "en")
-			$posts->where('is_en', '=', true);
-
-		$posts->take($limit)->get();
-
-		return $posts;
+		{
+			return Post::latest('published_at')
+						->where('post_type_id', '=', $post->post_type_id)
+						->where('category_id', '=', $post->category_id)
+						->where('id', '!=', $post->id)
+						->where('is_en', '=', true)
+						->take($limit)
+						->get();
+		}
 	}
 
 
