@@ -171,10 +171,10 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 				->where('id', '!=', $post->id);
 
 		if(Lang::getLocale() == "ar")
-			$posts->arabic();
-		
-		if(Lang::getLocale() == "ar")
-			$posts->english();
+			$posts->where('is_ar', '=', true);
+
+		if(Lang::getLocale() == "en")
+			$posts->where('is_en', '=', true);
 
 		$posts->take($limit)->get();
 
