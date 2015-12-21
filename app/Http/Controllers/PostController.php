@@ -153,6 +153,8 @@ class PostController extends Controller {
         //check the lang availability
         if(Lang::getLocale() =="ar" && !$post->is_ar)
         	return  view('front.notavailable_ar');
+         if(Lang::getLocale() =="en" && !$post->is_en)
+        	return  view('front.notavailable_en');
 
 		//get the view name
 		if( File::exists($this->viewsPath."/show-".$postType->slug.".blade.php" ))
