@@ -41,10 +41,10 @@
                     <table style="width:100%">
                       <tr>
                         <td>
-                          <input type="text" class="btn-newsletter" name="newsletter_email" id="newsletter_email" style="width:100%" />
+                          <input type="text" class="btn-newsletter" name="newsletter_email" id="newsletter_email" style="width:100%;height:38px" />
                         </td>
                         <td>
-                          <input type="submit" class="submit-newsletter" value="{{ trans('messages.subscriberBtn')}}" />
+                          <input type="submit" class="submit-newsletter" value="{{ trans('messages.subscriberBtn')}}" style="height:38px"  />
                         </td>
                       </tr>
                     </table>
