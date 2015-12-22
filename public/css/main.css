@@ -871,7 +871,7 @@ p.heading4
 	padding: 8px;
 	color: #FFF;
 	margin-left: -5px;
-	width: 33%;
+	/*width: 33%; */
 }
 /*************************
  * 	    Ellipsis 		 *
@@ -1160,17 +1160,17 @@ padding-bottom: 25px !important;
     background-color: #909cb7;
     border: medium none;
     color: #fff;
-    float: left;
+    /*float: left;*/
     padding: 8px;
-    width: 70%;
+   /* width: 70%;*/
 }
 .submit-newsletter {
     background-color: #3c5287;
     border: medium none;
     color: #fff;
-    float: right;
+    /*float: right;*/
     padding: 8px;
-    width: 30%;
+    /*width: 30%;*/
 }
 
 #copyright-text {

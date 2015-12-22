@@ -38,8 +38,16 @@
                 <p>{{ trans('messages.subscriberText')}}</p>
                 {!! Form::open(['route' => 'search.newsletter', 'method' => 'POST', 'role' => 'form']) !!}
                     <label for="newsletter_email" style="display:none">subscribe</label>
-                    <input type="text" class="btn-newsletter" name="newsletter_email" id="newsletter_email" />
-                    <input type="submit" class="submit-newsletter" value="{{ trans('messages.subscriberBtn')}}" />
+                    <table style="width:100%">
+                      <tr>
+                        <td>
+                          <input type="text" class="btn-newsletter" name="newsletter_email" id="newsletter_email" style="width:100%" />
+                        </td>
+                        <td>
+                          <input type="submit" class="submit-newsletter" value="{{ trans('messages.subscriberBtn')}}" />
+                        </td>
+                      </tr>
+                    </table>
                 {!! Form::close() !!}
 
                 <!-- -->
