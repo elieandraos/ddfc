@@ -891,6 +891,11 @@ p.heading4
  * 	    MOBILE MEDIA QUERY 		 *
  *********************************/
 @media screen and (min-width: 320px) and (max-width: 767px){
+
+	.news-list-row .col-sm-3
+	{
+		float: none;
+	}
 	.navbar-main #menu-navigation 
 	{
     	min-height: auto !important; 
@@ -1071,7 +1076,7 @@ p.heading4
 	}
 	img.grid-thumb {
 	/*height: 70%;*/
-	width: 80% !important;
+	width: 100% !important;
 	max-height: auto;
 	}
 
