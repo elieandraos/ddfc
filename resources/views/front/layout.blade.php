@@ -4,7 +4,7 @@
 	<meta charset="utf-8"> 
  {!! MetaTag::generate() !!}
  <link rel="shortcut icon" href="{{ asset('logo.ico') }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
   <meta http-equiv="Content-Language" content="ar,en" />
 
     <!-- styles --> 
@@ -17,9 +17,9 @@
 <body>
     @include('front.common._header')
     
-    <div class="container body-content" id='main-content'>
+  <div class="container body-content" id='main-content'>
       @yield('content')
-    </div>
+  </div>
 
     @include('front.common._footer')
 

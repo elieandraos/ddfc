@@ -34,12 +34,6 @@
         
         @if(!Request::is('page/act-now'))
              <div class="col-sm-3 col-sm-push-1 newsletter_bottom newsletter-{!! Lang::getLocale() !!}">
-                 {{--
-                <a href="/page/act-now" style="margin-bottom: 15px;display: block;">
-                    <img src="/images/ActNow.jpg" alt="ACT NOW"/>
-                </a>
-                --}}
-
                 <!--Newsletter --> 
                 <p>{{ trans('messages.subscriberText')}}</p>
                 {!! Form::open(['route' => 'search.newsletter', 'method' => 'POST', 'role' => 'form']) !!}
