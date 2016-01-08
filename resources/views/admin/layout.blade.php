@@ -137,6 +137,7 @@
     <script type="text/javascript" src="/admin/js/bootstrap-growl.min.js"></script>
     <script type="text/javascript" src="/admin/js/jquery.slugify.js"></script>
     <script type="text/javascript" src="/admin/js/sweet-alert.min.js"></script>
+    <script type="text/javascript" src="/admin/js/dropzone.js"></script>
     <script type="text/javascript" src="/admin/js/jquery.nestable.js"></script>
     <script type="text/javascript" src="/admin/js/nicEdit.js"></script>
     <script type="text/javascript" src="/admin/js/nicEditPasteFix.js"></script>

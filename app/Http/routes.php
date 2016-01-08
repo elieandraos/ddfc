@@ -92,7 +92,19 @@ use App\Models\News;
        Route::get('/subscribers', ['as' => 'admin.subscribers.list', 'uses' => 'SubscriberController@index']);
        Route::post('/subscribers/{id}/delete', ['as' => 'admin.subscribers.delete', 'uses' => 'SubscriberController@destroy']);
        Route::get('/subscribers/{id}/show', ['as' => 'admin.subscribers.show', 'uses' => 'SubscriberController@show']);
-        Route::get('/subscribers/export', ['as' => 'admin.subscribers.export', 'uses' => 'SubscriberController@export']);
+       Route::get('/subscribers/export', ['as' => 'admin.subscribers.export', 'uses' => 'SubscriberController@export']);
+
+
+       Route::get('/galleries', ['as' => 'admin.galleries.list', 'uses' => 'GalleryController@index']);
+       Route::get('/galleries/create', ['as' => 'admin.galleries.create', 'uses' => 'GalleryController@create']);
+       Route::get('/galleries/{galleries}/edit', ['as' => 'admin.galleries.edit', 'uses' => 'GalleryController@edit']);
+       Route::post('/galleries/store', ['as' => 'admin.galleries.store', 'uses' => 'GalleryController@store']);
+       Route::post('/galleries/{galleries}/update', ['as' => 'admin.galleries.update', 'uses' => 'GalleryController@update']);
+       Route::post('/galleries/{galleries}/delete', ['as' => 'admin.galleries.delete', 'uses' => 'GalleryController@destroy']);
+
+       Route::post('/upload-gallery-photo', [ 'as' => 'galleries.upload', 'uses' => 'GalleryController@upload']);
+
+
     });
 
 

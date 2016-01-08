@@ -13,6 +13,7 @@ var app = function() {
         initNestedCategories();
         initRichTextEditor();
         initMetaAutoFill();
+        initDropzone();
     };
 
     //set up tooltips
@@ -145,6 +146,41 @@ var app = function() {
            $("textarea[name=meta_description]").val(value);
            $("textarea[name=twitter_description]").val(value);
         })
+    }
+
+    var initDropzone = function() 
+    {
+        //Dropzone.autoDiscover = false;
+        $("#gallery-uploads").dropzone({ 
+            url: "/admin/upload-gallery-photo",
+            autoProcessQueue: true, //uploads will be processed on drop 
+            acceptedFiles: 'image/*',
+            addRemoveLinks: true,
+            maxFilesize: 1, //in MB
+            previewTemplate: document.querySelector('#preview-template').innerHTML,
+            dictDefaultMessage: '',
+            dictRemoveFile: 'Delete',
+            thumbnailWidth: 150
+        });
+
+        currentDropzone = $('#gallery-uploads').get(0).dropzone;
+
+        currentDropzone.on("sending", function(file, xhr, formData) {
+            var csrftoken = $('meta[name="csrf-token"]').attr('content');
+            formData.append('_token', csrftoken);
+        });
+
+        currentDropzone.on("uploadprogress",function(file,progress,bytesSent){
+            filePreview = file.previewElement;
+            //$(filePreview).find(".dz-upload").css('width',progress + '%');
+        });
+
+        currentDropzone.on("success", function(file, response) {
+            filePreview = file.previewElement;
+            $(filePreview).find('.dz-file').val( response.filename);
+           // $(filePreview).find(".dz-upload").css('width','0%');
+        });
+
     }
 
     //return functions

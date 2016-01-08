@@ -2622,3 +2622,37 @@ padding: 5px 0 5px 5px;
 .nano-content .user-panel .info .list-inline .i {
 min-width: 14px;  
 }
+
+
+.dropzone
+{
+  border: 3px dashed #ccc;
+  margin: 50px auto;
+  width: 75%;
+  min-height: 200px;
+  height: auto;
+}
+.dz-preview
+{
+  float: left;
+  width: 150px;
+  margin: 20px;
+}
+.dz-text
+{
+  margin-top: 10px;
+  font-size: 12px;
+  width: 150px;
+}
+a.dz-remove
+{
+  color: #c02638;
+  font-size: 11px;
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+}
+.dz-details img 
+{
+  height: 130px;
+}
