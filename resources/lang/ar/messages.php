@@ -29,7 +29,7 @@ return [
     'agenda_day2' =>'اليوم الثاني: 12 أكتوبر 2015',
 
     'registration_form' => 'استمارة التسجيل',
-
+    'Our Campaign' => 'حملتنا',
 
 
     'related' => 'ذات صلة',

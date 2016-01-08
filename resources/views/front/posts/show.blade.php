@@ -28,13 +28,11 @@
                   src="//www.youtube.com/embed/{{$youtube_id}}?rel=0&showinfo=0&color=white&iv_load_policy=3"
                                                                       frameborder="0" allowfullscreen></iframe>
                 <a href="#videoFrame" id="videoFrame" alt="{!! $post->title !!}" title="{!! $post->title !!}">
-                <div class="videoImageFrame" style="background-image: url('{!! $post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured') !!}')">
-                    <div class="playButtonContainer">
-                        <img src="/images/playButton.png" />
-                    </div>
-                </div>
-
-                <!--<img src="" alt="{!! $post->title !!}" title="{!! $post->title !!}" />-->
+	                <div class="videoImageFrame" style="background-image: url('{!! $post->getFirstMediaURL( $post->getMediaCollectionName(), 'featured') !!}')">
+	                    <div class="playButtonContainer">
+	                        <img src="/images/playButton.png" />
+	                    </div>
+	                </div>
                 </a>
 
             @else

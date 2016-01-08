@@ -10,6 +10,11 @@
 			
 		</div>
 	</div>
+	<div class="container homepage-block">
+		<div class="container">
+			@include('front.homepage._campaign')
+		</div>
+	</div>
 
 	<div class="container-fluid homepage-block homepage-block-goals">
 		<div class="container">
@@ -17,14 +22,6 @@
 		</div>
 	</div>
 
-	{{-- <div class="container-fluid actnow-block">
-		<div class="container text-center goal-act-now">
-			<a href="/page/act-now" alt="ACT NOW">
-                <img src="/images/ActNow.jpg" alt="ACT NOW">
-                <div class="line">{{ trans('messages.Join us now and be part of the change')}}</div>
-            </a>
-		</div>
-	</div> --}}
 
 	<div class="container">
 		@include('front.homepage._voices')
@@ -35,9 +32,5 @@
 			@include('front.homepage._news')
 		</div>
 	</div>
-
-	{{-- <div class="container">
-		@include('front.homepage._support')
-	</div> --}}
 	
 @stop

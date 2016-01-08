@@ -32,11 +32,22 @@ class WelcomeController extends Controller {
 	{
 		$voices = $this->postRepos->getAllByPostTypeSlug('voices', 3, true);
 		$slides = $this->postRepos->getAllByPostTypeSlug('slides');
+		
+		$campaigns = $this->postRepos->getAllByPostTypeSlug('campaign');
+		
+		$campaign = $campaigns[0];
+        $youtubeid = "";
+        if($campaign->youtube_url != "")
+        {
+            preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $campaign->youtube_url, $matches);
+            $youtubeid = $matches[1];
+        }
+
 
 		$news = $this->newsRepos->getOnlyWithContent(2);
 
 		//if(Auth::user())
-			return view('front.index', ['voices' => $voices, 'news' => $news, 'slides' => $slides]);
+			return view('front.index', ['voices' => $voices, 'news' => $news, 'slides' => $slides, 'campaign' => $campaign, 'youtubeid' => $youtubeid]);
 		//else
 		//	return view('front.comingsoon');
 	}

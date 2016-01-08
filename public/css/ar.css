@@ -21,6 +21,9 @@ div.navbar-collapse,
 .col-sm-push-2 {
     right: 16.66666667%;
 }
+.col-sm-push-3 {
+    right: 25%;
+}
 .pull-left {
     float: right!important;
 }

@@ -46,6 +46,7 @@ return [
     'Strategy' => 'Strategy',
     'the higher committee' => 'The Higher Committee',
     'Goals' => 'Goals',
+    'Our Campaign' => 'Our Campaign',
 
     'Health' => 'Quality Health and Rehabilitation Services',
     'Education' => 'Inclusive Education',
