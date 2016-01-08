@@ -1274,3 +1274,25 @@ div#links img.gallery-thumb
 	margin-left: 10px;
 }
 
+img.upcoming
+{
+	width: 60px;
+	height: 60px;
+}
+img.small-upcoming-badge
+{
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 0;
+	left: 0;
+}
+img.large-upcoming-badge
+{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 0px;
+	left: 15px;
+}
+

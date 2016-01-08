@@ -6,6 +6,11 @@
 			@else
 				<img src="/images/noimage.jpg" class="list-news" />
 			@endif
+			
+			@if( Jenssegers\Date\Date::parse($single_news->published_at)->gt(Jenssegers\Date\Date::now()) )
+	          <img src="/images/upcoming.png"  alt="Upcoming event" class="small-upcoming-badge" />
+	        @endif
+
 		</div>
 	</a>				
 </div>

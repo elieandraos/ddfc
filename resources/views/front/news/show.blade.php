@@ -15,7 +15,12 @@
 		<!-- posts listing -->
 		<div class='col-sm-7 top35'>
 		       @if($news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured'))
-		        <img class='featured-img' src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
+		        
+                @if( Jenssegers\Date\Date::parse($news->published_at)->gt(Jenssegers\Date\Date::now()) )
+                    <img src="/images/upcoming.png"  alt="Upcoming event" class="large-upcoming-badge" />
+                @endif
+
+                <img class='featured-img' src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
 
 		        @if(count($galleryItems))
 		        	<div id="links">

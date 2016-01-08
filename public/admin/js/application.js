@@ -150,6 +150,9 @@ var app = function() {
 
     var initDropzone = function() 
     {
+        if(!$("#gallery-uploads").length)
+            return;
+        
         //Dropzone.autoDiscover = false;
         $("#gallery-uploads").dropzone({ 
             url: "/admin/upload-gallery-photo",

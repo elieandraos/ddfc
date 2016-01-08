@@ -20,6 +20,9 @@
               <div class="caption-content">
                 <h1>{!! nl2br($slide->getMeta('caption_big')) !!}</h1>
                 <h2>{!! $slide->getMeta('caption_small') !!}</h2>
+                @if( Jenssegers\Date\Date::parse($slide->getMeta('event_date'))->gt(Jenssegers\Date\Date::now()) )
+                  <img src="/images/upcoming.png" class="upcoming"  alt="Upcoming event" />
+                @endif
               </div>
           </div>
         </a>
