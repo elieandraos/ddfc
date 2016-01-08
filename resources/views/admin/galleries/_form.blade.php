@@ -33,6 +33,7 @@
                             <input type="hidden" name="dz_media[]" value="{!! $mediaItem->id !!}" class="dz-media" />
                             <input type="hidden" name="dz_file[]"  class="dz-file" />
                         </div>
+                        <a class="media-remove" href="#">Delete</a>
                     </div>
                 @endforeach
             @endif

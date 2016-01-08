@@ -2628,8 +2628,8 @@ min-width: 14px;
 {
   border: 3px dashed #ccc;
   margin: 50px auto;
-  width: 75%;
-  min-height: 200px;
+  width: 80%;
+  min-height: 450px;
   height: auto;
 }
 .dz-preview
@@ -2644,7 +2644,7 @@ min-width: 14px;
   font-size: 12px;
   width: 150px;
 }
-a.dz-remove
+a.dz-remove,a.media-remove
 {
   color: #c02638;
   font-size: 11px;
