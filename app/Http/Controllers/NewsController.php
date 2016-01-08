@@ -11,6 +11,7 @@ use Response;
 use Request;
 use View;
 use Lang;
+use MediaLibrary;
 
 use MetaTag;
 
@@ -73,8 +74,10 @@ class NewsController extends Controller {
          ]);
         MetaTag::setTwitterDescription($news->seo->twitter_description);
         
+        $galleryItems = MediaLibrary::getCollection($news->gallery, 'gallery', []);
+
 		$related_news = $this->newsRepos->getByCategory($news->category_id, 5, [$news->id]);
-		return view('front.news.show', [ 'news' => $news, 'related_news' => $related_news]);
+		return view('front.news.show', [ 'news' => $news, 'related_news' => $related_news, 'galleryItems' => $galleryItems]);
 	}
 
 

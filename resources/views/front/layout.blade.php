@@ -9,6 +9,10 @@
 
     <!-- styles --> 
     <link href="/admin/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.17.0/css/blueimp-gallery.min.css">
+    <link href="/css/bootstrap-image-gallery.min.css" rel="stylesheet" />
+
     <link href="/css/main.css" rel="stylesheet" />
      @if (Lang::getLocale() =="ar")
         <link href="/css/ar.css" rel="stylesheet" />
@@ -26,6 +30,10 @@
     <!-- Third Party Scripts -->
     <script type="text/javascript" src="/admin/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="/admin/js/bootstrap.min.js"></script>
+
+    <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+    <script src="/js/bootstrap-image-gallery.min.js"></script>
+
     <script type="text/javascript" src="/js/app.js"></script>
     <script type="text/javascript" src="/js/fontResize.js"></script>
     <script type="text/javascript">

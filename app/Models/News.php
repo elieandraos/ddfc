@@ -9,13 +9,14 @@ use Vinkla\Translator\Contracts\Translatable as TranslatableContract;
 use App\Models\NewsTranslation;
 use Jenssegers\Date\Date;
 use Lang;
+use App\Models\Gallery;
 
 class News extends Model implements MediaLibraryModelInterface, TranslatableContract {
 
 	use MediaLibraryModelTrait, Translatable;
 
 	protected $table = 'news';
-	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured', 'is_en', 'is_ar'];
+	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured', 'is_en', 'is_ar', 'gallery_id'];
 	protected $translatedAttributes = ['title', 'excerpt', 'description'];
 	protected $translator = 'App\Models\NewsTranslation';
 	
@@ -27,6 +28,11 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	public function category()
 	{
 		return $this->belongsTo('App\Models\Category');
+	}
+
+	public function gallery()
+	{
+		return $this->belongsTo('App\Models\Gallery');
 	}
 
 	/**
@@ -138,6 +144,12 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 
 		return $obj->category_id;
 	}  
+
+
+	public static function getGalleries()
+	{
+		return Gallery::lists('name', 'id');
+	}
 
 
 }

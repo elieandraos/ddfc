@@ -42,7 +42,18 @@
                     ['class' => 'form-control', 'id' => 'category_id']
                 ) !!}    
             </div>
-        </div>      
+        </div> 
+        <div class="form-group">
+            {!! Form::label('gallery_id', 'Gallery', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::select(
+                    'gallery_id', 
+                    App\Models\News::getGalleries(), 
+                    isset($news)?$news->gallery_id:1, 
+                    ['class' => 'form-control', 'id' => 'gallery_id']
+                ) !!}    
+            </div>
+        </div>        
 	</div>
 </div>
 <!-- Panel end -->

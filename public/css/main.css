@@ -1262,5 +1262,15 @@ img.home-news-thumb {
 }
 
 
+div#links
+{
+	margin-top: 20px;
+}
 
+div#links img.gallery-thumb
+{
+	width: 60px;
+	height: 60px;
+	margin-left: 10px;
+}
 

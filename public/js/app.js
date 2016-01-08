@@ -40,6 +40,11 @@ var app = function() {
             })
             return false;
         })
+
+
+        $("#blueimp-gallery").on('opened', function (event) {
+            $("a.prev, a.next, a.close, h3.title").css('display', 'block');
+        });
     }
 
 

@@ -88,19 +88,24 @@ class PostTypeRepository extends DbRepository implements PostTypeRepositoryInter
 		//$postTypes = $this->getAll();
 		$view = "";
 
-		$postTypes = ['goals','voices', 'news', 'support', 'entities', 'knowledge', 'slides', 'members',];
+		$postTypes = ['goals','voices', 'campaign', 'news', 'support', 'entities', 'knowledge', 'slides', 'members', 'gallery'];
 		
 		foreach($postTypes as $slug)
 		{
-			if($slug != "news")
+			if($slug != "news" && $slug != "gallery")
 			{
 				$postType = $this->getBySlug($slug);
 				$html = View::make('admin.post-types.menu-item', ['postType' => $postType, 'authUser' => Auth::user() ]);
 				$view .= $html->render();
 			}
-			else 
+			elseif($slug == "news") 
 			{
 				$html = View::make('admin.news.menu-item');
+				$view .= $html->render();
+			}
+			elseif($slug == "gallery") 
+			{
+				$html = View::make('admin.galleries.menu-item');
 				$view .= $html->render();
 			}
 			
