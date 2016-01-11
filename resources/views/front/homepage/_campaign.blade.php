@@ -2,7 +2,7 @@
 	<!-- Block Title -->
 	<div class="row">
 		<div class="col-sm-12 col-xs-12 title-container">
-			<h1 class="heading1">{{trans('messages.Our Campaign')}}</h3>
+			<h1 class="heading1">{!! $campaign->title !!}</h3>
 		</div>
 	</div>
 	<!-- End Of Block Title -->

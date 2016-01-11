@@ -45,6 +45,44 @@ var app = function() {
         $("#blueimp-gallery").on('opened', function (event) {
             $("a.prev, a.next, a.close, h3.title").css('display', 'block');
         });
+
+        $("#blueimp-gallery").on('slideend', function (index, slide) {
+            var currentSlide = $("div.slide")[slide];
+            var currentImg   = $(currentSlide).find('img');
+
+            var positionImg = $(currentImg).offset();
+                // Already loaded, call the handler directly
+                $("h3.title").css({
+                    'top': positionImg.top - 40,
+                    'left': positionImg.left,
+                    'position' : 'absolute',
+                    'display' : 'block'
+                });
+
+            if(currentImg.complete) {
+                var positionImg = $(currentImg).offset();
+                // Already loaded, call the handler directly
+                $("h3.title").css({
+                    'top': positionImg.top - 40,
+                    'left': positionImg.left,
+                    'position' : 'absolute',
+                    'display' : 'block'
+                });
+            }
+            else {
+                $(currentImg).load(function(){
+                    var positionImg = $(currentImg).offset();
+
+                    $("h3.title").css({
+                        'top': positionImg.top - 40,
+                        'left': positionImg.left,
+                        'position' : 'absolute',
+                        'display' : 'block'
+                    });
+                });
+            }
+        });
+
     }
 
 

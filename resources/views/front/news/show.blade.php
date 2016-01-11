@@ -57,8 +57,8 @@
     <div class="slides"></div>
     <!-- Controls for the borderless lightbox -->
     <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
+    <a class="prev" style="border:none;left:30px;"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+    <a class="next" style="border:none;right:30px;"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
     <a class="close">×</a>
     <a class="play-pause"></a>
     <ol class="indicator"></ol>

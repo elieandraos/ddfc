@@ -160,7 +160,14 @@ ul.share-buttons li{
 {
     float:right;
 }
-
+img.small-upcoming-badge
+{
+    right: 0;
+}
+img.large-upcoming-badge
+{
+    right: 15px;
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
 
 }
