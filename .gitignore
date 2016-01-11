@@ -4,5 +4,6 @@
 .idea
 /.idea
 /public/media
+/storage/temp
 _ide_helper.php
 composer.lock
