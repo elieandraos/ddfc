@@ -35,14 +35,21 @@ class WelcomeController extends Controller {
 		
 		$campaigns = $this->postRepos->getAllByPostTypeSlug('campaign');
 		
-		$campaign = $campaigns[0];
-        $youtubeid = "";
-        if($campaign->youtube_url != "")
-        {
-            preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $campaign->youtube_url, $matches);
-            $youtubeid = $matches[1];
-        }
-
+		if(count($campaigns))
+		{
+			$campaign = $campaigns[0];
+	        $youtubeid = "";
+	        if($campaign->youtube_url != "")
+	        {
+	            preg_match('/[\\?\\&]v=([^\\?\\&]+)/', $campaign->youtube_url, $matches);
+	            $youtubeid = $matches[1];
+	        }
+		}
+		else
+		{
+			$campaign = null;
+			$youtubeid = null;
+		}
 
 		$news = $this->newsRepos->getOnlyWithContent(2);
 

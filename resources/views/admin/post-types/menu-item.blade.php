@@ -1,4 +1,4 @@
-@if($authUser->can('manage-'.$postType->slug) || $authUser->is('superadmin'))
+@if($authUser->can('manage-'.$postType->slug) || $authUser->is('superadmin') && $postType)
 <li class="sub-menu">
     <a href="javascript:void(0);"><i class="fa fa-book"></i><span>{{ $postType->title }}</span><i class="arrow fa fa-angle-right pull-right"></i></a>
     <ul>
