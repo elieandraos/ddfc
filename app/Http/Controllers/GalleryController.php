@@ -72,6 +72,11 @@ class GalleryController extends Controller {
 					'value' => $input['dz_caption'][$key],
 					'media_id' => $media->id
 				]);
+				MediaProperty::create([
+					'name' => 'caption_ar',
+					'value' => $input['dz_caption_ar'][$key],
+					'media_id' => $media->id
+				]);
 			} 
 		}
 		Flash::success('Gallery was created successfully.');
@@ -110,12 +115,20 @@ class GalleryController extends Controller {
 			//case media loaded, just update caption
 			if(isset($input['dz_media'][$key]) )
 			{
-				$mp = MediaProperty::where('media_id', '=', (int)$input['dz_media'][$key] )->first();
+				$mp = MediaProperty::where('media_id', '=', (int)$input['dz_media'][$key] )->where('name', '=', 'caption')->first();
 				if($mp)
 				{
 					$mp->value = $caption;
 					$mp->save();
 				}
+
+				$mp = MediaProperty::where('media_id', '=', (int)$input['dz_media'][$key] )->where('name', '=', 'caption_ar')->first();
+				if($mp)
+				{
+					$mp->value = $input['dz_caption_ar'][$key];
+					$mp->save();
+				}
+
 			}
 			//case new uploaded
 			if(isset($input['dz_file'][$key]))
@@ -127,6 +140,11 @@ class GalleryController extends Controller {
 					MediaProperty::create([
 						'name' => 'caption',
 						'value' => $caption,
+						'media_id' => $media->id
+					]);
+					MediaProperty::create([
+						'name' => 'caption_ar',
+						'value' => $input['dz_caption_ar'][$key],
 						'media_id' => $media->id
 					]);
 				}

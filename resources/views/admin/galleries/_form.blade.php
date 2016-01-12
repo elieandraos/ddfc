@@ -29,7 +29,8 @@
                         <div class="dz-details">
                             <img src="{!!  $mediaItem->getURL('thumb-back') !!}" />
                             <br/>
-                            <input type="text" name="dz_caption[]" placeholder="caption..." class="dz-text" value="{!! $gallery->getMediaCaption($mediaItem->id)!!}" />
+                            <input type="text" name="dz_caption[]" placeholder="English caption..." class="dz-text" value="{!! $gallery->getMediaProperty($mediaItem->id)!!}" />
+                            <input type="text" name="dz_caption_ar[]" placeholder="Arabic caption..." class="dz-text" value="{!! $gallery->getMediaProperty($mediaItem->id, 'caption_ar') !!}" />
                             <input type="hidden" name="dz_media[]" value="{!! $mediaItem->id !!}" class="dz-media" />
                             <input type="hidden" name="dz_file[]"  class="dz-file" />
                         </div>
@@ -45,7 +46,8 @@
                     <img data-dz-thumbnail />
                    {{--  <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div> --}}
                     <br/>
-                    <input type="text" name="dz_caption[]" placeholder="caption..." class="dz-text" />
+                    <input type="text" name="dz_caption[]" placeholder="English caption..." class="dz-text" /><Br/>
+                    <input type="text" name="dz_caption_ar[]" placeholder="Arabic caption..." class="dz-text" />
                     <input type="hidden" name="dz_file[]"  class="dz-file" />
                 </div>
                 <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>

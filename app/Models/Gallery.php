@@ -36,4 +36,13 @@ class Gallery extends Model implements MediaLibraryModelInterface{
 
 		return null;
 	} 
+
+	public function getMediaProperty($media_id, $name = 'caption')
+	{
+		$mp = MediaProperty::where('media_id', '=', $media_id)->where('name', '=', $name)->first();
+		if($mp)
+			return $mp->value;
+
+		return null;
+	} 
 }

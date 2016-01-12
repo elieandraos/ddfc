@@ -25,9 +25,16 @@
 		        @if(count($galleryItems))
 		        	<div id="links">
 		        		@foreach($galleryItems as $item)
-						    <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaCaption($item->id) !!}" data-gallery>
-						        <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaCaption($item->id) !!}" class='gallery-thumb'>
-						    </a>
+						    
+                            @if(Lang::getLocale() == "ar")
+                                <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaProperty($item->id, 'caption_ar') !!}" data-gallery>
+    						        <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaProperty($item->id, 'caption_ar') !!}" class='gallery-thumb'>
+    						    </a>
+                            @else
+                                <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaProperty($item->id, 'caption') !!}" data-gallery>
+                                    <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaProperty($item->id, 'caption') !!}" class='gallery-thumb'>
+                                </a>
+                            @endif
 					    @endforeach
 					</div>
 		        @endif

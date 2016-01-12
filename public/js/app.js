@@ -49,22 +49,24 @@ var app = function() {
         $("#blueimp-gallery").on('slideend', function (index, slide) {
             var currentSlide = $("div.slide")[slide];
             var currentImg   = $(currentSlide).find('img');
-
             var positionImg = $(currentImg).offset();
-                // Already loaded, call the handler directly
-                $("h3.title").css({
-                    'top': positionImg.top - 40,
-                    'left': positionImg.left,
-                    'position' : 'absolute',
-                    'display' : 'block'
-                });
+            var left = getOffsetCaption(currentImg);
+
+            // Already loaded, call the handler directly
+            $("h3.title").css({
+                'top': positionImg.top - 40,
+                'left': left,
+                'position' : 'absolute',
+                'display' : 'block'
+            });
 
             if(currentImg.complete) {
                 var positionImg = $(currentImg).offset();
+                left = getOffsetCaption(currentImg);
                 // Already loaded, call the handler directly
                 $("h3.title").css({
                     'top': positionImg.top - 40,
-                    'left': positionImg.left,
+                    'left': left,
                     'position' : 'absolute',
                     'display' : 'block'
                 });
@@ -72,10 +74,11 @@ var app = function() {
             else {
                 $(currentImg).load(function(){
                     var positionImg = $(currentImg).offset();
+                    left = getOffsetCaption(currentImg);
 
                     $("h3.title").css({
                         'top': positionImg.top - 40,
-                        'left': positionImg.left,
+                        'left': left,
                         'position' : 'absolute',
                         'display' : 'block'
                     });
@@ -105,4 +108,16 @@ $(document).ready(function() {
 
     app.init();
 });
+
+
+function getOffsetCaption( currentImg )
+{
+    var _lang = $('html').attr('lang');
+    var positionImg = $(currentImg).offset();       
+    
+    if(_lang == 'ar')
+       return ( $(window).width() - ( positionImg.left + $(currentImg).width() ) );
+    else
+       return positionImg.left;
+}
 
