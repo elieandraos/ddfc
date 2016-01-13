@@ -133,7 +133,8 @@ class UserRepository extends DbRepository implements UserRepositoryInterface
 			'manage-entities',
 			'manage-members',
 			'manage-goals',
-			'manage-slides'
+			'manage-slides',
+			'manage-campaign'
 		];
 		$perms['administrator'] = 
 		[
@@ -147,7 +148,8 @@ class UserRepository extends DbRepository implements UserRepositoryInterface
 			'manage-entities',
 			'manage-members',
 			'manage-goals',
-			'manage-slides'
+			'manage-slides',
+			'manage-campaign'
 		];
 		
 		if($rolename =="editor")
