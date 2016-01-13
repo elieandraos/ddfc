@@ -14,7 +14,7 @@ class AddGalleryIdToNewsTable extends Migration {
 	{
 		Schema::table('news', function(Blueprint $table)
 		{
-			$table->integer('gallery_id')->unsigned()->default(1);
+			$table->integer('gallery_id')->unsigned()->nullable();
 			$table->foreign('gallery_id')
 						->references('id')
 						->on('galleries')

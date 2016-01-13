@@ -33,7 +33,7 @@ class WelcomeController extends Controller {
 		$voices = $this->postRepos->getAllByPostTypeSlug('voices', 3, true);
 		$slides = $this->postRepos->getAllByPostTypeSlug('slides');
 		
-		$campaigns = $this->postRepos->getAllByPostTypeSlug('campaign');
+		$campaigns = $this->postRepos->getAllByPostTypeSlug('campaign',1,true);
 		
 		if(count($campaigns))
 		{
