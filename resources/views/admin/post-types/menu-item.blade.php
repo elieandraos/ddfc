@@ -1,7 +1,7 @@
 @if($authUser->can('manage-'.$postType->slug) || $authUser->is('superadmin') && $postType)
 <li class="sub-menu">
     <a href="javascript:void(0);"><i class="fa fa-book"></i><span>
-    	@if($postType->slug=="goals") Services @else {{ $postType->title }} @endif
+    	{{ $postType->title }} 
     </span><i class="arrow fa fa-angle-right pull-right"></i>
 	</a>
     <ul>
