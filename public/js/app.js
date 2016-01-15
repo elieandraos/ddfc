@@ -100,6 +100,8 @@ var app = function() {
     var initGallery = function()
     {
 
+        var itemWidth = $(".gallery-thumb").first().parent().width();
+        
         //set correct width:
         var galleryUIWidth = $("#gallery").width();
         var availableWidth = galleryUIWidth - 40;
@@ -107,7 +109,7 @@ var app = function() {
 
         $("#links").css("width",availableWidth+"px");
 
-        var totalItemsWidth = ($(".gallery-thumb").length) * 63.75;
+        var totalItemsWidth = ($(".gallery-thumb").length) * itemWidth;
         var width = ($("#links").width());
 
         if(totalItemsWidth <= width){
@@ -126,7 +128,7 @@ var app = function() {
 
             $("#links").css("width",availableWidth+"px");
 
-            var totalItemsWidth = ($(".gallery-thumb").length) * 63.75;
+            var totalItemsWidth = ($(".gallery-thumb").length) * itemWidth;
             var width = ($("#links").width());
 
             $("#gallery_items").css("width",totalItemsWidth+"px");
@@ -135,22 +137,42 @@ var app = function() {
 
 
         var left = 0;
-        $("#gallery_left").click(function(){
+
+        var currentLang = $("#lang_current").html();
+
+
+        var moveLeft = function(){
             width = ($("#links").width());
             var max = totalItemsWidth - width;
             if(left <= -max) return false;
 
             left -= 70;
-            $("#gallery_items").animate({marginLeft:left});
-            return false;
-        });
+            if(currentLang == "en")
+                $("#gallery_items").animate({marginLeft:left});
+            else
+                $("#gallery_items").animate({marginRight:left});
 
-        $("#gallery_right").click(function(){
+            return false;
+        };
+
+        var moveRight = function(){
             if(left >= 0) return false;
             left += 70;
-            $("#gallery_items").animate({marginLeft:left});
+            if(currentLang == "en")
+                $("#gallery_items").animate({marginLeft:left});
+            else
+                $("#gallery_items").animate({marginRight:left});
             return false;
-        });
+        };
+
+        if(currentLang == "en") {
+            $("#gallery_left").click(moveLeft);
+            $("#gallery_right").click(moveRight);
+        }else
+        {
+            $("#gallery_left").click(moveRight);
+            $("#gallery_right").click(moveLeft);
+        }
     }
 
 

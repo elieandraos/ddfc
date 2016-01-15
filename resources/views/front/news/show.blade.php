@@ -27,6 +27,7 @@
                         <div style="float:left;padding-top:40px"> <a id="gallery_left" href="#" class="glyphicon glyphicon-chevron-left" ></a> </div>
     		        	<div id="links" style="width:95%; float:left;overflow:hidden;height:60px;">
                             <div id="gallery_items">
+                            <div id="lang_current" style="display:none;">{{Lang::getLocale()}}</div>
     		        		@foreach($galleryItems as $item)
     						    
                                 @if(Lang::getLocale() == "ar")
