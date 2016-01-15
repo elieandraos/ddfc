@@ -8,6 +8,7 @@ var app = function() {
         initializeVideoFrames();
         initNewsFilters();
         initTabIndex();
+        initGallery();
     };
 
     //set up tooltips
@@ -94,6 +95,29 @@ var app = function() {
         $("#skip-link").click(function(){
             $("#main-content").attr("tabindex","-1").focus()
         })
+    }
+
+    var initGallery = function()
+    {
+        var totalItemsWidth = ($(".gallery-thumb").length) * 73.75;
+    
+        var left = 0;
+        $("#gallery_left").click(function(){
+            var width = ($("#links").width());
+            var max = totalItemsWidth - width;
+            if(left <= -max) return false;
+
+            left -= 70;
+            $("#gallery_items").animate({marginLeft:left});
+            return false;
+        });
+
+        $("#gallery_right").click(function(){
+            if(left >= 0) return false;
+            left += 70;
+            $("#gallery_items").animate({marginLeft:left});
+            return false;
+        });
     }
 
 

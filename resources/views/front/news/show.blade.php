@@ -23,20 +23,27 @@
                 <img class='featured-img' src="{!! $news->getFirstMediaURL( $news->getMediaCollectionName(), 'featured') !!}" alt="{!! $news->title !!}" title="{!! $news->title !!}" />
 
 		        @if(count($galleryItems))
-		        	<div id="links">
-		        		@foreach($galleryItems as $item)
-						    
-                            @if(Lang::getLocale() == "ar")
-                                <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaProperty($item->id, 'caption_ar') !!}" data-gallery>
-    						        <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaProperty($item->id, 'caption_ar') !!}" class='gallery-thumb'>
-    						    </a>
-                            @else
-                                <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaProperty($item->id, 'caption') !!}" data-gallery>
-                                    <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaProperty($item->id, 'caption') !!}" class='gallery-thumb'>
-                                </a>
-                            @endif
-					    @endforeach
-					</div>
+                    <div id="gallery">
+                        <div style="float:left;padding-top:40px"> <a id="gallery_left" href="#" class="glyphicon glyphicon-chevron-left" ></a> </div>
+    		        	<div id="links" style="width:90%; float:left;overflow:hidden;height:60px;">
+                            <div id="gallery_items">
+    		        		@foreach($galleryItems as $item)
+    						    
+                                @if(Lang::getLocale() == "ar")
+                                    <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaProperty($item->id, 'caption_ar') !!}" data-gallery>
+        						        <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaProperty($item->id, 'caption_ar') !!}" class='gallery-thumb'>
+        						    </a>
+                                @else
+                                    <a href="{!! $item->getURL('featured')  !!}" title="{!! $news->gallery->getMediaProperty($item->id, 'caption') !!}" data-gallery>
+                                        <img src="{!! $item->getURL('thumb')  !!}" alt="{!! $news->gallery->getMediaProperty($item->id, 'caption') !!}" class='gallery-thumb'>
+                                    </a>
+                                @endif
+    					    @endforeach
+                            </div>
+    					</div>
+                        <div style="float:left;padding-top:40px;padding-left:10px;"> <a id="gallery_right" href="#" class="glyphicon glyphicon-chevron-right"> </a></div>
+                        <div style="clear:both;"></div>
+                    </div>
 		        @endif
 
 		      @endif
