@@ -1271,7 +1271,7 @@ div#links img.gallery-thumb
 {
 	width: 60px;
 	height: 60px;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 }
 
 img.upcoming

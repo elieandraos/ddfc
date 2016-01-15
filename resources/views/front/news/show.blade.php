@@ -25,7 +25,7 @@
 		        @if(count($galleryItems))
                     <div id="gallery">
                         <div style="float:left;padding-top:40px"> <a id="gallery_left" href="#" class="glyphicon glyphicon-chevron-left" ></a> </div>
-    		        	<div id="links" style="width:90%; float:left;overflow:hidden;height:60px;">
+    		        	<div id="links" style="width:95%; float:left;overflow:hidden;height:60px;">
                             <div id="gallery_items">
     		        		@foreach($galleryItems as $item)
     						    
@@ -41,7 +41,7 @@
     					    @endforeach
                             </div>
     					</div>
-                        <div style="float:left;padding-top:40px;padding-left:10px;"> <a id="gallery_right" href="#" class="glyphicon glyphicon-chevron-right"> </a></div>
+                        <div style="float:right;padding-top:40px;"> <a id="gallery_right" href="#" class="glyphicon glyphicon-chevron-right"> </a></div>
                         <div style="clear:both;"></div>
                     </div>
 		        @endif

@@ -99,11 +99,44 @@ var app = function() {
 
     var initGallery = function()
     {
-        var totalItemsWidth = ($(".gallery-thumb").length) * 73.75;
-    
+
+        //set correct width:
+        var galleryUIWidth = $("#gallery").width();
+        var availableWidth = galleryUIWidth - 40;
+
+
+        $("#links").css("width",availableWidth+"px");
+
+        var totalItemsWidth = ($(".gallery-thumb").length) * 63.75;
+        var width = ($("#links").width());
+
+        if(totalItemsWidth <= width){
+            $("#gallery_left").hide();
+            $("#gallery_right").hide();
+
+            return;
+        }
+
+        $("#gallery_items").css("width",totalItemsWidth+"px");
+
+        $(window).resize(function(){
+            var galleryUIWidth = $("#gallery").width();
+            var availableWidth = galleryUIWidth - 40;
+
+
+            $("#links").css("width",availableWidth+"px");
+
+            var totalItemsWidth = ($(".gallery-thumb").length) * 63.75;
+            var width = ($("#links").width());
+
+            $("#gallery_items").css("width",totalItemsWidth+"px");
+        })
+
+
+
         var left = 0;
         $("#gallery_left").click(function(){
-            var width = ($("#links").width());
+            width = ($("#links").width());
             var max = totalItemsWidth - width;
             if(left <= -max) return false;
 
