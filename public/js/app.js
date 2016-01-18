@@ -52,24 +52,28 @@ var app = function() {
             var currentImg   = $(currentSlide).find('img');
             var positionImg = $(currentImg).offset();
             var top  = positionImg.top + $(currentImg).height() + 20;
-            var left = positionImg.left + ($(currentImg).width() / 2);
+            var left = positionImg.left;
 
             // Already loaded, call the handler directly
             $("h3.title").css({
                 'top': top,
-                'left': left,
+                'left': positionImg.left,
+                'width':$(currentImg).width()+"px",
+                'text-align':'center',
                 'position' : 'absolute',
                 'display' : 'block'
             });
 
             if(currentImg.complete) {
                 var positionImg = $(currentImg).offset();
-                left = positionImg.left + ($(currentImg).width() / 2);
+                left = positionImg.left;
                 top  = positionImg.top + $(currentImg).height() + 20;
                 // Already loaded, call the handler directly
                 $("h3.title").css({
                     'top': top,
                     'left': left,
+                    'width':$(currentImg).width()+"px",
+                    'text-align':'center',
                     'position' : 'absolute',
                     'display' : 'block'
                 });
@@ -77,12 +81,14 @@ var app = function() {
             else {
                 $(currentImg).load(function(){
                     var positionImg = $(currentImg).offset();
-                    left = positionImg.left + ($(currentImg).width() / 2);
+                    left = positionImg.left;
                     top  = positionImg.top + $(currentImg).height() + 20;
 
                     $("h3.title").css({
                         'top': top,
                         'left': left,
+                        'width':$(currentImg).width()+"px",
+                        'text-align':'center',
                         'position' : 'absolute',
                         'display' : 'block'
                     });
