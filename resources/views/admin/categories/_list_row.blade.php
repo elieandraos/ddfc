@@ -13,7 +13,7 @@
 
 
 <a href="{{ route('admin.categories.translate', [$data['category']->id, $data['locale']]) }}">
-	<button type="button" class="btn btn-info btn-trans btn-xs btn-action " data-toggle="tooltip" data-placement="top" title="Translate Category">
+	<button type="button" class="btn btn-info btn-trans btn-xs btn-action " data-toggle="tooltip" data-placement="top" title="Arabic Version">
 		<i class="fa fa-refresh"></i>
 	</button>
 </a>

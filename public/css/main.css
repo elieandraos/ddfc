@@ -935,9 +935,28 @@ p.heading4
 	}
 	#carousel-example-generic
 	{
+		/*display: none;*/
+	}
+	.caption-content
+	{
+		bottom: 47%;
+	}
+	.caption-content h1 
+	{
+		font-size: 28px;
+	}
+	.caption-content h2
+	{
+		font-size: 20px;
+	}
+	.carousel-indicators
+	{
 		display: none;
 	}
-
+	.campaign-block
+	{
+		margin-bottom: 20px;
+	}
 	.search-placeholder input#search, 
 	.search-placeholder .search-icon
 	{

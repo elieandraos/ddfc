@@ -5,7 +5,7 @@
 </a>
 
 <a href="{{ route('admin.pages.translate', [$page->id, $locale]) }}">
-	<button type="button" class="btn btn-info btn-trans btn-xs btn-action " data-toggle="tooltip" data-placement="top" title="Translate Page">
+	<button type="button" class="btn btn-info btn-trans btn-xs btn-action " data-toggle="tooltip" data-placement="top" title="Arabic Version">
 		<i class="fa fa-refresh"></i>
 	</button>
 </a>
