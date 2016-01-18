@@ -148,9 +148,9 @@ var app = function() {
 
             left -= 70;
             if(currentLang == "en")
-                $("#gallery_items").animate({marginLeft:left});
+                $("#gallery_items").animate({marginLeft:left},100);
             else
-                $("#gallery_items").animate({marginRight:left});
+                $("#gallery_items").animate({marginRight:left},100);
 
             return false;
         };
@@ -159,19 +159,19 @@ var app = function() {
             if(left >= 0) return false;
             left += 70;
             if(currentLang == "en")
-                $("#gallery_items").animate({marginLeft:left});
+                $("#gallery_items").animate({marginLeft:left},100);
             else
-                $("#gallery_items").animate({marginRight:left});
+                $("#gallery_items").animate({marginRight:left},100);
             return false;
         };
 
         if(currentLang == "en") {
-            $("#gallery_left").click(moveLeft);
-            $("#gallery_right").click(moveRight);
-        }else
-        {
             $("#gallery_left").click(moveRight);
             $("#gallery_right").click(moveLeft);
+        }else
+        {
+            $("#gallery_left").click(moveLeft);
+            $("#gallery_right").click(moveRight);
         }
     }
 
