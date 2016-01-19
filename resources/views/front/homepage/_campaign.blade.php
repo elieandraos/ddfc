@@ -8,7 +8,7 @@
 		</div>
 		<!-- End Of Block Title -->
 
-		<div class="col-xs-6 col-xs-push-3 campaign-block">
+		<div class="col-sm-6 col-sm-push-3 col-xs-12 campaign-block">
 			
 			@if ($youtubeid != "")
 

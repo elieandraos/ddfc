@@ -3,11 +3,9 @@
 @section('content')
 	</div> <!-- close the layout master page container -->
 	
-	<div class="container-fluid">
+	<div class="container-fluid slider-wrapper">
 		<div class="row">
-			
-				@include('front.homepage._slider')
-			
+			@include('front.homepage._slider')
 		</div>
 	</div>
 	<div class="container homepage-block">

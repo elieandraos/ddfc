@@ -943,11 +943,11 @@ p.heading4
 	}
 	.caption-content h1 
 	{
-		font-size: 28px;
+		font-size: 14px;
 	}
 	.caption-content h2
 	{
-		font-size: 20px;
+		font-size: 10px;
 	}
 	.carousel-indicators
 	{
@@ -957,15 +957,22 @@ p.heading4
 	{
 		margin-bottom: 20px;
 	}
+	a.right, a.left 
+	{
+		display: none;
+	}
 	.search-placeholder input#search, 
 	.search-placeholder .search-icon
 	{
 		height: 55px;
 	}
+	.slider-wrapper
+	{
+		overflow: hidden;
+	}
 
-
-		nav.navbar-top {
-	height: 58px;
+	nav.navbar-top {
+		height: 58px;
 	}
 	nav.navbar-top .col-sm-4 {
 	padding-left: 0;
