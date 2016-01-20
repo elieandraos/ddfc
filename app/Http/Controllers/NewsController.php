@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Gaia\Repositories\NewsRepositoryInterface;
 use Gaia\Repositories\CategoryRepositoryInterface;
 use App\Models\News;
+use App\Models\Gallery;
 use Response;
 use Request;
 use View;
@@ -92,4 +93,18 @@ class NewsController extends Controller {
 
 	}
 
+
+	public function listGalleries()
+	{
+		$galleries = Gallery::latest()->paginate(15);
+		return view('front.news.list_galleries', ['galleries' => $galleries, 'pageTitle' => 'Galleries']);
+	}
+
+
+	public function viewGallery($id)
+	{
+		$gallery = Gallery::find($id);
+		$galleryItems = MediaLibrary::getCollection($gallery, 'gallery', []);
+		return view('front.news.view_gallery', ['gallery' => $gallery, 'galleryItems' => $galleryItems]);
+	}
 }

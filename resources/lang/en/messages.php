@@ -65,6 +65,8 @@ return [
     'Articles' => 'Articles',
     'All Voices'=>'All Voices',
 
+    'Media' => 'Media',
+    'Galleries' => 'Galleries',
     'News' => 'News',
     'Knowledge' => 'Knowledge',
     'All Knowledge'=>'All Knowledge',

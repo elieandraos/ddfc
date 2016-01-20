@@ -5,6 +5,7 @@ use App\Models\Gallery;
 use App\Models\MediaProperty;
 use App\Http\Controllers\Controller;
 use Gaia\Repositories\PostTypeRepositoryInterface;
+use Gaia\Services\GalleryService;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\GalleryRequest;
@@ -21,10 +22,11 @@ class GalleryController extends Controller {
 	 * Constructor: inject needed dependencies
 	 * @return type
 	 */
-	public function __construct(PostTypeRepositoryInterface $postTypeRepositoryInterface)
+	public function __construct(PostTypeRepositoryInterface $postTypeRepositoryInterface, GalleryService $galleryService)
 	{
 		//share the post type submenu to the layout
 		$this->postTypeRepos = $postTypeRepositoryInterface;
+		$this->galleryService = $galleryService;
 		View::share('postTypesSubmenu', $this->postTypeRepos->renderMenu());
 	}
 
@@ -48,7 +50,7 @@ class GalleryController extends Controller {
 	 */
 	public function create()
 	{
-		return view('admin.galleries.create', ['mediaItems' => null ]);
+		return view('admin.galleries.create', ['mediaItems' => null , 'thumbUrl' => null]);
 	}
 
 
@@ -62,6 +64,11 @@ class GalleryController extends Controller {
 		$input = $request->all();
 		$input['type'] = 'news';
 		$gallery = Gallery::create($input); 
+
+		//upload the image via service
+		if(isset($input['image']))
+			$this->galleryService->uploadImage($gallery, $input['image']);
+
 		foreach($input['dz_file'] as $key => $filename)
 		{
 			if($filename)
@@ -95,7 +102,11 @@ class GalleryController extends Controller {
 		$gallery = Gallery::find($id); 
 		$mediaItems = MediaLibrary::getCollection($gallery, 'gallery', []);
 
-		return view('admin.galleries.edit', ['gallery' => $gallery, 'mediaItems' => $mediaItems]);
+		//get the small preview thumb if image is uploaded
+		$featuredItems = MediaLibrary::getCollection($gallery, $gallery->getMediaCollectionName(), []);
+		(count($featuredItems))?$thumbUrl = $featuredItems[0]->getURL('thumb'):$thumbUrl = null; 
+
+		return view('admin.galleries.edit', ['gallery' => $gallery, 'mediaItems' => $mediaItems, 'thumbUrl' => $thumbUrl]);
 	}
 
 	/**
@@ -108,7 +119,22 @@ class GalleryController extends Controller {
 	{
 		$gallery = Gallery::find($id); 
 		$input = $request->all();
+
+
+		//reset the input image
+		if(isset($input['remove_image']) && !isset($input['image']))
+			$input['image'] = null;
+
+		//remove image if checkbox is ticked
+		if(isset($input['remove_image']))
+			$this->galleryService->removeImage($gallery);
+
 		$gallery->update($input);
+
+		//upload new picture if any 
+		if(isset($input['image']))
+			$this->galleryService->uploadImage($gallery, $input['image']);
+
 		
 		foreach($input['dz_caption'] as $key => $caption)
 		{

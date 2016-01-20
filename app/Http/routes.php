@@ -37,6 +37,9 @@ use App\Models\News;
     Route::get('/news/category/{id}/', ['as' => 'news.category', 'uses' => 'NewsController@category']);
 
 
+    Route::get('/galleries/', ['as' => 'galleries.list', 'uses' => 'NewsController@listGalleries']);
+    Route::get('/galleries/{id}/', ['as' => 'galleries.view', 'uses' => 'NewsController@viewGallery']);
+
     /*
     |--------------------------------------------------------------------------
     | PAGES ROUTES

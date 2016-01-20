@@ -23,7 +23,9 @@ class Gallery extends Model implements MediaLibraryModelInterface{
 	    	//large
 	        'featured'  => ['w'=>800, 'h'=>600],
 	        'thumb'     => ['w'=>60, 'h'=>60],
-	        'thumb-back' => ['w'=>150, 'h'=>130]
+	        'thumb-back' => ['w'=>150, 'h'=>130],
+	        'thumb-large'     => ['w'=>570, 'h'=>325],
+	        'thumb-medium'    => ['w'=>270, 'h'=>192],
 	    ];
 	}   
 
@@ -45,4 +47,15 @@ class Gallery extends Model implements MediaLibraryModelInterface{
 
 		return null;
 	} 
+
+
+	/**
+     * Return the media collection name
+     * @return type
+     */
+    public function getMediaCollectionName()
+    {
+    	return "gallery-collection-".$this->id;
+    }
+
 }

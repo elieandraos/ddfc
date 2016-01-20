@@ -86,10 +86,13 @@
 
 
             <!-- News -->
-            <li class="{{ Request::is('*news*') ?  "active" : '' }}">
-            <a href="/news">{{trans('messages.News')}}</a>
+            <li class="dropdown" >
+                <a style="{{  Request::is('news')|| Request::is('galleries')  ?  'background-color:#23C4FD' : '' }}" href="/posts/media/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{trans('messages.Media')}} <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="{{ Request::is('*news*') ?  "active" : '' }}"><a href="/news">{{trans('messages.News')}}</a></li>
+                    <li class="{{ Request::is('*galleries*') ?  "active" : '' }}"><a href="/galleries">{{trans('messages.Galleries')}}</a></li>
+                </ul>
             </li>
-
 
             <!-- Support -->
             @if ($menuConfiguration['showSupportCategories']==true)

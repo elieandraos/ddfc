@@ -3,7 +3,6 @@
 class NewsService
 {
 	
-
 	/**
 	 * Handles the image upload for the news
 	 * @param type $news 
