@@ -24,7 +24,8 @@
 				    <tr>
 				      <th>Title</th>
 				      <th>Category</th>
-				      <th>Publish Date</th>
+				      <th>Published</th>
+				      <th>Creation Date</th>
 				      <th>Action</th>
 				    </tr>
 				  </thead>
@@ -33,6 +34,7 @@
 						<tr>
 							<td>{{ $post->title }}</td>
 							<td>{{ $post->category->title }}</td>
+							<td> @if($post->is_na)  @else  <i class="fa fa-check"></i>  @endif</td>
 							<td>{{ $post->getHumanPublishedAt() }}</td>
 							<td>
 								@include('admin.posts._actions', ["post" => $post])
