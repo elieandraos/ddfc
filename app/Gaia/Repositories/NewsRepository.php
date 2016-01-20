@@ -31,9 +31,9 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 	{	
 		
 		if(Lang::getLocale() == "ar")
-			$news =  News::latest('published_at')->arabic()->paginate($limit);
+			$news =  News::latest('published_at')->available()->arabic()->paginate($limit);
 		else
-			$news = News::latest('published_at')->english()->paginate($limit);
+			$news = News::latest('published_at')->available()->english()->paginate($limit);
 
         return $news;
 	}
@@ -61,6 +61,8 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 			$input['is_en'] = 0;
 		if(!isset($input['is_ar']))
 			$input['is_ar'] = 0;
+		if(!isset($input['is_na']))
+			$input['is_na'] = 0;
 		return News::create($input);
 	}
 
@@ -83,6 +85,8 @@ class NewsRepository extends DbRepository implements NewsRepositoryInterface
 				$input['is_en'] = 0;
 			if(!isset($input['is_ar']))
 				$input['is_ar'] = 0;
+			if(!isset($input['is_na']))
+				$input['is_na'] = 0;
 		}
 
 		return $news->update($input); 

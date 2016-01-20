@@ -16,7 +16,7 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
 	use MediaLibraryModelTrait, Translatable;
 
 	protected $table = 'news';
-	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured', 'is_en', 'is_ar', 'gallery_id'];
+	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'youtube_url', 'published_at', 'category_id', 'is_featured', 'is_na', 'is_en', 'is_ar', 'gallery_id'];
 	protected $translatedAttributes = ['title', 'excerpt', 'description'];
 	protected $translator = 'App\Models\NewsTranslation';
 	
@@ -57,6 +57,11 @@ class News extends Model implements MediaLibraryModelInterface, TranslatableCont
     public function scopeArabic($query)
     {
         return $query->where('is_ar', '=', 1);
+    }
+
+    public function scopeAvailable($query)
+    {
+        return $query->where('is_na', '=', 0);
     }
 
 	/******************

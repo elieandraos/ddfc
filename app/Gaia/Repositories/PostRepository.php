@@ -49,9 +49,9 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	{	
 		
 		if(Lang::getLocale() == "ar")
-			$posts =  Post::latest('published_at')->arabic()->where('post_type_id', '=', $postTypeId)->paginate($limit);
+			$posts =  Post::latest('published_at')->available()->arabic()->where('post_type_id', '=', $postTypeId)->paginate($limit);
 		else
-			$posts = Post::latest('published_at')->english()->where('post_type_id', '=', $postTypeId)->paginate($limit);
+			$posts = Post::latest('published_at')->available()->english()->where('post_type_id', '=', $postTypeId)->paginate($limit);
 
         return $posts;
 	}
@@ -78,6 +78,8 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 			$input['is_en'] = 0;
 		if(!isset($input['is_ar']))
 			$input['is_ar'] = 0;
+		if(!isset($input['is_na']))
+			$input['is_na'] = 0;
 
 		$post = Post::create($input);
 		//save the components values		
@@ -97,15 +99,19 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	public function update($id, $input)
 	{
 		$post = $this->find($id);
+
 		//save the components values		
 		$componentIds = $post->retrieveComponentIds($input);
 		$this->attachComponentPosts($componentIds, $id, $input);
+
 		if(Lang::getLocale() == 'en')
 		{
 			if(!isset($input['is_en']))
 				$input['is_en'] = 0;
 			if(!isset($input['is_ar']))
 				$input['is_ar'] = 0;
+			if(!isset($input['is_na']))
+				$input['is_na'] = 0;
 		}
 		return $post->update($input); 
 	}
@@ -148,7 +154,7 @@ class PostRepository extends DbRepository implements PostRepositoryInterface
 	 */
 	public function getAllByPostTypeIdAndCategoryId($postTypeId, $categoryId, $limit)
 	{
-		$posts = Post::latest('published_at');
+		$posts = Post::latest('published_at')->available();
 		
 		if(!$limit)
 			$limit = $this->limit;

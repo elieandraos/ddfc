@@ -85,6 +85,18 @@
             </div>
         </div>
 
+        <div class="form-group">
+            {!! Form::label('is_na', 'Not Available (Draft)', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_na', 
+                    1, 
+                    (isset($post->is_na))?$post->is_featured:true)
+                !!} 
+            </div>
+        </div>
+
+
         
         <div class="form-group">
             {!! Form::label('image', 'Image', ['class' => 'col-sm-3 control-label']) !!}

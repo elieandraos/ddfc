@@ -13,11 +13,11 @@ class Post extends Model implements MediaLibraryModelInterface, TranslatableCont
 	use MediaLibraryModelTrait, Translatable;
 
 	protected $table = 'post';
-	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'published_at', 'youtube_url', 'category_id', 'post_type_id', 'is_en', 'is_ar'];
+	protected $fillable = ['title', 'excerpt', 'description', 'slug', 'published_at', 'youtube_url', 'category_id', 'post_type_id', 'is_en', 'is_ar', 'is_na'];
 	protected $translatedAttributes = ['title', 'excerpt', 'description'];
 	protected $translator = 'App\Models\PostTranslation';
 	//for ComponentPost input filter
-	protected $except = ['_token', 'title', 'slug', 'description', 'excerpt', 'published_at', 'image', 'youtube_url' ,  'category_id', 'post_type_id', 'remove_image', 'meta_title', 'locale', 'meta_description', 'meta_keywords', 'facebook_title', 'facebook_description', 'twitter_title', 'twitter_description', 'is_en', 'is_ar'];
+	protected $except = ['_token', 'title', 'slug', 'description', 'excerpt', 'published_at', 'image', 'youtube_url' ,  'category_id', 'post_type_id', 'remove_image', 'meta_title', 'locale', 'meta_description', 'meta_keywords', 'facebook_title', 'facebook_description', 'twitter_title', 'twitter_description', 'is_en', 'is_ar', 'is_na'];
 
 	
 	/**********************
@@ -67,6 +67,11 @@ class Post extends Model implements MediaLibraryModelInterface, TranslatableCont
     public function scopeArabic($query)
     {
         return $query->where('is_ar', '=', 1);
+    }
+
+    public function scopeAvailable($query)
+    {
+        return $query->where('is_na', '=', 0);
     }
 
 	/******************
