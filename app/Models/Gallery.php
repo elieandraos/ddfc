@@ -26,6 +26,7 @@ class Gallery extends Model implements MediaLibraryModelInterface{
 	        'thumb-back' => ['w'=>150, 'h'=>130],
 	        'thumb-large'     => ['w'=>570, 'h'=>325],
 	        'thumb-medium'    => ['w'=>270, 'h'=>192],
+	         'thumb-small'     => ['w'=>170, 'h'=>120]
 	    ];
 	}   
 

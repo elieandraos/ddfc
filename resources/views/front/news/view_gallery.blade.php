@@ -49,7 +49,9 @@
 
 		<!-- others --> 
 		<div class='col-sm-5'>
-			
+			@if($related_galleries->count())
+                @include('front.news._related_galleries')
+            @endif
 		</div>
 	</div>
 
