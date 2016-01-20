@@ -97,6 +97,9 @@ return [
     'Skip to Content' => 'إذهب إلى المضمون',
 
 
+    'Galleries' => 'المعارض',
+    'Media' => 'الإعلام',
+    
     //Alts 
     'Universal Accessibility Alt' => 'Jump To Universal Accessibility Posts',
     'Social Protection Alt' => 'Jump To Social Protection Posts',
