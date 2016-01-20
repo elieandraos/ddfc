@@ -24,6 +24,7 @@ div.navbar-collapse,
 .col-sm-push-3 {
     right: 25%;
 }
+
 .pull-left {
     float: right!important;
 }
@@ -169,5 +170,14 @@ img.large-upcoming-badge
     right: 15px;
 }
 @media screen and (min-width: 320px) and (max-width: 767px) {
-
+    body 
+    {
+        overflow-x: hidden;
+    }
+    .container { padding-left: 0;}
+    .campaign-block.col-sm-push-3
+    {
+        right: auto;
+        padding-left: 30px;
+    }
 }
