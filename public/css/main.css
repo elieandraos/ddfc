@@ -1017,8 +1017,8 @@ p.heading4
 	padding-top: 10px;
 	}
 	.container {
-	    padding-left: 10px;
-	    padding-right: 10px;
+	   /* padding-left: 10px;
+	    padding-right: 10px;*/
 	}
 	.top-buffer {
 	    width: 50%;
