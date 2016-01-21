@@ -1263,8 +1263,8 @@ ul.share-buttons li {
     margin-right: 10px;
 }
 .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
-margin-left: -10px;
-    margin-right: -10px;
+/*margin-left: -10px;
+    margin-right: -10px;*/
 }
 .search-placeholder {
     margin-right: -10px;
