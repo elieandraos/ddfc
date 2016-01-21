@@ -106,7 +106,7 @@ class NewsController extends Controller {
 		$gallery = Gallery::find($id);
 		$galleryItems = MediaLibrary::getCollection($gallery, 'gallery', []);
 
-		$related_galleries = Gallery::where('id','!=', $id)->limit(5)->get();
+		$related_galleries = Gallery::where('id','!=', $id)->where('id', '!=', 1)->limit(5)->get();
 		return view('front.news.view_gallery', ['gallery' => $gallery, 'galleryItems' => $galleryItems, 'related_galleries' => $related_galleries]);
 	}
 }
