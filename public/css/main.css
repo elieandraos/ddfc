@@ -1010,8 +1010,8 @@ p.heading4
 	padding-right: 10px;
 	}
 	.container-fluid {
-	padding-left: 5px;
-	padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
 	}
 	.heading5, .heading5 a {
 	padding-top: 10px;
