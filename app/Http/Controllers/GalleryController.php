@@ -38,7 +38,7 @@ class GalleryController extends Controller {
 	 */
 	public function index()
 	{
-		$galleries = Gallery::latest()->where('id', '!=', 1)->paginate(15);
+		$galleries = Gallery::latest()->paginate(15);
 		return view('admin.galleries.index', ["galleries" => $galleries]);
 	}
 

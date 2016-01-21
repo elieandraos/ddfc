@@ -96,7 +96,7 @@ class NewsController extends Controller {
 
 	public function listGalleries()
 	{
-		$galleries = Gallery::latest()->paginate(15);
+		$galleries = Gallery::latest()->where('id', '!=', 1)->paginate(15);
 		return view('front.news.list_galleries', ['galleries' => $galleries, 'pageTitle' => 'Galleries']);
 	}
 
