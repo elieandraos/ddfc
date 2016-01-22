@@ -4,13 +4,14 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelInterface;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 use App\Models\MediaProperty;
+use Lang;
 
 class Gallery extends Model implements MediaLibraryModelInterface{
 
 	use MediaLibraryModelTrait;
 
 	protected $table = 'galleries';
-	protected $fillable = ['name', 'type'];
+	protected $fillable = ['name', 'name_ar', 'type'];
 
 	public static function getTypes()
 	{
@@ -57,6 +58,16 @@ class Gallery extends Model implements MediaLibraryModelInterface{
     public function getMediaCollectionName()
     {
     	return "gallery-collection-".$this->id;
+    }
+
+    public function getName()
+    {
+    	if(Lang::getLocale() == "en")
+    		return $this->name;
+
+    	if(Lang::getLocale() == "ar")
+    		return $this->name_ar;
+
     }
 
 }

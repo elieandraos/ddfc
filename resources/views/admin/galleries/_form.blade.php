@@ -11,6 +11,12 @@
                 {!! Form::text('name', (isset($gallery))?$gallery->name:null, ['class' => 'form-control']) !!}
             </div>
         </div>
+        <div class="form-group @if($errors->has('name_ar')) has-error @endif">
+            {!! Form::label('name_ar', 'Name Ar', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::text('name_ar', (isset($gallery))?$gallery->name_ar:null, ['class' => 'form-control']) !!}
+            </div>
+        </div>
         <div class="form-group">
             {!! Form::label('image', 'Image', ['class' => 'col-sm-3 control-label']) !!}
             <div class="col-sm-6">

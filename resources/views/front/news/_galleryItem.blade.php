@@ -3,6 +3,6 @@
 		<div class="tint black">
 			<img class='grid-thumb' src="{!! $gallery->getFirstMediaURL( $gallery->getMediaCollectionName(), 'thumb-large') !!}" alt="{!! $gallery->title !!}" title="{!! $gallery->title !!}" />
 		</div>
-		<h2 class="heading3">{!! $gallery->name !!}</h2>
+		<h2 class="heading3">{!! $gallery->getName() !!}</h2>
 	</a>				
 </div>
