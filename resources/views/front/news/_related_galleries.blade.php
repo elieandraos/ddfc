@@ -1,9 +1,5 @@
 <div class="title-container-left">
-	@if(Lang::getLocale() == "en")
-		<h1 class="heading1"> {{trans('messages.other')}} {{trans('messages.Galleries')}} </h1>
-	@else
-		<h1 class="heading1">{{trans('messages.Galleries')}} {{trans('messages.other')}} </h1>
-	@endif
+	<h1 class="heading1"> {{trans('messages.related')}}</h1>
 </div>
 
 @foreach($related_galleries as $related_gallery)

@@ -31,6 +31,7 @@
 				    <tr>
 				      <th>Title</th>
 				      <th>Category</th>
+				      <th>Published</th>
 				      <th>Publish Date</th>
 				      <th>Action</th>
 				    </tr>
@@ -40,6 +41,7 @@
 						<tr>
 							<td>{{ $n->title }}</td>
 							<td>{{ $n->category->title }}</td>
+							<td> @if($n->is_na)  @else  <i class="fa fa-check"></i>  @endif</td>
 							<td>{{ $n->getHumanPublishedAt() }}</td>
 							<td>
 								@include('admin.news._actions', ["news" => $n])

@@ -97,7 +97,7 @@ return [
     'Skip to Content' => 'إذهب إلى المضمون',
 
 
-    'Galleries' => 'المعارض',
+    'Galleries' => 'معرض الصور',
     'Media' => 'الإعلام',
     
     //Alts 

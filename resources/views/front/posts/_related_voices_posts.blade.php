@@ -1,5 +1,5 @@
 <div class="title-container-left">
-	<h1 class="heading1"> {{trans('messages.other')}} {{trans('messages.Voices')}}</h1>
+	<h1 class="heading1"> {{trans('messages.related')}}</h1>
 </div>
 
 @foreach($related_posts as $related_post)
