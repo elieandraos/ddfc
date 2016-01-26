@@ -40,8 +40,8 @@
         <p>Drag and drop photos, or click to upload.</p>   
         <div id="gallery-uploads" class="dropzone">
             @if(count($mediaItems))
-                @foreach($mediaItems as $mediaItem)
-                    <div class="dz-preview dz-file-preview">
+                @foreach($mediaItems as $key => $mediaItem)
+                    <div class="dz-preview dz-file-preview" id="{!! $key !!}">
                         <div class="dz-details">
                             <img src="{!!  $mediaItem->getURL('thumb-back') !!}" />
                             <br/>
@@ -49,6 +49,7 @@
                             <input type="text" name="dz_caption_ar[]" placeholder="Arabic caption..." class="dz-text" value="{!! $gallery->getMediaProperty($mediaItem->id, 'caption_ar') !!}" />
                             <input type="hidden" name="dz_media[]" value="{!! $mediaItem->id !!}" class="dz-media" />
                             <input type="hidden" name="dz_file[]"  class="dz-file" />
+                            <input type="hidden" name="dz_order[]"  class="dz-order" />
                         </div>
                         <a class="media-remove" href="#">Delete</a>
                     </div>
@@ -65,6 +66,7 @@
                     <input type="text" name="dz_caption[]" placeholder="English caption..." class="dz-text" /><Br/>
                     <input type="text" name="dz_caption_ar[]" placeholder="Arabic caption..." class="dz-text" />
                     <input type="hidden" name="dz_file[]"  class="dz-file" />
+                    <input type="hidden" name="dz_order[]"  class="dz-order" />
                 </div>
                 <div class="dz-progress"><span class="dz-upload" data-dz-uploadprogress></span></div>
                 <div class="dz-error-message"><span data-dz-errormessage></span></div>

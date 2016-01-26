@@ -14,6 +14,7 @@ var app = function() {
         initRichTextEditor();
         initMetaAutoFill();
         initDropzone();
+        initGallerySortables();
     };
 
     //set up tooltips
@@ -153,6 +154,8 @@ var app = function() {
         if(!$("#gallery-uploads").length)
             return;
         
+        updateDzOrder();
+
         //Dropzone.autoDiscover = false;
         $("#gallery-uploads").dropzone({ 
             url: "/admin/upload-gallery-photo",
@@ -181,9 +184,26 @@ var app = function() {
         currentDropzone.on("success", function(file, response) {
             filePreview = file.previewElement;
             $(filePreview).find('.dz-file').val( response.filename);
-           // $(filePreview).find(".dz-upload").css('width','0%');
+            updateDzOrder();
         });
 
+    }
+
+
+    var initGallerySortables = function(){
+        $("#gallery-uploads").sortable({
+            items:'.dz-preview',
+            cursor: 'move',
+            opacity: 0.5,
+            containment: '#gallery-uploads',
+            distance: 20,
+            tolerance: 'pointer',
+            update: function (event, ui) {
+               var data = $('#gallery-uploads').sortable('toArray').toString()
+               updateDzOrder();
+            }
+        });
+        
     }
 
     //return functions
@@ -262,5 +282,16 @@ function sortCategories(e)
             // ...
         }
     })
+}
+
+
+function updateDzOrder()
+{
+    if( $("#gallery-uploads .dz-preview").length )
+    {
+        $("#gallery-uploads .dz-preview").each(function(index){
+            $(this).find('.dz-order').val(index);
+       })
+    }
 }
 

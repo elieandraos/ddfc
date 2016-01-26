@@ -15,6 +15,7 @@ use Input;
 use Response;
 use Redirect;
 use MediaLibrary;
+use Spatie\MediaLibrary\Models\Media;
 
 class GalleryController extends Controller {
 
@@ -74,6 +75,9 @@ class GalleryController extends Controller {
 			if($filename)
 			{
 				$media = $gallery->addMedia($filename, 'gallery');
+				$media->order = $input['dz_order'][$key];
+				$media->save();
+
 				MediaProperty::create([
 					'name' => 'caption',
 					'value' => $input['dz_caption'][$key],
@@ -101,6 +105,7 @@ class GalleryController extends Controller {
 	{
 		$gallery = Gallery::find($id); 
 		$mediaItems = MediaLibrary::getCollection($gallery, 'gallery', []);
+		$mediaItems = $mediaItems->sortBy('order');
 
 		//get the small preview thumb if image is uploaded
 		$featuredItems = MediaLibrary::getCollection($gallery, $gallery->getMediaCollectionName(), []);
@@ -119,7 +124,7 @@ class GalleryController extends Controller {
 	{
 		$gallery = Gallery::find($id); 
 		$input = $request->all();
-
+		
 
 		//reset the input image
 		if(isset($input['remove_image']) && !isset($input['image']))
@@ -140,7 +145,11 @@ class GalleryController extends Controller {
 		{
 			//case media loaded, just update caption
 			if(isset($input['dz_media'][$key]) )
-			{
+			{	
+				$media = Media::find($input['dz_media'][$key]);
+				$media->order = $input['dz_order'][$key];
+				$media->save();
+
 				$mp = MediaProperty::where('media_id', '=', (int)$input['dz_media'][$key] )->where('name', '=', 'caption')->first();
 				if($mp)
 				{
@@ -163,6 +172,8 @@ class GalleryController extends Controller {
 				if($filename)
 				{
 					$media = $gallery->addMedia($filename, 'gallery');
+					$media->order = $input['dz_order'][$key];
+					$media->save();
 					MediaProperty::create([
 						'name' => 'caption',
 						'value' => $caption,
