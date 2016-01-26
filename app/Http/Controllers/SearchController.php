@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\NewsTranslation;
 use App\Models\PostTranslation;
+use App\Models\Gallery;
 use Input;
 use Lang;
 use App\Models\Locale;
@@ -27,8 +28,9 @@ class SearchController extends Controller {
 		$query = $input['search'];
 		$newsTranslations  = NewsTranslation::where('locale_id', '=', $locale->id)->search($query, null, true)->with('news')->get();
 		$postsTranslations = PostTranslation::where('locale_id', '=', $locale->id)->search($query, null, true)->with('post')->get();
+		$galleries = Gallery::search($query, null, true)->get();
 
-		return view('front.search.index', ['newsTranslations' => $newsTranslations, 'postsTranslations' => $postsTranslations]);
+		return view('front.search.index', ['newsTranslations' => $newsTranslations, 'postsTranslations' => $postsTranslations, 'galleries' => $galleries]);
 		
 	}
 

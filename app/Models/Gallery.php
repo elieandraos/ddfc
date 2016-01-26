@@ -5,13 +5,24 @@ use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelInterface;
 use Spatie\MediaLibrary\MediaLibraryModel\MediaLibraryModelTrait;
 use App\Models\MediaProperty;
 use Lang;
+use Nicolaslopezj\Searchable\SearchableTrait;
 
 class Gallery extends Model implements MediaLibraryModelInterface{
 
-	use MediaLibraryModelTrait;
+	use MediaLibraryModelTrait, SearchableTrait;
 
 	protected $table = 'galleries';
 	protected $fillable = ['name', 'name_ar', 'type', 'is_en', 'is_ar', 'is_na'];
+	protected $searchable = [
+        'columns' => [
+            'name' => 10,
+            'name_ar' => 10
+        ],
+        'joins' => [
+            
+        ]
+    ];
+
 
 	public static function getTypes()
 	{
