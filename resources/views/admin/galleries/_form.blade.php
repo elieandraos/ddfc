@@ -27,6 +27,38 @@
                 @endif
             </div>
         </div>
+        
+        <div class="form-group">
+            {!! Form::label('is_en', 'Available in english', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_en', 
+                    1, 
+                    (isset($gallery->is_en))?$gallery->is_en:false)
+                !!} 
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('is_ar', 'Available in arabic', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_ar', 
+                    1, 
+                    (isset($gallery->is_ar))?$gallery->is_ar:false)
+                !!} 
+            </div>
+        </div>
+        <div class="form-group">
+            {!! Form::label('is_na', 'Not Published (Draft)', ['class' => 'col-sm-3 control-label']) !!}
+            <div class="col-sm-6">
+                {!! Form::checkbox(
+                    'is_na', 
+                    1, 
+                    (isset($gallery->is_na))?$gallery->is_na:false)
+                !!} 
+            </div>
+        </div>
+
 	</div>
 </div>
 <!-- Panel end -->

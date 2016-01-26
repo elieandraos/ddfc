@@ -11,7 +11,7 @@ class Gallery extends Model implements MediaLibraryModelInterface{
 	use MediaLibraryModelTrait;
 
 	protected $table = 'galleries';
-	protected $fillable = ['name', 'name_ar', 'type'];
+	protected $fillable = ['name', 'name_ar', 'type', 'is_en', 'is_ar', 'is_na'];
 
 	public static function getTypes()
 	{
@@ -68,6 +68,26 @@ class Gallery extends Model implements MediaLibraryModelInterface{
     	if(Lang::getLocale() == "ar")
     		return $this->name_ar;
 
+    }
+
+    /******************
+	 *    SCOPES      *
+	 ******************/
+
+	public function scopeEnglish($query)
+    {
+        return $query->where('is_en', '=', 1);
+    }
+
+
+    public function scopeArabic($query)
+    {
+        return $query->where('is_ar', '=', 1);
+    }
+
+    public function scopeAvailable($query)
+    {
+        return $query->where('is_na', '=', 0);
     }
 
 }

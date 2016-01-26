@@ -97,7 +97,11 @@ class NewsController extends Controller {
 
 	public function listGalleries()
 	{
-		$galleries = Gallery::latest()->where('id', '!=', 1)->paginate(15);
+		if(Lang::getLocale() == "ar")
+			$galleries = Gallery::latest()->available()->arabic()->where('id', '!=', 1)->paginate(15);
+		else
+			$galleries = Gallery::latest()->available()->english()->where('id', '!=', 1)->paginate(15);
+
 		return view('front.news.list_galleries', ['galleries' => $galleries, 'pageTitle' => 'Galleries']);
 	}
 
@@ -107,7 +111,11 @@ class NewsController extends Controller {
 		$gallery = Gallery::find($id);
 		$galleryItems = MediaLibrary::getCollection($gallery, 'gallery', []);
 
-		$related_galleries = Gallery::where('id','!=', $id)->where('id', '!=', 1)->limit(5)->get();
+		if(Lang::getLocale() == "ar")
+			$related_galleries = Gallery::where('id','!=', $id)->available()->arabic()->where('id', '!=', 1)->limit(5)->get();
+		else
+			$related_galleries = Gallery::where('id','!=', $id)->available()->english()->where('id', '!=', 1)->limit(5)->get();
+
 		return view('front.news.view_gallery', ['gallery' => $gallery, 'galleryItems' => $galleryItems, 'related_galleries' => $related_galleries]);
 	}
 }

@@ -64,7 +64,16 @@ class GalleryController extends Controller {
 	{
 		$input = $request->all();
 		$input['type'] = 'news';
+
+		if(!isset($input['is_en']))
+			$input['is_en'] = 0;
+		if(!isset($input['is_ar']))
+			$input['is_ar'] = 0;
+		if(!isset($input['is_na']))
+			$input['is_na'] = 0;
+		
 		$gallery = Gallery::create($input); 
+
 
 		//upload the image via service
 		if(isset($input['image']))
@@ -125,6 +134,12 @@ class GalleryController extends Controller {
 		$gallery = Gallery::find($id); 
 		$input = $request->all();
 		
+		if(!isset($input['is_en']))
+			$input['is_en'] = 0;
+		if(!isset($input['is_ar']))
+			$input['is_ar'] = 0;
+		if(!isset($input['is_na']))
+			$input['is_na'] = 0;
 
 		//reset the input image
 		if(isset($input['remove_image']) && !isset($input['image']))
