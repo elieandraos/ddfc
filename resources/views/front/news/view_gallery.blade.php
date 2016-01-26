@@ -15,7 +15,7 @@
 		<!-- posts listing -->
 		<div class='col-sm-7 top35'>
 		   	
-		   	<h2 class="heading3" style="margin-top:0px;">{!! $gallery->name !!}</h2>
+		   	<h2 class="heading3" style="margin-top:0px;">{!! $gallery->getName() !!}</h2>
 			<img class='featured-img' src="{!! $gallery->getFirstMediaURL( $gallery->getMediaCollectionName(), 'featured') !!}" alt="{!! $gallery->name !!}" title="{!! $gallery->name !!}" />
 
 		        @if(count($galleryItems))
