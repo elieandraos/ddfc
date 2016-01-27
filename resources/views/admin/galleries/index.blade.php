@@ -31,6 +31,7 @@
 				    <tr>
 				      <th>Title</th>
 				      <th>Type</th>
+				      <th>Published</th>
 				      <th>Action</th>
 				    </tr>
 				  </thead>
@@ -39,6 +40,7 @@
 						<tr>
 							<td>{{ $gallery->name }}</td>
 							<td>{{ $gallery->type }}</td>
+							<td> @if($gallery->is_na)  @else  <i class="fa fa-check"></i>  @endif</td>
 							<td>
 								@include('admin.galleries._actions', ["gallery" => $gallery])
 							</td>
